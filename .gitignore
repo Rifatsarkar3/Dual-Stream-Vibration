@@ -1,0 +1,26 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.vscode/
+.idea/
+data/
+Processed_PRONOSTIA/
+Processed_XJTU/
+*.ckpt
+*.pt
+*.pth
+.DS_Store
+
+# outputs/ is excluded by default except the released final20 checkpoints,
+# predictions, and results backing the headline PRONOSTIA numbers.
+outputs/*
+!outputs/exp16_ress
+outputs/exp16_ress/*
+!outputs/exp16_ress/final20
+outputs/exp16_ress/final20/*
+!outputs/exp16_ress/final20/*.pth
+!outputs/exp16_ress/final20/*.npz
+!outputs/exp16_ress/final20/results.json
+!outputs/stats_tests_n20.json
