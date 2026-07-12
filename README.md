@@ -2,9 +2,10 @@
 
 Code, trained model checkpoints, and result artifacts accompanying the manuscript *"Leakage-Free,
 Monotonic, and Uncertainty-Calibrated Bearing RUL Prediction for Reliability-Centered Maintenance,"*
-by Sarkar Mohammad Raziul Hasan Rifat, Tao Zhang, Akter Labani, Boudjelkha Mohammed Djamel Eddine,
+by Sarkar Mohammad Raziul Hasan Rifat, Tao Zhang, Labani Akter, Boudjelkha Mohammed Djamel Eddine,
 and Saleh Mahamat Aboubakar Ousmane (Faculty of Mechanical and Material Engineering, Huai'an
-University), submitted to *Reliability Engineering & System Safety* (Elsevier). See
+University; Labani Akter: Faculty of Material and Chemical Engineering, Huai'an University),
+submitted to *Reliability Engineering & System Safety* (Elsevier). See
 [`paper/manuscript.pdf`](paper/manuscript.pdf) for the full manuscript and
 [`highlights.docx`](highlights.docx) for the paper's highlights.
 
