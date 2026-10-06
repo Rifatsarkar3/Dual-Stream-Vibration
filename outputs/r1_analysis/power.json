@@ -1,0 +1,166 @@
+{
+ "dry_run": false,
+ "rows": [
+  {
+   "endpoint": "A5-P1 framework against standard practice, PRONOSTIA, r = 5",
+   "kind": "cost",
+   "n": 10,
+   "mean": -0.0023569244940777655,
+   "sd": 0.2197561011949418,
+   "mde": 0.2185944122107843,
+   "mde_as_cost_ratio": 1.5594902714459478,
+   "bearings_needed": {
+    "10 %": 168,
+    "25 %": 31
+   }
+  },
+  {
+   "endpoint": "A5-P1 framework against standard practice, PRONOSTIA, r = 10",
+   "kind": "cost",
+   "n": 10,
+   "mean": 0.0515188786526646,
+   "sd": 0.33092131004575803,
+   "mde": 0.32917197230991013,
+   "mde_as_cost_ratio": 1.9813900395407493,
+   "bearings_needed": {
+    "10 %": 380,
+    "25 %": 70
+   }
+  },
+  {
+   "endpoint": "A6-P1 coverage error, in-bearing against held-out calibration, PRONOSTIA",
+   "kind": "coverage",
+   "n": 10,
+   "mean": 38.986468239406356,
+   "sd": 10.948456560802084,
+   "mde": 10.890580118186604,
+   "bearings_needed": {
+    "5 points": 38,
+    "10 points": 10
+   }
+  },
+  {
+   "endpoint": "A6 (d) cost, in-bearing against held-out calibration, PRONOSTIA, r = 5",
+   "kind": "cost",
+   "n": 10,
+   "mean": -0.01952185358413135,
+   "sd": 0.19079308998746022,
+   "mde": 0.18978450715546324,
+   "mde_as_cost_ratio": 1.468479086938119,
+   "bearings_needed": {
+    "10 %": 127,
+    "25 %": 24
+   }
+  },
+  {
+   "endpoint": "A6 (d) cost, in-bearing against held-out calibration, PRONOSTIA, r = 10",
+   "kind": "cost",
+   "n": 10,
+   "mean": 0.014172165814169385,
+   "sd": 0.27505288481893986,
+   "mde": 0.2735988823834331,
+   "mde_as_cost_ratio": 1.7532997286159275,
+   "bearings_needed": {
+    "10 %": 262,
+    "25 %": 49
+   }
+  },
+  {
+   "endpoint": "A7-P1 coverage error, in-bearing against held-out calibration, XJTU-SY",
+   "kind": "coverage",
+   "n": 11,
+   "mean": 19.298935588410885,
+   "sd": 11.775198955822297,
+   "mde": 11.031654594932801,
+   "bearings_needed": {
+    "5 points": 44,
+    "10 points": 11
+   }
+  },
+  {
+   "endpoint": "A7-P3 late-alarm share, XJTU-SY, r = 5",
+   "kind": "late",
+   "n": 11,
+   "mean": 0.16363636363636366,
+   "sd": 0.33097651660722777,
+   "mde": 0.3100770206892866
+  },
+  {
+   "endpoint": "A7-A (d) cost, XJTU-SY, r = 5",
+   "kind": "cost",
+   "n": 11,
+   "mean": -0.07833968301970123,
+   "sd": 0.14765376006415148,
+   "mde": 0.13833017062233183,
+   "mde_as_cost_ratio": 1.3210746527408053,
+   "bearings_needed": {
+    "10 %": 76,
+    "25 %": 14
+   }
+  },
+  {
+   "endpoint": "A7-P3 late-alarm share, XJTU-SY, r = 10",
+   "kind": "late",
+   "n": 11,
+   "mean": 0.14545454545454548,
+   "sd": 0.2659459958850156,
+   "mde": 0.24915284901052734
+  },
+  {
+   "endpoint": "A7-A (d) cost, XJTU-SY, r = 10",
+   "kind": "cost",
+   "n": 11,
+   "mean": -0.03612522991947831,
+   "sd": 0.1636830522288465,
+   "mde": 0.15334729391898272,
+   "mde_as_cost_ratio": 1.362243675163565,
+   "bearings_needed": {
+    "10 %": 93,
+    "25 %": 18
+   }
+  },
+  {
+   "endpoint": "A7-P4 coverage error, best-epoch against final-epoch calibration, PRONOSTIA",
+   "kind": "coverage",
+   "n": 10,
+   "mean": 1.4347399920619988,
+   "sd": 1.5597350835803214,
+   "mde": 1.5514899106138063,
+   "bearings_needed": {
+    "5 points": 1,
+    "10 points": 1
+   }
+  }
+ ],
+ "missing": [],
+ "provenance": {
+  "plan_sha256": "71abd0b61dbf1847d5f8990185d8695891a44880a68924ad9cc9804a983423f1",
+  "code_sha256": {
+   "Experiments/exp16_ress.py": "7fb30773b3b5f3c7418c9a3ad78abda4fe436e30c3e450d9b9f056114b58f43a",
+   "Experiments/exp19_baselines.py": "ed481def3afd500661ce90106e1e140131508590594e67d1bcaf38b8d18e5cfd",
+   "Experiments/r1_provenance.py": "ff2e32fe946c0707c788a39b3414262c36388ec89b736fa12f4db90be49cf47e",
+   "src/dsaf_v2_lite.py": "985a33ca0993c5b52f736c97b2ac44399c8ea22b36c1b9169e4d305973766752",
+   "src/ablation_models.py": "d603563d9c4003c60b60eeee0b72123b0ed56e6cda7f1ddbff510092fe61b2c8",
+   "src/published_baselines.py": "c9f581bc27020b46e7d5a9f79129a826b34f012bda84665c2381e8338b6d5783",
+   "src/sota_baselines.py": "8ed27e977934fa2a58555be06288d71266f684a083557c53eb3bf2cacc9c9034",
+   "src/vanilla_baselines.py": "bcd744631eee25c660617360ac84423603f4b175b3666a99495d9fa8b3592f52",
+   "src/mini_dann.py": "897581f518e61506d9d6f52593946e430e7511a403baac25438e23631318ea09",
+   "src/online_filters.py": "89e523690d0d9f8f4e23157a8094ae68eedc5aedd7a9f1da13cb518322d028d4",
+   "src/isotonic_eval.py": "3e56013efe14b808f4d55311318567a2565628d31a087d6e55dcb4ca9d63e40b",
+   "Experiments/r1_power.py": "a8cf0ee9058680f6ca03538bc34be8e20628734d543c6b9f8616032a55c18493"
+  },
+  "data_list_sha256": {
+   "data_sha256_v2.txt": "8d520c299c9c1fec05d1d397beef3232a39e8bd157c6eb368e37e05b3df9d27b",
+   "data_sha256_v2hv.txt": "7b601df5d718d9be4900aa88568fec565c31b508ffcdc6ddb2b7f4b96112ee8d"
+  },
+  "git_head": "bf06c79d3f44137e1ab02597308424d22b4210f1",
+  "git_tree_differs": true,
+  "command": "Experiments/r1_power.py",
+  "python": "3.14.3",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "gpu": "NVIDIA GeForce RTX 5070"
+ }
+}

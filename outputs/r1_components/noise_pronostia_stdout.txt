@@ -1,0 +1,121 @@
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.398, -0.143]
+[noise] full seed 7: clean CES MAE (bearing mean) 0.1660
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.028, 0.123]
+[noise] full seed 8: clean CES MAE (bearing mean) 0.1571
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.065, 0.075]
+[noise] full seed 21: clean CES MAE (bearing mean) 0.1550
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.145, 0.115]
+[noise] full seed 34: clean CES MAE (bearing mean) 0.1661
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.043, 0.069]
+[noise] full seed 42: clean CES MAE (bearing mean) 0.1552
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.194, 0.061]
+[noise] full seed 55: clean CES MAE (bearing mean) 0.1567
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.179, 0.331]
+[noise] full seed 89: clean CES MAE (bearing mean) 0.1562
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.519, -0.202]
+[noise] full seed 123: clean CES MAE (bearing mean) 0.1602
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.068, 0.197]
+[noise] full seed 144: clean CES MAE (bearing mean) 0.1566
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.554, -0.194]
+[noise] full seed 233: clean CES MAE (bearing mean) 0.1647
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.020, 0.259]
+[noise] full seed 377: clean CES MAE (bearing mean) 0.1527
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.010, 0.170]
+[noise] full seed 610: clean CES MAE (bearing mean) 0.1543
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.343, 0.213]
+[noise] full seed 777: clean CES MAE (bearing mean) 0.1724
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.054, 0.239]
+[noise] full seed 987: clean CES MAE (bearing mean) 0.1632
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.200, 0.026]
+[noise] full seed 999: clean CES MAE (bearing mean) 0.1703
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.112, 0.102]
+[noise] full seed 1597: clean CES MAE (bearing mean) 0.1559
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.188, -0.019]
+[noise] full seed 2584: clean CES MAE (bearing mean) 0.1662
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.177, -0.032]
+[noise] full seed 4181: clean CES MAE (bearing mean) 0.1528
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.130, 0.064]
+[noise] full seed 6765: clean CES MAE (bearing mean) 0.1603
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.085, 0.320]
+[noise] full seed 10946: clean CES MAE (bearing mean) 0.1559
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.260, -0.038]
+[noise] static seed 7: clean CES MAE (bearing mean) 0.1648
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.149, -0.044]
+[noise] static seed 8: clean CES MAE (bearing mean) 0.1579
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.363, -0.014]
+[noise] static seed 21: clean CES MAE (bearing mean) 0.1584
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.019, 0.206]
+[noise] static seed 34: clean CES MAE (bearing mean) 0.1675
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.127, 0.261]
+[noise] static seed 42: clean CES MAE (bearing mean) 0.1576
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.546, -0.142]
+[noise] static seed 55: clean CES MAE (bearing mean) 0.1607
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.186, 0.085]
+[noise] static seed 89: clean CES MAE (bearing mean) 0.1532
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.370, 0.592]
+[noise] static seed 123: clean CES MAE (bearing mean) 0.1624
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.136, 0.119]
+[noise] static seed 144: clean CES MAE (bearing mean) 0.1601
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.408, -0.202]
+[noise] static seed 233: clean CES MAE (bearing mean) 0.1642
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.378, -0.132]
+[noise] static seed 377: clean CES MAE (bearing mean) 0.1541
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.301, -0.093]
+[noise] static seed 610: clean CES MAE (bearing mean) 0.1549
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.172, 0.289]
+[noise] static seed 777: clean CES MAE (bearing mean) 0.1775
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.354, 0.160]
+[noise] static seed 987: clean CES MAE (bearing mean) 0.1602
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.267, 0.085]
+[noise] static seed 999: clean CES MAE (bearing mean) 0.1688
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.297, 0.189]
+[noise] static seed 1597: clean CES MAE (bearing mean) 0.1566
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.230, 0.485]
+[noise] static seed 2584: clean CES MAE (bearing mean) 0.1637
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.025, 0.469]
+[noise] static seed 4181: clean CES MAE (bearing mean) 0.1549
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.059, 0.153]
+[noise] static seed 6765: clean CES MAE (bearing mean) 0.1621
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.250, 0.123]
+[noise] static seed 10946: clean CES MAE (bearing mean) 0.1551
+[noise] saved E:\Yolo-Thermal\Dual-Stream Vibration-Vision\outputs\r1_components_final\noise.json

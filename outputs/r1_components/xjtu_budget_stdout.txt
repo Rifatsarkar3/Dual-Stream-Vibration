@@ -1,0 +1,701 @@
+=== outputs/r1_components_xjtu/lam0.08_B5_foldA ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B5_foldA seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.1182  R2=0.7576  (best 0.1182)
+  final-epoch val MAE=0.1503 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.1198  R2=0.7427  (best 0.1198)
+  final-epoch val MAE=0.1502 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.1583  R2=0.5589  (best 0.1583)
+  final-epoch val MAE=0.1695 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.1158  R2=0.7687  (best 0.1158)
+  final-epoch val MAE=0.1440 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.1566  R2=0.5662  (best 0.1566)
+  final-epoch val MAE=0.1499 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B5_foldA\results.json
+=== outputs/r1_components_xjtu/lam0.08_B5_foldB ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B5_foldB seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.1002  R2=0.7629  (best 0.1002)
+  final-epoch val MAE=0.1151 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.1421  R2=0.5722  (best 0.1421)
+  final-epoch val MAE=0.0930 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.1712  R2=0.3735  (best 0.1712)
+  final-epoch val MAE=0.1132 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.1044  R2=0.7673  (best 0.1044)
+  final-epoch val MAE=0.1042 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.0947  R2=0.7950  (best 0.0947)
+  final-epoch val MAE=0.0951 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B5_foldB\results.json
+=== outputs/r1_components_xjtu/lam0.08_B5_foldC ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B5_foldC seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.1433  R2=0.6727  (best 0.1433)
+  final-epoch val MAE=0.1451 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.1406  R2=0.6470  (best 0.1406)
+  final-epoch val MAE=0.1521 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.1244  R2=0.7131  (best 0.1244)
+  final-epoch val MAE=0.1250 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.1105  R2=0.7599  (best 0.1105)
+  final-epoch val MAE=0.1366 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.1028  R2=0.8141  (best 0.1028)
+  final-epoch val MAE=0.1650 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B5_foldC\results.json
+=== outputs/r1_components_xjtu/lam0.08_B5_foldD ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B5_foldD seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.3930  R2=-1.6619  (best 0.3930)
+  final-epoch val MAE=0.3546 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.3128  R2=-0.7618  (best 0.3128)
+  final-epoch val MAE=0.3578 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.3224  R2=-0.8712  (best 0.3224)
+  final-epoch val MAE=0.3176 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.3290  R2=-0.9200  (best 0.3290)
+  final-epoch val MAE=0.3364 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.4163  R2=-1.9078  (best 0.4163)
+  final-epoch val MAE=0.3515 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B5_foldD\results.json
+=== outputs/r1_components_xjtu/lam0.08_B10_foldA ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B10_foldA seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/10  val MAE=0.1182  R2=0.7576  (best 0.1182)
+  epoch  10/10  val MAE=0.1629  R2=0.4939  (best 0.1168)
+  final-epoch val MAE=0.1629 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/10  val MAE=0.1198  R2=0.7427  (best 0.1198)
+  epoch  10/10  val MAE=0.1524  R2=0.5530  (best 0.1198)
+  final-epoch val MAE=0.1524 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/10  val MAE=0.1583  R2=0.5589  (best 0.1583)
+  epoch  10/10  val MAE=0.1686  R2=0.4512  (best 0.1331)
+  final-epoch val MAE=0.1686 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/10  val MAE=0.1158  R2=0.7687  (best 0.1158)
+  epoch  10/10  val MAE=0.1515  R2=0.5431  (best 0.1158)
+  final-epoch val MAE=0.1515 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/10  val MAE=0.1566  R2=0.5662  (best 0.1566)
+  epoch  10/10  val MAE=0.1576  R2=0.5261  (best 0.1253)
+  final-epoch val MAE=0.1576 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B10_foldA\results.json
+=== outputs/r1_components_xjtu/lam0.08_B10_foldB ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B10_foldB seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/10  val MAE=0.1002  R2=0.7629  (best 0.1002)
+  epoch  10/10  val MAE=0.1184  R2=0.7245  (best 0.1002)
+  final-epoch val MAE=0.1184 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/10  val MAE=0.1421  R2=0.5722  (best 0.1421)
+  epoch  10/10  val MAE=0.0922  R2=0.8037  (best 0.0869)
+  final-epoch val MAE=0.0922 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/10  val MAE=0.1712  R2=0.3735  (best 0.1712)
+  epoch  10/10  val MAE=0.1028  R2=0.7692  (best 0.0871)
+  final-epoch val MAE=0.1028 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/10  val MAE=0.1044  R2=0.7673  (best 0.1044)
+  epoch  10/10  val MAE=0.1348  R2=0.5726  (best 0.0992)
+  final-epoch val MAE=0.1348 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/10  val MAE=0.0947  R2=0.7950  (best 0.0947)
+  epoch  10/10  val MAE=0.0956  R2=0.8092  (best 0.0943)
+  final-epoch val MAE=0.0956 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B10_foldB\results.json
+=== outputs/r1_components_xjtu/lam0.08_B10_foldC ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B10_foldC seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/10  val MAE=0.1433  R2=0.6727  (best 0.1433)
+  epoch  10/10  val MAE=0.1736  R2=0.4549  (best 0.1358)
+  final-epoch val MAE=0.1736 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/10  val MAE=0.1406  R2=0.6470  (best 0.1406)
+  epoch  10/10  val MAE=0.1855  R2=0.3247  (best 0.1299)
+  final-epoch val MAE=0.1855 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/10  val MAE=0.1244  R2=0.7131  (best 0.1244)
+  epoch  10/10  val MAE=0.1653  R2=0.4400  (best 0.1113)
+  final-epoch val MAE=0.1653 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/10  val MAE=0.1105  R2=0.7599  (best 0.1105)
+  epoch  10/10  val MAE=0.1577  R2=0.4953  (best 0.1105)
+  final-epoch val MAE=0.1577 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/10  val MAE=0.1028  R2=0.8141  (best 0.1028)
+  epoch  10/10  val MAE=0.1667  R2=0.4592  (best 0.1028)
+  final-epoch val MAE=0.1667 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B10_foldC\results.json
+=== outputs/r1_components_xjtu/lam0.08_B10_foldD ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B10_foldD seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/10  val MAE=0.3930  R2=-1.6619  (best 0.3930)
+  epoch  10/10  val MAE=0.3164  R2=-0.8031  (best 0.3144)
+  final-epoch val MAE=0.3164 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/10  val MAE=0.3128  R2=-0.7618  (best 0.3128)
+  epoch  10/10  val MAE=0.3416  R2=-1.0825  (best 0.3128)
+  final-epoch val MAE=0.3416 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/10  val MAE=0.3224  R2=-0.8712  (best 0.3224)
+  epoch  10/10  val MAE=0.3218  R2=-0.8621  (best 0.2806)
+  final-epoch val MAE=0.3218 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/10  val MAE=0.3290  R2=-0.9200  (best 0.3290)
+  epoch  10/10  val MAE=0.3252  R2=-0.8974  (best 0.3012)
+  final-epoch val MAE=0.3252 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/10  val MAE=0.4163  R2=-1.9078  (best 0.4163)
+  epoch  10/10  val MAE=0.3160  R2=-0.8024  (best 0.3160)
+  final-epoch val MAE=0.3160 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B10_foldD\results.json
+=== outputs/r1_components_xjtu/lam0.08_B20_foldA ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B20_foldA seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/20  val MAE=0.1182  R2=0.7576  (best 0.1182)
+  epoch  10/20  val MAE=0.1662  R2=0.5007  (best 0.1133)
+  epoch  20/20  val MAE=0.1748  R2=0.4059  (best 0.1133)
+  final-epoch val MAE=0.1748 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/20  val MAE=0.1198  R2=0.7427  (best 0.1198)
+  epoch  10/20  val MAE=0.1632  R2=0.4943  (best 0.1198)
+  epoch  20/20  val MAE=0.1591  R2=0.5159  (best 0.1198)
+  final-epoch val MAE=0.1591 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/20  val MAE=0.1583  R2=0.5589  (best 0.1583)
+  epoch  10/20  val MAE=0.1594  R2=0.4932  (best 0.1360)
+  epoch  20/20  val MAE=0.1721  R2=0.4163  (best 0.1360)
+  final-epoch val MAE=0.1721 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/20  val MAE=0.1158  R2=0.7687  (best 0.1158)
+  epoch  10/20  val MAE=0.1462  R2=0.5873  (best 0.1147)
+  epoch  20/20  val MAE=0.1582  R2=0.5030  (best 0.1147)
+  final-epoch val MAE=0.1582 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/20  val MAE=0.1566  R2=0.5662  (best 0.1566)
+  epoch  10/20  val MAE=0.1639  R2=0.4950  (best 0.1364)
+  epoch  20/20  val MAE=0.1773  R2=0.4030  (best 0.1364)
+  final-epoch val MAE=0.1773 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B20_foldA\results.json
+=== outputs/r1_components_xjtu/lam0.08_B20_foldB ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B20_foldB seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/20  val MAE=0.1002  R2=0.7629  (best 0.1002)
+  epoch  10/20  val MAE=0.1036  R2=0.7582  (best 0.0874)
+  epoch  20/20  val MAE=0.1020  R2=0.8084  (best 0.0874)
+  final-epoch val MAE=0.1020 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/20  val MAE=0.1421  R2=0.5722  (best 0.1421)
+  epoch  10/20  val MAE=0.1419  R2=0.5907  (best 0.0989)
+  epoch  20/20  val MAE=0.1136  R2=0.7259  (best 0.0989)
+  final-epoch val MAE=0.1136 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/20  val MAE=0.1712  R2=0.3735  (best 0.1712)
+  epoch  10/20  val MAE=0.1689  R2=0.4161  (best 0.1009)
+  epoch  20/20  val MAE=0.1200  R2=0.6477  (best 0.0959)
+  final-epoch val MAE=0.1201 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/20  val MAE=0.1044  R2=0.7673  (best 0.1044)
+  epoch  10/20  val MAE=0.1231  R2=0.6327  (best 0.0854)
+  epoch  20/20  val MAE=0.1176  R2=0.6856  (best 0.0854)
+  final-epoch val MAE=0.1176 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/20  val MAE=0.0947  R2=0.7950  (best 0.0947)
+  epoch  10/20  val MAE=0.1069  R2=0.7658  (best 0.0767)
+  epoch  20/20  val MAE=0.1095  R2=0.7661  (best 0.0767)
+  final-epoch val MAE=0.1095 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B20_foldB\results.json
+=== outputs/r1_components_xjtu/lam0.08_B20_foldC ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B20_foldC seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/20  val MAE=0.1433  R2=0.6727  (best 0.1433)
+  epoch  10/20  val MAE=0.1969  R2=0.2779  (best 0.1179)
+  epoch  20/20  val MAE=0.1768  R2=0.3907  (best 0.1179)
+  final-epoch val MAE=0.1768 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/20  val MAE=0.1406  R2=0.6470  (best 0.1406)
+  epoch  10/20  val MAE=0.1678  R2=0.4391  (best 0.1204)
+  epoch  20/20  val MAE=0.1879  R2=0.2595  (best 0.1204)
+  final-epoch val MAE=0.1879 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/20  val MAE=0.1244  R2=0.7131  (best 0.1244)
+  epoch  10/20  val MAE=0.1844  R2=0.3839  (best 0.1192)
+  epoch  20/20  val MAE=0.1751  R2=0.4065  (best 0.1192)
+  final-epoch val MAE=0.1751 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/20  val MAE=0.1105  R2=0.7599  (best 0.1105)
+  epoch  10/20  val MAE=0.1232  R2=0.7015  (best 0.1105)
+  epoch  20/20  val MAE=0.1869  R2=0.3145  (best 0.1105)
+  final-epoch val MAE=0.1869 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/20  val MAE=0.1028  R2=0.8141  (best 0.1028)
+  epoch  10/20  val MAE=0.1127  R2=0.7300  (best 0.1028)
+  epoch  20/20  val MAE=0.1749  R2=0.3662  (best 0.1028)
+  final-epoch val MAE=0.1749 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B20_foldC\results.json
+=== outputs/r1_components_xjtu/lam0.08_B20_foldD ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B20_foldD seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/20  val MAE=0.3930  R2=-1.6619  (best 0.3930)
+  epoch  10/20  val MAE=0.3003  R2=-0.6265  (best 0.2963)
+  epoch  20/20  val MAE=0.3056  R2=-0.6877  (best 0.2896)
+  final-epoch val MAE=0.3056 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/20  val MAE=0.3128  R2=-0.7618  (best 0.3128)
+  epoch  10/20  val MAE=0.3140  R2=-0.7801  (best 0.3097)
+  epoch  20/20  val MAE=0.2947  R2=-0.5586  (best 0.2783)
+  final-epoch val MAE=0.2947 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/20  val MAE=0.3224  R2=-0.8712  (best 0.3224)
+  epoch  10/20  val MAE=0.3333  R2=-0.9879  (best 0.2839)
+  epoch  20/20  val MAE=0.3080  R2=-0.7168  (best 0.2839)
+  final-epoch val MAE=0.3080 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/20  val MAE=0.3290  R2=-0.9200  (best 0.3290)
+  epoch  10/20  val MAE=0.3372  R2=-1.0429  (best 0.3038)
+  epoch  20/20  val MAE=0.3081  R2=-0.7083  (best 0.2977)
+  final-epoch val MAE=0.3081 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/20  val MAE=0.4163  R2=-1.9078  (best 0.4163)
+  epoch  10/20  val MAE=0.3388  R2=-1.0619  (best 0.3141)
+  epoch  20/20  val MAE=0.3125  R2=-0.7593  (best 0.3015)
+  final-epoch val MAE=0.3125 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B20_foldD\results.json
+=== outputs/r1_components_xjtu/lam0.08_B40_foldA ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B40_foldA seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/40  val MAE=0.1264  R2=0.7044  (best 0.1264)
+  epoch  10/40  val MAE=0.1644  R2=0.4695  (best 0.1149)
+  epoch  20/40  val MAE=0.1654  R2=0.4558  (best 0.1149)
+  epoch  30/40  val MAE=0.1522  R2=0.5352  (best 0.1149)
+  epoch  40/40  val MAE=0.1623  R2=0.4710  (best 0.1149)
+  final-epoch val MAE=0.1623 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/40  val MAE=0.1236  R2=0.7440  (best 0.1236)
+  epoch  10/40  val MAE=0.1589  R2=0.4903  (best 0.1236)
+  epoch  20/40  val MAE=0.1485  R2=0.5662  (best 0.1236)
+  epoch  30/40  val MAE=0.1500  R2=0.5478  (best 0.1236)
+  epoch  40/40  val MAE=0.1482  R2=0.5538  (best 0.1236)
+  final-epoch val MAE=0.1482 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/40  val MAE=0.1778  R2=0.4236  (best 0.1778)
+  epoch  10/40  val MAE=0.1589  R2=0.5067  (best 0.1491)
+  epoch  20/40  val MAE=0.1591  R2=0.5174  (best 0.1356)
+  epoch  30/40  val MAE=0.1548  R2=0.5417  (best 0.1356)
+  epoch  40/40  val MAE=0.1591  R2=0.5093  (best 0.1356)
+  final-epoch val MAE=0.1591 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/40  val MAE=0.1076  R2=0.7916  (best 0.1076)
+  epoch  10/40  val MAE=0.1474  R2=0.5785  (best 0.1076)
+  epoch  20/40  val MAE=0.1432  R2=0.5922  (best 0.1076)
+  epoch  30/40  val MAE=0.1585  R2=0.5008  (best 0.1076)
+  epoch  40/40  val MAE=0.1562  R2=0.5103  (best 0.1076)
+  final-epoch val MAE=0.1562 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/40  val MAE=0.1324  R2=0.6781  (best 0.1324)
+  epoch  10/40  val MAE=0.1718  R2=0.4262  (best 0.1278)
+  epoch  20/40  val MAE=0.1565  R2=0.5210  (best 0.1278)
+  epoch  30/40  val MAE=0.1611  R2=0.4867  (best 0.1278)
+  epoch  40/40  val MAE=0.1604  R2=0.4920  (best 0.1278)
+  final-epoch val MAE=0.1604 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B40_foldA\results.json
+=== outputs/r1_components_xjtu/lam0.08_B40_foldB ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B40_foldB seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/40  val MAE=0.1540  R2=0.5150  (best 0.1540)
+  epoch  10/40  val MAE=0.1193  R2=0.7539  (best 0.0948)
+  epoch  20/40  val MAE=0.1142  R2=0.7251  (best 0.0948)
+  epoch  30/40  val MAE=0.1241  R2=0.6570  (best 0.0948)
+  epoch  40/40  val MAE=0.1312  R2=0.6425  (best 0.0948)
+  final-epoch val MAE=0.1312 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/40  val MAE=0.1489  R2=0.5522  (best 0.1489)
+  epoch  10/40  val MAE=0.1098  R2=0.7786  (best 0.0893)
+  epoch  20/40  val MAE=0.1317  R2=0.6296  (best 0.0893)
+  epoch  30/40  val MAE=0.1347  R2=0.6248  (best 0.0893)
+  epoch  40/40  val MAE=0.1516  R2=0.5693  (best 0.0893)
+  final-epoch val MAE=0.1516 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/40  val MAE=0.1458  R2=0.5305  (best 0.1458)
+  epoch  10/40  val MAE=0.1291  R2=0.6314  (best 0.1091)
+  epoch  20/40  val MAE=0.1183  R2=0.7004  (best 0.1063)
+  epoch  30/40  val MAE=0.1335  R2=0.6420  (best 0.1063)
+  epoch  40/40  val MAE=0.1442  R2=0.5949  (best 0.1063)
+  final-epoch val MAE=0.1442 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/40  val MAE=0.1046  R2=0.7284  (best 0.1046)
+  epoch  10/40  val MAE=0.1267  R2=0.6184  (best 0.1020)
+  epoch  20/40  val MAE=0.1012  R2=0.7425  (best 0.1012)
+  epoch  30/40  val MAE=0.1210  R2=0.6760  (best 0.1012)
+  epoch  40/40  val MAE=0.1241  R2=0.6634  (best 0.1012)
+  final-epoch val MAE=0.1241 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/40  val MAE=0.0784  R2=0.8673  (best 0.0784)
+  epoch  10/40  val MAE=0.0973  R2=0.7872  (best 0.0784)
+  epoch  20/40  val MAE=0.1116  R2=0.7278  (best 0.0784)
+  epoch  30/40  val MAE=0.1072  R2=0.7617  (best 0.0784)
+  epoch  40/40  val MAE=0.1210  R2=0.7105  (best 0.0784)
+  final-epoch val MAE=0.1211 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B40_foldB\results.json
+=== outputs/r1_components_xjtu/lam0.08_B40_foldC ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B40_foldC seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/40  val MAE=0.1441  R2=0.6551  (best 0.1441)
+  epoch  10/40  val MAE=0.1903  R2=0.2873  (best 0.1316)
+  epoch  20/40  val MAE=0.1573  R2=0.4939  (best 0.1316)
+  epoch  30/40  val MAE=0.1765  R2=0.3724  (best 0.1316)
+  epoch  40/40  val MAE=0.1501  R2=0.5462  (best 0.1316)
+  final-epoch val MAE=0.1502 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/40  val MAE=0.1348  R2=0.6662  (best 0.1348)
+  epoch  10/40  val MAE=0.1626  R2=0.4542  (best 0.1208)
+  epoch  20/40  val MAE=0.1710  R2=0.3996  (best 0.1208)
+  epoch  30/40  val MAE=0.1857  R2=0.2951  (best 0.1208)
+  epoch  40/40  val MAE=0.1721  R2=0.3897  (best 0.1208)
+  final-epoch val MAE=0.1721 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/40  val MAE=0.1802  R2=0.4489  (best 0.1802)
+  epoch  10/40  val MAE=0.1773  R2=0.3980  (best 0.1185)
+  epoch  20/40  val MAE=0.1829  R2=0.4597  (best 0.1185)
+  epoch  30/40  val MAE=0.1740  R2=0.4129  (best 0.1185)
+  epoch  40/40  val MAE=0.1797  R2=0.3581  (best 0.1185)
+  final-epoch val MAE=0.1797 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/40  val MAE=0.1216  R2=0.7585  (best 0.1216)
+  epoch  10/40  val MAE=0.2146  R2=0.2012  (best 0.1216)
+  epoch  20/40  val MAE=0.1900  R2=0.2486  (best 0.1216)
+  epoch  30/40  val MAE=0.1960  R2=0.2041  (best 0.1216)
+  epoch  40/40  val MAE=0.1712  R2=0.4251  (best 0.1216)
+  final-epoch val MAE=0.1712 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/40  val MAE=0.0990  R2=0.8172  (best 0.0990)
+  epoch  10/40  val MAE=0.1436  R2=0.5910  (best 0.0990)
+  epoch  20/40  val MAE=0.1641  R2=0.4526  (best 0.0990)
+  epoch  30/40  val MAE=0.2078  R2=0.1247  (best 0.0990)
+  epoch  40/40  val MAE=0.1776  R2=0.3480  (best 0.0990)
+  final-epoch val MAE=0.1776 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B40_foldC\results.json
+=== outputs/r1_components_xjtu/lam0.08_B40_foldD ===
+[r1_components_xjtu] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'xjtu', 'band_json': 'outputs/r1_components/band_xjtu.json', 'band_json_sha256': '0512698e0cbb3f6c24b52e37989230c1ec448da5727c2792be3fb8768f5b1072', 'band_hz': [9600.0, 12800.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919} ablation=none
+[exp17] XJTU-SY variant=lam0.08_B40_foldD seeds=[42, 123, 777, 999, 7]
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/40  val MAE=0.3897  R2=-1.6210  (best 0.3897)
+  epoch  10/40  val MAE=0.3074  R2=-0.6873  (best 0.2867)
+  epoch  20/40  val MAE=0.2921  R2=-0.5358  (best 0.2820)
+  epoch  30/40  val MAE=0.3054  R2=-0.6676  (best 0.2820)
+  epoch  40/40  val MAE=0.3010  R2=-0.6240  (best 0.2820)
+  final-epoch val MAE=0.3010 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/40  val MAE=0.3194  R2=-0.8366  (best 0.3194)
+  epoch  10/40  val MAE=0.3008  R2=-0.6268  (best 0.3008)
+  epoch  20/40  val MAE=0.3046  R2=-0.6681  (best 0.2823)
+  epoch  30/40  val MAE=0.2893  R2=-0.4976  (best 0.2756)
+  epoch  40/40  val MAE=0.2947  R2=-0.5505  (best 0.2756)
+  final-epoch val MAE=0.2947 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/40  val MAE=0.3158  R2=-0.7970  (best 0.3158)
+  epoch  10/40  val MAE=0.3253  R2=-0.9093  (best 0.2971)
+  epoch  20/40  val MAE=0.3026  R2=-0.6618  (best 0.2932)
+  epoch  30/40  val MAE=0.3036  R2=-0.6639  (best 0.2859)
+  epoch  40/40  val MAE=0.2997  R2=-0.6277  (best 0.2859)
+  final-epoch val MAE=0.2997 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/40  val MAE=0.3221  R2=-0.8539  (best 0.3221)
+  epoch  10/40  val MAE=0.3199  R2=-0.8419  (best 0.3045)
+  epoch  20/40  val MAE=0.3508  R2=-1.1866  (best 0.2768)
+  epoch  30/40  val MAE=0.3047  R2=-0.6568  (best 0.2768)
+  epoch  40/40  val MAE=0.3088  R2=-0.7042  (best 0.2768)
+  final-epoch val MAE=0.3088 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/40  val MAE=0.3854  R2=-1.5586  (best 0.3854)
+  epoch  10/40  val MAE=0.3500  R2=-1.1787  (best 0.3259)
+  epoch  20/40  val MAE=0.3106  R2=-0.7380  (best 0.3014)
+  epoch  30/40  val MAE=0.3030  R2=-0.6406  (best 0.2890)
+  epoch  40/40  val MAE=0.3181  R2=-0.8094  (best 0.2890)
+  final-epoch val MAE=0.3181 (test bearings not loaded)
+
+[exp17] results saved to outputs\r1_components_xjtu\lam0.08_B40_foldD\results.json
+=== r1_components_runs xjtu-budget done ===

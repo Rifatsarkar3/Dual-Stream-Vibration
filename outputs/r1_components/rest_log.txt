@@ -1,0 +1,14 @@
+22:22:22 waiting for the PRONOSTIA final runs
+22:33:23 PRONOSTIA final finished: exit 0 22:32:59
+22:33:23 noise pronostia start
+22:35:34 noise pronostia done
+22:35:34 xjtu-budget start
+00:28:24 xjtu-budget done; B* = 5
+00:28:24 xjtu-lambda start
+01:04:15 xjtu-lambda done; lambda* = 0.08
+01:04:15 xjtu-valpreds start
+01:22:07 xjtu-valpreds done
+01:22:07 xjtu-final start
+02:05:27 xjtu-final done
+02:05:27 noise xjtu start
+02:18:09 noise xjtu done; all stages finished

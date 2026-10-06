@@ -1,0 +1,421 @@
+=== outputs/r1_components_val/rawonly_foldA ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=rawonly_foldA seeds=[42, 123, 777, 999, 7] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.1953  R2=0.2917  (best 0.1953)
+  final-epoch val MAE=0.1948 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.2114  R2=0.2089  (best 0.2114)
+  final-epoch val MAE=0.2425 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.1824  R2=0.4215  (best 0.1824)
+  final-epoch val MAE=0.1688 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.1935  R2=0.3056  (best 0.1935)
+  final-epoch val MAE=0.1796 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.1650  R2=0.5341  (best 0.1650)
+  final-epoch val MAE=0.2028 (test bearings not loaded)
+
+[exp16] results saved to outputs\r1_components_val\rawonly_foldA\results.json
+=== outputs/r1_components_val/rawonly_foldB ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=rawonly_foldB seeds=[42, 123, 777, 999, 7] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.0822  R2=0.8588  (best 0.0822)
+  final-epoch val MAE=0.0971 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.0780  R2=0.8185  (best 0.0780)
+  final-epoch val MAE=0.1455 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.0811  R2=0.8539  (best 0.0811)
+  final-epoch val MAE=0.1462 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.0978  R2=0.8109  (best 0.0978)
+  final-epoch val MAE=0.1192 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.0903  R2=0.7811  (best 0.0903)
+  final-epoch val MAE=0.1375 (test bearings not loaded)
+
+[exp16] results saved to outputs\r1_components_val\rawonly_foldB\results.json
+=== outputs/r1_components_val/rawonly_foldC ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=rawonly_foldC seeds=[42, 123, 777, 999, 7] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.3291  R2=-0.5098  (best 0.3291)
+  final-epoch val MAE=0.3111 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.2005  R2=0.3077  (best 0.2005)
+  final-epoch val MAE=0.3148 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.3046  R2=-0.2173  (best 0.3046)
+  final-epoch val MAE=0.3464 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.1378  R2=0.6754  (best 0.1378)
+  final-epoch val MAE=0.2425 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.1741  R2=0.5368  (best 0.1741)
+  final-epoch val MAE=0.3212 (test bearings not loaded)
+
+[exp16] results saved to outputs\r1_components_val\rawonly_foldC\results.json
+=== outputs/r1_components_val/rawonly_foldD ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=rawonly_foldD seeds=[42, 123, 777, 999, 7] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.1884  R2=0.3537  (best 0.1884)
+  final-epoch val MAE=0.1764 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.2025  R2=0.3051  (best 0.2025)
+  final-epoch val MAE=0.1746 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.2318  R2=0.0574  (best 0.2318)
+  final-epoch val MAE=0.1935 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.2152  R2=0.1808  (best 0.2152)
+  final-epoch val MAE=0.1723 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.2199  R2=0.1552  (best 0.2199)
+  final-epoch val MAE=0.1736 (test bearings not loaded)
+
+[exp16] results saved to outputs\r1_components_val\rawonly_foldD\results.json
+=== outputs/r1_components_val/static_foldA ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=static_foldA seeds=[42, 123, 777, 999, 7] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=False
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.1739  R2=0.4832  (best 0.1739)
+  final-epoch val MAE=0.1942 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.2117  R2=0.1975  (best 0.2117)
+  final-epoch val MAE=0.2361 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.2524  R2=-0.1777  (best 0.2524)
+  final-epoch val MAE=0.1567 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.1874  R2=0.3778  (best 0.1874)
+  final-epoch val MAE=0.1781 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.1841  R2=0.4236  (best 0.1841)
+  final-epoch val MAE=0.2024 (test bearings not loaded)
+
+[exp16] results saved to outputs\r1_components_val\static_foldA\results.json
+=== outputs/r1_components_val/static_foldB ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=static_foldB seeds=[42, 123, 777, 999, 7] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=False
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.1086  R2=0.7023  (best 0.1086)
+  final-epoch val MAE=0.1174 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.0733  R2=0.8351  (best 0.0733)
+  final-epoch val MAE=0.1249 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.1016  R2=0.7625  (best 0.1016)
+  final-epoch val MAE=0.1280 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.1171  R2=0.7182  (best 0.1171)
+  final-epoch val MAE=0.1420 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.1338  R2=0.6150  (best 0.1338)
+  final-epoch val MAE=0.1340 (test bearings not loaded)
+
+[exp16] results saved to outputs\r1_components_val\static_foldB\results.json
+=== outputs/r1_components_val/static_foldC ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=static_foldC seeds=[42, 123, 777, 999, 7] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=False
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.1553  R2=0.6316  (best 0.1553)
+  final-epoch val MAE=0.2217 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.1666  R2=0.5827  (best 0.1666)
+  final-epoch val MAE=0.2280 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.1344  R2=0.6435  (best 0.1344)
+  final-epoch val MAE=0.2269 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.1384  R2=0.6988  (best 0.1384)
+  final-epoch val MAE=0.1868 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.1007  R2=0.7894  (best 0.1007)
+  final-epoch val MAE=0.1753 (test bearings not loaded)
+
+[exp16] results saved to outputs\r1_components_val\static_foldC\results.json
+=== outputs/r1_components_val/static_foldD ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=static_foldD seeds=[42, 123, 777, 999, 7] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=False
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.1617  R2=0.5228  (best 0.1617)
+  final-epoch val MAE=0.1761 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.1892  R2=0.3420  (best 0.1892)
+  final-epoch val MAE=0.1838 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.2333  R2=0.0369  (best 0.2333)
+  final-epoch val MAE=0.1957 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.1937  R2=0.3062  (best 0.1937)
+  final-epoch val MAE=0.1758 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.2006  R2=0.2612  (best 0.2006)
+  final-epoch val MAE=0.1959 (test bearings not loaded)
+
+[exp16] results saved to outputs\r1_components_val\static_foldD\results.json
+=== outputs/r1_components_val/no_pgmc_foldA ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=no_pgmc_foldA seeds=[42, 123, 777, 999, 7] pgmc_mode=aux-seq dann=True pgmc=False adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.1945  R2=0.3245  (best 0.1945)
+  final-epoch val MAE=0.1846 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.1983  R2=0.2898  (best 0.1983)
+  final-epoch val MAE=0.2204 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.2071  R2=0.2277  (best 0.2071)
+  final-epoch val MAE=0.1607 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.1832  R2=0.3643  (best 0.1832)
+  final-epoch val MAE=0.1798 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.2020  R2=0.2765  (best 0.2020)
+  final-epoch val MAE=0.1912 (test bearings not loaded)
+
+[exp16] results saved to outputs\r1_components_val\no_pgmc_foldA\results.json
+=== outputs/r1_components_val/no_pgmc_foldB ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=no_pgmc_foldB seeds=[42, 123, 777, 999, 7] pgmc_mode=aux-seq dann=True pgmc=False adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.1192  R2=0.6657  (best 0.1192)
+  final-epoch val MAE=0.1065 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.0860  R2=0.8073  (best 0.0860)
+  final-epoch val MAE=0.1332 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.1079  R2=0.7916  (best 0.1079)
+  final-epoch val MAE=0.1218 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.1135  R2=0.6912  (best 0.1135)
+  final-epoch val MAE=0.1419 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.0998  R2=0.8026  (best 0.0998)
+  final-epoch val MAE=0.1406 (test bearings not loaded)
+
+[exp16] results saved to outputs\r1_components_val\no_pgmc_foldB\results.json
+=== outputs/r1_components_val/no_pgmc_foldC ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=no_pgmc_foldC seeds=[42, 123, 777, 999, 7] pgmc_mode=aux-seq dann=True pgmc=False adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.1338  R2=0.6542  (best 0.1338)
+  final-epoch val MAE=0.2615 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.2467  R2=0.0405  (best 0.2467)
+  final-epoch val MAE=0.2512 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.0915  R2=0.8438  (best 0.0915)
+  final-epoch val MAE=0.2691 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.1230  R2=0.7407  (best 0.1230)
+  final-epoch val MAE=0.2674 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.1483  R2=0.6287  (best 0.1483)
+  final-epoch val MAE=0.2508 (test bearings not loaded)
+
+[exp16] results saved to outputs\r1_components_val\no_pgmc_foldC\results.json
+=== outputs/r1_components_val/no_pgmc_foldD ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=no_pgmc_foldD seeds=[42, 123, 777, 999, 7] pgmc_mode=aux-seq dann=True pgmc=False adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  val MAE=0.1690  R2=0.4953  (best 0.1690)
+  final-epoch val MAE=0.1847 (test bearings not loaded)
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  val MAE=0.1972  R2=0.2932  (best 0.1972)
+  final-epoch val MAE=0.1801 (test bearings not loaded)
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  val MAE=0.2162  R2=0.1272  (best 0.2162)
+  final-epoch val MAE=0.1933 (test bearings not loaded)
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  val MAE=0.1946  R2=0.2910  (best 0.1946)
+  final-epoch val MAE=0.1797 (test bearings not loaded)
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  val MAE=0.1816  R2=0.4419  (best 0.1816)
+  final-epoch val MAE=0.1846 (test bearings not loaded)
+
+[exp16] results saved to outputs\r1_components_val\no_pgmc_foldD\results.json
+=== r1_components_runs valpreds done ===

@@ -17,6 +17,7 @@ RUN:
 
 import argparse
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -29,6 +30,11 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from Experiments.exp16_ress import (  # noqa: E402
     CONFIG as BASE_CONFIG, train_one_seed, evaluate_on_test,
     load_bearings, aggregate)
+from Experiments.r1_provenance import provenance  # noqa: E402
+
+# Wrappers that change the model (e.g. Experiments/r1_temporal_xjtu.py) add their files here.
+EXTRA_CODE = ()
+PROVENANCE_EXTRA = {}
 
 XJTU_CONFIG = dict(BASE_CONFIG)
 XJTU_CONFIG.update({
@@ -70,9 +76,26 @@ def main():
                     help='skip Condition-3 zero-shot eval (selection runs)')
     ap.add_argument('--lambda-pgmc', type=float, default=None)
     ap.add_argument('--seeds', type=str, default=None)
+    ap.add_argument('--output-root', type=str, default=None)
+    ap.add_argument('--skip-test', action='store_true',
+                    help='selection runs: in-domain test bearings are neither loaded nor evaluated')
+    ap.add_argument('--deterministic', action='store_true',
+                    help='deterministic CUDA kernels, so a seed reproduces a run exactly')
+    ap.add_argument('--save-val-preds', action='store_true',
+                    help='also save final-epoch MC-dropout predictions on the validation bearing '
+                         '(valpreds_seed*.npz) and the final-epoch weights, as exp16 does')
     args = ap.parse_args()
 
+    if args.deterministic:
+        # Must precede the first cuBLAS call; the CUDA context is created lazily.
+        os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG', ':4096:8')
+        torch.use_deterministic_algorithms(True)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+
     config = dict(XJTU_CONFIG)
+    if args.output_root:
+        config['output_root'] = args.output_root
     if args.pgmc_mode:
         config['pgmc_mode'] = args.pgmc_mode
     if args.val_mode:
@@ -93,6 +116,11 @@ def main():
         config['lambda_pgmc_max'] = args.lambda_pgmc
     if args.seeds:
         config['seeds'] = [int(s) for s in args.seeds.split(',')]
+    if args.skip_test:
+        config['skip_test'] = True
+        config['test_bearings'] = []
+    if args.save_val_preds:
+        config['save_val_preds'] = True
 
     variant = args.variant_name or ('smoke' if args.smoke else 'full')
     out_dir = Path(config['output_root']) / variant
@@ -118,19 +146,29 @@ def main():
             seed, config, use_dann=True, use_pgmc=True, static_gate=False,
             epochs_override=epochs_override)
 
-        arrays = result.pop('_arrays')
-        np.savez_compressed(
-            out_dir / f'preds_seed{seed}.npz',
-            **{f'raw_{n}': v for n, v in arrays['raw_p'].items()},
-            **{f'tgt_{n}': v for n, v in arrays['tgt'].items()},
-            **{f'alpha_{n}': v for n, v in arrays['alphas'].items()},
-            **{f'mcmean_{n}': v for n, v in arrays['mc_mean'].items()},
-            **{f'mcstd_{n}': v for n, v in arrays['mc_std'].items()})
+        arrays = result.pop('_arrays', None)
+        if arrays is not None:
+            np.savez_compressed(
+                out_dir / f'preds_seed{seed}.npz',
+                **{f'raw_{n}': v for n, v in arrays['raw_p'].items()},
+                **{f'tgt_{n}': v for n, v in arrays['tgt'].items()},
+                **{f'alpha_{n}': v for n, v in arrays['alphas'].items()},
+                **{f'mcmean_{n}': v for n, v in arrays['mc_mean'].items()},
+                **{f'mcstd_{n}': v for n, v in arrays['mc_std'].items()})
+        val_arrays = result.pop('_val_arrays', None)
+        final_state = result.pop('_final_state', None)
+        if val_arrays is not None:
+            np.savez_compressed(out_dir / f'valpreds_seed{seed}.npz', **val_arrays)
+            torch.save(final_state, out_dir / f'model_final_seed{seed}.pth')
         torch.save(model.state_dict(), out_dir / f'model_seed{seed}.pth')
 
-        print(f"  TEST raw : MAE={result['raw']['mae']:.4f} R2={result['raw']['r2']:.4f} "
-              f"Mono={result['raw']['mono']:.1f}%")
-        print(f"  TEST pava: MAE={result['pava']['mae']:.4f} R2={result['pava']['r2']:.4f}")
+        if 'raw' in result:
+            print(f"  TEST raw : MAE={result['raw']['mae']:.4f} R2={result['raw']['r2']:.4f} "
+                  f"Mono={result['raw']['mono']:.1f}%")
+            print(f"  TEST pava: MAE={result['pava']['mae']:.4f} R2={result['pava']['r2']:.4f}")
+        elif result['val_history']:
+            print(f"  final-epoch val MAE={result['val_history'][-1]:.4f} "
+                  f"(test bearings not loaded)", flush=True)
         per_seed.append(result)
 
         # Zero-shot Condition 3 evaluation (never seen in training)
@@ -154,13 +192,15 @@ def main():
         'config': {k: v for k, v in config.items() if k != 'train_bearings'},
         'per_seed': per_seed,
         'per_seed_zeroshot': per_seed_zs,
-        'aggregated': aggregate(per_seed) if per_seed else {},
+        'aggregated': aggregate(per_seed) if per_seed and not config.get('skip_test') else {},
         'aggregated_zeroshot': aggregate(per_seed_zs) if per_seed_zs else {},
+        'provenance': {**provenance(extra_code=('Experiments/exp17_xjtu.py',) + tuple(EXTRA_CODE)),
+                       **PROVENANCE_EXTRA},
     }
     with open(out_dir / 'results.json', 'w', encoding='utf-8') as f:
         json.dump(final, f, indent=2)
 
-    if len(per_seed) > 1:
+    if len(per_seed) > 1 and final['aggregated']:
         a, az = final['aggregated'], final['aggregated_zeroshot']
         print(f"\n=== XJTU AGGREGATE ({len(per_seed)} seeds) ===")
         print(f"  in-domain raw : MAE={a['raw_mae_mean']:.4f}±{a['raw_mae_std']:.4f} "

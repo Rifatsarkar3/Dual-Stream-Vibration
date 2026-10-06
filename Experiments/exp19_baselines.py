@@ -39,6 +39,7 @@ from Experiments.exp16_ress import (  # noqa: E402
 from src.vanilla_baselines import Vanilla1DCNN, VanillaBiLSTM  # noqa: E402
 from src.sota_baselines import (  # noqa: E402
     CNNLSTMBaseline, VanillaTransformerBaseline, DeepResNet1DBaseline)
+from src.published_baselines import TSMCCNN  # noqa: E402
 
 MODELS = {
     'cnn': Vanilla1DCNN,
@@ -46,6 +47,14 @@ MODELS = {
     'cnnlstm': CNNLSTMBaseline,
     'transformer': VanillaTransformerBaseline,
     'resnet': DeepResNet1DBaseline,
+    'tsmccnn': TSMCCNN,   # published model, Jiang et al. 2020 (ref [21])
+}
+
+# Training settings that a published method specifies itself; everything else
+# (data, splits, budget selection, seeds, evaluation) follows the protocol.
+MODEL_TRAINING = {
+    'tsmccnn': {'loss': 'mse', 'optimizer': 'adam', 'lr': 1e-3, 'weight_decay': 0.0,
+                'channels': 'hv'},
 }
 
 SELECT_SEEDS = [42, 123]          # budget selection needs fewer seeds
@@ -101,16 +110,18 @@ def train_baseline(model_name: str, seed: int, config: Dict, device,
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
+    config = {**config, **MODEL_TRAINING.get(model_name, {})}
     train_loader, val_loader, _seq, test_bearings = build_loaders(config, seed)
     model = BaselineAdapter(MODELS[model_name](),
                             needs_spectrogram=(model_name == 'transformer')).to(device)
     n_params = sum(p.numel() for p in model.parameters())
 
-    optimizer = torch.optim.AdamW(model.parameters(), lr=config['lr'],
-                                  weight_decay=config['weight_decay'])
+    opt_cls = torch.optim.Adam if config.get('optimizer') == 'adam' else torch.optim.AdamW
+    optimizer = opt_cls(model.parameters(), lr=config['lr'],
+                        weight_decay=config['weight_decay'])
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
         optimizer, T_max=config['epochs'], eta_min=1e-6)
-    l1 = nn.L1Loss()
+    criterion = nn.MSELoss() if config.get('loss') == 'mse' else nn.L1Loss()
 
     best_val_mae, best_state, best_epoch, patience_cnt = float('inf'), None, 0, 0
     val_history = []
@@ -120,7 +131,7 @@ def train_baseline(model_name: str, seed: int, config: Dict, device,
             x, y = x.to(device), y.to(device)
             optimizer.zero_grad()
             pred, *_r = model(x)
-            loss = l1(pred, y)
+            loss = criterion(pred, y)
             loss.backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
             optimizer.step()
@@ -152,7 +163,9 @@ def train_baseline(model_name: str, seed: int, config: Dict, device,
                 break
 
     model.load_state_dict({k: v.to(device) for k, v in best_state.items()})
-    result = evaluate_on_test(model, test_bearings, config, device)
+    # Selection runs (config['skip_test']) never evaluate test bearings.
+    result = ({} if config.get('skip_test')
+              else evaluate_on_test(model, test_bearings, config, device))
     result.update({'seed': seed, 'best_epoch': int(best_epoch),
                    'best_val_mae': (float(best_val_mae)
                                     if np.isfinite(best_val_mae) else None),
@@ -230,12 +243,16 @@ def main():
     ap.add_argument('--seeds', type=str, default=None)
     ap.add_argument('--fixed-k', type=int, default=None,
                     help='skip the budget sweep and use this K')
+    ap.add_argument('--data-dir', type=str, default=None,
+                    help='processed data directory override')
     args = ap.parse_args()
 
     base_config = dict(BASE_CONFIG)
     if args.dataset == 'xjtu':
         from Experiments.exp17_xjtu import XJTU_CONFIG
         base_config = dict(XJTU_CONFIG)
+    if args.data_dir:
+        base_config['data_dir'] = args.data_dir
     seeds = ([int(s) for s in args.seeds.split(',')] if args.seeds else None)
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

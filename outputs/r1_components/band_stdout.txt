@@ -1,0 +1,19 @@
+[band] pronostia: late-life windows train_01_Bearing1_1 560, train_02_Bearing1_2 174, train_03_Bearing2_1 182, train_04_Bearing2_2 159
+[band] best five candidates (score = mean over bearings of mean spectral kurtosis):
+     6400 to    9600 Hz  score 2.704
+     4800 to    8000 Hz  score 2.647
+     6400 to    8000 Hz  score 2.360
+     5600 to    7200 Hz  score 1.896
+      800 to    2400 Hz  score 1.854
+[band] selected: 6400 to 9600 Hz
+[band] saved E:\Yolo-Thermal\Dual-Stream Vibration-Vision\outputs\r1_components\band_pronostia.json
+[band] xjtu: late-life windows train_01_Bearing1_1 300, train_02_Bearing1_2 396, train_03_Bearing2_1 1188, train_04_Bearing2_2 396
+[band] best five candidates (score = mean over bearings of mean spectral kurtosis):
+     9600 to   12800 Hz  score 2.826
+    11200 to   12800 Hz  score 2.823
+     6400 to   12800 Hz  score 2.220
+    12000 to   12800 Hz  score 2.065
+    11600 to   12400 Hz  score 2.052
+[band] selected: 9600 to 12800 Hz
+[band] saved E:\Yolo-Thermal\Dual-Stream Vibration-Vision\outputs\r1_components\band_xjtu.json
+=== r1_components_runs band done ===

@@ -1,0 +1,777 @@
+{
+  "analysis": "R1 analysis plan, Amendment 10, fix E: demodulation band of the envelope stream",
+  "dataset": "pronostia",
+  "data_dir": "Processed_PRONOSTIA_v2",
+  "late_life_threshold": 0.2,
+  "late_windows": {
+    "train_01_Bearing1_1": 560,
+    "train_02_Bearing1_2": 174,
+    "train_03_Bearing2_1": 182,
+    "train_04_Bearing2_2": 159
+  },
+  "band_hz": [
+    6400.0,
+    9600.0
+  ],
+  "candidates": [
+    {
+      "band_hz": [
+        6400.0,
+        9600.0
+      ],
+      "width_hz": 3200.0,
+      "score": 2.7038417063117373,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.692867907450111,
+        "train_02_Bearing1_2": 3.8998866756244244,
+        "train_03_Bearing2_1": 4.840298175857978,
+        "train_04_Bearing2_2": 1.3823140663144353
+      }
+    },
+    {
+      "band_hz": [
+        4800.0,
+        8000.0
+      ],
+      "width_hz": 3200.0,
+      "score": 2.6473787813198366,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.8270857181533716,
+        "train_02_Bearing1_2": 2.2428074649677074,
+        "train_03_Bearing2_1": 5.819433202698918,
+        "train_04_Bearing2_2": 1.700188739459349
+      }
+    },
+    {
+      "band_hz": [
+        6400.0,
+        8000.0
+      ],
+      "width_hz": 1600.0,
+      "score": 2.3595948837873477,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.600842912698383,
+        "train_02_Bearing1_2": 2.6234099194130382,
+        "train_03_Bearing2_1": 5.250831109614076,
+        "train_04_Bearing2_2": 0.963295593423894
+      }
+    },
+    {
+      "band_hz": [
+        5600.0,
+        7200.0
+      ],
+      "width_hz": 1600.0,
+      "score": 1.8959141443228846,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.393455326265206,
+        "train_02_Bearing1_2": 1.1667039810669393,
+        "train_03_Bearing2_1": 4.98325332701617,
+        "train_04_Bearing2_2": 1.0402439429432235
+      }
+    },
+    {
+      "band_hz": [
+        800.0,
+        2400.0
+      ],
+      "width_hz": 1600.0,
+      "score": 1.853981195090724,
+      "per_bearing": {
+        "train_01_Bearing1_1": 2.259834807629337,
+        "train_02_Bearing1_2": 1.1847060104462768,
+        "train_03_Bearing2_1": 3.412044529085082,
+        "train_04_Bearing2_2": 0.5593394332022003
+      }
+    },
+    {
+      "band_hz": [
+        6400.0,
+        7200.0
+      ],
+      "width_hz": 800.0,
+      "score": 1.7453645445808657,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.33402572167442085,
+        "train_02_Bearing1_2": 1.2170033439529218,
+        "train_03_Bearing2_1": 4.9515580289075904,
+        "train_04_Bearing2_2": 0.47887108378852994
+      }
+    },
+    {
+      "band_hz": [
+        3200.0,
+        9600.0
+      ],
+      "width_hz": 6400.0,
+      "score": 1.7259529988372793,
+      "per_bearing": {
+        "train_01_Bearing1_1": 1.241479825382297,
+        "train_02_Bearing1_2": 2.117337494263179,
+        "train_03_Bearing2_1": 2.30547592263689,
+        "train_04_Bearing2_2": 1.2395187530667513
+      }
+    },
+    {
+      "band_hz": [
+        8000.0,
+        11200.0
+      ],
+      "width_hz": 3200.0,
+      "score": 1.6880525699234374,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.3573616012600646,
+        "train_02_Bearing1_2": 1.3148218537464749,
+        "train_03_Bearing2_1": 4.082533971147667,
+        "train_04_Bearing2_2": 0.9974928535395435
+      }
+    },
+    {
+      "band_hz": [
+        7200.0,
+        8800.0
+      ],
+      "width_hz": 1600.0,
+      "score": 1.6622965301481967,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.8394150379361857,
+        "train_02_Bearing1_2": 2.7594104939687902,
+        "train_03_Bearing2_1": 1.9544366535983717,
+        "train_04_Bearing2_2": 1.0959239350894385
+      }
+    },
+    {
+      "band_hz": [
+        6400.0,
+        12800.0
+      ],
+      "width_hz": 6400.0,
+      "score": 1.5283410375061202,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.46295682572555136,
+        "train_02_Bearing1_2": 3.74885300006433,
+        "train_03_Bearing2_1": 1.0813698066318367,
+        "train_04_Bearing2_2": 0.8201845176027631
+      }
+    },
+    {
+      "band_hz": [
+        9600.0,
+        12800.0
+      ],
+      "width_hz": 3200.0,
+      "score": 1.3994246489469482,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.441420197517756,
+        "train_02_Bearing1_2": 3.825854803004102,
+        "train_03_Bearing2_1": 0.6178001001795204,
+        "train_04_Bearing2_2": 0.7126234950864143
+      }
+    },
+    {
+      "band_hz": [
+        11200.0,
+        12800.0
+      ],
+      "width_hz": 1600.0,
+      "score": 1.372174291032808,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.3785329006471752,
+        "train_02_Bearing1_2": 4.13573534751084,
+        "train_03_Bearing2_1": 0.08970075846141794,
+        "train_04_Bearing2_2": 0.8847281575117989
+      }
+    },
+    {
+      "band_hz": [
+        8000.0,
+        9600.0
+      ],
+      "width_hz": 1600.0,
+      "score": 1.3505043939914096,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.40283182705027826,
+        "train_02_Bearing1_2": 1.6136686155796132,
+        "train_03_Bearing2_1": 2.4545611481650695,
+        "train_04_Bearing2_2": 0.9309559851706771
+      }
+    },
+    {
+      "band_hz": [
+        1600.0,
+        3200.0
+      ],
+      "width_hz": 1600.0,
+      "score": 1.2927527838692014,
+      "per_bearing": {
+        "train_01_Bearing1_1": 1.2907267277700112,
+        "train_02_Bearing1_2": 0.8041974392189281,
+        "train_03_Bearing2_1": 2.49344849512996,
+        "train_04_Bearing2_2": 0.5826384733579058
+      }
+    },
+    {
+      "band_hz": [
+        8800.0,
+        10400.0
+      ],
+      "width_hz": 1600.0,
+      "score": 1.2921033781341245,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.2703466168170693,
+        "train_02_Bearing1_2": 0.8975268104572209,
+        "train_03_Bearing2_1": 3.4327114890694244,
+        "train_04_Bearing2_2": 0.5678285961927823
+      }
+    },
+    {
+      "band_hz": [
+        6800.0,
+        7600.0
+      ],
+      "width_hz": 800.0,
+      "score": 1.2557545089709512,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.4190142255695137,
+        "train_02_Bearing1_2": 1.4810652630340828,
+        "train_03_Bearing2_1": 2.633739958580433,
+        "train_04_Bearing2_2": 0.4891985886997752
+      }
+    },
+    {
+      "band_hz": [
+        800.0,
+        1600.0
+      ],
+      "width_hz": 800.0,
+      "score": 1.2457339325813763,
+      "per_bearing": {
+        "train_01_Bearing1_1": 1.7673718233993563,
+        "train_02_Bearing1_2": 1.1814794760289897,
+        "train_03_Bearing2_1": 1.686147067858217,
+        "train_04_Bearing2_2": 0.34793736303894224
+      }
+    },
+    {
+      "band_hz": [
+        12000.0,
+        12800.0
+      ],
+      "width_hz": 800.0,
+      "score": 1.213158825238915,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.46327146344917114,
+        "train_02_Bearing1_2": 3.8721178006058192,
+        "train_03_Bearing2_1": 0.055267161499598844,
+        "train_04_Bearing2_2": 0.4619788754010701
+      }
+    },
+    {
+      "band_hz": [
+        9600.0,
+        11200.0
+      ],
+      "width_hz": 1600.0,
+      "score": 1.2108447294954578,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.27833775983050774,
+        "train_02_Bearing1_2": 0.6479245062713046,
+        "train_03_Bearing2_1": 2.9274027501901827,
+        "train_04_Bearing2_2": 0.9897139016898364
+      }
+    },
+    {
+      "band_hz": [
+        1600.0,
+        4800.0
+      ],
+      "width_hz": 3200.0,
+      "score": 1.1997774661256857,
+      "per_bearing": {
+        "train_01_Bearing1_1": 1.321277880538938,
+        "train_02_Bearing1_2": 1.1288562331209389,
+        "train_03_Bearing2_1": 1.0832298518134706,
+        "train_04_Bearing2_2": 1.2657458990293953
+      }
+    },
+    {
+      "band_hz": [
+        6000.0,
+        6800.0
+      ],
+      "width_hz": 800.0,
+      "score": 1.1397732286905218,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.1936215353500482,
+        "train_02_Bearing1_2": 0.7128811547614321,
+        "train_03_Bearing2_1": 3.1472834760022543,
+        "train_04_Bearing2_2": 0.505306748648352
+      }
+    },
+    {
+      "band_hz": [
+        1200.0,
+        2000.0
+      ],
+      "width_hz": 800.0,
+      "score": 1.0611261343144314,
+      "per_bearing": {
+        "train_01_Bearing1_1": 1.1623086462638956,
+        "train_02_Bearing1_2": 0.6848229133992444,
+        "train_03_Bearing2_1": 2.2179231322995596,
+        "train_04_Bearing2_2": 0.1794498452950258
+      }
+    },
+    {
+      "band_hz": [
+        4800.0,
+        6400.0
+      ],
+      "width_hz": 1600.0,
+      "score": 1.0462915667949302,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.8609320919608904,
+        "train_02_Bearing1_2": 0.7228820222689932,
+        "train_03_Bearing2_1": 1.6814750343133869,
+        "train_04_Bearing2_2": 0.9198771186364504
+      }
+    },
+    {
+      "band_hz": [
+        7200.0,
+        8000.0
+      ],
+      "width_hz": 800.0,
+      "score": 1.043838033409608,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.4156816035703999,
+        "train_02_Bearing1_2": 1.5997238293387714,
+        "train_03_Bearing2_1": 1.347745010596962,
+        "train_04_Bearing2_2": 0.812201690132299
+      }
+    },
+    {
+      "band_hz": [
+        11600.0,
+        12400.0
+      ],
+      "width_hz": 800.0,
+      "score": 1.0421174720169761,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.32406773654936544,
+        "train_02_Bearing1_2": 3.0174422438659225,
+        "train_03_Bearing2_1": 0.11812398868760975,
+        "train_04_Bearing2_2": 0.7088359189650066
+      }
+    },
+    {
+      "band_hz": [
+        7600.0,
+        8400.0
+      ],
+      "width_hz": 800.0,
+      "score": 1.0106314414187594,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.5070593525234934,
+        "train_02_Bearing1_2": 1.5592056261876013,
+        "train_03_Bearing2_1": 1.3609498380905154,
+        "train_04_Bearing2_2": 0.6153109488734272
+      }
+    },
+    {
+      "band_hz": [
+        4000.0,
+        5600.0
+      ],
+      "width_hz": 1600.0,
+      "score": 1.0085178226334988,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.8514666614332875,
+        "train_02_Bearing1_2": 1.1896790302500717,
+        "train_03_Bearing2_1": 1.2421721305118791,
+        "train_04_Bearing2_2": 0.7507534683387569
+      }
+    },
+    {
+      "band_hz": [
+        400.0,
+        1200.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.9948240757849869,
+      "per_bearing": {
+        "train_01_Bearing1_1": 1.3315964811057361,
+        "train_02_Bearing1_2": 0.9574643368360883,
+        "train_03_Bearing2_1": 1.3257888764668893,
+        "train_04_Bearing2_2": 0.3644466087312335
+      }
+    },
+    {
+      "band_hz": [
+        2000.0,
+        2800.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.958496189392553,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.9370918024289214,
+        "train_02_Bearing1_2": 0.40550481560525825,
+        "train_03_Bearing2_1": 2.163596410201249,
+        "train_04_Bearing2_2": 0.3277917293347832
+      }
+    },
+    {
+      "band_hz": [
+        1600.0,
+        2400.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.9201362155805959,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.9581266704950321,
+        "train_02_Bearing1_2": 0.510057846167181,
+        "train_03_Bearing2_1": 2.0545320400962104,
+        "train_04_Bearing2_2": 0.1578283055639602
+      }
+    },
+    {
+      "band_hz": [
+        9600.0,
+        10400.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.8944393818930113,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.1377494847197546,
+        "train_02_Bearing1_2": 0.6401923709546796,
+        "train_03_Bearing2_1": 2.3925073864632114,
+        "train_04_Bearing2_2": 0.4073082854343995
+      }
+    },
+    {
+      "band_hz": [
+        3200.0,
+        6400.0
+      ],
+      "width_hz": 3200.0,
+      "score": 0.8582381762326323,
+      "per_bearing": {
+        "train_01_Bearing1_1": 1.23624963078048,
+        "train_02_Bearing1_2": 0.9507864269155045,
+        "train_03_Bearing2_1": 0.4110634782550862,
+        "train_04_Bearing2_2": 0.8348531689794585
+      }
+    },
+    {
+      "band_hz": [
+        9200.0,
+        10000.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.8330296103920631,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.1174968605695001,
+        "train_02_Bearing1_2": 0.48442526045422596,
+        "train_03_Bearing2_1": 2.358848354613574,
+        "train_04_Bearing2_2": 0.3713479659309523
+      }
+    },
+    {
+      "band_hz": [
+        8800.0,
+        9600.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.8060842700136003,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.17613144663814906,
+        "train_02_Bearing1_2": 0.49917734806441455,
+        "train_03_Bearing2_1": 2.0755987383263563,
+        "train_04_Bearing2_2": 0.4734295470254812
+      }
+    },
+    {
+      "band_hz": [
+        8000.0,
+        8800.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.7971157093949152,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.5018204943490184,
+        "train_02_Bearing1_2": 1.2631176219211395,
+        "train_03_Bearing2_1": 0.9314424422777321,
+        "train_04_Bearing2_2": 0.4920822790317704
+      }
+    },
+    {
+      "band_hz": [
+        3200.0,
+        4800.0
+      ],
+      "width_hz": 1600.0,
+      "score": 0.7913093761692634,
+      "per_bearing": {
+        "train_01_Bearing1_1": 1.6282805657654356,
+        "train_02_Bearing1_2": 0.7127266042989434,
+        "train_03_Bearing2_1": 0.1965620672622809,
+        "train_04_Bearing2_2": 0.6276682673503942
+      }
+    },
+    {
+      "band_hz": [
+        8400.0,
+        9200.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.7653714699812941,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.35256618018415264,
+        "train_02_Bearing1_2": 0.8852091753250388,
+        "train_03_Bearing2_1": 1.2605648830961214,
+        "train_04_Bearing2_2": 0.5631456413198634
+      }
+    },
+    {
+      "band_hz": [
+        10400.0,
+        12000.0
+      ],
+      "width_hz": 1600.0,
+      "score": 0.7376754551480437,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.31502981328707863,
+        "train_02_Bearing1_2": 1.5417401526529122,
+        "train_03_Bearing2_1": 0.49813347423442583,
+        "train_04_Bearing2_2": 0.5957983804177581
+      }
+    },
+    {
+      "band_hz": [
+        10000.0,
+        10800.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.7311565495481167,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.222238181750803,
+        "train_02_Bearing1_2": 0.46591406257967566,
+        "train_03_Bearing2_1": 1.7201276388752982,
+        "train_04_Bearing2_2": 0.5163463149866901
+      }
+    },
+    {
+      "band_hz": [
+        3200.0,
+        4000.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.7310212017445556,
+      "per_bearing": {
+        "train_01_Bearing1_1": 2.125000732635041,
+        "train_02_Bearing1_2": 0.38910608166579613,
+        "train_03_Bearing2_1": 0.19318784087210428,
+        "train_04_Bearing2_2": 0.21679015180528094
+      }
+    },
+    {
+      "band_hz": [
+        2400.0,
+        4000.0
+      ],
+      "width_hz": 1600.0,
+      "score": 0.7266322374733123,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.8484098852990171,
+        "train_02_Bearing1_2": 0.9015575649121331,
+        "train_03_Bearing2_1": 0.46239589722161095,
+        "train_04_Bearing2_2": 0.6941656024604879
+      }
+    },
+    {
+      "band_hz": [
+        2400.0,
+        3200.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.7069743535873307,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.6002924645500429,
+        "train_02_Bearing1_2": 0.8767460893134459,
+        "train_03_Bearing2_1": 0.9745899267384217,
+        "train_04_Bearing2_2": 0.3762689337474123
+      }
+    },
+    {
+      "band_hz": [
+        4800.0,
+        5600.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.6898851307029241,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.6141180753964032,
+        "train_02_Bearing1_2": 0.5615982313927347,
+        "train_03_Bearing2_1": 1.1205846662086125,
+        "train_04_Bearing2_2": 0.46323954981394627
+      }
+    },
+    {
+      "band_hz": [
+        11200.0,
+        12000.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.6675018147998084,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.2025716633744635,
+        "train_02_Bearing1_2": 1.555969489821496,
+        "train_03_Bearing2_1": 0.18085492636049125,
+        "train_04_Bearing2_2": 0.7306111796427829
+      }
+    },
+    {
+      "band_hz": [
+        4400.0,
+        5200.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.6634199856768778,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.4821226172327397,
+        "train_02_Bearing1_2": 0.8337334920927354,
+        "train_03_Bearing2_1": 0.902677476339129,
+        "train_04_Bearing2_2": 0.43514635704290716
+      }
+    },
+    {
+      "band_hz": [
+        2800.0,
+        3600.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.6034514208463472,
+      "per_bearing": {
+        "train_01_Bearing1_1": 1.290107421918832,
+        "train_02_Bearing1_2": 0.6347969316744585,
+        "train_03_Bearing2_1": 0.27478057015234086,
+        "train_04_Bearing2_2": 0.21412075963975752
+      }
+    },
+    {
+      "band_hz": [
+        4000.0,
+        4800.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.5530457645649933,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.5981286306111457,
+        "train_02_Bearing1_2": 0.7504154299173716,
+        "train_03_Bearing2_1": 0.46741860116111755,
+        "train_04_Bearing2_2": 0.3962203965703386
+      }
+    },
+    {
+      "band_hz": [
+        5600.0,
+        6400.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.5404319693666322,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.30299186010302376,
+        "train_02_Bearing1_2": 0.3267833544767237,
+        "train_03_Bearing2_1": 0.9675609347680593,
+        "train_04_Bearing2_2": 0.5643917281187216
+      }
+    },
+    {
+      "band_hz": [
+        5200.0,
+        6000.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.5380427075878639,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.5231365717854968,
+        "train_02_Bearing1_2": 0.2960504515895828,
+        "train_03_Bearing2_1": 0.6088403804611163,
+        "train_04_Bearing2_2": 0.7241434265152598
+      }
+    },
+    {
+      "band_hz": [
+        3600.0,
+        4400.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.488108760383458,
+      "per_bearing": {
+        "train_01_Bearing1_1": 1.2063023427651889,
+        "train_02_Bearing1_2": 0.2507508116216196,
+        "train_03_Bearing2_1": 0.1486278858322783,
+        "train_04_Bearing2_2": 0.3467540013147454
+      }
+    },
+    {
+      "band_hz": [
+        10400.0,
+        11200.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.48618284394579997,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.21279067248748862,
+        "train_02_Bearing1_2": 0.40873209089072515,
+        "train_03_Bearing2_1": 0.7898117238728415,
+        "train_04_Bearing2_2": 0.5333968885321447
+      }
+    },
+    {
+      "band_hz": [
+        10800.0,
+        11600.0
+      ],
+      "width_hz": 800.0,
+      "score": 0.43246637225180995,
+      "per_bearing": {
+        "train_01_Bearing1_1": 0.19210502658820722,
+        "train_02_Bearing1_2": 0.8121358235840554,
+        "train_03_Bearing2_1": 0.3049077337870861,
+        "train_04_Bearing2_2": 0.42071690504789117
+      }
+    }
+  ],
+  "date": "2026-10-05 15:44",
+  "provenance": {
+    "plan_sha256": "2ee58939ac13d5576be99833c3630541ff8c067b9c3f48953ffb8c1aea9be144",
+    "code_sha256": {
+      "Experiments/exp16_ress.py": "7fb30773b3b5f3c7418c9a3ad78abda4fe436e30c3e450d9b9f056114b58f43a",
+      "Experiments/exp19_baselines.py": "ed481def3afd500661ce90106e1e140131508590594e67d1bcaf38b8d18e5cfd",
+      "Experiments/r1_provenance.py": "ff2e32fe946c0707c788a39b3414262c36388ec89b736fa12f4db90be49cf47e",
+      "src/dsaf_v2_lite.py": "985a33ca0993c5b52f736c97b2ac44399c8ea22b36c1b9169e4d305973766752",
+      "src/ablation_models.py": "d603563d9c4003c60b60eeee0b72123b0ed56e6cda7f1ddbff510092fe61b2c8",
+      "src/published_baselines.py": "c9f581bc27020b46e7d5a9f79129a826b34f012bda84665c2381e8338b6d5783",
+      "src/sota_baselines.py": "8ed27e977934fa2a58555be06288d71266f684a083557c53eb3bf2cacc9c9034",
+      "src/vanilla_baselines.py": "bcd744631eee25c660617360ac84423603f4b175b3666a99495d9fa8b3592f52",
+      "src/mini_dann.py": "897581f518e61506d9d6f52593946e430e7511a403baac25438e23631318ea09",
+      "src/online_filters.py": "89e523690d0d9f8f4e23157a8094ae68eedc5aedd7a9f1da13cb518322d028d4",
+      "src/isotonic_eval.py": "3e56013efe14b808f4d55311318567a2565628d31a087d6e55dcb4ca9d63e40b",
+      "Experiments/r1_band_select.py": "7693af219299c72b85f7ceb2d1c717441805f45dd325938705eabce8ddd0e1d6"
+    },
+    "data_list_sha256": {
+      "data_sha256_v2.txt": "8d520c299c9c1fec05d1d397beef3232a39e8bd157c6eb368e37e05b3df9d27b",
+      "data_sha256_v2hv.txt": "7b601df5d718d9be4900aa88568fec565c31b508ffcdc6ddb2b7f4b96112ee8d"
+    },
+    "git_head": "a84671f8bc44397f037d72f0e0a96c5560d98e54",
+    "git_tree_differs": true,
+    "command": "Experiments/r1_band_select.py --dataset pronostia",
+    "python": "3.14.3",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "gpu": "NVIDIA GeForce RTX 5070"
+  }
+}

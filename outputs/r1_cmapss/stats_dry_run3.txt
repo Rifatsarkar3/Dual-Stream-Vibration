@@ -1,0 +1,13 @@
+14:48:26
+sign-flip exact 0.5575 against Monte Carlo 0.5579
+Kendall exact 0.0803 against Monte Carlo 0.0837
+no effect, m = 70: mean d as written +2.503, size-matched +0.028 points; mean log rho as written -0.0330; rho~ median 1.0011, mean log -0.0019, share below 1 0.496
+no effect, m = 180: mean d as written +1.303, size-matched -0.015 points; mean log rho as written -0.0136; rho~ median 0.9993, mean log -0.0016, share below 1 0.503
+no effect, m = 450: mean d as written +0.710, size-matched +0.008 points; mean log rho as written -0.0044; rho~ median 1.0007, mean log -0.0000, share below 1 0.495
+no effect, m = 1400: mean d as written +0.316, size-matched -0.003 points; mean log rho as written -0.0015; rho~ median 0.9994, mean log -0.0006, share below 1 0.505
+no effect, share of 200 families with p < 0.05 (unadjusted): {'P1_n4': 0.105, 'P1_n10': 0.06, 'P1_n25': 0.06, 'P1_n80': 0.04, 'P2': 0.04, 'P3': 0.045}
+planted {'P1_n4': (22.066, '9.5e-06', True), 'P1_n10': (14.76, '9.5e-06', True), 'P1_n25': (8.61, '9.5e-06', True), 'P1_n80': (5.945, '9.5e-06', True), 'P2': (-0.246, '9.5e-06', True), 'P3': (108.0, '2.3e-19', True)}
+dry run FAILED: rejection rate P1_n4 (3141 s)
+15:40:49
+
+[exited with code 0]

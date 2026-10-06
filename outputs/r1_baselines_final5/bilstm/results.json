@@ -1,0 +1,157 @@
+{
+ "model": "bilstm",
+ "K": 40,
+ "selection": "outputs/r1_baseline_sel5/bilstm.json",
+ "per_seed": [
+  {
+   "seed": 42,
+   "raw_mae_13": 0.15238890051841736,
+   "ces_mae_13": 0.15175896883010864,
+   "minutes": 3.3
+  },
+  {
+   "seed": 123,
+   "raw_mae_13": 0.1416066735982895,
+   "ces_mae_13": 0.13931696116924286,
+   "minutes": 3.2
+  },
+  {
+   "seed": 777,
+   "raw_mae_13": 0.168606698513031,
+   "ces_mae_13": 0.16876733303070068,
+   "minutes": 3.3
+  },
+  {
+   "seed": 999,
+   "raw_mae_13": 0.15400218963623047,
+   "ces_mae_13": 0.15385890007019043,
+   "minutes": 2.8
+  },
+  {
+   "seed": 7,
+   "raw_mae_13": 0.1378161907196045,
+   "ces_mae_13": 0.1349307745695114,
+   "minutes": 2.4
+  },
+  {
+   "seed": 8,
+   "raw_mae_13": 0.15375517308712006,
+   "ces_mae_13": 0.1527760624885559,
+   "minutes": 2.3
+  },
+  {
+   "seed": 21,
+   "raw_mae_13": 0.14520108699798584,
+   "ces_mae_13": 0.14471912384033203,
+   "minutes": 2.3
+  },
+  {
+   "seed": 34,
+   "raw_mae_13": 0.1429445743560791,
+   "ces_mae_13": 0.14053240418434143,
+   "minutes": 2.3
+  },
+  {
+   "seed": 55,
+   "raw_mae_13": 0.15253691375255585,
+   "ces_mae_13": 0.15176938474178314,
+   "minutes": 2.3
+  },
+  {
+   "seed": 89,
+   "raw_mae_13": 0.15138989686965942,
+   "ces_mae_13": 0.15070514380931854,
+   "minutes": 2.3
+  },
+  {
+   "seed": 144,
+   "raw_mae_13": 0.14117977023124695,
+   "ces_mae_13": 0.13981077075004578,
+   "minutes": 2.3
+  },
+  {
+   "seed": 233,
+   "raw_mae_13": 0.1444958597421646,
+   "ces_mae_13": 0.14394667744636536,
+   "minutes": 2.4
+  },
+  {
+   "seed": 377,
+   "raw_mae_13": 0.15754194557666779,
+   "ces_mae_13": 0.1561320275068283,
+   "minutes": 2.3
+  },
+  {
+   "seed": 610,
+   "raw_mae_13": 0.14671270549297333,
+   "ces_mae_13": 0.14547862112522125,
+   "minutes": 2.3
+  },
+  {
+   "seed": 987,
+   "raw_mae_13": 0.15215986967086792,
+   "ces_mae_13": 0.15130901336669922,
+   "minutes": 2.3
+  },
+  {
+   "seed": 1597,
+   "raw_mae_13": 0.14094433188438416,
+   "ces_mae_13": 0.1402093768119812,
+   "minutes": 2.3
+  },
+  {
+   "seed": 2584,
+   "raw_mae_13": 0.1525430679321289,
+   "ces_mae_13": 0.15104877948760986,
+   "minutes": 2.3
+  },
+  {
+   "seed": 4181,
+   "raw_mae_13": 0.1431249976158142,
+   "ces_mae_13": 0.14097726345062256,
+   "minutes": 2.3
+  },
+  {
+   "seed": 6765,
+   "raw_mae_13": 0.1517687439918518,
+   "ces_mae_13": 0.15051665902137756,
+   "minutes": 2.3
+  },
+  {
+   "seed": 10946,
+   "raw_mae_13": 0.1516776978969574,
+   "ces_mae_13": 0.15089470148086548,
+   "minutes": 2.3
+  }
+ ],
+ "provenance": {
+  "plan_sha256": "1a94d3655ca731df02ed53b2fa82432ec25ec74bf2842381a3e406475e899449",
+  "code_sha256": {
+   "Experiments/exp16_ress.py": "7fb30773b3b5f3c7418c9a3ad78abda4fe436e30c3e450d9b9f056114b58f43a",
+   "Experiments/exp19_baselines.py": "ed481def3afd500661ce90106e1e140131508590594e67d1bcaf38b8d18e5cfd",
+   "Experiments/r1_provenance.py": "ff2e32fe946c0707c788a39b3414262c36388ec89b736fa12f4db90be49cf47e",
+   "src/dsaf_v2_lite.py": "985a33ca0993c5b52f736c97b2ac44399c8ea22b36c1b9169e4d305973766752",
+   "src/ablation_models.py": "d603563d9c4003c60b60eeee0b72123b0ed56e6cda7f1ddbff510092fe61b2c8",
+   "src/published_baselines.py": "c9f581bc27020b46e7d5a9f79129a826b34f012bda84665c2381e8338b6d5783",
+   "src/sota_baselines.py": "8ed27e977934fa2a58555be06288d71266f684a083557c53eb3bf2cacc9c9034",
+   "src/vanilla_baselines.py": "bcd744631eee25c660617360ac84423603f4b175b3666a99495d9fa8b3592f52",
+   "src/mini_dann.py": "897581f518e61506d9d6f52593946e430e7511a403baac25438e23631318ea09",
+   "src/online_filters.py": "89e523690d0d9f8f4e23157a8094ae68eedc5aedd7a9f1da13cb518322d028d4",
+   "src/isotonic_eval.py": "3e56013efe14b808f4d55311318567a2565628d31a087d6e55dcb4ca9d63e40b",
+   "Experiments/r1_baseline_final.py": "c693bfa686e67963962b5579ead018bed5d85a99abd7b69ed6e69a67d48f2b48"
+  },
+  "data_list_sha256": {
+   "data_sha256_v2.txt": "8d520c299c9c1fec05d1d397beef3232a39e8bd157c6eb368e37e05b3df9d27b",
+   "data_sha256_v2hv.txt": "7b601df5d718d9be4900aa88568fec565c31b508ffcdc6ddb2b7f4b96112ee8d"
+  },
+  "git_head": "bf06c79d3f44137e1ab02597308424d22b4210f1",
+  "git_tree_differs": true,
+  "command": "Experiments/r1_baseline_final.py --model bilstm",
+  "python": "3.14.3",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "gpu": "NVIDIA GeForce RTX 5070"
+ }
+}

@@ -1,0 +1,157 @@
+{
+ "model": "cnnlstm",
+ "K": 5,
+ "selection": "outputs/r1_baseline_sel5/cnnlstm.json",
+ "per_seed": [
+  {
+   "seed": 42,
+   "raw_mae_13": 0.14119212329387665,
+   "ces_mae_13": 0.13725054264068604,
+   "minutes": 0.5
+  },
+  {
+   "seed": 123,
+   "raw_mae_13": 0.13087454438209534,
+   "ces_mae_13": 0.12587112188339233,
+   "minutes": 0.6
+  },
+  {
+   "seed": 777,
+   "raw_mae_13": 0.14768613874912262,
+   "ces_mae_13": 0.1447601616382599,
+   "minutes": 0.6
+  },
+  {
+   "seed": 999,
+   "raw_mae_13": 0.14692993462085724,
+   "ces_mae_13": 0.14443308115005493,
+   "minutes": 0.6
+  },
+  {
+   "seed": 7,
+   "raw_mae_13": 0.14225399494171143,
+   "ces_mae_13": 0.13832764327526093,
+   "minutes": 0.6
+  },
+  {
+   "seed": 8,
+   "raw_mae_13": 0.135407954454422,
+   "ces_mae_13": 0.13076913356781006,
+   "minutes": 0.7
+  },
+  {
+   "seed": 21,
+   "raw_mae_13": 0.14667697250843048,
+   "ces_mae_13": 0.1433069109916687,
+   "minutes": 0.6
+  },
+  {
+   "seed": 34,
+   "raw_mae_13": 0.157349094748497,
+   "ces_mae_13": 0.15486489236354828,
+   "minutes": 0.6
+  },
+  {
+   "seed": 55,
+   "raw_mae_13": 0.12833544611930847,
+   "ces_mae_13": 0.12291745096445084,
+   "minutes": 0.6
+  },
+  {
+   "seed": 89,
+   "raw_mae_13": 0.12772740423679352,
+   "ces_mae_13": 0.12232382595539093,
+   "minutes": 0.6
+  },
+  {
+   "seed": 144,
+   "raw_mae_13": 0.12945696711540222,
+   "ces_mae_13": 0.12293175607919693,
+   "minutes": 0.6
+  },
+  {
+   "seed": 233,
+   "raw_mae_13": 0.14004625380039215,
+   "ces_mae_13": 0.1367066204547882,
+   "minutes": 0.7
+  },
+  {
+   "seed": 377,
+   "raw_mae_13": 0.13645659387111664,
+   "ces_mae_13": 0.13140225410461426,
+   "minutes": 0.6
+  },
+  {
+   "seed": 610,
+   "raw_mae_13": 0.1368531882762909,
+   "ces_mae_13": 0.1317024528980255,
+   "minutes": 0.6
+  },
+  {
+   "seed": 987,
+   "raw_mae_13": 0.13340693712234497,
+   "ces_mae_13": 0.12766946852207184,
+   "minutes": 0.6
+  },
+  {
+   "seed": 1597,
+   "raw_mae_13": 0.15698377788066864,
+   "ces_mae_13": 0.15437783300876617,
+   "minutes": 0.6
+  },
+  {
+   "seed": 2584,
+   "raw_mae_13": 0.14428381621837616,
+   "ces_mae_13": 0.1410469263792038,
+   "minutes": 0.7
+  },
+  {
+   "seed": 4181,
+   "raw_mae_13": 0.13757319748401642,
+   "ces_mae_13": 0.13424649834632874,
+   "minutes": 0.6
+  },
+  {
+   "seed": 6765,
+   "raw_mae_13": 0.13099302351474762,
+   "ces_mae_13": 0.12532661855220795,
+   "minutes": 0.6
+  },
+  {
+   "seed": 10946,
+   "raw_mae_13": 0.14975649118423462,
+   "ces_mae_13": 0.14703074097633362,
+   "minutes": 0.6
+  }
+ ],
+ "provenance": {
+  "plan_sha256": "1a94d3655ca731df02ed53b2fa82432ec25ec74bf2842381a3e406475e899449",
+  "code_sha256": {
+   "Experiments/exp16_ress.py": "7fb30773b3b5f3c7418c9a3ad78abda4fe436e30c3e450d9b9f056114b58f43a",
+   "Experiments/exp19_baselines.py": "ed481def3afd500661ce90106e1e140131508590594e67d1bcaf38b8d18e5cfd",
+   "Experiments/r1_provenance.py": "ff2e32fe946c0707c788a39b3414262c36388ec89b736fa12f4db90be49cf47e",
+   "src/dsaf_v2_lite.py": "985a33ca0993c5b52f736c97b2ac44399c8ea22b36c1b9169e4d305973766752",
+   "src/ablation_models.py": "d603563d9c4003c60b60eeee0b72123b0ed56e6cda7f1ddbff510092fe61b2c8",
+   "src/published_baselines.py": "c9f581bc27020b46e7d5a9f79129a826b34f012bda84665c2381e8338b6d5783",
+   "src/sota_baselines.py": "8ed27e977934fa2a58555be06288d71266f684a083557c53eb3bf2cacc9c9034",
+   "src/vanilla_baselines.py": "bcd744631eee25c660617360ac84423603f4b175b3666a99495d9fa8b3592f52",
+   "src/mini_dann.py": "897581f518e61506d9d6f52593946e430e7511a403baac25438e23631318ea09",
+   "src/online_filters.py": "89e523690d0d9f8f4e23157a8094ae68eedc5aedd7a9f1da13cb518322d028d4",
+   "src/isotonic_eval.py": "3e56013efe14b808f4d55311318567a2565628d31a087d6e55dcb4ca9d63e40b",
+   "Experiments/r1_baseline_final.py": "c693bfa686e67963962b5579ead018bed5d85a99abd7b69ed6e69a67d48f2b48"
+  },
+  "data_list_sha256": {
+   "data_sha256_v2.txt": "8d520c299c9c1fec05d1d397beef3232a39e8bd157c6eb368e37e05b3df9d27b",
+   "data_sha256_v2hv.txt": "7b601df5d718d9be4900aa88568fec565c31b508ffcdc6ddb2b7f4b96112ee8d"
+  },
+  "git_head": "bf06c79d3f44137e1ab02597308424d22b4210f1",
+  "git_tree_differs": true,
+  "command": "Experiments/r1_baseline_final.py --model cnnlstm",
+  "python": "3.14.3",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "gpu": "NVIDIA GeForce RTX 5070"
+ }
+}

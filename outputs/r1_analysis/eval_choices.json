@@ -1,0 +1,3459 @@
+{
+ "E1": {
+  "ces": {
+   "adopted: baselines (all10)": {
+    "1D CNN": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.007955577036274636,
+     "bavg_diff": 0.008067668287018508,
+     "p_a_seed_pooled": 0.002220171617356201,
+     "p_b_seed_bavg": 0.001277168850977575,
+     "p_c_bearing_flip": 0.17578125,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 0.004440343234712402,
+     "p_b_seed_bavg_holm": 0.001277168850977575,
+     "p_c_bearing_flip_holm": 0.3515625
+    },
+    "BiLSTM": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.023836138262455127,
+     "bavg_diff": 0.024696624840927616,
+     "p_a_seed_pooled": 6.804080943812064e-09,
+     "p_b_seed_bavg": 9.669004816923635e-10,
+     "p_c_bearing_flip": 0.013671875,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 2.041224283143619e-08,
+     "p_b_seed_bavg_holm": 2.9007014450770906e-09,
+     "p_c_bearing_flip_holm": 0.068359375
+    },
+    "CNN-LSTM": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.008456468634263616,
+     "bavg_diff": 0.010205113827252442,
+     "p_a_seed_pooled": 0.004741524478524155,
+     "p_b_seed_bavg": 0.0003108733999904797,
+     "p_c_bearing_flip": 0.177734375,
+     "bearings_ref_better": 5,
+     "p_a_seed_pooled_holm": 0.004741524478524155,
+     "p_b_seed_bavg_holm": 0.0006217467999809594,
+     "p_c_bearing_flip_holm": 0.3515625
+    },
+    "1D ResNet": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.042093562124149796,
+     "bavg_diff": 0.03941249494451753,
+     "p_a_seed_pooled": 7.099741812216468e-13,
+     "p_b_seed_bavg": 6.170535904742347e-12,
+     "p_c_bearing_flip": 0.0078125,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 2.839896724886587e-12,
+     "p_b_seed_bavg_holm": 2.468214361896939e-11,
+     "p_c_bearing_flip_holm": 0.046875
+    },
+    "Transformer": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.10778052496554584,
+     "bavg_diff": 0.09744290444197397,
+     "p_a_seed_pooled": 2.4070026139762156e-14,
+     "p_b_seed_bavg": 3.6065583098130556e-13,
+     "p_c_bearing_flip": 0.001953125,
+     "bearings_ref_better": 10,
+     "p_a_seed_pooled_holm": 1.2035013069881078e-13,
+     "p_b_seed_bavg_holm": 1.803279154906528e-12,
+     "p_c_bearing_flip_holm": 0.013671875
+    },
+    "TSMC-CNN [21]": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.0889468419077079,
+     "bavg_diff": 0.07690178544756175,
+     "p_a_seed_pooled": 6.333364300253982e-17,
+     "p_b_seed_bavg": 1.4705655153034475e-15,
+     "p_c_bearing_flip": 0.029296875,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 3.800018580152389e-16,
+     "p_b_seed_bavg_holm": 8.823393091820685e-15,
+     "p_c_bearing_flip_holm": 0.1171875
+    },
+    "MSCNN [7]": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.08768851642099947,
+     "bavg_diff": 0.05737304585171745,
+     "p_a_seed_pooled": 3.2720582017097983e-22,
+     "p_b_seed_bavg": 4.716595890211745e-16,
+     "p_c_bearing_flip": 0.07421875,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 2.290440741196859e-21,
+     "p_b_seed_bavg_holm": 3.3016171231482215e-15,
+     "p_c_bearing_flip_holm": 0.22265625
+    }
+   },
+   "adopted: ablations (all10)": {
+    "static fusion": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.004314020890966188,
+     "bavg_diff": -0.004026947402487527,
+     "p_a_seed_pooled": 6.939930692725426e-07,
+     "p_b_seed_bavg": 2.4284381543827624e-06,
+     "p_c_bearing_flip": 0.142578125,
+     "bearings_ref_better": 2,
+     "p_a_seed_pooled_holm": 4.163958415635255e-06,
+     "p_b_seed_bavg_holm": 1.4570628926296575e-05,
+     "p_c_bearing_flip_holm": 0.85546875
+    },
+    "temporal stream only": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.002583406361080959,
+     "bavg_diff": 0.0033966607869037393,
+     "p_a_seed_pooled": 0.1492386920722887,
+     "p_b_seed_bavg": 0.08307196617418275,
+     "p_c_bearing_flip": 0.900390625,
+     "bearings_ref_better": 5,
+     "p_a_seed_pooled_holm": 0.5969547682891548,
+     "p_b_seed_bavg_holm": 0.332287864696731,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "spectral stream only": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.07755671126792717,
+     "bavg_diff": 0.07597702109728523,
+     "p_a_seed_pooled": 7.68006604390529e-25,
+     "p_b_seed_bavg": 4.6550544066495826e-24,
+     "p_c_bearing_flip": 0.01171875,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 5.376046230733703e-24,
+     "p_b_seed_bavg_holm": 3.258538084654708e-23,
+     "p_c_bearing_flip_holm": 0.08203125
+    },
+    "without PGMC": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.0008724269857248266,
+     "bavg_diff": 0.001506604819869925,
+     "p_a_seed_pooled": 0.2891495857962553,
+     "p_b_seed_bavg": 0.1548511201731666,
+     "p_c_bearing_flip": 0.287109375,
+     "bearings_ref_better": 7,
+     "p_a_seed_pooled_holm": 0.7983018559659436,
+     "p_b_seed_bavg_holm": 0.4645533605194998,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "without DANN": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.0006743746208883704,
+     "bavg_diff": 0.00015261869077172612,
+     "p_a_seed_pooled": 0.26610061865531454,
+     "p_b_seed_bavg": 0.8257366393703307,
+     "p_c_bearing_flip": 0.947265625,
+     "bearings_ref_better": 5,
+     "p_a_seed_pooled_holm": 0.7983018559659436,
+     "p_b_seed_bavg_holm": 1.0,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "without PGMC and DANN": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.0020625288669500414,
+     "bavg_diff": 0.0025344679759436023,
+     "p_a_seed_pooled": 0.04766215885671338,
+     "p_b_seed_bavg": 0.04440820385970882,
+     "p_c_bearing_flip": 0.255859375,
+     "bearings_ref_better": 7,
+     "p_a_seed_pooled_holm": 0.23831079428356688,
+     "p_b_seed_bavg_holm": 0.22204101929854408,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "PGMC batch ordering": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.00021195508480352995,
+     "bavg_diff": 0.0008694219737859818,
+     "p_a_seed_pooled": 0.891877364791942,
+     "p_b_seed_bavg": 0.6000855361538063,
+     "p_c_bearing_flip": 0.646484375,
+     "bearings_ref_better": 7,
+     "p_a_seed_pooled_holm": 0.891877364791942,
+     "p_b_seed_bavg_holm": 1.0,
+     "p_c_bearing_flip_holm": 1.0
+    }
+   },
+   "adopted: protocol (all10)": {
+    "in-bearing early stopping": {
+     "n_seeds": 5,
+     "n_bearings": 10,
+     "pooled_diff": 0.027684523891632805,
+     "bavg_diff": 0.030427189493444685,
+     "p_a_seed_pooled": 0.0006540399567434797,
+     "p_b_seed_bavg": 0.0017607743079618096,
+     "p_c_bearing_flip": 0.009765625,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 0.0006540399567434797,
+     "p_b_seed_bavg_holm": 0.0017607743079618096,
+     "p_c_bearing_flip_holm": 0.009765625
+    }
+   },
+   "adopted: XJTU-SY baselines (xjtu_test)": {
+    "1D CNN": {
+     "n_seeds": 5,
+     "n_bearings": 6,
+     "pooled_diff": 0.022655606511935444,
+     "bavg_diff": -0.03209832058890637,
+     "p_a_seed_pooled": 0.0024640427913678606,
+     "p_b_seed_bavg": 0.009106738033532822,
+     "p_c_bearing_flip": 0.5,
+     "bearings_ref_better": 2,
+     "p_a_seed_pooled_holm": 0.007392128374103582,
+     "p_b_seed_bavg_holm": 0.018213476067065644,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "BiLSTM": {
+     "n_seeds": 5,
+     "n_bearings": 6,
+     "pooled_diff": -0.009510991749158293,
+     "bavg_diff": -0.052305983990851755,
+     "p_a_seed_pooled": 0.018032339420850845,
+     "p_b_seed_bavg": 0.0008121341313895837,
+     "p_c_bearing_flip": 0.1875,
+     "bearings_ref_better": 2,
+     "p_a_seed_pooled_holm": 0.03606467884170169,
+     "p_b_seed_bavg_holm": 0.0024364023941687513,
+     "p_c_bearing_flip_holm": 0.5625
+    },
+    "CNN-LSTM": {
+     "n_seeds": 5,
+     "n_bearings": 6,
+     "pooled_diff": 0.024207855537692762,
+     "bavg_diff": -0.01926242241417505,
+     "p_a_seed_pooled": 0.11666153697897395,
+     "p_b_seed_bavg": 0.02202021864558749,
+     "p_c_bearing_flip": 0.5,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.11666153697897395,
+     "p_b_seed_bavg_holm": 0.02202021864558749,
+     "p_c_bearing_flip_holm": 1.0
+    }
+   },
+   "adopted: XJTU-SY baselines (xjtu_zs)": {
+    "1D CNN": {
+     "n_seeds": 5,
+     "n_bearings": 5,
+     "pooled_diff": 0.03472474694699075,
+     "bavg_diff": 0.01918657670676227,
+     "p_a_seed_pooled": 0.1123912982104631,
+     "p_b_seed_bavg": 0.13489364281450036,
+     "p_c_bearing_flip": 0.625,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.19744540318319184,
+     "p_b_seed_bavg_holm": 0.26978728562900073,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "BiLSTM": {
+     "n_seeds": 5,
+     "n_bearings": 5,
+     "pooled_diff": 0.051183623709745676,
+     "bavg_diff": 0.02285113083323178,
+     "p_a_seed_pooled": 0.09872270159159592,
+     "p_b_seed_bavg": 0.1543897680304716,
+     "p_c_bearing_flip": 0.6875,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.19744540318319184,
+     "p_b_seed_bavg_holm": 0.26978728562900073,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "CNN-LSTM": {
+     "n_seeds": 5,
+     "n_bearings": 5,
+     "pooled_diff": 0.06361813436560242,
+     "bavg_diff": 0.04378866594797333,
+     "p_a_seed_pooled": 0.03572005123753642,
+     "p_b_seed_bavg": 0.018987639961677863,
+     "p_c_bearing_flip": 0.4375,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.10716015371260926,
+     "p_b_seed_bavg_holm": 0.05696291988503359,
+     "p_c_bearing_flip_holm": 1.0
+    }
+   },
+   "submitted: baselines (all10)": {
+    "1D CNN": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.011508130438524344,
+     "bavg_diff": 0.009931187083996524,
+     "p_a_seed_pooled": 6.974403444422071e-07,
+     "p_b_seed_bavg": 3.0333225454655697e-06,
+     "p_c_bearing_flip": 0.076171875,
+     "bearings_ref_better": 7,
+     "p_a_seed_pooled_holm": 1.3948806888844142e-06,
+     "p_b_seed_bavg_holm": 6.0666450909311395e-06,
+     "p_c_bearing_flip_holm": 0.15234375
+    },
+    "BiLSTM": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.02738869166470484,
+     "bavg_diff": 0.026560143637905632,
+     "p_a_seed_pooled": 2.802463537801727e-11,
+     "p_b_seed_bavg": 3.0473980369143838e-12,
+     "p_c_bearing_flip": 0.0078125,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 8.407390613405181e-11,
+     "p_b_seed_bavg_holm": 9.14219411074315e-12,
+     "p_c_bearing_flip_holm": 0.0390625
+    },
+    "CNN-LSTM": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.012009022036513325,
+     "bavg_diff": 0.012068632624230458,
+     "p_a_seed_pooled": 0.00023639999646585908,
+     "p_b_seed_bavg": 7.521544808798244e-05,
+     "p_c_bearing_flip": 0.05078125,
+     "bearings_ref_better": 7,
+     "p_a_seed_pooled_holm": 0.00023639999646585908,
+     "p_b_seed_bavg_holm": 7.521544808798244e-05,
+     "p_c_bearing_flip_holm": 0.15234375
+    },
+    "1D ResNet": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.04564611552639951,
+     "bavg_diff": 0.04127601374149555,
+     "p_a_seed_pooled": 2.0761613754802678e-13,
+     "p_b_seed_bavg": 1.4279079496990779e-12,
+     "p_c_bearing_flip": 0.005859375,
+     "bearings_ref_better": 9,
+     "p_a_seed_pooled_holm": 8.304645501921071e-13,
+     "p_b_seed_bavg_holm": 5.7116317987963114e-12,
+     "p_c_bearing_flip_holm": 0.03515625
+    },
+    "Transformer": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.11133307836779557,
+     "bavg_diff": 0.09930642323895197,
+     "p_a_seed_pooled": 2.46192308524871e-14,
+     "p_b_seed_bavg": 2.9191588249146984e-13,
+     "p_c_bearing_flip": 0.001953125,
+     "bearings_ref_better": 10,
+     "p_a_seed_pooled_holm": 1.230961542624355e-13,
+     "p_b_seed_bavg_holm": 1.459579412457349e-12,
+     "p_c_bearing_flip_holm": 0.013671875
+    },
+    "TSMC-CNN [21]": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.09249939530995761,
+     "bavg_diff": 0.07876530424453977,
+     "p_a_seed_pooled": 3.3152269232744175e-17,
+     "p_b_seed_bavg": 2.1075249426415357e-15,
+     "p_c_bearing_flip": 0.009765625,
+     "bearings_ref_better": 9,
+     "p_a_seed_pooled_holm": 1.9891361539646505e-16,
+     "p_b_seed_bavg_holm": 1.475267459849075e-14,
+     "p_c_bearing_flip_holm": 0.0390625
+    },
+    "MSCNN [7]": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.09124106982324917,
+     "bavg_diff": 0.05923656464869548,
+     "p_a_seed_pooled": 1.1695576614689555e-20,
+     "p_b_seed_bavg": 3.924996323918674e-15,
+     "p_c_bearing_flip": 0.076171875,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 8.186903630282688e-20,
+     "p_b_seed_bavg_holm": 2.3549977943512046e-14,
+     "p_c_bearing_flip_holm": 0.15234375
+    }
+   },
+   "submitted: ablations (all10)": {
+    "static fusion": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.0026466631451585064,
+     "bavg_diff": -0.002377080391290444,
+     "p_a_seed_pooled": 7.931680340733129e-05,
+     "p_b_seed_bavg": 0.0002018396898804717,
+     "p_c_bearing_flip": 0.134765625,
+     "bearings_ref_better": 2,
+     "p_a_seed_pooled_holm": 0.0004759008204439877,
+     "p_b_seed_bavg_holm": 0.0012110381392828303,
+     "p_c_bearing_flip_holm": 0.80859375
+    },
+    "temporal stream only": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.00408680133602383,
+     "bavg_diff": 0.0008713176323792163,
+     "p_a_seed_pooled": 0.0001097498815030308,
+     "p_b_seed_bavg": 0.3964939787755022,
+     "p_c_bearing_flip": 0.916015625,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.0005487494075151541,
+     "p_b_seed_bavg_holm": 0.7799160751317502,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "spectral stream only": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.08261719877091304,
+     "bavg_diff": 0.08014066646070667,
+     "p_a_seed_pooled": 4.093199273693154e-24,
+     "p_b_seed_bavg": 4.248794170062564e-22,
+     "p_c_bearing_flip": 0.0078125,
+     "bearings_ref_better": 9,
+     "p_a_seed_pooled_holm": 2.865239491585208e-23,
+     "p_b_seed_bavg_holm": 2.974155919043795e-21,
+     "p_c_bearing_flip_holm": 0.0546875
+    },
+    "without PGMC": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.0006262904573003172,
+     "bavg_diff": -0.001279509532276249,
+     "p_a_seed_pooled": 0.5364418967891101,
+     "p_b_seed_bavg": 0.3899580375658751,
+     "p_c_bearing_flip": 0.3671875,
+     "bearings_ref_better": 4,
+     "p_a_seed_pooled_holm": 0.5364418967891101,
+     "p_b_seed_bavg_holm": 0.7799160751317502,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "without DANN": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.0014340761731379437,
+     "bavg_diff": -0.0017113095011078868,
+     "p_a_seed_pooled": 0.031979435666557886,
+     "p_b_seed_bavg": 0.0334429830513719,
+     "p_c_bearing_flip": 0.3828125,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.11280182371232272,
+     "p_b_seed_bavg_holm": 0.1672149152568595,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "without PGMC and DANN": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.0021936378964332245,
+     "bavg_diff": -0.0026112449564765607,
+     "p_a_seed_pooled": 0.02820045592808068,
+     "p_b_seed_bavg": 0.05141151852068921,
+     "p_c_bearing_flip": 0.275390625,
+     "bearings_ref_better": 4,
+     "p_a_seed_pooled_holm": 0.11280182371232272,
+     "p_b_seed_bavg_holm": 0.20564607408275684,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "PGMC batch ordering": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.001379205941661888,
+     "bavg_diff": -0.0018272192929365133,
+     "p_a_seed_pooled": 0.1837744646460906,
+     "p_b_seed_bavg": 0.18996428169005267,
+     "p_c_bearing_flip": 0.15625,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.3675489292921812,
+     "p_b_seed_bavg_holm": 0.569892845070158,
+     "p_c_bearing_flip_holm": 0.80859375
+    }
+   },
+   "submitted: protocol (all10)": {
+    "in-bearing early stopping": {
+     "n_seeds": 5,
+     "n_bearings": 10,
+     "pooled_diff": 0.025083911921135217,
+     "bavg_diff": 0.025756515861724106,
+     "p_a_seed_pooled": 0.005093941532912475,
+     "p_b_seed_bavg": 0.004695160709445943,
+     "p_c_bearing_flip": 0.03125,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 0.01018788306582495,
+     "p_b_seed_bavg_holm": 0.009390321418891887,
+     "p_c_bearing_flip_holm": 0.0625
+    },
+    "lambda by validation argmin": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.006284218028806479,
+     "bavg_diff": -0.003645506539658769,
+     "p_a_seed_pooled": 0.009330872912012804,
+     "p_b_seed_bavg": 0.024766319909345115,
+     "p_c_bearing_flip": 0.7734375,
+     "bearings_ref_better": 6,
+     "p_a_seed_pooled_holm": 0.01018788306582495,
+     "p_b_seed_bavg_holm": 0.024766319909345115,
+     "p_c_bearing_flip_holm": 0.7734375
+    }
+   },
+   "submitted: XJTU-SY baselines (xjtu_test)": {
+    "1D CNN": {
+     "n_seeds": 5,
+     "n_bearings": 6,
+     "pooled_diff": 0.022550415151057775,
+     "bavg_diff": -0.019001355918215633,
+     "p_a_seed_pooled": 0.0038190395733860836,
+     "p_b_seed_bavg": 0.044601059170159,
+     "p_c_bearing_flip": 0.59375,
+     "bearings_ref_better": 2,
+     "p_a_seed_pooled_holm": 0.011457118720158251,
+     "p_b_seed_bavg_holm": 0.089202118340318,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "BiLSTM": {
+     "n_seeds": 5,
+     "n_bearings": 6,
+     "pooled_diff": -0.009616183110035963,
+     "bavg_diff": -0.03920901932016102,
+     "p_a_seed_pooled": 0.1225100512267396,
+     "p_b_seed_bavg": 0.005621803958647897,
+     "p_c_bearing_flip": 0.15625,
+     "bearings_ref_better": 2,
+     "p_a_seed_pooled_holm": 0.14080171736859828,
+     "p_b_seed_bavg_holm": 0.01686541187594369,
+     "p_c_bearing_flip_holm": 0.46875
+    },
+    "CNN-LSTM": {
+     "n_seeds": 5,
+     "n_bearings": 6,
+     "pooled_diff": 0.024102664176815093,
+     "bavg_diff": -0.006165457743484315,
+     "p_a_seed_pooled": 0.07040085868429914,
+     "p_b_seed_bavg": 0.4105507973287772,
+     "p_c_bearing_flip": 0.75,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.14080171736859828,
+     "p_b_seed_bavg_holm": 0.4105507973287772,
+     "p_c_bearing_flip_holm": 1.0
+    }
+   },
+   "submitted: XJTU-SY baselines (xjtu_zs)": {
+    "1D CNN": {
+     "n_seeds": 5,
+     "n_bearings": 5,
+     "pooled_diff": 0.048250967206931436,
+     "bavg_diff": 0.022949115048091984,
+     "p_a_seed_pooled": 0.0026969011232272,
+     "p_b_seed_bavg": 0.018755981723924103,
+     "p_c_bearing_flip": 0.6875,
+     "bearings_ref_better": 2,
+     "p_a_seed_pooled_holm": 0.008090703369681599,
+     "p_b_seed_bavg_holm": 0.037511963447848205,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "BiLSTM": {
+     "n_seeds": 5,
+     "n_bearings": 5,
+     "pooled_diff": 0.06470984396968635,
+     "bavg_diff": 0.026613669174561493,
+     "p_a_seed_pooled": 0.0212615672850222,
+     "p_b_seed_bavg": 0.06451739512805649,
+     "p_c_bearing_flip": 0.75,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.0212615672850222,
+     "p_b_seed_bavg_holm": 0.06451739512805649,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "CNN-LSTM": {
+     "n_seeds": 5,
+     "n_bearings": 5,
+     "pooled_diff": 0.0771443546255431,
+     "bavg_diff": 0.04755120428930304,
+     "p_a_seed_pooled": 0.004441048077416509,
+     "p_b_seed_bavg": 0.004231370525059637,
+     "p_c_bearing_flip": 0.5625,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.008882096154833019,
+     "p_b_seed_bavg_holm": 0.012694111575178912,
+     "p_c_bearing_flip_holm": 1.0
+    }
+   },
+   "adopted vs submitted (all10)": {
+    "submitted architecture": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.0035525534022497083,
+     "bavg_diff": -0.001863518796978017,
+     "p_a_seed_pooled": 0.009725300115324974,
+     "p_b_seed_bavg": 0.21917045117749734,
+     "p_c_bearing_flip": 0.611328125,
+     "bearings_ref_better": 4,
+     "p_a_seed_pooled_holm": 0.009725300115324974,
+     "p_b_seed_bavg_holm": 0.21917045117749734,
+     "p_c_bearing_flip_holm": 0.611328125
+    }
+   }
+  },
+  "raw": {
+   "adopted: baselines (all10)": {
+    "1D CNN": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.011619965250261785,
+     "bavg_diff": 0.011232904976657174,
+     "p_a_seed_pooled": 3.650525418946869e-05,
+     "p_b_seed_bavg": 3.7373205651283725e-05,
+     "p_c_bearing_flip": 0.029296875,
+     "bearings_ref_better": 9,
+     "p_a_seed_pooled_holm": 7.301050837893738e-05,
+     "p_b_seed_bavg_holm": 3.7373205651283725e-05,
+     "p_c_bearing_flip_holm": 0.087890625
+    },
+    "BiLSTM": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.023263004393312213,
+     "bavg_diff": 0.024071436879600592,
+     "p_a_seed_pooled": 3.600008993151199e-09,
+     "p_b_seed_bavg": 6.567665199293035e-10,
+     "p_c_bearing_flip": 0.009765625,
+     "bearings_ref_better": 9,
+     "p_a_seed_pooled_holm": 1.0800026979453597e-08,
+     "p_b_seed_bavg_holm": 1.9702995597879103e-09,
+     "p_c_bearing_flip_holm": 0.048828125
+    },
+    "CNN-LSTM": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.011261488439203335,
+     "bavg_diff": 0.012432901144424873,
+     "p_a_seed_pooled": 0.00014388334087665967,
+     "p_b_seed_bavg": 1.2817274385013125e-05,
+     "p_c_bearing_flip": 0.08984375,
+     "bearings_ref_better": 6,
+     "p_a_seed_pooled_holm": 0.00014388334087665967,
+     "p_b_seed_bavg_holm": 2.563454877002625e-05,
+     "p_c_bearing_flip_holm": 0.14453125
+    },
+    "1D ResNet": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.04177631314384234,
+     "bavg_diff": 0.03896330988686687,
+     "p_a_seed_pooled": 6.48362521066858e-13,
+     "p_b_seed_bavg": 5.817565961377785e-12,
+     "p_c_bearing_flip": 0.0078125,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 2.593450084267432e-12,
+     "p_b_seed_bavg_holm": 2.327026384551114e-11,
+     "p_c_bearing_flip_holm": 0.046875
+    },
+    "Transformer": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.11821146226327936,
+     "bavg_diff": 0.10622463982303265,
+     "p_a_seed_pooled": 4.1785869226579056e-15,
+     "p_b_seed_bavg": 6.767099342630529e-14,
+     "p_c_bearing_flip": 0.001953125,
+     "bearings_ref_better": 10,
+     "p_a_seed_pooled_holm": 2.0892934613289528e-14,
+     "p_b_seed_bavg_holm": 3.3835496713152643e-13,
+     "p_c_bearing_flip_holm": 0.013671875
+    },
+    "TSMC-CNN [21]": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.0850356904507594,
+     "bavg_diff": 0.07666905861876394,
+     "p_a_seed_pooled": 9.437384284410772e-20,
+     "p_b_seed_bavg": 2.814171618523262e-17,
+     "p_c_bearing_flip": 0.017578125,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 5.662430570646464e-19,
+     "p_b_seed_bavg_holm": 1.9699201329662833e-16,
+     "p_c_bearing_flip_holm": 0.0703125
+    },
+    "MSCNN [7]": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.08783929583952407,
+     "bavg_diff": 0.05858572837711053,
+     "p_a_seed_pooled": 1.139126491715986e-22,
+     "p_b_seed_bavg": 1.2211433138822373e-16,
+     "p_c_bearing_flip": 0.072265625,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 7.973885442011901e-22,
+     "p_b_seed_bavg_holm": 7.326859883293423e-16,
+     "p_c_bearing_flip_holm": 0.14453125
+    }
+   },
+   "adopted: ablations (all10)": {
+    "static fusion": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.004525844676228496,
+     "bavg_diff": -0.004267676514781449,
+     "p_a_seed_pooled": 3.2864231849816697e-07,
+     "p_b_seed_bavg": 1.1658959118119923e-06,
+     "p_c_bearing_flip": 0.119140625,
+     "bearings_ref_better": 2,
+     "p_a_seed_pooled_holm": 1.971853910989002e-06,
+     "p_b_seed_bavg_holm": 6.995375470871954e-06,
+     "p_c_bearing_flip_holm": 0.71484375
+    },
+    "temporal stream only": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.0031539928714627704,
+     "bavg_diff": 0.003077017888456615,
+     "p_a_seed_pooled": 0.08090937834011157,
+     "p_b_seed_bavg": 0.112518614714132,
+     "p_c_bearing_flip": 0.91015625,
+     "bearings_ref_better": 5,
+     "p_a_seed_pooled_holm": 0.40454689170055785,
+     "p_b_seed_bavg_holm": 0.450074458856528,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "spectral stream only": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.0791585702144703,
+     "bavg_diff": 0.0770909252612207,
+     "p_a_seed_pooled": 5.5367345705590585e-25,
+     "p_b_seed_bavg": 3.334233924377599e-24,
+     "p_c_bearing_flip": 0.009765625,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 3.875714199391341e-24,
+     "p_b_seed_bavg_holm": 2.3339637470643193e-23,
+     "p_c_bearing_flip_holm": 0.068359375
+    },
+    "without PGMC": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.0008854393523880004,
+     "bavg_diff": 0.0014759302271561761,
+     "p_a_seed_pooled": 0.2746354895014922,
+     "p_b_seed_bavg": 0.15136237770265404,
+     "p_c_bearing_flip": 0.28125,
+     "bearings_ref_better": 7,
+     "p_a_seed_pooled_holm": 0.8239064685044766,
+     "p_b_seed_bavg_holm": 0.4540871331079621,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "without DANN": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.00022067973035178948,
+     "bavg_diff": -0.00019734173774462875,
+     "p_a_seed_pooled": 0.7060318059748399,
+     "p_b_seed_bavg": 0.7713090911562532,
+     "p_c_bearing_flip": 0.919921875,
+     "bearings_ref_better": 5,
+     "p_a_seed_pooled_holm": 1.0,
+     "p_b_seed_bavg_holm": 1.0,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "without PGMC and DANN": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.0016126292068566722,
+     "bavg_diff": 0.002148981175824767,
+     "p_a_seed_pooled": 0.09925788711629213,
+     "p_b_seed_bavg": 0.07409385705795356,
+     "p_c_bearing_flip": 0.32421875,
+     "bearings_ref_better": 7,
+     "p_a_seed_pooled_holm": 0.40454689170055785,
+     "p_b_seed_bavg_holm": 0.3704692852897678,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "PGMC batch ordering": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.00021804642506961027,
+     "bavg_diff": 0.0008695834443724168,
+     "p_a_seed_pooled": 0.8855011548058171,
+     "p_b_seed_bavg": 0.587792315556899,
+     "p_c_bearing_flip": 0.642578125,
+     "bearings_ref_better": 7,
+     "p_a_seed_pooled_holm": 1.0,
+     "p_b_seed_bavg_holm": 1.0,
+     "p_c_bearing_flip_holm": 1.0
+    }
+   },
+   "adopted: protocol (all10)": {
+    "in-bearing early stopping": {
+     "n_seeds": 5,
+     "n_bearings": 10,
+     "pooled_diff": 0.026672074290401367,
+     "bavg_diff": 0.029464825961934123,
+     "p_a_seed_pooled": 0.0007199002750545211,
+     "p_b_seed_bavg": 0.0018781835086050765,
+     "p_c_bearing_flip": 0.01171875,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 0.0007199002750545211,
+     "p_b_seed_bavg_holm": 0.0018781835086050765,
+     "p_c_bearing_flip_holm": 0.01171875
+    }
+   },
+   "adopted: XJTU-SY baselines (xjtu_test)": {
+    "1D CNN": {
+     "n_seeds": 5,
+     "n_bearings": 6,
+     "pooled_diff": 0.02738133871793566,
+     "bavg_diff": -0.02660939664554472,
+     "p_a_seed_pooled": 0.0011144260474782758,
+     "p_b_seed_bavg": 0.014029015303332065,
+     "p_c_bearing_flip": 0.53125,
+     "bearings_ref_better": 2,
+     "p_a_seed_pooled_holm": 0.0033432781424348277,
+     "p_b_seed_bavg_holm": 0.02805803060666413,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "BiLSTM": {
+     "n_seeds": 5,
+     "n_bearings": 6,
+     "pooled_diff": -0.0027943122481771275,
+     "bavg_diff": -0.045149095627168824,
+     "p_a_seed_pooled": 0.3306570876391122,
+     "p_b_seed_bavg": 0.0011306843876058255,
+     "p_c_bearing_flip": 0.21875,
+     "bearings_ref_better": 2,
+     "p_a_seed_pooled_holm": 0.3306570876391122,
+     "p_b_seed_bavg_holm": 0.0033920531628174764,
+     "p_c_bearing_flip_holm": 0.65625
+    },
+    "CNN-LSTM": {
+     "n_seeds": 5,
+     "n_bearings": 6,
+     "pooled_diff": 0.032638162445516664,
+     "bavg_diff": -0.012567335040106192,
+     "p_a_seed_pooled": 0.046145911652138584,
+     "p_b_seed_bavg": 0.07331664593991577,
+     "p_c_bearing_flip": 0.625,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.09229182330427717,
+     "p_b_seed_bavg_holm": 0.07331664593991577,
+     "p_c_bearing_flip_holm": 1.0
+    }
+   },
+   "adopted: XJTU-SY baselines (xjtu_zs)": {
+    "1D CNN": {
+     "n_seeds": 5,
+     "n_bearings": 5,
+     "pooled_diff": 0.04163803763686285,
+     "bavg_diff": 0.023595855604492566,
+     "p_a_seed_pooled": 0.06968847555756796,
+     "p_b_seed_bavg": 0.08167747378303693,
+     "p_c_bearing_flip": 0.5625,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.13937695111513593,
+     "p_b_seed_bavg_holm": 0.16335494756607385,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "BiLSTM": {
+     "n_seeds": 5,
+     "n_bearings": 5,
+     "pooled_diff": 0.051711278174115714,
+     "bavg_diff": 0.02320193462393737,
+     "p_a_seed_pooled": 0.08723830356533899,
+     "p_b_seed_bavg": 0.13781318784609928,
+     "p_c_bearing_flip": 0.625,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.13937695111513593,
+     "p_b_seed_bavg_holm": 0.16335494756607385,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "CNN-LSTM": {
+     "n_seeds": 5,
+     "n_bearings": 5,
+     "pooled_diff": 0.065903958374221,
+     "bavg_diff": 0.04495310163928105,
+     "p_a_seed_pooled": 0.026681997612001428,
+     "p_b_seed_bavg": 0.014247743096177509,
+     "p_c_bearing_flip": 0.375,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.08004599283600428,
+     "p_b_seed_bavg_holm": 0.042743229288532525,
+     "p_c_bearing_flip_holm": 1.0
+    }
+   },
+   "submitted: baselines (all10)": {
+    "1D CNN": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.01244321228277093,
+     "bavg_diff": 0.010988028593634116,
+     "p_a_seed_pooled": 9.817255960266907e-08,
+     "p_b_seed_bavg": 4.2060067722983086e-07,
+     "p_c_bearing_flip": 0.0390625,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 1.9634511920533813e-07,
+     "p_b_seed_bavg_holm": 8.412013544596617e-07,
+     "p_c_bearing_flip_holm": 0.087890625
+    },
+    "BiLSTM": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.02408625142582136,
+     "bavg_diff": 0.023826560496577533,
+     "p_a_seed_pooled": 6.974077439648208e-11,
+     "p_b_seed_bavg": 6.653216930280183e-12,
+     "p_c_bearing_flip": 0.0078125,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 2.0922232318944623e-10,
+     "p_b_seed_bavg_holm": 1.995965079084055e-11,
+     "p_c_bearing_flip_holm": 0.0390625
+    },
+    "CNN-LSTM": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.012084735471712483,
+     "bavg_diff": 0.012188024761401815,
+     "p_a_seed_pooled": 6.040562564061042e-05,
+     "p_b_seed_bavg": 2.1190829884120176e-05,
+     "p_c_bearing_flip": 0.029296875,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 6.040562564061042e-05,
+     "p_b_seed_bavg_holm": 2.1190829884120176e-05,
+     "p_c_bearing_flip_holm": 0.087890625
+    },
+    "1D ResNet": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.042599560176351484,
+     "bavg_diff": 0.038718433503843824,
+     "p_a_seed_pooled": 4.1134570436763804e-13,
+     "p_b_seed_bavg": 2.699379373281347e-12,
+     "p_c_bearing_flip": 0.005859375,
+     "bearings_ref_better": 9,
+     "p_a_seed_pooled_holm": 1.6453828174705521e-12,
+     "p_b_seed_bavg_holm": 1.0797517493125388e-11,
+     "p_c_bearing_flip_holm": 0.03515625
+    },
+    "Transformer": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.1190347092957885,
+     "bavg_diff": 0.10597976344000959,
+     "p_a_seed_pooled": 8.228010957400167e-15,
+     "p_b_seed_bavg": 8.890944470664165e-14,
+     "p_c_bearing_flip": 0.001953125,
+     "bearings_ref_better": 10,
+     "p_a_seed_pooled_holm": 4.114005478700083e-14,
+     "p_b_seed_bavg_holm": 4.4454722353320826e-13,
+     "p_c_bearing_flip_holm": 0.013671875
+    },
+    "TSMC-CNN [21]": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.08585893748326855,
+     "bavg_diff": 0.07642418223574088,
+     "p_a_seed_pooled": 9.80374960938607e-20,
+     "p_b_seed_bavg": 5.217746670999403e-17,
+     "p_c_bearing_flip": 0.009765625,
+     "bearings_ref_better": 9,
+     "p_a_seed_pooled_holm": 5.882249765631642e-19,
+     "p_b_seed_bavg_holm": 3.6524226696995823e-16,
+     "p_c_bearing_flip_holm": 0.0390625
+    },
+    "MSCNN [7]": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.0886625428720332,
+     "bavg_diff": 0.05834085199408745,
+     "p_a_seed_pooled": 7.261668755747953e-21,
+     "p_b_seed_bavg": 2.3759870403264814e-15,
+     "p_c_bearing_flip": 0.076171875,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 5.083168129023567e-20,
+     "p_b_seed_bavg_holm": 1.425592224195889e-14,
+     "p_c_bearing_flip_holm": 0.087890625
+    }
+   },
+   "submitted: ablations (all10)": {
+    "static fusion": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.0027617152144303195,
+     "bavg_diff": -0.0024895354580081993,
+     "p_a_seed_pooled": 1.3599018422631074e-05,
+     "p_b_seed_bavg": 6.070252685645743e-05,
+     "p_c_bearing_flip": 0.115234375,
+     "bearings_ref_better": 2,
+     "p_a_seed_pooled_holm": 6.799509211315538e-05,
+     "p_b_seed_bavg_holm": 0.0003642151611387446,
+     "p_c_bearing_flip_holm": 0.69140625
+    },
+    "temporal stream only": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.004927737575799384,
+     "bavg_diff": 0.0001762618286217113,
+     "p_a_seed_pooled": 2.320992892910738e-06,
+     "p_b_seed_bavg": 0.8544473759462915,
+     "p_c_bearing_flip": 0.982421875,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 1.3925957357464427e-05,
+     "p_b_seed_bavg_holm": 0.9199690013769123,
+     "p_c_bearing_flip_holm": 0.982421875
+    },
+    "spectral stream only": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.08957048683681432,
+     "bavg_diff": 0.08587081830215317,
+     "p_a_seed_pooled": 1.662627544553601e-24,
+     "p_b_seed_bavg": 1.3188763023789005e-22,
+     "p_c_bearing_flip": 0.00390625,
+     "bearings_ref_better": 9,
+     "p_a_seed_pooled_holm": 1.1638392811875206e-23,
+     "p_b_seed_bavg_holm": 9.232134116652303e-22,
+     "p_c_bearing_flip_holm": 0.02734375
+    },
+    "without PGMC": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.0003861449574641414,
+     "bavg_diff": -0.001030838830195735,
+     "p_a_seed_pooled": 0.6765322118596241,
+     "p_b_seed_bavg": 0.45998450068845614,
+     "p_c_bearing_flip": 0.447265625,
+     "bearings_ref_better": 4,
+     "p_a_seed_pooled_holm": 0.6765322118596241,
+     "p_b_seed_bavg_holm": 0.9199690013769123,
+     "p_c_bearing_flip_holm": 0.89453125
+    },
+    "without DANN": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.0024303185984409633,
+     "bavg_diff": -0.002535648788935682,
+     "p_a_seed_pooled": 0.0005171724931479445,
+     "p_b_seed_bavg": 0.002248965056971849,
+     "p_c_bearing_flip": 0.193359375,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.002068689972591778,
+     "p_b_seed_bavg_holm": 0.011244825284859246,
+     "p_c_bearing_flip_holm": 0.76171875
+    },
+    "without PGMC and DANN": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.003085979823656569,
+     "bavg_diff": -0.003311547555982247,
+     "p_a_seed_pooled": 0.002122619006779677,
+     "p_b_seed_bavg": 0.012219662254675202,
+     "p_c_bearing_flip": 0.15234375,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.006367857020339032,
+     "p_b_seed_bavg_holm": 0.04887864901870081,
+     "p_c_bearing_flip_holm": 0.76171875
+    },
+    "PGMC batch ordering": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.001303639024200811,
+     "bavg_diff": -0.0016891925803311724,
+     "p_a_seed_pooled": 0.1560239308046768,
+     "p_b_seed_bavg": 0.18514101790841728,
+     "p_c_bearing_flip": 0.18359375,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.3120478616093536,
+     "p_b_seed_bavg_holm": 0.5554230537252518,
+     "p_c_bearing_flip_holm": 0.76171875
+    }
+   },
+   "submitted: protocol (all10)": {
+    "in-bearing early stopping": {
+     "n_seeds": 5,
+     "n_bearings": 10,
+     "pooled_diff": 0.023657500568800605,
+     "bavg_diff": 0.02438478154991442,
+     "p_a_seed_pooled": 0.006794756701827974,
+     "p_b_seed_bavg": 0.006054368306112154,
+     "p_c_bearing_flip": 0.037109375,
+     "bearings_ref_better": 8,
+     "p_a_seed_pooled_holm": 0.013589513403655948,
+     "p_b_seed_bavg_holm": 0.012108736612224308,
+     "p_c_bearing_flip_holm": 0.07421875
+    },
+    "lambda by validation argmin": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": 0.005948826239112937,
+     "bavg_diff": -0.0035035450086376707,
+     "p_a_seed_pooled": 0.011342023346010706,
+     "p_b_seed_bavg": 0.0249639341273552,
+     "p_c_bearing_flip": 0.7734375,
+     "bearings_ref_better": 6,
+     "p_a_seed_pooled_holm": 0.013589513403655948,
+     "p_b_seed_bavg_holm": 0.0249639341273552,
+     "p_c_bearing_flip_holm": 0.7734375
+    }
+   },
+   "submitted: XJTU-SY baselines (xjtu_test)": {
+    "1D CNN": {
+     "n_seeds": 5,
+     "n_bearings": 6,
+     "pooled_diff": 0.024994125509302745,
+     "bavg_diff": -0.01566252344199513,
+     "p_a_seed_pooled": 0.0029687225203607593,
+     "p_b_seed_bavg": 0.07039604751820282,
+     "p_c_bearing_flip": 0.625,
+     "bearings_ref_better": 2,
+     "p_a_seed_pooled_holm": 0.008906167561082277,
+     "p_b_seed_bavg_holm": 0.14079209503640563,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "BiLSTM": {
+     "n_seeds": 5,
+     "n_bearings": 6,
+     "pooled_diff": -0.005181525456810043,
+     "bavg_diff": -0.034202222423619234,
+     "p_a_seed_pooled": 0.31410558373005915,
+     "p_b_seed_bavg": 0.007802392403160347,
+     "p_c_bearing_flip": 0.1875,
+     "bearings_ref_better": 2,
+     "p_a_seed_pooled_holm": 0.31410558373005915,
+     "p_b_seed_bavg_holm": 0.02340717720948104,
+     "p_c_bearing_flip_holm": 0.5625
+    },
+    "CNN-LSTM": {
+     "n_seeds": 5,
+     "n_bearings": 6,
+     "pooled_diff": 0.03025094923688375,
+     "bavg_diff": -0.0016204618365566025,
+     "p_a_seed_pooled": 0.035004252849084753,
+     "p_b_seed_bavg": 0.8270432852941316,
+     "p_c_bearing_flip": 1.0,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.07000850569816951,
+     "p_b_seed_bavg_holm": 0.8270432852941316,
+     "p_c_bearing_flip_holm": 1.0
+    }
+   },
+   "submitted: XJTU-SY baselines (xjtu_zs)": {
+    "1D CNN": {
+     "n_seeds": 5,
+     "n_bearings": 5,
+     "pooled_diff": 0.051899128901833055,
+     "bavg_diff": 0.025415522726510265,
+     "p_a_seed_pooled": 0.0014031093867903316,
+     "p_b_seed_bavg": 0.010698657321171898,
+     "p_c_bearing_flip": 0.375,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.004209328160370994,
+     "p_b_seed_bavg_holm": 0.021397314642343797,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "BiLSTM": {
+     "n_seeds": 5,
+     "n_bearings": 5,
+     "pooled_diff": 0.06197236943908593,
+     "bavg_diff": 0.02502160174595507,
+     "p_a_seed_pooled": 0.019202632844330582,
+     "p_b_seed_bavg": 0.0636767467911093,
+     "p_c_bearing_flip": 0.75,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.019202632844330582,
+     "p_b_seed_bavg_holm": 0.0636767467911093,
+     "p_c_bearing_flip_holm": 1.0
+    },
+    "CNN-LSTM": {
+     "n_seeds": 5,
+     "n_bearings": 5,
+     "pooled_diff": 0.07616504963919121,
+     "bavg_diff": 0.046772768761298746,
+     "p_a_seed_pooled": 0.0030801067164774446,
+     "p_b_seed_bavg": 0.003207267929314117,
+     "p_c_bearing_flip": 0.5625,
+     "bearings_ref_better": 3,
+     "p_a_seed_pooled_holm": 0.006160213432954889,
+     "p_b_seed_bavg_holm": 0.009621803787942352,
+     "p_c_bearing_flip_holm": 1.0
+    }
+   },
+   "adopted vs submitted (all10)": {
+    "submitted architecture": {
+     "n_seeds": 20,
+     "n_bearings": 10,
+     "pooled_diff": -0.0008232470325091459,
+     "bavg_diff": 0.00024487638302305716,
+     "p_a_seed_pooled": 0.4850504904809686,
+     "p_b_seed_bavg": 0.8631973009985795,
+     "p_c_bearing_flip": 0.9453125,
+     "bearings_ref_better": 5,
+     "p_a_seed_pooled_holm": 0.4850504904809686,
+     "p_b_seed_bavg_holm": 0.8631973009985795,
+     "p_c_bearing_flip_holm": 0.9453125
+    }
+   }
+  }
+ },
+ "E2": {
+  "flips": {
+   "ces": {
+    "all10": [
+     {
+      "comparison": "adopted vs 1D CNN",
+      "pooled_diff": 0.007955577036274636,
+      "bavg_diff": 0.008067668287018508,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs BiLSTM",
+      "pooled_diff": 0.023836138262455127,
+      "bavg_diff": 0.024696624840927616,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs CNN-LSTM",
+      "pooled_diff": 0.008456468634263616,
+      "bavg_diff": 0.010205113827252442,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs 1D ResNet",
+      "pooled_diff": 0.042093562124149796,
+      "bavg_diff": 0.03941249494451753,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs Transformer",
+      "pooled_diff": 0.10778052496554584,
+      "bavg_diff": 0.09744290444197397,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs TSMC-CNN [21]",
+      "pooled_diff": 0.0889468419077079,
+      "bavg_diff": 0.07690178544756175,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs MSCNN [7]",
+      "pooled_diff": 0.08768851642099947,
+      "bavg_diff": 0.05737304585171745,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D CNN",
+      "pooled_diff": 0.011508130438524344,
+      "bavg_diff": 0.009931187083996524,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs BiLSTM",
+      "pooled_diff": 0.02738869166470484,
+      "bavg_diff": 0.026560143637905632,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs CNN-LSTM",
+      "pooled_diff": 0.012009022036513325,
+      "bavg_diff": 0.012068632624230458,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D ResNet",
+      "pooled_diff": 0.04564611552639951,
+      "bavg_diff": 0.04127601374149555,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs Transformer",
+      "pooled_diff": 0.11133307836779557,
+      "bavg_diff": 0.09930642323895197,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs TSMC-CNN [21]",
+      "pooled_diff": 0.09249939530995761,
+      "bavg_diff": 0.07876530424453977,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs MSCNN [7]",
+      "pooled_diff": 0.09124106982324917,
+      "bavg_diff": 0.05923656464869548,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs static fusion",
+      "pooled_diff": -0.004314020890966188,
+      "bavg_diff": -0.004026947402487527,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs temporal stream only",
+      "pooled_diff": -0.002583406361080959,
+      "bavg_diff": 0.0033966607869037393,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs spectral stream only",
+      "pooled_diff": 0.07755671126792717,
+      "bavg_diff": 0.07597702109728523,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without PGMC",
+      "pooled_diff": 0.0008724269857248266,
+      "bavg_diff": 0.001506604819869925,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without DANN",
+      "pooled_diff": 0.0006743746208883704,
+      "bavg_diff": 0.00015261869077172612,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without PGMC and DANN",
+      "pooled_diff": 0.0020625288669500414,
+      "bavg_diff": 0.0025344679759436023,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs PGMC batch ordering",
+      "pooled_diff": -0.00021195508480352995,
+      "bavg_diff": 0.0008694219737859818,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs static fusion",
+      "pooled_diff": -0.0026466631451585064,
+      "bavg_diff": -0.002377080391290444,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs temporal stream only",
+      "pooled_diff": -0.00408680133602383,
+      "bavg_diff": 0.0008713176323792163,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs spectral stream only",
+      "pooled_diff": 0.08261719877091304,
+      "bavg_diff": 0.08014066646070667,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without PGMC",
+      "pooled_diff": -0.0006262904573003172,
+      "bavg_diff": -0.001279509532276249,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without DANN",
+      "pooled_diff": -0.0014340761731379437,
+      "bavg_diff": -0.0017113095011078868,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without PGMC and DANN",
+      "pooled_diff": -0.0021936378964332245,
+      "bavg_diff": -0.0026112449564765607,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs PGMC batch ordering",
+      "pooled_diff": -0.001379205941661888,
+      "bavg_diff": -0.0018272192929365133,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs in-bearing early stopping",
+      "pooled_diff": 0.027684523891632805,
+      "bavg_diff": 0.030427189493444685,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs in-bearing early stopping",
+      "pooled_diff": 0.025083911921135217,
+      "bavg_diff": 0.025756515861724106,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs lambda by validation argmin",
+      "pooled_diff": 0.006284218028806479,
+      "bavg_diff": -0.003645506539658769,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs submitted",
+      "pooled_diff": -0.0035525534022497083,
+      "bavg_diff": -0.001863518796978017,
+      "flip": false
+     }
+    ],
+    "new6": [
+     {
+      "comparison": "adopted vs 1D CNN",
+      "pooled_diff": -0.0021667614686783727,
+      "bavg_diff": -4.073532770329513e-06,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs BiLSTM",
+      "pooled_diff": 0.01431836005030262,
+      "bavg_diff": 0.01745640761056506,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs CNN-LSTM",
+      "pooled_diff": 0.006983752609132822,
+      "bavg_diff": 0.010342268596362895,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs 1D ResNet",
+      "pooled_diff": 0.03170611643941877,
+      "bavg_diff": 0.030850814860839258,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs Transformer",
+      "pooled_diff": 0.07824953445657759,
+      "bavg_diff": 0.06830515987453484,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs TSMC-CNN [21]",
+      "pooled_diff": 0.02940173166851478,
+      "bavg_diff": 0.02567625193085511,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs MSCNN [7]",
+      "pooled_diff": 0.07737950905754999,
+      "bavg_diff": 0.028726136629037835,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D CNN",
+      "pooled_diff": 0.006596710309610466,
+      "bavg_diff": 0.004028936413082072,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs BiLSTM",
+      "pooled_diff": 0.023081831828591456,
+      "bavg_diff": 0.021489417556417468,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs CNN-LSTM",
+      "pooled_diff": 0.01574722438742166,
+      "bavg_diff": 0.014375278542215297,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D ResNet",
+      "pooled_diff": 0.040469588217707624,
+      "bavg_diff": 0.03488382480669166,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs Transformer",
+      "pooled_diff": 0.08701300623486645,
+      "bavg_diff": 0.07233816982038722,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs TSMC-CNN [21]",
+      "pooled_diff": 0.038165203446803624,
+      "bavg_diff": 0.02970926187670751,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs MSCNN [7]",
+      "pooled_diff": 0.08614298083583882,
+      "bavg_diff": 0.03275914657489024,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs static fusion",
+      "pooled_diff": -0.0004910249021808366,
+      "bavg_diff": -0.00032975159399220854,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs temporal stream only",
+      "pooled_diff": 0.004354470639061231,
+      "bavg_diff": 0.01155591921822799,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs spectral stream only",
+      "pooled_diff": 0.047434520758923446,
+      "bavg_diff": 0.05498892289030725,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without PGMC",
+      "pooled_diff": -0.0019873777530101736,
+      "bavg_diff": 0.000135428670412939,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs without DANN",
+      "pooled_diff": -0.0016033064782906836,
+      "bavg_diff": -0.0018914864152021608,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without PGMC and DANN",
+      "pooled_diff": -0.0028889147425012972,
+      "bavg_diff": -0.0006420067105561269,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs PGMC batch ordering",
+      "pooled_diff": -0.004016063337019515,
+      "bavg_diff": -0.0016349041106411971,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs static fusion",
+      "pooled_diff": -0.00032941739121701287,
+      "bavg_diff": -4.2049879524928836e-05,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs temporal stream only",
+      "pooled_diff": -0.0019342649096213554,
+      "bavg_diff": 0.003662391060198064,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs spectral stream only",
+      "pooled_diff": 0.06056264285625692,
+      "bavg_diff": 0.06313370656364262,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without PGMC",
+      "pooled_diff": 0.002681833639152885,
+      "bavg_diff": 0.0006381525262599052,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without DANN",
+      "pooled_diff": 0.0005786551199472828,
+      "bavg_diff": -0.0002268589587342898,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs without PGMC and DANN",
+      "pooled_diff": 0.0010632457884951236,
+      "bavg_diff": -0.00010604237497169044,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs PGMC batch ordering",
+      "pooled_diff": 0.0008605298313590943,
+      "bavg_diff": -0.0005946527404580585,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs in-bearing early stopping",
+      "pooled_diff": 0.007164838613821006,
+      "bavg_diff": 0.016466129542276102,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs in-bearing early stopping",
+      "pooled_diff": 0.005995474774389453,
+      "bavg_diff": 0.011504778442902036,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs lambda by validation argmin",
+      "pooled_diff": 0.02143600286981273,
+      "bavg_diff": 0.002257803584854201,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs submitted",
+      "pooled_diff": -0.00876347177828884,
+      "bavg_diff": -0.004033009945852402,
+      "flip": false
+     }
+    ],
+    "orig4": [
+     {
+      "comparison": "adopted vs 1D CNN",
+      "pooled_diff": 0.018667697823659523,
+      "bavg_diff": 0.020175281016701758,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs BiLSTM",
+      "pooled_diff": 0.03390847379897464,
+      "bavg_diff": 0.03555695068647145,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs CNN-LSTM",
+      "pooled_diff": 0.010014993073947093,
+      "bavg_diff": 0.009999381673586768,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs 1D ResNet",
+      "pooled_diff": 0.05308623667191283,
+      "bavg_diff": 0.052255015070034994,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs Transformer",
+      "pooled_diff": 0.13903215097552318,
+      "bavg_diff": 0.14114952129313268,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs TSMC-CNN [21]",
+      "pooled_diff": 0.15196137287486272,
+      "bavg_diff": 0.1537400857226217,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs MSCNN [7]",
+      "pooled_diff": 0.09859818240591742,
+      "bavg_diff": 0.10034340968573692,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D CNN",
+      "pooled_diff": 0.016705716513399756,
+      "bavg_diff": 0.01878456309036819,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs BiLSTM",
+      "pooled_diff": 0.031946492488714874,
+      "bavg_diff": 0.03416623276013788,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs CNN-LSTM",
+      "pooled_diff": 0.008053011763687324,
+      "bavg_diff": 0.008608663747253201,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D ResNet",
+      "pooled_diff": 0.05112425536165307,
+      "bavg_diff": 0.05086429714370142,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs Transformer",
+      "pooled_diff": 0.13707016966526342,
+      "bavg_diff": 0.13975880336679908,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs TSMC-CNN [21]",
+      "pooled_diff": 0.14999939156460296,
+      "bavg_diff": 0.1523493677962881,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs MSCNN [7]",
+      "pooled_diff": 0.09663620109565761,
+      "bavg_diff": 0.09895269175940337,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs static fusion",
+      "pooled_diff": -0.008359765338409634,
+      "bavg_diff": -0.009572741115230505,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs temporal stream only",
+      "pooled_diff": -0.009925521663506095,
+      "bavg_diff": -0.008842226860082627,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs spectral stream only",
+      "pooled_diff": 0.10943398379296457,
+      "bavg_diff": 0.10745916840775224,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without PGMC",
+      "pooled_diff": 0.003898859442481239,
+      "bavg_diff": 0.0035633690440554045,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without DANN",
+      "pooled_diff": 0.003084765761000006,
+      "bavg_diff": 0.0032187763497325697,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without PGMC and DANN",
+      "pooled_diff": 0.007302470407179529,
+      "bavg_diff": 0.007299180005693186,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs PGMC batch ordering",
+      "pooled_diff": 0.003813801124207425,
+      "bavg_diff": 0.004625911100426763,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs static fusion",
+      "pooled_diff": -0.005098924191173712,
+      "bavg_diff": -0.005879626158938704,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs temporal stream only",
+      "pooled_diff": -0.0063647561967100615,
+      "bavg_diff": -0.003315292509349045,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs spectral stream only",
+      "pooled_diff": 0.10595677260104422,
+      "bavg_diff": 0.10565110630630277,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without PGMC",
+      "pooled_diff": -0.0041271637864747305,
+      "bavg_diff": -0.004156002620080481,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without DANN",
+      "pooled_diff": -0.003564080095999088,
+      "bavg_diff": -0.003937985314668263,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without PGMC and DANN",
+      "pooled_diff": -0.005640285270095384,
+      "bavg_diff": -0.006369048828733878,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs PGMC batch ordering",
+      "pooled_diff": -0.003749440855332066,
+      "bavg_diff": -0.0036760691216542003,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs in-bearing early stopping",
+      "pooled_diff": 0.04939979720594526,
+      "bavg_diff": 0.051368779420197554,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs in-bearing early stopping",
+      "pooled_diff": 0.04528454483400326,
+      "bavg_diff": 0.04713412198995724,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs lambda by validation argmin",
+      "pooled_diff": -0.00975039188686733,
+      "bavg_diff": -0.012500471726428219,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs submitted",
+      "pooled_diff": 0.001961981310259768,
+      "bavg_diff": 0.0013907179263335664,
+      "flip": false
+     }
+    ],
+    "zs3": [
+     {
+      "comparison": "adopted vs 1D CNN",
+      "pooled_diff": -0.04803586130565996,
+      "bavg_diff": -0.03197346968764931,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs BiLSTM",
+      "pooled_diff": -0.059468507691274396,
+      "bavg_diff": -0.035408446117788824,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs CNN-LSTM",
+      "pooled_diff": -0.050181351547912534,
+      "bavg_diff": -0.03112967672371353,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs 1D ResNet",
+      "pooled_diff": -0.006884362660323348,
+      "bavg_diff": -0.003435299856343611,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs Transformer",
+      "pooled_diff": 0.13820866316802533,
+      "bavg_diff": 0.13171014739797743,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs TSMC-CNN [21]",
+      "pooled_diff": -0.04050986593532389,
+      "bavg_diff": -0.026595398088414636,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs MSCNN [7]",
+      "pooled_diff": 0.02212926777126865,
+      "bavg_diff": 0.04604120217516003,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D CNN",
+      "pooled_diff": -0.014211430043952995,
+      "bavg_diff": -0.006200649619414291,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs BiLSTM",
+      "pooled_diff": -0.025644076429567432,
+      "bavg_diff": -0.009635626049553805,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs CNN-LSTM",
+      "pooled_diff": -0.016356920286205577,
+      "bavg_diff": -0.00535685665547851,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D ResNet",
+      "pooled_diff": 0.026940068601383614,
+      "bavg_diff": 0.022337520211891407,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs Transformer",
+      "pooled_diff": 0.1720330944297323,
+      "bavg_diff": 0.15748296746621246,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs TSMC-CNN [21]",
+      "pooled_diff": -0.006685434673616919,
+      "bavg_diff": -0.0008225780201796207,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs MSCNN [7]",
+      "pooled_diff": 0.05595369903297561,
+      "bavg_diff": 0.07181402224339506,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs static fusion",
+      "pooled_diff": 0.0011550496978448787,
+      "bavg_diff": 0.00342438103710387,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs temporal stream only",
+      "pooled_diff": -0.011950023374839873,
+      "bavg_diff": 0.00536486740621135,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs spectral stream only",
+      "pooled_diff": -0.010942602518975605,
+      "bavg_diff": 0.0021075077772416905,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs without PGMC",
+      "pooled_diff": -0.009848382358629688,
+      "bavg_diff": -0.008084355188088838,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without DANN",
+      "pooled_diff": -0.02060867617658447,
+      "bavg_diff": -0.014434278972728998,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without PGMC and DANN",
+      "pooled_diff": -0.025010243240213254,
+      "bavg_diff": -0.01895997518617922,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs PGMC batch ordering",
+      "pooled_diff": -0.007239672166228593,
+      "bavg_diff": -0.008140687913761277,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs static fusion",
+      "pooled_diff": -0.0001330146472543911,
+      "bavg_diff": 0.0016652435151042865,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs temporal stream only",
+      "pooled_diff": -0.013391858154679309,
+      "bavg_diff": -0.00022220259868075966,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs spectral stream only",
+      "pooled_diff": 0.017093824406473584,
+      "bavg_diff": 0.021920701701583816,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without PGMC",
+      "pooled_diff": 0.00585683287251659,
+      "bavg_diff": 0.005871951313448085,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without DANN",
+      "pooled_diff": -0.003844449359303853,
+      "bavg_diff": 0.002370993745207524,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs without PGMC and DANN",
+      "pooled_diff": -0.0020263427529593507,
+      "bavg_diff": 0.003816683148319594,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs PGMC batch ordering",
+      "pooled_diff": 0.0034194740623542845,
+      "bavg_diff": 0.002241628499516589,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs in-bearing early stopping",
+      "pooled_diff": -0.0948212503409819,
+      "bavg_diff": -0.07789401552724207,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs in-bearing early stopping",
+      "pooled_diff": -0.03906362347979814,
+      "bavg_diff": -0.028641244228190567,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs lambda by validation argmin",
+      "pooled_diff": 0.04775268537596529,
+      "bavg_diff": 0.048171488051930576,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs submitted",
+      "pooled_diff": -0.033824431261706964,
+      "bavg_diff": -0.025772820068235013,
+      "flip": false
+     }
+    ],
+    "xjtu_test": [
+     {
+      "comparison": "adopted vs 1D CNN",
+      "pooled_diff": 0.022655606511935444,
+      "bavg_diff": -0.03209832058890637,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs BiLSTM",
+      "pooled_diff": -0.009510991749158293,
+      "bavg_diff": -0.052305983990851755,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs CNN-LSTM",
+      "pooled_diff": 0.024207855537692762,
+      "bavg_diff": -0.01926242241417505,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs 1D CNN",
+      "pooled_diff": 0.022550415151057775,
+      "bavg_diff": -0.019001355918215633,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs BiLSTM",
+      "pooled_diff": -0.009616183110035963,
+      "bavg_diff": -0.03920901932016102,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs CNN-LSTM",
+      "pooled_diff": 0.024102664176815093,
+      "bavg_diff": -0.006165457743484315,
+      "flip": true
+     }
+    ],
+    "xjtu_zs": [
+     {
+      "comparison": "adopted vs 1D CNN",
+      "pooled_diff": 0.03472474694699075,
+      "bavg_diff": 0.01918657670676227,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs BiLSTM",
+      "pooled_diff": 0.051183623709745676,
+      "bavg_diff": 0.02285113083323178,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs CNN-LSTM",
+      "pooled_diff": 0.06361813436560242,
+      "bavg_diff": 0.04378866594797333,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D CNN",
+      "pooled_diff": 0.048250967206931436,
+      "bavg_diff": 0.022949115048091984,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs BiLSTM",
+      "pooled_diff": 0.06470984396968635,
+      "bavg_diff": 0.026613669174561493,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs CNN-LSTM",
+      "pooled_diff": 0.0771443546255431,
+      "bavg_diff": 0.04755120428930304,
+      "flip": false
+     }
+    ]
+   },
+   "raw": {
+    "all10": [
+     {
+      "comparison": "adopted vs 1D CNN",
+      "pooled_diff": 0.011619965250261785,
+      "bavg_diff": 0.011232904976657174,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs BiLSTM",
+      "pooled_diff": 0.023263004393312213,
+      "bavg_diff": 0.024071436879600592,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs CNN-LSTM",
+      "pooled_diff": 0.011261488439203335,
+      "bavg_diff": 0.012432901144424873,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs 1D ResNet",
+      "pooled_diff": 0.04177631314384234,
+      "bavg_diff": 0.03896330988686687,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs Transformer",
+      "pooled_diff": 0.11821146226327936,
+      "bavg_diff": 0.10622463982303265,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs TSMC-CNN [21]",
+      "pooled_diff": 0.0850356904507594,
+      "bavg_diff": 0.07666905861876394,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs MSCNN [7]",
+      "pooled_diff": 0.08783929583952407,
+      "bavg_diff": 0.05858572837711053,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D CNN",
+      "pooled_diff": 0.01244321228277093,
+      "bavg_diff": 0.010988028593634116,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs BiLSTM",
+      "pooled_diff": 0.02408625142582136,
+      "bavg_diff": 0.023826560496577533,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs CNN-LSTM",
+      "pooled_diff": 0.012084735471712483,
+      "bavg_diff": 0.012188024761401815,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D ResNet",
+      "pooled_diff": 0.042599560176351484,
+      "bavg_diff": 0.038718433503843824,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs Transformer",
+      "pooled_diff": 0.1190347092957885,
+      "bavg_diff": 0.10597976344000959,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs TSMC-CNN [21]",
+      "pooled_diff": 0.08585893748326855,
+      "bavg_diff": 0.07642418223574088,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs MSCNN [7]",
+      "pooled_diff": 0.0886625428720332,
+      "bavg_diff": 0.05834085199408745,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs static fusion",
+      "pooled_diff": -0.004525844676228496,
+      "bavg_diff": -0.004267676514781449,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs temporal stream only",
+      "pooled_diff": -0.0031539928714627704,
+      "bavg_diff": 0.003077017888456615,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs spectral stream only",
+      "pooled_diff": 0.0791585702144703,
+      "bavg_diff": 0.0770909252612207,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without PGMC",
+      "pooled_diff": 0.0008854393523880004,
+      "bavg_diff": 0.0014759302271561761,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without DANN",
+      "pooled_diff": 0.00022067973035178948,
+      "bavg_diff": -0.00019734173774462875,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs without PGMC and DANN",
+      "pooled_diff": 0.0016126292068566722,
+      "bavg_diff": 0.002148981175824767,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs PGMC batch ordering",
+      "pooled_diff": -0.00021804642506961027,
+      "bavg_diff": 0.0008695834443724168,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs static fusion",
+      "pooled_diff": -0.0027617152144303195,
+      "bavg_diff": -0.0024895354580081993,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs temporal stream only",
+      "pooled_diff": -0.004927737575799384,
+      "bavg_diff": 0.0001762618286217113,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs spectral stream only",
+      "pooled_diff": 0.08957048683681432,
+      "bavg_diff": 0.08587081830215317,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without PGMC",
+      "pooled_diff": -0.0003861449574641414,
+      "bavg_diff": -0.001030838830195735,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without DANN",
+      "pooled_diff": -0.0024303185984409633,
+      "bavg_diff": -0.002535648788935682,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without PGMC and DANN",
+      "pooled_diff": -0.003085979823656569,
+      "bavg_diff": -0.003311547555982247,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs PGMC batch ordering",
+      "pooled_diff": -0.001303639024200811,
+      "bavg_diff": -0.0016891925803311724,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs in-bearing early stopping",
+      "pooled_diff": 0.026672074290401367,
+      "bavg_diff": 0.029464825961934123,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs in-bearing early stopping",
+      "pooled_diff": 0.023657500568800605,
+      "bavg_diff": 0.02438478154991442,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs lambda by validation argmin",
+      "pooled_diff": 0.005948826239112937,
+      "bavg_diff": -0.0035035450086376707,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs submitted",
+      "pooled_diff": -0.0008232470325091459,
+      "bavg_diff": 0.00024487638302305716,
+      "flip": true
+     }
+    ],
+    "new6": [
+     {
+      "comparison": "adopted vs 1D CNN",
+      "pooled_diff": 0.0017224864733392687,
+      "bavg_diff": 0.0030925658443575975,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs BiLSTM",
+      "pooled_diff": 0.013581855781998248,
+      "bavg_diff": 0.01668130481783624,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs CNN-LSTM",
+      "pooled_diff": 0.009275319542506665,
+      "bavg_diff": 0.011978320232052139,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs 1D ResNet",
+      "pooled_diff": 0.0319901855619368,
+      "bavg_diff": 0.030710479194409522,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs Transformer",
+      "pooled_diff": 0.09384433342414558,
+      "bavg_diff": 0.07923334737748935,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs TSMC-CNN [21]",
+      "pooled_diff": 0.03130150320375741,
+      "bavg_diff": 0.029615202898442206,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs MSCNN [7]",
+      "pooled_diff": 0.07683576547290552,
+      "bavg_diff": 0.02982130990848056,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D CNN",
+      "pooled_diff": 0.007374967768787667,
+      "bavg_diff": 0.00503789013676881,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs BiLSTM",
+      "pooled_diff": 0.019234337077446644,
+      "bavg_diff": 0.018626629110247452,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs CNN-LSTM",
+      "pooled_diff": 0.014927800837955063,
+      "bavg_diff": 0.013923644524463352,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D ResNet",
+      "pooled_diff": 0.0376426668573852,
+      "bavg_diff": 0.03265580348682074,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs Transformer",
+      "pooled_diff": 0.09949681471959397,
+      "bavg_diff": 0.08117867166990056,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs TSMC-CNN [21]",
+      "pooled_diff": 0.036953984499205804,
+      "bavg_diff": 0.03156052719085342,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs MSCNN [7]",
+      "pooled_diff": 0.08248824676835392,
+      "bavg_diff": 0.03176663420089177,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs static fusion",
+      "pooled_diff": -0.0007028081354671061,
+      "bavg_diff": -0.0005706576106007097,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs temporal stream only",
+      "pooled_diff": 0.003800942294080152,
+      "bavg_diff": 0.01140832326682778,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs spectral stream only",
+      "pooled_diff": 0.04953174105969134,
+      "bavg_diff": 0.056150743934164984,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without PGMC",
+      "pooled_diff": -0.0018297647169527545,
+      "bavg_diff": 0.0001764565427974235,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs without DANN",
+      "pooled_diff": -0.0017936761051151454,
+      "bavg_diff": -0.002010526113659075,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without PGMC and DANN",
+      "pooled_diff": -0.002981109243546326,
+      "bavg_diff": -0.0007651307631083321,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs PGMC batch ordering",
+      "pooled_diff": -0.0039018823863458743,
+      "bavg_diff": -0.0015539679670845505,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs static fusion",
+      "pooled_diff": -0.0004074337055469071,
+      "bavg_diff": -0.00011059985687359164,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs temporal stream only",
+      "pooled_diff": -0.0029773667563735133,
+      "bavg_diff": 0.0029861321701095374,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs spectral stream only",
+      "pooled_diff": 0.06869000957416768,
+      "bavg_diff": 0.06900754617290665,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without PGMC",
+      "pooled_diff": 0.0025725424608681324,
+      "bavg_diff": 0.0006295417101858186,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without DANN",
+      "pooled_diff": -0.0004829308738354604,
+      "bavg_diff": -0.001027276474529766,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without PGMC and DANN",
+      "pooled_diff": 2.0200142186289906e-05,
+      "bavg_diff": -0.0008554634600540081,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs PGMC batch ordering",
+      "pooled_diff": 0.0006659590085318065,
+      "bavg_diff": -0.0006470785957706324,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs in-bearing early stopping",
+      "pooled_diff": 0.006702298243124655,
+      "bavg_diff": 0.015911044448121442,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs in-bearing early stopping",
+      "pooled_diff": 0.005996202648520982,
+      "bavg_diff": 0.011080580248113332,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs lambda by validation argmin",
+      "pooled_diff": 0.01919455331722582,
+      "bavg_diff": 0.0011543923525668283,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs submitted",
+      "pooled_diff": -0.005652481295448398,
+      "bavg_diff": -0.0019453242924112129,
+      "flip": false
+     }
+    ],
+    "orig4": [
+     {
+      "comparison": "adopted vs 1D CNN",
+      "pooled_diff": 0.02209412476360883,
+      "bavg_diff": 0.023443413675106523,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs BiLSTM",
+      "pooled_diff": 0.03350822917356176,
+      "bavg_diff": 0.03515663497224712,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs CNN-LSTM",
+      "pooled_diff": 0.01336338229655172,
+      "bavg_diff": 0.013114772512983958,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs 1D ResNet",
+      "pooled_diff": 0.0521326335382686,
+      "bavg_diff": 0.051342555925552855,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs Transformer",
+      "pooled_diff": 0.1439983520456007,
+      "bavg_diff": 0.14671157849134756,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs TSMC-CNN [21]",
+      "pooled_diff": 0.14190072256959135,
+      "bavg_diff": 0.1472498421992465,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs MSCNN [7]",
+      "pooled_diff": 0.09948395150058495,
+      "bavg_diff": 0.10173235608005549,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D CNN",
+      "pooled_diff": 0.017806760181038103,
+      "bavg_diff": 0.01991323627893207,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs BiLSTM",
+      "pooled_diff": 0.029220864590991047,
+      "bavg_diff": 0.031626457576072665,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs CNN-LSTM",
+      "pooled_diff": 0.009076017713981002,
+      "bavg_diff": 0.00958459511680951,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D ResNet",
+      "pooled_diff": 0.04784526895569788,
+      "bavg_diff": 0.04781237852937841,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs Transformer",
+      "pooled_diff": 0.13971098746303,
+      "bavg_diff": 0.14318140109517313,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs TSMC-CNN [21]",
+      "pooled_diff": 0.1376133579870206,
+      "bavg_diff": 0.14371966480307202,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs MSCNN [7]",
+      "pooled_diff": 0.09519658691801422,
+      "bavg_diff": 0.09820217868388104,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs static fusion",
+      "pooled_diff": -0.0085716320384258,
+      "bavg_diff": -0.009813204871052566,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs temporal stream only",
+      "pooled_diff": -0.010514160240423166,
+      "bavg_diff": -0.009419940179100129,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs spectral stream only",
+      "pooled_diff": 0.11051161894900104,
+      "bavg_diff": 0.10850119725180425,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without PGMC",
+      "pooled_diff": 0.0037588459213290805,
+      "bavg_diff": 0.0034251407536942864,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without DANN",
+      "pooled_diff": 0.0023524028502353057,
+      "bavg_diff": 0.0025224348261270292,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without PGMC and DANN",
+      "pooled_diff": 0.006474023747485083,
+      "bavg_diff": 0.006520149084224411,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs PGMC batch ordering",
+      "pooled_diff": 0.0036804297777163694,
+      "bavg_diff": 0.0045049105615578506,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs static fusion",
+      "pooled_diff": -0.005253169919123875,
+      "bavg_diff": -0.006057938859710106,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs temporal stream only",
+      "pooled_diff": -0.0069917475659471845,
+      "bavg_diff": -0.004038543683610013,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs spectral stream only",
+      "pooled_diff": 0.1116675738317086,
+      "bavg_diff": 0.11116572649602294,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without PGMC",
+      "pooled_diff": -0.0035172215344609547,
+      "bavg_diff": -0.0035214096407680537,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without DANN",
+      "pooled_diff": -0.004491171682502256,
+      "bavg_diff": -0.004798207260544543,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without PGMC and DANN",
+      "pooled_diff": -0.006373142663071834,
+      "bavg_diff": -0.006995673699874615,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs PGMC batch ordering",
+      "pooled_diff": -0.003387996509272433,
+      "bavg_diff": -0.003252363557171986,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs in-bearing early stopping",
+      "pooled_diff": 0.047805397683091735,
+      "bavg_diff": 0.04979549823265315,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs in-bearing early stopping",
+      "pooled_diff": 0.042347841391867466,
+      "bavg_diff": 0.04434108350261605,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs lambda by validation argmin",
+      "pooled_diff": -0.008068668661699873,
+      "bavg_diff": -0.0104904510504444,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs submitted",
+      "pooled_diff": 0.00428736458257072,
+      "bavg_diff": 0.00353017739617445,
+      "flip": false
+     }
+    ],
+    "zs3": [
+     {
+      "comparison": "adopted vs 1D CNN",
+      "pooled_diff": -0.04729368354501606,
+      "bavg_diff": -0.03131208778026734,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs BiLSTM",
+      "pooled_diff": -0.05905197431458601,
+      "bavg_diff": -0.03555351947009272,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs CNN-LSTM",
+      "pooled_diff": -0.0492243108776998,
+      "bavg_diff": -0.031196082257968338,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs 1D ResNet",
+      "pooled_diff": -0.010401972446762452,
+      "bavg_diff": -0.007584890362300267,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs Transformer",
+      "pooled_diff": 0.1367114273832824,
+      "bavg_diff": 0.13157266578907506,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs TSMC-CNN [21]",
+      "pooled_diff": -0.04264849259289218,
+      "bavg_diff": -0.030031280218564844,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs MSCNN [7]",
+      "pooled_diff": 0.020714954512891747,
+      "bavg_diff": 0.04267687061827034,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D CNN",
+      "pooled_diff": -0.014801789641344116,
+      "bavg_diff": -0.0069549088274951255,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs BiLSTM",
+      "pooled_diff": -0.026560080410914073,
+      "bavg_diff": -0.011196340517320498,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs CNN-LSTM",
+      "pooled_diff": -0.01673241697402785,
+      "bavg_diff": -0.0068389033051961205,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D ResNet",
+      "pooled_diff": 0.022089921456909488,
+      "bavg_diff": 0.016772288590471952,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs Transformer",
+      "pooled_diff": 0.16920332128695437,
+      "bavg_diff": 0.1559298447418473,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs TSMC-CNN [21]",
+      "pooled_diff": -0.010156598689220232,
+      "bavg_diff": -0.00567410126579262,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs MSCNN [7]",
+      "pooled_diff": 0.05320684841656369,
+      "bavg_diff": 0.06703404957104257,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs static fusion",
+      "pooled_diff": 0.001126482908958637,
+      "bavg_diff": 0.003353181896701418,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs temporal stream only",
+      "pooled_diff": -0.012595168784312433,
+      "bavg_diff": 0.004220337909903363,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs spectral stream only",
+      "pooled_diff": -0.008841972368263711,
+      "bavg_diff": 0.0035561698291892456,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs without PGMC",
+      "pooled_diff": -0.00986200091486677,
+      "bavg_diff": -0.007997755457761702,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without DANN",
+      "pooled_diff": -0.021579638851904843,
+      "bavg_diff": -0.015626933093840778,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs without PGMC and DANN",
+      "pooled_diff": -0.025848478757701947,
+      "bavg_diff": -0.0198867141621239,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs PGMC batch ordering",
+      "pooled_diff": -0.007248553193675078,
+      "bavg_diff": -0.008050430531364214,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs static fusion",
+      "pooled_diff": -0.0001944111466457496,
+      "bavg_diff": 0.001538655611142656,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs temporal stream only",
+      "pooled_diff": -0.013637408062585895,
+      "bavg_diff": -0.0014249175976679893,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs spectral stream only",
+      "pooled_diff": 0.034584785706257545,
+      "bavg_diff": 0.04026134089039411,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without PGMC",
+      "pooled_diff": 0.005909800579264861,
+      "bavg_diff": 0.005937459822219157,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs without DANN",
+      "pooled_diff": -0.004981043690444442,
+      "bavg_diff": 0.0010370062688952672,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs without PGMC and DANN",
+      "pooled_diff": -0.002983080120094564,
+      "bavg_diff": 0.0026339849062442743,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs PGMC batch ordering",
+      "pooled_diff": 0.003343329682421482,
+      "bavg_diff": 0.0021868958392847067,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs in-bearing early stopping",
+      "pooled_diff": -0.09512345890872172,
+      "bavg_diff": -0.07898185197532064,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs in-bearing early stopping",
+      "pooled_diff": -0.0390935663797778,
+      "bavg_diff": -0.02945544008482549,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs lambda by validation argmin",
+      "pooled_diff": 0.04698213922305849,
+      "bavg_diff": 0.047217407073336784,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs submitted",
+      "pooled_diff": -0.03249189390367195,
+      "bavg_diff": -0.024357178952772222,
+      "flip": false
+     }
+    ],
+    "xjtu_test": [
+     {
+      "comparison": "adopted vs 1D CNN",
+      "pooled_diff": 0.02738133871793566,
+      "bavg_diff": -0.02660939664554472,
+      "flip": true
+     },
+     {
+      "comparison": "adopted vs BiLSTM",
+      "pooled_diff": -0.0027943122481771275,
+      "bavg_diff": -0.045149095627168824,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs CNN-LSTM",
+      "pooled_diff": 0.032638162445516664,
+      "bavg_diff": -0.012567335040106192,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs 1D CNN",
+      "pooled_diff": 0.024994125509302745,
+      "bavg_diff": -0.01566252344199513,
+      "flip": true
+     },
+     {
+      "comparison": "submitted vs BiLSTM",
+      "pooled_diff": -0.005181525456810043,
+      "bavg_diff": -0.034202222423619234,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs CNN-LSTM",
+      "pooled_diff": 0.03025094923688375,
+      "bavg_diff": -0.0016204618365566025,
+      "flip": true
+     }
+    ],
+    "xjtu_zs": [
+     {
+      "comparison": "adopted vs 1D CNN",
+      "pooled_diff": 0.04163803763686285,
+      "bavg_diff": 0.023595855604492566,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs BiLSTM",
+      "pooled_diff": 0.051711278174115714,
+      "bavg_diff": 0.02320193462393737,
+      "flip": false
+     },
+     {
+      "comparison": "adopted vs CNN-LSTM",
+      "pooled_diff": 0.065903958374221,
+      "bavg_diff": 0.04495310163928105,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs 1D CNN",
+      "pooled_diff": 0.051899128901833055,
+      "bavg_diff": 0.025415522726510265,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs BiLSTM",
+      "pooled_diff": 0.06197236943908593,
+      "bavg_diff": 0.02502160174595507,
+      "flip": false
+     },
+     {
+      "comparison": "submitted vs CNN-LSTM",
+      "pooled_diff": 0.07616504963919121,
+      "bavg_diff": 0.046772768761298746,
+      "flip": false
+     }
+    ]
+   }
+  },
+  "kendall": {
+   "ces": {
+    "all10": {
+     "tau": 1.0,
+     "p": 5.5114638447971785e-06,
+     "rank_pooled": [
+      "submitted",
+      "adopted",
+      "1D CNN",
+      "CNN-LSTM",
+      "BiLSTM",
+      "1D ResNet",
+      "MSCNN [7]",
+      "TSMC-CNN [21]",
+      "Transformer"
+     ],
+     "rank_bearing_avg": [
+      "submitted",
+      "adopted",
+      "1D CNN",
+      "CNN-LSTM",
+      "BiLSTM",
+      "1D ResNet",
+      "MSCNN [7]",
+      "TSMC-CNN [21]",
+      "Transformer"
+     ],
+     "pooled": {
+      "adopted": 0.1256872116864171,
+      "submitted": 0.12213465828416739,
+      "1D CNN": 0.13364278872269172,
+      "BiLSTM": 0.14952334994887226,
+      "CNN-LSTM": 0.13414368032068075,
+      "1D ResNet": 0.1677807738105669,
+      "Transformer": 0.233467736651963,
+      "TSMC-CNN [21]": 0.214634053594125,
+      "MSCNN [7]": 0.21337572810741653
+     },
+     "bearing_avg": {
+      "adopted": 0.15350376472642635,
+      "submitted": 0.15164024592944836,
+      "1D CNN": 0.16157143301344484,
+      "BiLSTM": 0.17820038956735398,
+      "CNN-LSTM": 0.1637088785536788,
+      "1D ResNet": 0.1929162596709439,
+      "Transformer": 0.2509466691684003,
+      "TSMC-CNN [21]": 0.23040555017398812,
+      "MSCNN [7]": 0.21087681057814384
+     }
+    },
+    "new6": {
+     "tau": 0.9444444444444445,
+     "p": 4.96031746031746e-05,
+     "rank_pooled": [
+      "submitted",
+      "1D CNN",
+      "adopted",
+      "CNN-LSTM",
+      "BiLSTM",
+      "TSMC-CNN [21]",
+      "1D ResNet",
+      "MSCNN [7]",
+      "Transformer"
+     ],
+     "rank_bearing_avg": [
+      "submitted",
+      "1D CNN",
+      "adopted",
+      "CNN-LSTM",
+      "BiLSTM",
+      "TSMC-CNN [21]",
+      "MSCNN [7]",
+      "1D ResNet",
+      "Transformer"
+     ],
+     "pooled": {
+      "adopted": 0.14687493703436721,
+      "submitted": 0.13811146525607834,
+      "1D CNN": 0.14470817556568882,
+      "BiLSTM": 0.1611932970846698,
+      "CNN-LSTM": 0.1538586896435,
+      "1D ResNet": 0.17858105347378597,
+      "Transformer": 0.22512447149094478,
+      "TSMC-CNN [21]": 0.17627666870288197,
+      "MSCNN [7]": 0.22425444609191714
+     },
+     "bearing_avg": {
+      "adopted": 0.18548406789962976,
+      "submitted": 0.1814510579537774,
+      "1D CNN": 0.18547999436685944,
+      "BiLSTM": 0.20294047551019484,
+      "CNN-LSTM": 0.19582633649599263,
+      "1D ResNet": 0.21633488276046903,
+      "Transformer": 0.25378922777416457,
+      "TSMC-CNN [21]": 0.21116031983048486,
+      "MSCNN [7]": 0.21421020452866762
+     }
+    },
+    "orig4": {
+     "tau": 1.0,
+     "p": 5.5114638447971785e-06,
+     "rank_pooled": [
+      "adopted",
+      "submitted",
+      "CNN-LSTM",
+      "1D CNN",
+      "BiLSTM",
+      "1D ResNet",
+      "MSCNN [7]",
+      "Transformer",
+      "TSMC-CNN [21]"
+     ],
+     "rank_bearing_avg": [
+      "adopted",
+      "submitted",
+      "CNN-LSTM",
+      "1D CNN",
+      "BiLSTM",
+      "1D ResNet",
+      "MSCNN [7]",
+      "Transformer",
+      "TSMC-CNN [21]"
+     ],
+     "pooled": {
+      "adopted": 0.10326497466815102,
+      "submitted": 0.10522695597841077,
+      "1D CNN": 0.12193267249181053,
+      "BiLSTM": 0.13717344846712565,
+      "CNN-LSTM": 0.1132799677420981,
+      "1D ResNet": 0.15635121134006386,
+      "Transformer": 0.2422971256436742,
+      "TSMC-CNN [21]": 0.25522634754301377,
+      "MSCNN [7]": 0.20186315707406838
+     },
+     "bearing_avg": {
+      "adopted": 0.10553330996662127,
+      "submitted": 0.10692402789295481,
+      "1D CNN": 0.12570859098332304,
+      "BiLSTM": 0.14109026065309271,
+      "CNN-LSTM": 0.11553269164020803,
+      "1D ResNet": 0.15778832503665624,
+      "Transformer": 0.246682831259754,
+      "TSMC-CNN [21]": 0.25927339568924296,
+      "MSCNN [7]": 0.20587671965235818
+     }
+    },
+    "zs3": {
+     "tau": 0.9444444444444445,
+     "p": 4.96031746031746e-05,
+     "rank_pooled": [
+      "BiLSTM",
+      "CNN-LSTM",
+      "1D CNN",
+      "TSMC-CNN [21]",
+      "submitted",
+      "1D ResNet",
+      "adopted",
+      "MSCNN [7]",
+      "Transformer"
+     ],
+     "rank_bearing_avg": [
+      "BiLSTM",
+      "1D CNN",
+      "CNN-LSTM",
+      "TSMC-CNN [21]",
+      "submitted",
+      "1D ResNet",
+      "adopted",
+      "MSCNN [7]",
+      "Transformer"
+     ],
+     "pooled": {
+      "adopted": 0.19729660304210309,
+      "submitted": 0.16347217178039608,
+      "1D CNN": 0.14926074173644316,
+      "BiLSTM": 0.13782809535082868,
+      "CNN-LSTM": 0.14711525149419052,
+      "1D ResNet": 0.19041224038177976,
+      "Transformer": 0.3355052662101284,
+      "TSMC-CNN [21]": 0.15678673710677918,
+      "MSCNN [7]": 0.21942587081337175
+     },
+     "bearing_avg": {
+      "adopted": 0.18267011856414753,
+      "submitted": 0.1568972984959125,
+      "1D CNN": 0.1506966488764982,
+      "BiLSTM": 0.14726167244635868,
+      "CNN-LSTM": 0.151540441840434,
+      "1D ResNet": 0.1792348187078039,
+      "Transformer": 0.314380265962125,
+      "TSMC-CNN [21]": 0.15607472047573287,
+      "MSCNN [7]": 0.22871132073930758
+     }
+    },
+    "xjtu_test": {
+     "tau": 0.19999999999999998,
+     "p": 0.8166666666666667,
+     "rank_pooled": [
+      "BiLSTM",
+      "submitted",
+      "adopted",
+      "1D CNN",
+      "CNN-LSTM"
+     ],
+     "rank_bearing_avg": [
+      "BiLSTM",
+      "1D CNN",
+      "CNN-LSTM",
+      "submitted",
+      "adopted"
+     ],
+     "pooled": {
+      "adopted": 0.17803663501957157,
+      "submitted": 0.17767148451112208,
+      "1D CNN": 0.20092844810591007,
+      "BiLSTM": 0.16876184984481632,
+      "CNN-LSTM": 0.20248069713166741
+     },
+     "bearing_avg": {
+      "adopted": 0.2078274926815717,
+      "submitted": 0.19863129456398745,
+      "1D CNN": 0.18210841815137743,
+      "BiLSTM": 0.16190075474943205,
+      "CNN-LSTM": 0.19494431632610876
+     }
+    },
+    "xjtu_zs": {
+     "tau": 0.9999999999999999,
+     "p": 0.016666666666666666,
+     "rank_pooled": [
+      "submitted",
+      "adopted",
+      "1D CNN",
+      "BiLSTM",
+      "CNN-LSTM"
+     ],
+     "rank_bearing_avg": [
+      "submitted",
+      "adopted",
+      "1D CNN",
+      "BiLSTM",
+      "CNN-LSTM"
+     ],
+     "pooled": {
+      "adopted": 0.20351288309820026,
+      "submitted": 0.198561051704283,
+      "1D CNN": 0.2537099717853738,
+      "BiLSTM": 0.2701688485481287,
+      "CNN-LSTM": 0.2826033592039855
+     },
+     "bearing_avg": {
+      "adopted": 0.2713098753825679,
+      "submitted": 0.26866473021824056,
+      "1D CNN": 0.2996523257604668,
+      "BiLSTM": 0.30331687988693634,
+      "CNN-LSTM": 0.32425441500167784
+     }
+    }
+   },
+   "raw": {
+    "all10": {
+     "tau": 0.8333333333333334,
+     "p": 0.0008542768959435626,
+     "rank_pooled": [
+      "submitted",
+      "adopted",
+      "CNN-LSTM",
+      "1D CNN",
+      "BiLSTM",
+      "1D ResNet",
+      "TSMC-CNN [21]",
+      "MSCNN [7]",
+      "Transformer"
+     ],
+     "rank_bearing_avg": [
+      "adopted",
+      "submitted",
+      "1D CNN",
+      "CNN-LSTM",
+      "BiLSTM",
+      "1D ResNet",
+      "MSCNN [7]",
+      "TSMC-CNN [21]",
+      "Transformer"
+     ],
+     "pooled": {
+      "adopted": 0.12699080795059056,
+      "submitted": 0.1261675609180814,
+      "1D CNN": 0.13861077320085236,
+      "BiLSTM": 0.15025381234390275,
+      "CNN-LSTM": 0.13825229638979392,
+      "1D ResNet": 0.16876712109443287,
+      "Transformer": 0.24520227021386992,
+      "TSMC-CNN [21]": 0.21202649840134996,
+      "MSCNN [7]": 0.21483010379011463
+     },
+     "bearing_avg": {
+      "adopted": 0.15334082413401742,
+      "submitted": 0.15358570051704043,
+      "1D CNN": 0.16457372911067455,
+      "BiLSTM": 0.17741226101361796,
+      "CNN-LSTM": 0.16577372527844228,
+      "1D ResNet": 0.19230413402088428,
+      "Transformer": 0.25956546395705005,
+      "TSMC-CNN [21]": 0.2300098827527813,
+      "MSCNN [7]": 0.21192655251112788
+     }
+    },
+    "new6": {
+     "tau": 0.9444444444444445,
+     "p": 4.96031746031746e-05,
+     "rank_pooled": [
+      "submitted",
+      "adopted",
+      "1D CNN",
+      "CNN-LSTM",
+      "BiLSTM",
+      "TSMC-CNN [21]",
+      "1D ResNet",
+      "MSCNN [7]",
+      "Transformer"
+     ],
+     "rank_bearing_avg": [
+      "submitted",
+      "adopted",
+      "1D CNN",
+      "CNN-LSTM",
+      "BiLSTM",
+      "TSMC-CNN [21]",
+      "MSCNN [7]",
+      "1D ResNet",
+      "Transformer"
+     ],
+     "pooled": {
+      "adopted": 0.14816265476845245,
+      "submitted": 0.14251017347300404,
+      "1D CNN": 0.1498851412417917,
+      "BiLSTM": 0.16174451055045067,
+      "CNN-LSTM": 0.1574379743109591,
+      "1D ResNet": 0.18015284033038922,
+      "Transformer": 0.24200698819259805,
+      "TSMC-CNN [21]": 0.17946415797220985,
+      "MSCNN [7]": 0.22499842024135797
+     },
+     "bearing_avg": {
+      "adopted": 0.18438091958801917,
+      "submitted": 0.18243559529560793,
+      "1D CNN": 0.18747348543237674,
+      "BiLSTM": 0.2010622244058554,
+      "CNN-LSTM": 0.19635923982007128,
+      "1D ResNet": 0.2150913987824287,
+      "Transformer": 0.2636142669655085,
+      "TSMC-CNN [21]": 0.21399612248646135,
+      "MSCNN [7]": 0.21420222949649972
+     }
+    },
+    "orig4": {
+     "tau": 0.9444444444444445,
+     "p": 4.96031746031746e-05,
+     "rank_pooled": [
+      "adopted",
+      "submitted",
+      "CNN-LSTM",
+      "1D CNN",
+      "BiLSTM",
+      "1D ResNet",
+      "MSCNN [7]",
+      "TSMC-CNN [21]",
+      "Transformer"
+     ],
+     "rank_bearing_avg": [
+      "adopted",
+      "submitted",
+      "CNN-LSTM",
+      "1D CNN",
+      "BiLSTM",
+      "1D ResNet",
+      "MSCNN [7]",
+      "Transformer",
+      "TSMC-CNN [21]"
+     ],
+     "pooled": {
+      "adopted": 0.1045853746316028,
+      "submitted": 0.10887273921417351,
+      "1D CNN": 0.12667949939521164,
+      "BiLSTM": 0.13809360380516456,
+      "CNN-LSTM": 0.11794875692815454,
+      "1D ResNet": 0.1567180081698714,
+      "Transformer": 0.24858372667720358,
+      "TSMC-CNN [21]": 0.2464860972011942,
+      "MSCNN [7]": 0.2040693261321877
+     },
+     "bearing_avg": {
+      "adopted": 0.10678068095301477,
+      "submitted": 0.11031085834918923,
+      "1D CNN": 0.1302240946281213,
+      "BiLSTM": 0.14193731592526188,
+      "CNN-LSTM": 0.11989545346599875,
+      "1D ResNet": 0.1581232368785676,
+      "Transformer": 0.2534922594443623,
+      "TSMC-CNN [21]": 0.2540305231522613,
+      "MSCNN [7]": 0.20851303703307025
+     }
+    },
+    "zs3": {
+     "tau": 0.9444444444444445,
+     "p": 4.96031746031746e-05,
+     "rank_pooled": [
+      "BiLSTM",
+      "CNN-LSTM",
+      "1D CNN",
+      "TSMC-CNN [21]",
+      "submitted",
+      "1D ResNet",
+      "adopted",
+      "MSCNN [7]",
+      "Transformer"
+     ],
+     "rank_bearing_avg": [
+      "BiLSTM",
+      "1D CNN",
+      "CNN-LSTM",
+      "TSMC-CNN [21]",
+      "submitted",
+      "1D ResNet",
+      "adopted",
+      "MSCNN [7]",
+      "Transformer"
+     ],
+     "pooled": {
+      "adopted": 0.2007520589463403,
+      "submitted": 0.16826016504266833,
+      "1D CNN": 0.15345837540132418,
+      "BiLSTM": 0.14170008463175426,
+      "CNN-LSTM": 0.15152774806864047,
+      "1D ResNet": 0.1903500864995778,
+      "Transformer": 0.3374634863296227,
+      "TSMC-CNN [21]": 0.15810356635344808,
+      "MSCNN [7]": 0.22146701345923198
+     },
+     "bearing_avg": {
+      "adopted": 0.18740036407341926,
+      "submitted": 0.16304318512064706,
+      "1D CNN": 0.15608827629315192,
+      "BiLSTM": 0.15184684460332654,
+      "CNN-LSTM": 0.15620428181545093,
+      "1D ResNet": 0.179815473711119,
+      "Transformer": 0.3189730298624943,
+      "TSMC-CNN [21]": 0.15736908385485443,
+      "MSCNN [7]": 0.23007723469168964
+     }
+    },
+    "xjtu_test": {
+     "tau": 0.19999999999999998,
+     "p": 0.8166666666666667,
+     "rank_pooled": [
+      "BiLSTM",
+      "adopted",
+      "submitted",
+      "1D CNN",
+      "CNN-LSTM"
+     ],
+     "rank_bearing_avg": [
+      "BiLSTM",
+      "1D CNN",
+      "submitted",
+      "CNN-LSTM",
+      "adopted"
+     ],
+     "pooled": {
+      "adopted": 0.17949482358582028,
+      "submitted": 0.1813094394311054,
+      "1D CNN": 0.20712245367821197,
+      "BiLSTM": 0.17694680271209917,
+      "CNN-LSTM": 0.21237927740579296
+     },
+     "bearing_avg": {
+      "adopted": 0.21000909709334153,
+      "submitted": 0.20283964468041055,
+      "1D CNN": 0.1896816773816273,
+      "BiLSTM": 0.1711419784000032,
+      "CNN-LSTM": 0.2037237389870658
+     }
+    },
+    "xjtu_zs": {
+     "tau": 0.7999999999999999,
+     "p": 0.08333333333333333,
+     "rank_pooled": [
+      "submitted",
+      "adopted",
+      "1D CNN",
+      "BiLSTM",
+      "CNN-LSTM"
+     ],
+     "rank_bearing_avg": [
+      "submitted",
+      "adopted",
+      "BiLSTM",
+      "1D CNN",
+      "CNN-LSTM"
+     ],
+     "pooled": {
+      "adopted": 0.20542189672733802,
+      "submitted": 0.20367225929917182,
+      "1D CNN": 0.2623612077554588,
+      "BiLSTM": 0.27243444829271174,
+      "CNN-LSTM": 0.286627128492817
+     },
+     "bearing_avg": {
+      "adopted": 0.2726749437048464,
+      "submitted": 0.2719410267097285,
+      "1D CNN": 0.3053313062756612,
+      "BiLSTM": 0.304937385295106,
+      "CNN-LSTM": 0.3266885523104497
+     }
+    }
+   }
+  }
+ },
+ "provenance": {
+  "plan_sha256": "646e4d8b38e60167c80d59dc7709e65247c0c7057244f73ad8dfb47e70e45be7",
+  "code_sha256": {
+   "Experiments/exp16_ress.py": "7fb30773b3b5f3c7418c9a3ad78abda4fe436e30c3e450d9b9f056114b58f43a",
+   "Experiments/exp19_baselines.py": "ed481def3afd500661ce90106e1e140131508590594e67d1bcaf38b8d18e5cfd",
+   "Experiments/r1_provenance.py": "ff2e32fe946c0707c788a39b3414262c36388ec89b736fa12f4db90be49cf47e",
+   "src/dsaf_v2_lite.py": "985a33ca0993c5b52f736c97b2ac44399c8ea22b36c1b9169e4d305973766752",
+   "src/ablation_models.py": "d603563d9c4003c60b60eeee0b72123b0ed56e6cda7f1ddbff510092fe61b2c8",
+   "src/published_baselines.py": "c9f581bc27020b46e7d5a9f79129a826b34f012bda84665c2381e8338b6d5783",
+   "src/sota_baselines.py": "8ed27e977934fa2a58555be06288d71266f684a083557c53eb3bf2cacc9c9034",
+   "src/vanilla_baselines.py": "bcd744631eee25c660617360ac84423603f4b175b3666a99495d9fa8b3592f52",
+   "src/mini_dann.py": "897581f518e61506d9d6f52593946e430e7511a403baac25438e23631318ea09",
+   "src/online_filters.py": "89e523690d0d9f8f4e23157a8094ae68eedc5aedd7a9f1da13cb518322d028d4",
+   "src/isotonic_eval.py": "3e56013efe14b808f4d55311318567a2565628d31a087d6e55dcb4ca9d63e40b",
+   "Experiments/r1_eval_choices.py": "4d846a529a91d29f8b4a22415ade6ecc94475898fa5f231bf10f4b5111751edf",
+   "Experiments/r1_strict_stats.py": "7caba300b2395c6ca537d4d8b710613c902b4840a9d9e91f0a9bfd4262f5243f",
+   "Experiments/r1_xjtu_stats.py": "47833cdc981c356ef443a32a13233f1e47b56ba2cd6199bf52867920496ac57a",
+   "Experiments/r1_analysis.py": "da42415bd574b381142fa3439a47a79bac14935499e48dd2a038d36244cb2b11"
+  },
+  "data_list_sha256": {
+   "data_sha256_v2.txt": "8d520c299c9c1fec05d1d397beef3232a39e8bd157c6eb368e37e05b3df9d27b",
+   "data_sha256_v2hv.txt": "7b601df5d718d9be4900aa88568fec565c31b508ffcdc6ddb2b7f4b96112ee8d"
+  },
+  "git_head": "bf06c79d3f44137e1ab02597308424d22b4210f1",
+  "git_tree_differs": true,
+  "command": "Experiments/r1_eval_choices.py",
+  "python": "3.14.3",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "gpu": "NVIDIA GeForce RTX 5070"
+ }
+}

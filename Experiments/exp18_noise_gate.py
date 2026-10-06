@@ -102,10 +102,15 @@ def main():
     ap.add_argument('--full-dir', required=True)
     ap.add_argument('--static-dir', required=True)
     ap.add_argument('--out', default='outputs/exp18_noise_gate/results.json')
+    ap.add_argument('--data-dir', default=None, help='processed data directory override')
+    ap.add_argument('--test-bearings', default=None,
+                    help='comma-separated test bearing patterns override')
     args = ap.parse_args()
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    bearings = load_bearings(CONFIG['data_dir'], CONFIG['test_bearings'])
+    test_bearings = ([s.strip() for s in args.test_bearings.split(',')]
+                     if args.test_bearings else CONFIG['test_bearings'])
+    bearings = load_bearings(args.data_dir or CONFIG['data_dir'], test_bearings)
 
     print('[exp18] FULL model (adaptive gate):')
     full = run_variant(Path(args.full_dir), False, bearings, CONFIG, device)

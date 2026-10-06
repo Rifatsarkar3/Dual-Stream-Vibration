@@ -1,0 +1,6 @@
+B= 5: 4-fold=0.1832  SE=0.0086  n=20
+B=10: 4-fold=0.1936  SE=0.0092  n=20
+B=20: 4-fold=0.2051  SE=0.0119  n=20
+B=40: 4-fold=0.2046  SE=0.0135  n=20
+SELECTED B* = 5
+adoption threshold (current 0.1510 - SE 0.0078) = 0.1432; variant at B*: 0.1832 -> NOT better by more than one SE: not adopted

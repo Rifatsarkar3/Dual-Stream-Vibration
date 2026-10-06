@@ -1,0 +1,1720 @@
+=== outputs/r1_components_final/full ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=full seeds=[42, 123, 777, 999, 7, 8, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1367 R2=0.6064 Mono=50.3%
+  TEST pava: MAE=0.1307 R2=0.6648
+  TEST ces : MAE=0.1344  rtrm: MAE=0.1769
+  UQ: PICP90=40.2% MPIW=0.168 NLL=5.539
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1451 R2=0.5730 Mono=50.3%
+  TEST pava: MAE=0.1381 R2=0.6339
+  TEST ces : MAE=0.1420  rtrm: MAE=0.1908
+  UQ: PICP90=40.0% MPIW=0.185 NLL=4.303
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1574 R2=0.4556 Mono=50.3%
+  TEST pava: MAE=0.1530 R2=0.4938
+  TEST ces : MAE=0.1556  rtrm: MAE=0.1890
+  UQ: PICP90=47.4% MPIW=0.202 NLL=6.078
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1557 R2=0.4853 Mono=50.5%
+  TEST pava: MAE=0.1515 R2=0.5222
+  TEST ces : MAE=0.1542  rtrm: MAE=0.1750
+  UQ: PICP90=39.7% MPIW=0.176 NLL=6.766
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1448 R2=0.5370 Mono=50.4%
+  TEST pava: MAE=0.1390 R2=0.5922
+  TEST ces : MAE=0.1426  rtrm: MAE=0.1679
+  UQ: PICP90=43.3% MPIW=0.183 NLL=5.142
+
+=== seed 8 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.040, 0.191]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1331 R2=0.6086 Mono=50.4%
+  TEST pava: MAE=0.1257 R2=0.6669
+  TEST ces : MAE=0.1301  rtrm: MAE=0.1774
+  UQ: PICP90=47.2% MPIW=0.190 NLL=3.688
+
+=== seed 21 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.150, 0.358]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1345 R2=0.6050 Mono=50.5%
+  TEST pava: MAE=0.1291 R2=0.6581
+  TEST ces : MAE=0.1318  rtrm: MAE=0.1777
+  UQ: PICP90=44.0% MPIW=0.182 NLL=4.867
+
+=== seed 34 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.171, -0.003]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1454 R2=0.5210 Mono=50.7%
+  TEST pava: MAE=0.1389 R2=0.5740
+  TEST ces : MAE=0.1430  rtrm: MAE=0.1721
+  UQ: PICP90=43.4% MPIW=0.173 NLL=6.801
+
+=== seed 55 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.256, 0.551]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1393 R2=0.5937 Mono=50.2%
+  TEST pava: MAE=0.1324 R2=0.6516
+  TEST ces : MAE=0.1369  rtrm: MAE=0.1859
+  UQ: PICP90=45.1% MPIW=0.195 NLL=3.854
+
+=== seed 89 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.217, -0.016]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1366 R2=0.5965 Mono=50.8%
+  TEST pava: MAE=0.1309 R2=0.6503
+  TEST ces : MAE=0.1346  rtrm: MAE=0.1824
+  UQ: PICP90=38.7% MPIW=0.157 NLL=6.338
+
+=== seed 144 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.234, 0.072]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1407 R2=0.5912 Mono=50.8%
+  TEST pava: MAE=0.1342 R2=0.6467
+  TEST ces : MAE=0.1384  rtrm: MAE=0.1827
+  UQ: PICP90=41.1% MPIW=0.183 NLL=4.294
+
+=== seed 233 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.167, 0.268]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1479 R2=0.5259 Mono=50.3%
+  TEST pava: MAE=0.1423 R2=0.5790
+  TEST ces : MAE=0.1458  rtrm: MAE=0.1824
+  UQ: PICP90=40.3% MPIW=0.177 NLL=5.703
+
+=== seed 377 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.109, 0.302]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1331 R2=0.6148 Mono=50.5%
+  TEST pava: MAE=0.1263 R2=0.6723
+  TEST ces : MAE=0.1305  rtrm: MAE=0.1838
+  UQ: PICP90=45.4% MPIW=0.176 NLL=4.820
+
+=== seed 610 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.137, 0.188]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1352 R2=0.6244 Mono=50.1%
+  TEST pava: MAE=0.1271 R2=0.6866
+  TEST ces : MAE=0.1318  rtrm: MAE=0.2019
+  UQ: PICP90=46.5% MPIW=0.198 NLL=3.038
+
+=== seed 987 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.177, 0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1411 R2=0.5443 Mono=50.3%
+  TEST pava: MAE=0.1357 R2=0.5902
+  TEST ces : MAE=0.1387  rtrm: MAE=0.1655
+  UQ: PICP90=47.9% MPIW=0.191 NLL=4.639
+
+=== seed 1597 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.204, -0.027]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1420 R2=0.5940 Mono=50.4%
+  TEST pava: MAE=0.1359 R2=0.6476
+  TEST ces : MAE=0.1392  rtrm: MAE=0.1976
+  UQ: PICP90=43.3% MPIW=0.192 NLL=3.858
+
+=== seed 2584 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.193, 0.173]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1482 R2=0.5399 Mono=50.3%
+  TEST pava: MAE=0.1441 R2=0.5886
+  TEST ces : MAE=0.1464  rtrm: MAE=0.1815
+  UQ: PICP90=41.4% MPIW=0.190 NLL=4.917
+
+=== seed 4181 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.146, 0.351]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1388 R2=0.6069 Mono=50.3%
+  TEST pava: MAE=0.1331 R2=0.6612
+  TEST ces : MAE=0.1369  rtrm: MAE=0.1830
+  UQ: PICP90=40.0% MPIW=0.172 NLL=5.024
+
+=== seed 6765 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.120]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1341 R2=0.5854 Mono=50.3%
+  TEST pava: MAE=0.1278 R2=0.6454
+  TEST ces : MAE=0.1310  rtrm: MAE=0.1681
+  UQ: PICP90=48.8% MPIW=0.196 NLL=4.108
+
+=== seed 10946 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.214, -0.055]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1340 R2=0.6225 Mono=50.3%
+  TEST pava: MAE=0.1278 R2=0.6824
+  TEST ces : MAE=0.1315  rtrm: MAE=0.1891
+  UQ: PICP90=39.8% MPIW=0.166 NLL=5.048
+
+=== AGGREGATE (20 seeds) ===
+  raw : MAE=0.1412±0.0070 R2=0.5716±0.0463 Mono=50.4%
+  pava: MAE=0.1352±0.0077 R2=0.6254±0.0520
+  ces : MAE=0.1388±0.0073
+  UQ  : PICP90=43.2% MPIW=0.183
+
+[exp16] results saved to outputs\r1_components_final\full\results.json
+=== outputs/r1_components_final/rawonly ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=rawonly seeds=[42, 123, 777, 999, 7, 8, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1389 R2=0.5993 Mono=50.4%
+  TEST pava: MAE=0.1320 R2=0.6632
+  TEST ces : MAE=0.1363  rtrm: MAE=0.1923
+  UQ: PICP90=40.7% MPIW=0.175 NLL=4.977
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1445 R2=0.5852 Mono=49.8%
+  TEST pava: MAE=0.1369 R2=0.6492
+  TEST ces : MAE=0.1418  rtrm: MAE=0.1965
+  UQ: PICP90=43.0% MPIW=0.208 NLL=3.061
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1511 R2=0.5260 Mono=50.2%
+  TEST pava: MAE=0.1469 R2=0.5650
+  TEST ces : MAE=0.1496  rtrm: MAE=0.1934
+  UQ: PICP90=45.9% MPIW=0.204 NLL=4.487
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1539 R2=0.5215 Mono=50.3%
+  TEST pava: MAE=0.1484 R2=0.5658
+  TEST ces : MAE=0.1523  rtrm: MAE=0.1872
+  UQ: PICP90=38.5% MPIW=0.187 NLL=5.117
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1389 R2=0.5776 Mono=50.4%
+  TEST pava: MAE=0.1324 R2=0.6373
+  TEST ces : MAE=0.1364  rtrm: MAE=0.1739
+  UQ: PICP90=42.6% MPIW=0.182 NLL=4.452
+
+=== seed 8 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.040, 0.191]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1341 R2=0.5917 Mono=50.3%
+  TEST pava: MAE=0.1265 R2=0.6522
+  TEST ces : MAE=0.1312  rtrm: MAE=0.1789
+  UQ: PICP90=49.2% MPIW=0.195 NLL=3.554
+
+=== seed 21 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.150, 0.358]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1398 R2=0.5875 Mono=50.6%
+  TEST pava: MAE=0.1342 R2=0.6434
+  TEST ces : MAE=0.1374  rtrm: MAE=0.1898
+  UQ: PICP90=42.9% MPIW=0.187 NLL=4.419
+
+=== seed 34 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.171, -0.003]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1421 R2=0.5836 Mono=50.0%
+  TEST pava: MAE=0.1363 R2=0.6401
+  TEST ces : MAE=0.1400  rtrm: MAE=0.1934
+  UQ: PICP90=40.3% MPIW=0.179 NLL=4.899
+
+=== seed 55 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.256, 0.551]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1496 R2=0.5303 Mono=50.2%
+  TEST pava: MAE=0.1427 R2=0.5878
+  TEST ces : MAE=0.1479  rtrm: MAE=0.1954
+  UQ: PICP90=44.4% MPIW=0.204 NLL=4.062
+
+=== seed 89 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.217, -0.016]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1367 R2=0.5923 Mono=50.6%
+  TEST pava: MAE=0.1296 R2=0.6516
+  TEST ces : MAE=0.1343  rtrm: MAE=0.1925
+  UQ: PICP90=41.0% MPIW=0.165 NLL=5.411
+
+=== seed 144 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.234, 0.072]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1472 R2=0.5516 Mono=50.3%
+  TEST pava: MAE=0.1402 R2=0.6122
+  TEST ces : MAE=0.1450  rtrm: MAE=0.1949
+  UQ: PICP90=40.6% MPIW=0.190 NLL=4.463
+
+=== seed 233 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.167, 0.268]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1481 R2=0.5458 Mono=50.3%
+  TEST pava: MAE=0.1415 R2=0.6050
+  TEST ces : MAE=0.1460  rtrm: MAE=0.1969
+  UQ: PICP90=38.8% MPIW=0.185 NLL=4.655
+
+=== seed 377 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.109, 0.302]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1439 R2=0.5879 Mono=50.6%
+  TEST pava: MAE=0.1367 R2=0.6478
+  TEST ces : MAE=0.1414  rtrm: MAE=0.2068
+  UQ: PICP90=39.4% MPIW=0.173 NLL=4.866
+
+=== seed 610 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.137, 0.188]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1383 R2=0.6016 Mono=50.2%
+  TEST pava: MAE=0.1303 R2=0.6683
+  TEST ces : MAE=0.1348  rtrm: MAE=0.2099
+  UQ: PICP90=46.7% MPIW=0.204 NLL=3.073
+
+=== seed 987 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.177, 0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1481 R2=0.5156 Mono=50.0%
+  TEST pava: MAE=0.1428 R2=0.5621
+  TEST ces : MAE=0.1464  rtrm: MAE=0.1765
+  UQ: PICP90=43.7% MPIW=0.190 NLL=4.821
+
+=== seed 1597 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.204, -0.027]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1442 R2=0.5894 Mono=50.3%
+  TEST pava: MAE=0.1366 R2=0.6540
+  TEST ces : MAE=0.1409  rtrm: MAE=0.2138
+  UQ: PICP90=41.9% MPIW=0.192 NLL=3.748
+
+=== seed 2584 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.193, 0.173]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1492 R2=0.5455 Mono=50.3%
+  TEST pava: MAE=0.1438 R2=0.6015
+  TEST ces : MAE=0.1473  rtrm: MAE=0.1925
+  UQ: PICP90=38.0% MPIW=0.181 NLL=5.233
+
+=== seed 4181 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.146, 0.351]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1435 R2=0.5909 Mono=50.3%
+  TEST pava: MAE=0.1381 R2=0.6497
+  TEST ces : MAE=0.1416  rtrm: MAE=0.1939
+  UQ: PICP90=37.5% MPIW=0.179 NLL=4.399
+
+=== seed 6765 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.120]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1364 R2=0.5984 Mono=50.4%
+  TEST pava: MAE=0.1288 R2=0.6692
+  TEST ces : MAE=0.1329  rtrm: MAE=0.1900
+  UQ: PICP90=43.9% MPIW=0.194 NLL=3.584
+
+=== seed 10946 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.214, -0.055]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1433 R2=0.5822 Mono=50.1%
+  TEST pava: MAE=0.1374 R2=0.6355
+  TEST ces : MAE=0.1413  rtrm: MAE=0.1928
+  UQ: PICP90=38.8% MPIW=0.175 NLL=5.029
+
+=== AGGREGATE (20 seeds) ===
+  raw : MAE=0.1436±0.0053 R2=0.5702±0.0283 Mono=50.3%
+  pava: MAE=0.1371±0.0059 R2=0.6281±0.0343
+  ces : MAE=0.1412±0.0058
+  UQ  : PICP90=41.9% MPIW=0.188
+
+[exp16] results saved to outputs\r1_components_final\rawonly\results.json
+=== outputs/r1_components_final/static ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=static seeds=[42, 123, 777, 999, 7, 8, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=False
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1388 R2=0.5890 Mono=50.0%
+  TEST pava: MAE=0.1327 R2=0.6471
+  TEST ces : MAE=0.1364  rtrm: MAE=0.1751
+  UQ: PICP90=40.4% MPIW=0.169 NLL=6.090
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1475 R2=0.5537 Mono=50.3%
+  TEST pava: MAE=0.1418 R2=0.6084
+  TEST ces : MAE=0.1449  rtrm: MAE=0.1864
+  UQ: PICP90=39.7% MPIW=0.185 NLL=4.807
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1641 R2=0.4201 Mono=50.5%
+  TEST pava: MAE=0.1603 R2=0.4544
+  TEST ces : MAE=0.1624  rtrm: MAE=0.1958
+  UQ: PICP90=45.8% MPIW=0.199 NLL=6.990
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1563 R2=0.4835 Mono=50.7%
+  TEST pava: MAE=0.1523 R2=0.5207
+  TEST ces : MAE=0.1547  rtrm: MAE=0.1778
+  UQ: PICP90=40.3% MPIW=0.180 NLL=6.582
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1449 R2=0.5433 Mono=50.4%
+  TEST pava: MAE=0.1399 R2=0.5950
+  TEST ces : MAE=0.1429  rtrm: MAE=0.1658
+  UQ: PICP90=41.6% MPIW=0.179 NLL=5.474
+
+=== seed 8 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.040, 0.191]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1352 R2=0.5874 Mono=50.8%
+  TEST pava: MAE=0.1287 R2=0.6410
+  TEST ces : MAE=0.1321  rtrm: MAE=0.1682
+  UQ: PICP90=49.6% MPIW=0.195 NLL=3.757
+
+=== seed 21 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.150, 0.358]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1389 R2=0.5759 Mono=50.7%
+  TEST pava: MAE=0.1341 R2=0.6234
+  TEST ces : MAE=0.1364  rtrm: MAE=0.1773
+  UQ: PICP90=43.5% MPIW=0.176 NLL=6.072
+
+=== seed 34 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.171, -0.003]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1484 R2=0.4965 Mono=50.3%
+  TEST pava: MAE=0.1432 R2=0.5434
+  TEST ces : MAE=0.1463  rtrm: MAE=0.1693
+  UQ: PICP90=44.3% MPIW=0.176 NLL=6.800
+
+=== seed 55 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.256, 0.551]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1446 R2=0.5515 Mono=50.0%
+  TEST pava: MAE=0.1394 R2=0.6013
+  TEST ces : MAE=0.1425  rtrm: MAE=0.1799
+  UQ: PICP90=44.6% MPIW=0.190 NLL=4.979
+
+=== seed 89 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.217, -0.016]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1328 R2=0.6192 Mono=50.6%
+  TEST pava: MAE=0.1267 R2=0.6748
+  TEST ces : MAE=0.1305  rtrm: MAE=0.1866
+  UQ: PICP90=40.6% MPIW=0.162 NLL=5.537
+
+=== seed 144 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.234, 0.072]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1429 R2=0.5662 Mono=50.6%
+  TEST pava: MAE=0.1370 R2=0.6178
+  TEST ces : MAE=0.1407  rtrm: MAE=0.1790
+  UQ: PICP90=41.8% MPIW=0.181 NLL=5.028
+
+=== seed 233 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.167, 0.268]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1481 R2=0.5220 Mono=50.4%
+  TEST pava: MAE=0.1421 R2=0.5781
+  TEST ces : MAE=0.1455  rtrm: MAE=0.1845
+  UQ: PICP90=40.8% MPIW=0.180 NLL=5.540
+
+=== seed 377 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.109, 0.302]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1344 R2=0.6058 Mono=50.1%
+  TEST pava: MAE=0.1273 R2=0.6652
+  TEST ces : MAE=0.1312  rtrm: MAE=0.1865
+  UQ: PICP90=45.8% MPIW=0.180 NLL=4.737
+
+=== seed 610 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.137, 0.188]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1350 R2=0.6288 Mono=50.3%
+  TEST pava: MAE=0.1274 R2=0.6906
+  TEST ces : MAE=0.1313  rtrm: MAE=0.2042
+  UQ: PICP90=46.3% MPIW=0.197 NLL=3.072
+
+=== seed 987 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.177, 0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1394 R2=0.5581 Mono=50.5%
+  TEST pava: MAE=0.1329 R2=0.6097
+  TEST ces : MAE=0.1364  rtrm: MAE=0.1698
+  UQ: PICP90=48.8% MPIW=0.197 NLL=4.186
+
+=== seed 1597 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.204, -0.027]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1425 R2=0.5937 Mono=50.5%
+  TEST pava: MAE=0.1370 R2=0.6444
+  TEST ces : MAE=0.1398  rtrm: MAE=0.1941
+  UQ: PICP90=43.5% MPIW=0.195 NLL=3.743
+
+=== seed 2584 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.193, 0.173]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1472 R2=0.5394 Mono=50.3%
+  TEST pava: MAE=0.1435 R2=0.5864
+  TEST ces : MAE=0.1454  rtrm: MAE=0.1754
+  UQ: PICP90=41.4% MPIW=0.184 NLL=5.505
+
+=== seed 4181 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.146, 0.351]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1414 R2=0.5769 Mono=50.5%
+  TEST pava: MAE=0.1369 R2=0.6238
+  TEST ces : MAE=0.1395  rtrm: MAE=0.1765
+  UQ: PICP90=41.7% MPIW=0.174 NLL=5.634
+
+=== seed 6765 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.120]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1388 R2=0.5635 Mono=50.6%
+  TEST pava: MAE=0.1330 R2=0.6219
+  TEST ces : MAE=0.1358  rtrm: MAE=0.1677
+  UQ: PICP90=47.4% MPIW=0.195 NLL=4.401
+
+=== seed 10946 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.214, -0.055]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1340 R2=0.6193 Mono=50.5%
+  TEST pava: MAE=0.1279 R2=0.6727
+  TEST ces : MAE=0.1315  rtrm: MAE=0.1826
+  UQ: PICP90=41.3% MPIW=0.171 NLL=5.024
+
+=== AGGREGATE (20 seeds) ===
+  raw : MAE=0.1428±0.0076 R2=0.5597±0.0494 Mono=50.4%
+  pava: MAE=0.1372±0.0084 R2=0.6110±0.0549
+  ces : MAE=0.1403±0.0080
+  UQ  : PICP90=43.4% MPIW=0.183
+
+[exp16] results saved to outputs\r1_components_final\static\results.json
+=== outputs/r1_components_final/no_pgmc ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=no_pgmc seeds=[42, 123, 777, 999, 7, 8, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946] pgmc_mode=aux-seq dann=True pgmc=False adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1397 R2=0.5971 Mono=50.4%
+  TEST pava: MAE=0.1336 R2=0.6567
+  TEST ces : MAE=0.1373  rtrm: MAE=0.1819
+  UQ: PICP90=41.0% MPIW=0.181 NLL=4.520
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1444 R2=0.5698 Mono=50.3%
+  TEST pava: MAE=0.1384 R2=0.6218
+  TEST ces : MAE=0.1424  rtrm: MAE=0.1807
+  UQ: PICP90=41.3% MPIW=0.190 NLL=4.182
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1468 R2=0.5441 Mono=50.2%
+  TEST pava: MAE=0.1414 R2=0.5889
+  TEST ces : MAE=0.1444  rtrm: MAE=0.1893
+  UQ: PICP90=47.9% MPIW=0.200 NLL=4.787
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1504 R2=0.5314 Mono=50.5%
+  TEST pava: MAE=0.1453 R2=0.5773
+  TEST ces : MAE=0.1482  rtrm: MAE=0.1760
+  UQ: PICP90=38.9% MPIW=0.180 NLL=5.502
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1467 R2=0.5433 Mono=50.3%
+  TEST pava: MAE=0.1421 R2=0.5934
+  TEST ces : MAE=0.1449  rtrm: MAE=0.1673
+  UQ: PICP90=41.3% MPIW=0.186 NLL=4.949
+
+=== seed 8 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.040, 0.191]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1346 R2=0.5956 Mono=50.3%
+  TEST pava: MAE=0.1285 R2=0.6477
+  TEST ces : MAE=0.1321  rtrm: MAE=0.1729
+  UQ: PICP90=48.6% MPIW=0.195 NLL=3.582
+
+=== seed 21 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.150, 0.358]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1350 R2=0.5936 Mono=50.6%
+  TEST pava: MAE=0.1292 R2=0.6458
+  TEST ces : MAE=0.1326  rtrm: MAE=0.1773
+  UQ: PICP90=44.6% MPIW=0.176 NLL=5.595
+
+=== seed 34 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.171, -0.003]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1422 R2=0.5315 Mono=50.8%
+  TEST pava: MAE=0.1357 R2=0.5864
+  TEST ces : MAE=0.1397  rtrm: MAE=0.1671
+  UQ: PICP90=46.4% MPIW=0.179 NLL=5.810
+
+=== seed 55 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.256, 0.551]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1422 R2=0.5804 Mono=50.4%
+  TEST pava: MAE=0.1359 R2=0.6388
+  TEST ces : MAE=0.1400  rtrm: MAE=0.1880
+  UQ: PICP90=43.2% MPIW=0.190 NLL=4.414
+
+=== seed 89 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.217, -0.016]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1307 R2=0.6177 Mono=50.3%
+  TEST pava: MAE=0.1236 R2=0.6781
+  TEST ces : MAE=0.1279  rtrm: MAE=0.1803
+  UQ: PICP90=43.4% MPIW=0.166 NLL=5.178
+
+=== seed 144 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.234, 0.072]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1413 R2=0.5879 Mono=50.6%
+  TEST pava: MAE=0.1340 R2=0.6483
+  TEST ces : MAE=0.1386  rtrm: MAE=0.1871
+  UQ: PICP90=42.9% MPIW=0.190 NLL=4.052
+
+=== seed 233 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.167, 0.268]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1480 R2=0.5498 Mono=50.2%
+  TEST pava: MAE=0.1420 R2=0.6072
+  TEST ces : MAE=0.1454  rtrm: MAE=0.1945
+  UQ: PICP90=39.0% MPIW=0.185 NLL=4.728
+
+=== seed 377 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.109, 0.302]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1349 R2=0.6027 Mono=50.3%
+  TEST pava: MAE=0.1279 R2=0.6592
+  TEST ces : MAE=0.1320  rtrm: MAE=0.1852
+  UQ: PICP90=43.9% MPIW=0.172 NLL=5.220
+
+=== seed 610 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.137, 0.188]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1319 R2=0.6400 Mono=50.2%
+  TEST pava: MAE=0.1234 R2=0.6976
+  TEST ces : MAE=0.1281  rtrm: MAE=0.2012
+  UQ: PICP90=47.8% MPIW=0.192 NLL=3.251
+
+=== seed 987 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.177, 0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1354 R2=0.5877 Mono=50.2%
+  TEST pava: MAE=0.1292 R2=0.6382
+  TEST ces : MAE=0.1327  rtrm: MAE=0.1666
+  UQ: PICP90=44.8% MPIW=0.178 NLL=5.014
+
+=== seed 1597 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.204, -0.027]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1418 R2=0.5878 Mono=50.2%
+  TEST pava: MAE=0.1360 R2=0.6391
+  TEST ces : MAE=0.1392  rtrm: MAE=0.1935
+  UQ: PICP90=44.2% MPIW=0.193 NLL=3.902
+
+=== seed 2584 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.193, 0.173]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1435 R2=0.5694 Mono=49.9%
+  TEST pava: MAE=0.1368 R2=0.6280
+  TEST ces : MAE=0.1414  rtrm: MAE=0.1874
+  UQ: PICP90=40.8% MPIW=0.184 NLL=5.054
+
+=== seed 4181 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.146, 0.351]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1363 R2=0.6005 Mono=50.3%
+  TEST pava: MAE=0.1303 R2=0.6572
+  TEST ces : MAE=0.1342  rtrm: MAE=0.1732
+  UQ: PICP90=42.2% MPIW=0.178 NLL=4.799
+
+=== seed 6765 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.120]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1351 R2=0.6032 Mono=50.3%
+  TEST pava: MAE=0.1276 R2=0.6686
+  TEST ces : MAE=0.1317  rtrm: MAE=0.1814
+  UQ: PICP90=46.8% MPIW=0.200 NLL=3.349
+
+=== seed 10946 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.214, -0.055]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1347 R2=0.6117 Mono=50.4%
+  TEST pava: MAE=0.1268 R2=0.6746
+  TEST ces : MAE=0.1314  rtrm: MAE=0.1841
+  UQ: PICP90=42.7% MPIW=0.182 NLL=4.194
+
+=== AGGREGATE (20 seeds) ===
+  raw : MAE=0.1398±0.0056 R2=0.5822±0.0290 Mono=50.3%
+  pava: MAE=0.1334±0.0063 R2=0.6377±0.0323
+  ces : MAE=0.1372±0.0059
+  UQ  : PICP90=43.6% MPIW=0.185
+
+[exp16] results saved to outputs\r1_components_final\no_pgmc\results.json
+=== outputs/r1_components_final/old_env ===
+[r1_components] {'envelope': 'submitted', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=old_env seeds=[42, 123, 777, 999, 7, 8, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1448 R2=0.5573 Mono=50.2%
+  TEST pava: MAE=0.1332 R2=0.6333
+  TEST ces : MAE=0.1401  rtrm: MAE=0.1955
+  UQ: PICP90=41.8% MPIW=0.175 NLL=5.558
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1485 R2=0.5382 Mono=50.2%
+  TEST pava: MAE=0.1376 R2=0.6113
+  TEST ces : MAE=0.1441  rtrm: MAE=0.1956
+  UQ: PICP90=41.0% MPIW=0.176 NLL=5.559
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1596 R2=0.4708 Mono=50.2%
+  TEST pava: MAE=0.1516 R2=0.5282
+  TEST ces : MAE=0.1556  rtrm: MAE=0.2056
+  UQ: PICP90=44.7% MPIW=0.197 NLL=5.610
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1658 R2=0.3985 Mono=50.6%
+  TEST pava: MAE=0.1570 R2=0.4684
+  TEST ces : MAE=0.1617  rtrm: MAE=0.1884
+  UQ: PICP90=42.0% MPIW=0.189 NLL=6.464
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1492 R2=0.4974 Mono=49.9%
+  TEST pava: MAE=0.1384 R2=0.5703
+  TEST ces : MAE=0.1443  rtrm: MAE=0.1845
+  UQ: PICP90=44.0% MPIW=0.180 NLL=5.997
+
+=== seed 8 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.040, 0.191]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1494 R2=0.4968 Mono=50.3%
+  TEST pava: MAE=0.1386 R2=0.5690
+  TEST ces : MAE=0.1444  rtrm: MAE=0.1848
+  UQ: PICP90=44.5% MPIW=0.179 NLL=5.952
+
+=== seed 21 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.150, 0.358]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1455 R2=0.5493 Mono=50.3%
+  TEST pava: MAE=0.1343 R2=0.6263
+  TEST ces : MAE=0.1403  rtrm: MAE=0.1943
+  UQ: PICP90=45.9% MPIW=0.189 NLL=4.525
+
+=== seed 34 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.171, -0.003]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1542 R2=0.4936 Mono=50.5%
+  TEST pava: MAE=0.1423 R2=0.5742
+  TEST ces : MAE=0.1494  rtrm: MAE=0.2060
+  UQ: PICP90=40.1% MPIW=0.166 NLL=7.516
+
+=== seed 55 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.256, 0.551]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1496 R2=0.5259 Mono=50.4%
+  TEST pava: MAE=0.1388 R2=0.5994
+  TEST ces : MAE=0.1448  rtrm: MAE=0.2008
+  UQ: PICP90=43.2% MPIW=0.179 NLL=5.676
+
+=== seed 89 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.217, -0.016]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1451 R2=0.5488 Mono=50.4%
+  TEST pava: MAE=0.1344 R2=0.6208
+  TEST ces : MAE=0.1410  rtrm: MAE=0.1911
+  UQ: PICP90=38.4% MPIW=0.156 NLL=7.379
+
+=== seed 144 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.234, 0.072]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1504 R2=0.5080 Mono=50.7%
+  TEST pava: MAE=0.1393 R2=0.5845
+  TEST ces : MAE=0.1455  rtrm: MAE=0.1975
+  UQ: PICP90=43.0% MPIW=0.179 NLL=5.647
+
+=== seed 233 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.167, 0.268]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1567 R2=0.4604 Mono=50.3%
+  TEST pava: MAE=0.1462 R2=0.5332
+  TEST ces : MAE=0.1526  rtrm: MAE=0.1902
+  UQ: PICP90=39.8% MPIW=0.169 NLL=7.250
+
+=== seed 377 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.109, 0.302]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1505 R2=0.5326 Mono=50.6%
+  TEST pava: MAE=0.1371 R2=0.6243
+  TEST ces : MAE=0.1451  rtrm: MAE=0.2189
+  UQ: PICP90=39.3% MPIW=0.167 NLL=6.417
+
+=== seed 610 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.137, 0.188]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1468 R2=0.5549 Mono=50.4%
+  TEST pava: MAE=0.1343 R2=0.6362
+  TEST ces : MAE=0.1419  rtrm: MAE=0.2159
+  UQ: PICP90=45.2% MPIW=0.190 NLL=4.334
+
+=== seed 987 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.177, 0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1531 R2=0.4678 Mono=50.4%
+  TEST pava: MAE=0.1423 R2=0.5411
+  TEST ces : MAE=0.1481  rtrm: MAE=0.1829
+  UQ: PICP90=43.5% MPIW=0.180 NLL=6.431
+
+=== seed 1597 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.204, -0.027]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1474 R2=0.5559 Mono=50.3%
+  TEST pava: MAE=0.1380 R2=0.6251
+  TEST ces : MAE=0.1426  rtrm: MAE=0.2142
+  UQ: PICP90=42.9% MPIW=0.187 NLL=4.675
+
+=== seed 2584 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.193, 0.173]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1555 R2=0.4994 Mono=50.3%
+  TEST pava: MAE=0.1439 R2=0.5797
+  TEST ces : MAE=0.1507  rtrm: MAE=0.2017
+  UQ: PICP90=40.6% MPIW=0.183 NLL=5.464
+
+=== seed 4181 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.146, 0.351]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1487 R2=0.5454 Mono=50.3%
+  TEST pava: MAE=0.1379 R2=0.6236
+  TEST ces : MAE=0.1443  rtrm: MAE=0.2007
+  UQ: PICP90=39.7% MPIW=0.174 NLL=5.651
+
+=== seed 6765 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.120]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1454 R2=0.5289 Mono=50.4%
+  TEST pava: MAE=0.1336 R2=0.6088
+  TEST ces : MAE=0.1400  rtrm: MAE=0.1854
+  UQ: PICP90=44.1% MPIW=0.184 NLL=5.201
+
+=== seed 10946 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.214, -0.055]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1431 R2=0.5841 Mono=50.5%
+  TEST pava: MAE=0.1326 R2=0.6556
+  TEST ces : MAE=0.1390  rtrm: MAE=0.2005
+  UQ: PICP90=38.3% MPIW=0.165 NLL=5.717
+
+=== AGGREGATE (20 seeds) ===
+  raw : MAE=0.1505±0.0055 R2=0.5157±0.0426 Mono=50.4%
+  pava: MAE=0.1396±0.0061 R2=0.5907±0.0450
+  ces : MAE=0.1458±0.0057
+  UQ  : PICP90=42.1% MPIW=0.178
+
+[exp16] results saved to outputs\r1_components_final\old_env\results.json
+=== outputs/r1_components_final/no_aug ===
+[r1_components] {'envelope': 'band', 'augment': 'none', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=no_aug seeds=[42, 123, 777, 999, 7, 8, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1257 R2=0.6459 Mono=50.1%
+  TEST pava: MAE=0.1170 R2=0.7226
+  TEST ces : MAE=0.1219  rtrm: MAE=0.1876
+  UQ: PICP90=45.5% MPIW=0.174 NLL=4.172
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1361 R2=0.6101 Mono=50.1%
+  TEST pava: MAE=0.1284 R2=0.6792
+  TEST ces : MAE=0.1331  rtrm: MAE=0.2012
+  UQ: PICP90=44.0% MPIW=0.187 NLL=4.040
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1306 R2=0.6592 Mono=50.2%
+  TEST pava: MAE=0.1246 R2=0.7070
+  TEST ces : MAE=0.1277  rtrm: MAE=0.2061
+  UQ: PICP90=50.1% MPIW=0.192 NLL=3.064
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1352 R2=0.6284 Mono=50.3%
+  TEST pava: MAE=0.1304 R2=0.6711
+  TEST ces : MAE=0.1336  rtrm: MAE=0.1901
+  UQ: PICP90=42.8% MPIW=0.173 NLL=4.728
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1285 R2=0.6440 Mono=50.4%
+  TEST pava: MAE=0.1196 R2=0.7183
+  TEST ces : MAE=0.1251  rtrm: MAE=0.1828
+  UQ: PICP90=46.8% MPIW=0.189 NLL=3.240
+
+=== seed 8 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.040, 0.191]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1205 R2=0.6760 Mono=50.0%
+  TEST pava: MAE=0.1115 R2=0.7381
+  TEST ces : MAE=0.1168  rtrm: MAE=0.1732
+  UQ: PICP90=50.3% MPIW=0.181 NLL=3.350
+
+=== seed 21 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.150, 0.358]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1248 R2=0.6491 Mono=50.2%
+  TEST pava: MAE=0.1175 R2=0.7120
+  TEST ces : MAE=0.1217  rtrm: MAE=0.1733
+  UQ: PICP90=45.7% MPIW=0.175 NLL=4.714
+
+=== seed 34 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.171, -0.003]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1289 R2=0.6313 Mono=50.1%
+  TEST pava: MAE=0.1201 R2=0.6928
+  TEST ces : MAE=0.1265  rtrm: MAE=0.1858
+  UQ: PICP90=44.8% MPIW=0.170 NLL=5.277
+
+=== seed 55 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.256, 0.551]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1328 R2=0.6392 Mono=50.1%
+  TEST pava: MAE=0.1263 R2=0.7046
+  TEST ces : MAE=0.1301  rtrm: MAE=0.2007
+  UQ: PICP90=45.6% MPIW=0.193 NLL=3.010
+
+=== seed 89 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.217, -0.016]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1227 R2=0.6520 Mono=50.1%
+  TEST pava: MAE=0.1142 R2=0.7305
+  TEST ces : MAE=0.1196  rtrm: MAE=0.1796
+  UQ: PICP90=44.8% MPIW=0.157 NLL=5.372
+
+=== seed 144 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.234, 0.072]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1290 R2=0.6520 Mono=50.1%
+  TEST pava: MAE=0.1220 R2=0.7158
+  TEST ces : MAE=0.1263  rtrm: MAE=0.1961
+  UQ: PICP90=45.0% MPIW=0.183 NLL=3.428
+
+=== seed 233 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.167, 0.268]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1337 R2=0.6308 Mono=50.3%
+  TEST pava: MAE=0.1257 R2=0.6994
+  TEST ces : MAE=0.1308  rtrm: MAE=0.1935
+  UQ: PICP90=42.9% MPIW=0.179 NLL=3.870
+
+=== seed 377 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.109, 0.302]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1266 R2=0.6523 Mono=50.1%
+  TEST pava: MAE=0.1182 R2=0.7226
+  TEST ces : MAE=0.1232  rtrm: MAE=0.1992
+  UQ: PICP90=45.6% MPIW=0.170 NLL=4.157
+
+=== seed 610 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.137, 0.188]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1379 R2=0.5987 Mono=50.6%
+  TEST pava: MAE=0.1278 R2=0.6793
+  TEST ces : MAE=0.1338  rtrm: MAE=0.2378
+  UQ: PICP90=49.7% MPIW=0.199 NLL=2.884
+
+=== seed 987 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.177, 0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1195 R2=0.6768 Mono=50.2%
+  TEST pava: MAE=0.1100 R2=0.7434
+  TEST ces : MAE=0.1154  rtrm: MAE=0.1871
+  UQ: PICP90=49.9% MPIW=0.177 NLL=3.361
+
+=== seed 1597 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.204, -0.027]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1313 R2=0.6461 Mono=50.3%
+  TEST pava: MAE=0.1240 R2=0.7095
+  TEST ces : MAE=0.1280  rtrm: MAE=0.2121
+  UQ: PICP90=48.3% MPIW=0.194 NLL=2.884
+
+=== seed 2584 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.193, 0.173]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1334 R2=0.6161 Mono=50.1%
+  TEST pava: MAE=0.1279 R2=0.6747
+  TEST ces : MAE=0.1312  rtrm: MAE=0.1837
+  UQ: PICP90=43.8% MPIW=0.178 NLL=4.811
+
+=== seed 4181 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.146, 0.351]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1259 R2=0.6571 Mono=49.9%
+  TEST pava: MAE=0.1190 R2=0.7228
+  TEST ces : MAE=0.1230  rtrm: MAE=0.1927
+  UQ: PICP90=46.1% MPIW=0.177 NLL=3.824
+
+=== seed 6765 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.120]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1285 R2=0.6394 Mono=50.3%
+  TEST pava: MAE=0.1195 R2=0.7070
+  TEST ces : MAE=0.1248  rtrm: MAE=0.1765
+  UQ: PICP90=47.0% MPIW=0.196 NLL=3.435
+
+=== seed 10946 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.214, -0.055]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1245 R2=0.6579 Mono=50.6%
+  TEST pava: MAE=0.1152 R2=0.7331
+  TEST ces : MAE=0.1213  rtrm: MAE=0.1954
+  UQ: PICP90=46.0% MPIW=0.172 NLL=4.153
+
+=== AGGREGATE (20 seeds) ===
+  raw : MAE=0.1288±0.0050 R2=0.6431±0.0194 Mono=50.2%
+  pava: MAE=0.1209±0.0057 R2=0.7092±0.0207
+  ces : MAE=0.1257±0.0053
+  UQ  : PICP90=46.2% MPIW=0.181
+
+[exp16] results saved to outputs\r1_components_final\no_aug\results.json
+=== outputs/r1_components_final/adjacent ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'adjacent', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5}
+[exp16] variant=adjacent seeds=[42, 123, 777, 999, 7, 8, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1373 R2=0.5857 Mono=50.4%
+  TEST pava: MAE=0.1302 R2=0.6490
+  TEST ces : MAE=0.1344  rtrm: MAE=0.1732
+  UQ: PICP90=42.5% MPIW=0.178 NLL=5.190
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1418 R2=0.5798 Mono=50.6%
+  TEST pava: MAE=0.1333 R2=0.6462
+  TEST ces : MAE=0.1384  rtrm: MAE=0.1937
+  UQ: PICP90=42.7% MPIW=0.185 NLL=4.492
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1372 R2=0.5785 Mono=50.5%
+  TEST pava: MAE=0.1305 R2=0.6315
+  TEST ces : MAE=0.1343  rtrm: MAE=0.1869
+  UQ: PICP90=51.2% MPIW=0.202 NLL=4.229
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1463 R2=0.5187 Mono=50.5%
+  TEST pava: MAE=0.1414 R2=0.5633
+  TEST ces : MAE=0.1449  rtrm: MAE=0.1719
+  UQ: PICP90=44.4% MPIW=0.175 NLL=6.683
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1448 R2=0.5245 Mono=50.4%
+  TEST pava: MAE=0.1381 R2=0.5849
+  TEST ces : MAE=0.1424  rtrm: MAE=0.1721
+  UQ: PICP90=45.4% MPIW=0.188 NLL=4.992
+
+=== seed 8 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.040, 0.191]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1319 R2=0.6081 Mono=50.1%
+  TEST pava: MAE=0.1241 R2=0.6664
+  TEST ces : MAE=0.1287  rtrm: MAE=0.1819
+  UQ: PICP90=48.7% MPIW=0.188 NLL=3.874
+
+=== seed 21 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.150, 0.358]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1357 R2=0.6227 Mono=50.4%
+  TEST pava: MAE=0.1296 R2=0.6753
+  TEST ces : MAE=0.1326  rtrm: MAE=0.1957
+  UQ: PICP90=46.4% MPIW=0.192 NLL=3.398
+
+=== seed 34 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.171, -0.003]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1508 R2=0.4821 Mono=50.4%
+  TEST pava: MAE=0.1446 R2=0.5350
+  TEST ces : MAE=0.1486  rtrm: MAE=0.1845
+  UQ: PICP90=43.9% MPIW=0.177 NLL=6.960
+
+=== seed 55 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.256, 0.551]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1388 R2=0.5886 Mono=50.4%
+  TEST pava: MAE=0.1311 R2=0.6455
+  TEST ces : MAE=0.1358  rtrm: MAE=0.1923
+  UQ: PICP90=44.9% MPIW=0.183 NLL=4.719
+
+=== seed 89 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.217, -0.016]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1372 R2=0.5925 Mono=50.4%
+  TEST pava: MAE=0.1319 R2=0.6459
+  TEST ces : MAE=0.1352  rtrm: MAE=0.1724
+  UQ: PICP90=38.2% MPIW=0.159 NLL=6.237
+
+=== seed 144 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.234, 0.072]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1416 R2=0.5967 Mono=50.4%
+  TEST pava: MAE=0.1353 R2=0.6552
+  TEST ces : MAE=0.1391  rtrm: MAE=0.1898
+  UQ: PICP90=40.3% MPIW=0.186 NLL=4.008
+
+=== seed 233 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.167, 0.268]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1528 R2=0.4736 Mono=50.3%
+  TEST pava: MAE=0.1473 R2=0.5267
+  TEST ces : MAE=0.1507  rtrm: MAE=0.1731
+  UQ: PICP90=41.6% MPIW=0.180 NLL=6.267
+
+=== seed 377 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.109, 0.302]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1389 R2=0.5730 Mono=50.5%
+  TEST pava: MAE=0.1323 R2=0.6260
+  TEST ces : MAE=0.1365  rtrm: MAE=0.1803
+  UQ: PICP90=44.8% MPIW=0.179 NLL=5.354
+
+=== seed 610 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.137, 0.188]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1336 R2=0.6186 Mono=50.3%
+  TEST pava: MAE=0.1266 R2=0.6791
+  TEST ces : MAE=0.1307  rtrm: MAE=0.1877
+  UQ: PICP90=47.3% MPIW=0.199 NLL=3.365
+
+=== seed 987 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.177, 0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1350 R2=0.6241 Mono=50.2%
+  TEST pava: MAE=0.1289 R2=0.6720
+  TEST ces : MAE=0.1319  rtrm: MAE=0.1873
+  UQ: PICP90=45.0% MPIW=0.185 NLL=3.581
+
+=== seed 1597 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.204, -0.027]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1478 R2=0.5292 Mono=50.7%
+  TEST pava: MAE=0.1426 R2=0.5819
+  TEST ces : MAE=0.1456  rtrm: MAE=0.1845
+  UQ: PICP90=43.9% MPIW=0.194 NLL=4.774
+
+=== seed 2584 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.193, 0.173]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1421 R2=0.5946 Mono=50.1%
+  TEST pava: MAE=0.1363 R2=0.6557
+  TEST ces : MAE=0.1399  rtrm: MAE=0.1940
+  UQ: PICP90=39.0% MPIW=0.180 NLL=4.566
+
+=== seed 4181 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.146, 0.351]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1363 R2=0.6018 Mono=50.5%
+  TEST pava: MAE=0.1297 R2=0.6624
+  TEST ces : MAE=0.1339  rtrm: MAE=0.1825
+  UQ: PICP90=43.4% MPIW=0.178 NLL=4.570
+
+=== seed 6765 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.120]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1345 R2=0.5926 Mono=50.4%
+  TEST pava: MAE=0.1275 R2=0.6506
+  TEST ces : MAE=0.1318  rtrm: MAE=0.1728
+  UQ: PICP90=44.9% MPIW=0.178 NLL=5.100
+
+=== seed 10946 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.214, -0.055]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1358 R2=0.6180 Mono=50.4%
+  TEST pava: MAE=0.1283 R2=0.6815
+  TEST ces : MAE=0.1327  rtrm: MAE=0.1959
+  UQ: PICP90=41.2% MPIW=0.173 NLL=4.422
+
+=== AGGREGATE (20 seeds) ===
+  raw : MAE=0.1400±0.0057 R2=0.5752±0.0440 Mono=50.4%
+  pava: MAE=0.1335±0.0062 R2=0.6317±0.0461
+  ces : MAE=0.1374±0.0060
+  UQ  : PICP90=44.0% MPIW=0.183
+
+[exp16] results saved to outputs\r1_components_final\adjacent\results.json
+=== outputs/r1_components_final/no_dann ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=no_dann seeds=[42, 123, 777, 999, 7, 8, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946] pgmc_mode=aux-seq dann=False pgmc=True adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1463 R2=0.5186 Mono=50.4%
+  TEST pava: MAE=0.1393 R2=0.5653
+  TEST ces : MAE=0.1448  rtrm: MAE=0.1649
+  UQ: PICP90=42.9% MPIW=0.163 NLL=8.402
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1471 R2=0.5533 Mono=50.2%
+  TEST pava: MAE=0.1408 R2=0.6024
+  TEST ces : MAE=0.1453  rtrm: MAE=0.1838
+  UQ: PICP90=38.7% MPIW=0.173 NLL=5.881
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1581 R2=0.4683 Mono=50.3%
+  TEST pava: MAE=0.1526 R2=0.5061
+  TEST ces : MAE=0.1564  rtrm: MAE=0.1957
+  UQ: PICP90=46.9% MPIW=0.198 NLL=6.088
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1555 R2=0.5364 Mono=50.4%
+  TEST pava: MAE=0.1509 R2=0.5720
+  TEST ces : MAE=0.1541  rtrm: MAE=0.1873
+  UQ: PICP90=34.2% MPIW=0.171 NLL=5.990
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1472 R2=0.5249 Mono=50.5%
+  TEST pava: MAE=0.1400 R2=0.5792
+  TEST ces : MAE=0.1455  rtrm: MAE=0.1700
+  UQ: PICP90=43.7% MPIW=0.185 NLL=5.377
+
+=== seed 8 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.040, 0.191]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1440 R2=0.5226 Mono=50.5%
+  TEST pava: MAE=0.1357 R2=0.5765
+  TEST ces : MAE=0.1417  rtrm: MAE=0.1646
+  UQ: PICP90=47.5% MPIW=0.185 NLL=5.349
+
+=== seed 21 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.150, 0.358]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1401 R2=0.5653 Mono=50.1%
+  TEST pava: MAE=0.1344 R2=0.6117
+  TEST ces : MAE=0.1381  rtrm: MAE=0.1766
+  UQ: PICP90=45.1% MPIW=0.179 NLL=5.961
+
+=== seed 34 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.171, -0.003]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1433 R2=0.5425 Mono=50.3%
+  TEST pava: MAE=0.1368 R2=0.5915
+  TEST ces : MAE=0.1414  rtrm: MAE=0.1782
+  UQ: PICP90=43.4% MPIW=0.168 NLL=6.826
+
+=== seed 55 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.256, 0.551]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1508 R2=0.5048 Mono=50.1%
+  TEST pava: MAE=0.1448 R2=0.5508
+  TEST ces : MAE=0.1491  rtrm: MAE=0.1794
+  UQ: PICP90=43.5% MPIW=0.179 NLL=6.702
+
+=== seed 89 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.217, -0.016]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1375 R2=0.5847 Mono=50.4%
+  TEST pava: MAE=0.1304 R2=0.6367
+  TEST ces : MAE=0.1354  rtrm: MAE=0.1726
+  UQ: PICP90=39.3% MPIW=0.157 NLL=6.746
+
+=== seed 144 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.234, 0.072]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1427 R2=0.5681 Mono=50.4%
+  TEST pava: MAE=0.1347 R2=0.6198
+  TEST ces : MAE=0.1404  rtrm: MAE=0.1819
+  UQ: PICP90=43.3% MPIW=0.183 NLL=4.746
+
+=== seed 233 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.167, 0.268]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1473 R2=0.5413 Mono=50.3%
+  TEST pava: MAE=0.1400 R2=0.5943
+  TEST ces : MAE=0.1450  rtrm: MAE=0.1886
+  UQ: PICP90=38.3% MPIW=0.171 NLL=5.917
+
+=== seed 377 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.109, 0.302]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1395 R2=0.5732 Mono=50.2%
+  TEST pava: MAE=0.1321 R2=0.6251
+  TEST ces : MAE=0.1373  rtrm: MAE=0.1815
+  UQ: PICP90=44.8% MPIW=0.171 NLL=6.138
+
+=== seed 610 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.137, 0.188]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1403 R2=0.5883 Mono=50.3%
+  TEST pava: MAE=0.1323 R2=0.6421
+  TEST ces : MAE=0.1379  rtrm: MAE=0.1930
+  UQ: PICP90=47.7% MPIW=0.199 NLL=3.936
+
+=== seed 987 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.177, 0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1419 R2=0.5686 Mono=50.1%
+  TEST pava: MAE=0.1342 R2=0.6148
+  TEST ces : MAE=0.1397  rtrm: MAE=0.1795
+  UQ: PICP90=44.4% MPIW=0.177 NLL=5.350
+
+=== seed 1597 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.204, -0.027]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1455 R2=0.5593 Mono=50.3%
+  TEST pava: MAE=0.1383 R2=0.6080
+  TEST ces : MAE=0.1428  rtrm: MAE=0.1923
+  UQ: PICP90=44.2% MPIW=0.187 NLL=4.801
+
+=== seed 2584 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.193, 0.173]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1513 R2=0.5048 Mono=50.2%
+  TEST pava: MAE=0.1460 R2=0.5501
+  TEST ces : MAE=0.1500  rtrm: MAE=0.1776
+  UQ: PICP90=39.7% MPIW=0.170 NLL=7.597
+
+=== seed 4181 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.146, 0.351]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1397 R2=0.5739 Mono=50.0%
+  TEST pava: MAE=0.1321 R2=0.6294
+  TEST ces : MAE=0.1381  rtrm: MAE=0.1719
+  UQ: PICP90=43.2% MPIW=0.170 NLL=6.132
+
+=== seed 6765 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.120]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1363 R2=0.6105 Mono=50.3%
+  TEST pava: MAE=0.1295 R2=0.6635
+  TEST ces : MAE=0.1342  rtrm: MAE=0.1764
+  UQ: PICP90=44.7% MPIW=0.183 NLL=4.371
+
+=== seed 10946 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.214, -0.055]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.1367 R2=0.5969 Mono=50.1%
+  TEST pava: MAE=0.1302 R2=0.6511
+  TEST ces : MAE=0.1348  rtrm: MAE=0.1713
+  UQ: PICP90=41.8% MPIW=0.174 NLL=5.051
+
+=== AGGREGATE (20 seeds) ===
+  raw : MAE=0.1446±0.0059 R2=0.5503±0.0347 Mono=50.3%
+  pava: MAE=0.1378±0.0065 R2=0.5995±0.0380
+  ces : MAE=0.1426±0.0061
+  UQ  : PICP90=42.9% MPIW=0.177
+
+[exp16] results saved to outputs\r1_components_final\no_dann\results.json
+=== outputs/r1_components_final/spectral ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=spectral seeds=[42, 123, 777, 999, 7, 8, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=True
+
+=== seed 42 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.315, 0.591]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2599 R2=-0.1731 Mono=50.6%
+  TEST pava: MAE=0.2423 R2=-0.0060
+  TEST ces : MAE=0.2577  rtrm: MAE=0.2514
+  UQ: PICP90=19.4% MPIW=0.176 NLL=17.598
+
+=== seed 123 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.345, -0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2650 R2=-0.2389 Mono=50.4%
+  TEST pava: MAE=0.2466 R2=-0.0601
+  TEST ces : MAE=0.2624  rtrm: MAE=0.2507
+  UQ: PICP90=21.2% MPIW=0.198 NLL=13.957
+
+=== seed 777 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.179, 0.119]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2658 R2=-0.2448 Mono=50.0%
+  TEST pava: MAE=0.2469 R2=-0.0599
+  TEST ces : MAE=0.2632  rtrm: MAE=0.2560
+  UQ: PICP90=23.9% MPIW=0.224 NLL=11.093
+
+=== seed 999 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.076, 0.034]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2828 R2=-0.4299 Mono=50.3%
+  TEST pava: MAE=0.2613 R2=-0.2169
+  TEST ces : MAE=0.2790  rtrm: MAE=0.2524
+  UQ: PICP90=20.8% MPIW=0.198 NLL=16.056
+
+=== seed 7 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.002]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2735 R2=-0.3346 Mono=49.8%
+  TEST pava: MAE=0.2544 R2=-0.1497
+  TEST ces : MAE=0.2708  rtrm: MAE=0.2447
+  UQ: PICP90=21.8% MPIW=0.198 NLL=14.777
+
+=== seed 8 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.040, 0.191]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2713 R2=-0.3094 Mono=50.2%
+  TEST pava: MAE=0.2538 R2=-0.1392
+  TEST ces : MAE=0.2690  rtrm: MAE=0.2403
+  UQ: PICP90=22.1% MPIW=0.199 NLL=14.437
+
+=== seed 21 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.150, 0.358]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2573 R2=-0.1411 Mono=50.1%
+  TEST pava: MAE=0.2409 R2=0.0142
+  TEST ces : MAE=0.2551  rtrm: MAE=0.2540
+  UQ: PICP90=20.1% MPIW=0.187 NLL=14.959
+
+=== seed 34 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.171, -0.003]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2639 R2=-0.2217 Mono=50.5%
+  TEST pava: MAE=0.2479 R2=-0.0681
+  TEST ces : MAE=0.2619  rtrm: MAE=0.2467
+  UQ: PICP90=20.6% MPIW=0.189 NLL=15.098
+
+=== seed 55 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.256, 0.551]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2654 R2=-0.2397 Mono=50.1%
+  TEST pava: MAE=0.2470 R2=-0.0608
+  TEST ces : MAE=0.2624  rtrm: MAE=0.2510
+  UQ: PICP90=20.3% MPIW=0.188 NLL=16.068
+
+=== seed 89 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.217, -0.016]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2692 R2=-0.2806 Mono=50.0%
+  TEST pava: MAE=0.2493 R2=-0.0906
+  TEST ces : MAE=0.2661  rtrm: MAE=0.2470
+  UQ: PICP90=18.8% MPIW=0.173 NLL=19.197
+
+=== seed 144 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.234, 0.072]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2647 R2=-0.2275 Mono=50.0%
+  TEST pava: MAE=0.2461 R2=-0.0503
+  TEST ces : MAE=0.2619  rtrm: MAE=0.2488
+  UQ: PICP90=21.6% MPIW=0.200 NLL=13.517
+
+=== seed 233 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.167, 0.268]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2654 R2=-0.2376 Mono=50.2%
+  TEST pava: MAE=0.2456 R2=-0.0486
+  TEST ces : MAE=0.2623  rtrm: MAE=0.2501
+  UQ: PICP90=19.6% MPIW=0.180 NLL=17.081
+
+=== seed 377 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.109, 0.302]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2618 R2=-0.2018 Mono=50.1%
+  TEST pava: MAE=0.2443 R2=-0.0339
+  TEST ces : MAE=0.2596  rtrm: MAE=0.2544
+  UQ: PICP90=20.2% MPIW=0.185 NLL=15.880
+
+=== seed 610 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.137, 0.188]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2595 R2=-0.1726 Mono=50.1%
+  TEST pava: MAE=0.2406 R2=0.0114
+  TEST ces : MAE=0.2567  rtrm: MAE=0.2686
+  UQ: PICP90=22.4% MPIW=0.210 NLL=11.486
+
+=== seed 987 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.177, 0.021]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2740 R2=-0.3335 Mono=50.3%
+  TEST pava: MAE=0.2552 R2=-0.1502
+  TEST ces : MAE=0.2713  rtrm: MAE=0.2440
+  UQ: PICP90=21.0% MPIW=0.195 NLL=15.190
+
+=== seed 1597 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.204, -0.027]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2711 R2=-0.3013 Mono=49.9%
+  TEST pava: MAE=0.2507 R2=-0.1027
+  TEST ces : MAE=0.2681  rtrm: MAE=0.2507
+  UQ: PICP90=23.0% MPIW=0.211 NLL=13.060
+
+=== seed 2584 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.193, 0.173]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2731 R2=-0.3317 Mono=49.7%
+  TEST pava: MAE=0.2527 R2=-0.1302
+  TEST ces : MAE=0.2698  rtrm: MAE=0.2506
+  UQ: PICP90=20.7% MPIW=0.193 NLL=16.108
+
+=== seed 4181 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [0.146, 0.351]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2768 R2=-0.3581 Mono=50.3%
+  TEST pava: MAE=0.2575 R2=-0.1673
+  TEST ces : MAE=0.2739  rtrm: MAE=0.2507
+  UQ: PICP90=20.5% MPIW=0.195 NLL=15.921
+
+=== seed 6765 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.108, 0.120]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2678 R2=-0.2668 Mono=49.9%
+  TEST pava: MAE=0.2490 R2=-0.0815
+  TEST ces : MAE=0.2647  rtrm: MAE=0.2497
+  UQ: PICP90=21.3% MPIW=0.199 NLL=14.249
+
+=== seed 10946 ===
+[upgrade_dsaflite_regressor] Replaced regressor with MonotoneRULHead (8,577 params)
+[upgrade_dsaflite_regressor] Forward pass OK: rul range [-0.214, -0.055]
+  epoch   1/5  (fixed budget, no val)
+  TEST raw : MAE=0.2667 R2=-0.2501 Mono=49.9%
+  TEST pava: MAE=0.2477 R2=-0.0645
+  TEST ces : MAE=0.2638  rtrm: MAE=0.2586
+  UQ: PICP90=19.8% MPIW=0.186 NLL=16.132
+
+=== AGGREGATE (20 seeds) ===
+  raw : MAE=0.2677±0.0062 R2=-0.2647±0.0692 Mono=50.1%
+  pava: MAE=0.2490±0.0054 R2=-0.0828±0.0595
+  ces : MAE=0.2650±0.0059
+  UQ  : PICP90=21.0% MPIW=0.194
+
+[exp16] results saved to outputs\r1_components_final\spectral\results.json
+=== r1_components_runs final done ===

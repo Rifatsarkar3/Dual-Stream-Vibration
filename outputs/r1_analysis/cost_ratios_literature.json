@@ -1,0 +1,287 @@
+{
+ "sources": [
+  {
+   "study": "Mitici, de Pater, Barros, Zeng (RESS 234, 2023, 109199), Section 5.3",
+   "values": "preventive replacement c_r = 10, failure c_f = 50, generic maintenance slot c_g = 10",
+   "ratios": {
+    "failure / preventive": 5.0,
+    "failure / (preventive + generic slot)": 2.5
+   },
+   "checked": "read in the published version (TU Delft repository)"
+  },
+  {
+   "study": "de Pater, Reijns, Mitici (RESS 221, 2022, 108341), Section 4.2",
+   "values": "additional maintenance task c_p = 10,000, engine failure c_f = 50,000, rescheduling c_r = 5,000, generic slot c_g = 10^6; scheduling penalties p_late = 1000 and p_early = 1 per day",
+   "ratios": {
+    "failure / preventive": 5.0,
+    "late / early, per day": 1000.0
+   },
+   "checked": "read in the published version (TU Delft repository)"
+  },
+  {
+   "study": "Nguyen, Medjaher (RESS 188, 2019, 251-262), Sections 4.2 and 4.3",
+   "values": "preventive replacement C_p = 100, corrective replacement C_c = 500 (includes the downtime cost), inventory C_i = 0.1 per unit time, out-of-stock C_os = 10 (Table 3); case B of Table 4 C_c = 200; Fig. 8a-c C_c = 10 C_p; sensitivity analyses over C_c / C_p from 1 to 30 (Fig. 8d) and 1 to 100 (Fig. 9)",
+   "ratios": {
+    "corrective / preventive, Table 3": 5.0,
+    "Table 4, case B": 2.0,
+    "Fig. 8a-c": 10.0
+   },
+   "checked": "read in the published version (authors' copy of the article)"
+  }
+ ],
+ "optimal": {
+  "adopted variant": {
+   "c_star": 3.022849777423669,
+   "file": "outputs/r1_analysis/decision_temporal_B5_all10.json",
+   "tau": {
+    "0.30": {
+     "best": {
+      "2.0": "ces",
+      "2.5": "ces",
+      "5.0": "lb_ces",
+      "10.0": "lb_ces",
+      "1000.0": "lb_raw"
+     },
+     "envelope": [
+      {
+       "variant": "pava",
+       "r_from": 0.5,
+       "r_to": 0.8576273089310587
+      },
+      {
+       "variant": "ces",
+       "r_from": 0.8576273089310587,
+       "r_to": 2.8558548455226638
+      },
+      {
+       "variant": "raw",
+       "r_from": 2.8558548455226638,
+       "r_to": 3.2323357349973016
+      },
+      {
+       "variant": "lb_ces",
+       "r_from": 3.2323357349973016,
+       "r_to": 12.290676221210452
+      },
+      {
+       "variant": "lb_raw",
+       "r_from": 12.290676221210452,
+       "r_to": 100.0
+      }
+     ]
+    },
+    "0.20": {
+     "best": {
+      "2.0": "raw",
+      "2.5": "raw",
+      "5.0": "lb_raw",
+      "10.0": "lb_raw",
+      "1000.0": "lb_raw"
+     },
+     "envelope": [
+      {
+       "variant": "pava",
+       "r_from": 0.5,
+       "r_to": 0.9369429024911383
+      },
+      {
+       "variant": "ces",
+       "r_from": 0.9369429024911383,
+       "r_to": 1.8189554260530285
+      },
+      {
+       "variant": "raw",
+       "r_from": 1.8189554260530285,
+       "r_to": 4.6865954326156105
+      },
+      {
+       "variant": "lb_raw",
+       "r_from": 4.6865954326156105,
+       "r_to": 100.0
+      }
+     ]
+    },
+    "0.10": {
+     "best": {
+      "2.0": "pava",
+      "2.5": "ces",
+      "5.0": "raw",
+      "10.0": "lb_ces",
+      "1000.0": "lb_raw"
+     },
+     "envelope": [
+      {
+       "variant": "pava",
+       "r_from": 0.5,
+       "r_to": 2.022644163666506
+      },
+      {
+       "variant": "ces",
+       "r_from": 2.022644163666506,
+       "r_to": 2.756578218149487
+      },
+      {
+       "variant": "raw",
+       "r_from": 2.756578218149487,
+       "r_to": 5.794985089553466
+      },
+      {
+       "variant": "lb_ces",
+       "r_from": 5.794985089553466,
+       "r_to": 17.66344160752035
+      },
+      {
+       "variant": "lb_raw",
+       "r_from": 17.66344160752035,
+       "r_to": 100.0
+      }
+     ]
+    }
+   }
+  },
+  "submitted architecture": {
+   "c_star": 3.9473200928311263,
+   "file": "outputs/r1_analysis/decision_final20_all10.json",
+   "tau": {
+    "0.30": {
+     "best": {
+      "2.0": "raw",
+      "2.5": "raw",
+      "5.0": "raw",
+      "10.0": "lb_raw",
+      "1000.0": "lb_raw"
+     },
+     "envelope": [
+      {
+       "variant": "pava",
+       "r_from": 0.5,
+       "r_to": 0.7920006350792052
+      },
+      {
+       "variant": "ces",
+       "r_from": 0.7920006350792052,
+       "r_to": 1.901206624073151
+      },
+      {
+       "variant": "raw",
+       "r_from": 1.901206624073151,
+       "r_to": 5.84647066975063
+      },
+      {
+       "variant": "lb_ces",
+       "r_from": 5.84647066975063,
+       "r_to": 9.098428697422289
+      },
+      {
+       "variant": "lb_raw",
+       "r_from": 9.098428697422289,
+       "r_to": 100.0
+      }
+     ]
+    },
+    "0.20": {
+     "best": {
+      "2.0": "ces",
+      "2.5": "ces",
+      "5.0": "lb_ces",
+      "10.0": "lb_raw",
+      "1000.0": "lb_raw"
+     },
+     "envelope": [
+      {
+       "variant": "pava",
+       "r_from": 0.5,
+       "r_to": 1.0698796128950714
+      },
+      {
+       "variant": "ces",
+       "r_from": 1.0698796128950714,
+       "r_to": 2.523223936916345
+      },
+      {
+       "variant": "raw",
+       "r_from": 2.523223936916345,
+       "r_to": 4.104267690038914
+      },
+      {
+       "variant": "lb_ces",
+       "r_from": 4.104267690038914,
+       "r_to": 9.26081696682889
+      },
+      {
+       "variant": "lb_raw",
+       "r_from": 9.26081696682889,
+       "r_to": 100.0
+      }
+     ]
+    },
+    "0.10": {
+     "best": {
+      "2.0": "pava",
+      "2.5": "pava",
+      "5.0": "raw",
+      "10.0": "lb_ces",
+      "1000.0": "lb_raw"
+     },
+     "envelope": [
+      {
+       "variant": "pava",
+       "r_from": 0.5,
+       "r_to": 2.523223936916345
+      },
+      {
+       "variant": "ces",
+       "r_from": 2.523223936916345,
+       "r_to": 4.6865954326156105
+      },
+      {
+       "variant": "raw",
+       "r_from": 4.6865954326156105,
+       "r_to": 5.495454397984754
+      },
+      {
+       "variant": "lb_ces",
+       "r_from": 5.495454397984754,
+       "r_to": 16.899274675330485
+      },
+      {
+       "variant": "lb_raw",
+       "r_from": 16.899274675330485,
+       "r_to": 100.0
+      }
+     ]
+    }
+   }
+  }
+ },
+ "provenance": {
+  "plan_sha256": "646e4d8b38e60167c80d59dc7709e65247c0c7057244f73ad8dfb47e70e45be7",
+  "code_sha256": {
+   "Experiments/exp16_ress.py": "7fb30773b3b5f3c7418c9a3ad78abda4fe436e30c3e450d9b9f056114b58f43a",
+   "Experiments/exp19_baselines.py": "ed481def3afd500661ce90106e1e140131508590594e67d1bcaf38b8d18e5cfd",
+   "Experiments/r1_provenance.py": "ff2e32fe946c0707c788a39b3414262c36388ec89b736fa12f4db90be49cf47e",
+   "src/dsaf_v2_lite.py": "985a33ca0993c5b52f736c97b2ac44399c8ea22b36c1b9169e4d305973766752",
+   "src/ablation_models.py": "d603563d9c4003c60b60eeee0b72123b0ed56e6cda7f1ddbff510092fe61b2c8",
+   "src/published_baselines.py": "c9f581bc27020b46e7d5a9f79129a826b34f012bda84665c2381e8338b6d5783",
+   "src/sota_baselines.py": "8ed27e977934fa2a58555be06288d71266f684a083557c53eb3bf2cacc9c9034",
+   "src/vanilla_baselines.py": "bcd744631eee25c660617360ac84423603f4b175b3666a99495d9fa8b3592f52",
+   "src/mini_dann.py": "897581f518e61506d9d6f52593946e430e7511a403baac25438e23631318ea09",
+   "src/online_filters.py": "89e523690d0d9f8f4e23157a8094ae68eedc5aedd7a9f1da13cb518322d028d4",
+   "src/isotonic_eval.py": "3e56013efe14b808f4d55311318567a2565628d31a087d6e55dcb4ca9d63e40b",
+   "Experiments/r1_cost_literature.py": "82e123334981c9a9ec7a2e9aef3731f9a263251f1b8a017d2c8177d024ba4fdf"
+  },
+  "data_list_sha256": {
+   "data_sha256_v2.txt": "8d520c299c9c1fec05d1d397beef3232a39e8bd157c6eb368e37e05b3df9d27b",
+   "data_sha256_v2hv.txt": "7b601df5d718d9be4900aa88568fec565c31b508ffcdc6ddb2b7f4b96112ee8d"
+  },
+  "git_head": "bf06c79d3f44137e1ab02597308424d22b4210f1",
+  "git_tree_differs": true,
+  "command": "Experiments/r1_cost_literature.py",
+  "python": "3.14.3",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "gpu": "NVIDIA GeForce RTX 5070"
+ }
+}

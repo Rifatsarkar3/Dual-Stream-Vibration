@@ -1,0 +1,4 @@
+# Keep the analysis plan and the experiment registry byte-identical on every platform, so that their SHA-256
+# can be checked against the hashes recorded in the result files and in Supplementary Material S1.
+paper/revision_R1/R1_analysis_plan.md -text
+paper/revision_R1/R1_experiment_registry.md -text

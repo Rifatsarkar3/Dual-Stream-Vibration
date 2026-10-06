@@ -1,0 +1,8 @@
+lambda=0.08  A=0.1909  B=0.1315  C=0.2269  D=0.1836  4-fold=0.1832  SE=0.0086  n=20
+lambda=0.2   A=0.1903  B=0.1298  C=0.2345  D=0.1850  4-fold=0.1849  SE=0.0094  n=20
+lambda=0.5   A=0.1924  B=0.1247  C=0.2306  D=0.1831  4-fold=0.1827  SE=0.0094  n=20
+lambda=1.0   A=0.1861  B=0.1285  C=0.2263  D=0.1848  4-fold=0.1814  SE=0.0085  n=20
+lambda=2.0   A=0.1920  B=0.1254  C=0.2283  D=0.1888  4-fold=0.1836  SE=0.0093  n=20
+lambda=5.0   A=0.2025  B=0.1196  C=0.2282  D=0.1988  4-fold=0.1873  SE=0.0106  n=20
+argmin lambda = 1.0; threshold (min + SE) = 0.1899
+SELECTED lambda (pre-registered one-SE rule) = 0.08  [default within one SE of the minimum: kept]

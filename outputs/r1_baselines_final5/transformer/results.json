@@ -1,0 +1,157 @@
+{
+ "model": "transformer",
+ "K": 10,
+ "selection": "outputs/r1_baseline_sel5/transformer.json",
+ "per_seed": [
+  {
+   "seed": 42,
+   "raw_mae_13": 0.257005900144577,
+   "ces_mae_13": 0.24718618392944336,
+   "minutes": 0.7
+  },
+  {
+   "seed": 123,
+   "raw_mae_13": 0.3014594316482544,
+   "ces_mae_13": 0.28804880380630493,
+   "minutes": 0.7
+  },
+  {
+   "seed": 777,
+   "raw_mae_13": 0.2630891799926758,
+   "ces_mae_13": 0.24900579452514648,
+   "minutes": 0.7
+  },
+  {
+   "seed": 999,
+   "raw_mae_13": 0.26634499430656433,
+   "ces_mae_13": 0.2575790584087372,
+   "minutes": 0.8
+  },
+  {
+   "seed": 7,
+   "raw_mae_13": 0.25566914677619934,
+   "ces_mae_13": 0.2456241399049759,
+   "minutes": 1.4
+  },
+  {
+   "seed": 8,
+   "raw_mae_13": 0.22781893610954285,
+   "ces_mae_13": 0.21772077679634094,
+   "minutes": 1.4
+  },
+  {
+   "seed": 21,
+   "raw_mae_13": 0.265598863363266,
+   "ces_mae_13": 0.25943872332572937,
+   "minutes": 1.4
+  },
+  {
+   "seed": 34,
+   "raw_mae_13": 0.23599651455879211,
+   "ces_mae_13": 0.22633501887321472,
+   "minutes": 1.4
+  },
+  {
+   "seed": 55,
+   "raw_mae_13": 0.26636040210723877,
+   "ces_mae_13": 0.2498604953289032,
+   "minutes": 1.7
+  },
+  {
+   "seed": 89,
+   "raw_mae_13": 0.21446943283081055,
+   "ces_mae_13": 0.2011977732181549,
+   "minutes": 1.7
+  },
+  {
+   "seed": 144,
+   "raw_mae_13": 0.29437896609306335,
+   "ces_mae_13": 0.2796044945716858,
+   "minutes": 1.6
+  },
+  {
+   "seed": 233,
+   "raw_mae_13": 0.2490089386701584,
+   "ces_mae_13": 0.23791760206222534,
+   "minutes": 1.4
+  },
+  {
+   "seed": 377,
+   "raw_mae_13": 0.250259667634964,
+   "ces_mae_13": 0.2370842695236206,
+   "minutes": 1.4
+  },
+  {
+   "seed": 610,
+   "raw_mae_13": 0.2815346121788025,
+   "ces_mae_13": 0.2721608579158783,
+   "minutes": 1.4
+  },
+  {
+   "seed": 987,
+   "raw_mae_13": 0.26940834522247314,
+   "ces_mae_13": 0.26220035552978516,
+   "minutes": 1.4
+  },
+  {
+   "seed": 1597,
+   "raw_mae_13": 0.26521480083465576,
+   "ces_mae_13": 0.25711292028427124,
+   "minutes": 1.4
+  },
+  {
+   "seed": 2584,
+   "raw_mae_13": 0.23850832879543304,
+   "ces_mae_13": 0.23163609206676483,
+   "minutes": 1.4
+  },
+  {
+   "seed": 4181,
+   "raw_mae_13": 0.277690589427948,
+   "ces_mae_13": 0.26978835463523865,
+   "minutes": 1.3
+  },
+  {
+   "seed": 6765,
+   "raw_mae_13": 0.23275098204612732,
+   "ces_mae_13": 0.2202834039926529,
+   "minutes": 1.4
+  },
+  {
+   "seed": 10946,
+   "raw_mae_13": 0.2360946536064148,
+   "ces_mae_13": 0.23010754585266113,
+   "minutes": 1.4
+  }
+ ],
+ "provenance": {
+  "plan_sha256": "1a94d3655ca731df02ed53b2fa82432ec25ec74bf2842381a3e406475e899449",
+  "code_sha256": {
+   "Experiments/exp16_ress.py": "7fb30773b3b5f3c7418c9a3ad78abda4fe436e30c3e450d9b9f056114b58f43a",
+   "Experiments/exp19_baselines.py": "ed481def3afd500661ce90106e1e140131508590594e67d1bcaf38b8d18e5cfd",
+   "Experiments/r1_provenance.py": "ff2e32fe946c0707c788a39b3414262c36388ec89b736fa12f4db90be49cf47e",
+   "src/dsaf_v2_lite.py": "985a33ca0993c5b52f736c97b2ac44399c8ea22b36c1b9169e4d305973766752",
+   "src/ablation_models.py": "d603563d9c4003c60b60eeee0b72123b0ed56e6cda7f1ddbff510092fe61b2c8",
+   "src/published_baselines.py": "c9f581bc27020b46e7d5a9f79129a826b34f012bda84665c2381e8338b6d5783",
+   "src/sota_baselines.py": "8ed27e977934fa2a58555be06288d71266f684a083557c53eb3bf2cacc9c9034",
+   "src/vanilla_baselines.py": "bcd744631eee25c660617360ac84423603f4b175b3666a99495d9fa8b3592f52",
+   "src/mini_dann.py": "897581f518e61506d9d6f52593946e430e7511a403baac25438e23631318ea09",
+   "src/online_filters.py": "89e523690d0d9f8f4e23157a8094ae68eedc5aedd7a9f1da13cb518322d028d4",
+   "src/isotonic_eval.py": "3e56013efe14b808f4d55311318567a2565628d31a087d6e55dcb4ca9d63e40b",
+   "Experiments/r1_baseline_final.py": "c693bfa686e67963962b5579ead018bed5d85a99abd7b69ed6e69a67d48f2b48"
+  },
+  "data_list_sha256": {
+   "data_sha256_v2.txt": "8d520c299c9c1fec05d1d397beef3232a39e8bd157c6eb368e37e05b3df9d27b",
+   "data_sha256_v2hv.txt": "7b601df5d718d9be4900aa88568fec565c31b508ffcdc6ddb2b7f4b96112ee8d"
+  },
+  "git_head": "bf06c79d3f44137e1ab02597308424d22b4210f1",
+  "git_tree_differs": true,
+  "command": "Experiments/r1_baseline_final.py --model transformer",
+  "python": "3.14.3",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "gpu": "NVIDIA GeForce RTX 5070"
+ }
+}

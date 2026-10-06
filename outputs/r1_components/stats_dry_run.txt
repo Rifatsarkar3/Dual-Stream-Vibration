@@ -1,0 +1,59 @@
+# Rebuilt components (revision R1, analysis plan Amendment 10) — DRY RUN, synthetic data
+
+### Primary family, PRONOSTIA (ten test bearings)
+
+| Test | R | Comparator | R lower by | R better on | p | Holm p | Significant, R better |
+|---|---|---|---|---|---|---|---|
+| A10-E E, envelope stream (R against raw-vibration stream only) | 0.0296 | 0.0369 | +19.7 % | 10/10 | 0.0020 | 0.0059 | yes |
+| A10-G G, gate under noise (R against static fusion, five noise levels) | 0.0385 | 0.0382 | -0.7 % | 5/10 | 0.4414 | 0.4414 | no |
+| A10-M M, pair PGMC (R against no PGMC) | 0.0296 | 0.0292 | -1.4 % | 4/10 | 0.1895 | 0.3789 | no |
+
+### Replication family, XJTU-SY (six test and five Condition-3 bearings)
+
+| Test | R | Comparator | R lower by | R better on | p | Holm p | Significant, R better |
+|---|---|---|---|---|---|---|---|
+| A10-E E, envelope stream (R against raw-vibration stream only) | 0.0270 | 0.0364 | +25.7 % | 11/11 | 0.0010 | 0.0029 | yes |
+| A10-G G, gate under noise (R against static fusion, five noise levels) | 0.0351 | 0.0359 | +2.1 % | 6/11 | 0.1797 | 0.3594 | no |
+| A10-M M, pair PGMC (R against no PGMC) | 0.0270 | 0.0272 | +0.6 % | 6/11 | 0.6768 | 0.6768 | no |
+
+### Claims
+
+| Component | Measurable effect | Replicated | May be listed as a contribution |
+|---|---|---|---|
+| A10-E | yes | yes | yes |
+| A10-G | no | no | no |
+| A10-M | no | no | no |
+
+### Secondary (i): each change alone
+
+| Test | R | Comparator | R lower by | R better on | p | Holm p | Significant, R better |
+|---|---|---|---|---|---|---|---|
+| old_env submitted envelope extractor | 0.0296 | 0.0294 | -0.6 % | 3/10 | 0.6152 | 1.0000 | no |
+| no_aug no input noise | 0.0296 | 0.0293 | -1.2 % | 3/10 | 0.1484 | 0.5938 | no |
+| adjacent adjacent-window PGMC | 0.0296 | 0.0297 | +0.2 % | 5/10 | 0.7969 | 1.0000 | no |
+| no_dann without DANN | 0.0296 | 0.0294 | -0.7 % | 3/10 | 0.5840 | 1.0000 | no |
+| spectral envelope stream only | 0.0296 | 0.0462 | +35.8 % | 10/10 | 0.0020 | 0.0098 | yes |
+
+### Secondary (ii): R against the submitted network and the 1D CNN
+
+| Test | R | Comparator | R lower by | R better on | p | Holm p | Significant, R better |
+|---|---|---|---|---|---|---|---|
+| submitted network  | 0.0296 | 0.0297 | +0.2 % | 5/10 | 0.8613 | 0.8613 | no |
+| 1D CNN  | 0.0296 | 0.0289 | -2.5 % | 2/10 | 0.1113 | 0.2227 | no |
+
+### Descriptive: calibration and decisions (own validation runs; unadjusted p against R)
+
+| Model | c* | Coverage | Late life | Interval score | Tail ratio | Cost r = 5 | Cost r = 10 | CES MAE |
+|---|---|---|---|---|---|---|---|---|
+| full | 2.68 | 88.4 % | 88.2 % | 0.349 | 0.95 | 55.9 | 64.0 | 0.0296 |
+| rawonly | 3.97 | 89.1 % | 89.4 % | 0.501 (p 0.002) | 0.98 | 92.7 (p 0.002) | 105.1 (p 0.002) | 0.0369 |
+| static | 2.65 | 88.3 % | 88.1 % | 0.345 (p 0.117) | 0.95 | 56.1 (p 0.914) | 64.1 (p 0.965) | 0.0293 |
+| no_pgmc | 2.69 | 88.7 % | 88.7 % | 0.344 (p 0.041) | 0.96 | 58.5 (p 0.016) | 66.4 (p 0.021) | 0.0292 |
+
+### Mechanism
+
+Gate weight of R by noise level: clean 0.450, 20 0.430, 10 0.410, 5 0.390, 0 0.370, -5 0.350.
+Share of increasing raw-prediction pairs 5 to 10 % of the life apart: R 0.258, without PGMC 0.256 (p 0.4395).
+Envelope stream alone, CES MAE: rebuilt 0.0462, submitted 0.0457 (5/10 bearings, p 0.4980).
+
+DRY RUN: planted effect detected at the smallest attainable p on both datasets; null comparisons: A10-G p 0.441, A10-M p 0.189

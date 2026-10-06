@@ -1,0 +1,82 @@
+{
+ "dataset": "FD003",
+ "n": 4,
+ "repeat": 3,
+ "seed": 999,
+ "fleet": [
+  85,
+  46,
+  23,
+  2
+ ],
+ "folds": [
+  [
+   85
+  ],
+  [
+   46
+  ],
+  [
+   23
+  ],
+  [
+   2
+  ]
+ ],
+ "sp": {
+  "best_step": 7450,
+  "best_val_mae": 1.3068765140114686,
+  "steps_done": 8000,
+  "n_train_windows": 725,
+  "n_val_windows": 78
+ },
+ "pr": {
+  "s_star": 500,
+  "fold_mae": [
+   23.36752967995996,
+   24.390596898856675,
+   26.612140087263725,
+   26.49615396107408,
+   26.77238221252964
+  ]
+ },
+ "n_test_windows": 13696,
+ "n_test_engines_with_windows": 100,
+ "n_test_engines_short": 0,
+ "seconds": 388.3,
+ "data_sha256": {
+  "train_FD003.txt": "2abbe9968cc5e8eb091980f51b20f62bb4127336d3482cb52071d53bf23329e2",
+  "test_FD003.txt": "299babd63c8d987cef079c4a425429f33b3a34797d803bbe2ad48c29dbd0d790",
+  "RUL_FD003.txt": "df1e0566306b174a2de41c67a3e7a51877889598b78643fc3e5685259091b7cb"
+ },
+ "provenance": {
+  "plan_sha256": "0d4d7f6d6e30d18bb2d07ec7055a0083ff64e3534d3f6ba8ccdc7edf73ac134c",
+  "code_sha256": {
+   "Experiments/exp16_ress.py": "7fb30773b3b5f3c7418c9a3ad78abda4fe436e30c3e450d9b9f056114b58f43a",
+   "Experiments/exp19_baselines.py": "ed481def3afd500661ce90106e1e140131508590594e67d1bcaf38b8d18e5cfd",
+   "Experiments/r1_provenance.py": "ff2e32fe946c0707c788a39b3414262c36388ec89b736fa12f4db90be49cf47e",
+   "src/dsaf_v2_lite.py": "985a33ca0993c5b52f736c97b2ac44399c8ea22b36c1b9169e4d305973766752",
+   "src/ablation_models.py": "d603563d9c4003c60b60eeee0b72123b0ed56e6cda7f1ddbff510092fe61b2c8",
+   "src/published_baselines.py": "c9f581bc27020b46e7d5a9f79129a826b34f012bda84665c2381e8338b6d5783",
+   "src/sota_baselines.py": "8ed27e977934fa2a58555be06288d71266f684a083557c53eb3bf2cacc9c9034",
+   "src/vanilla_baselines.py": "bcd744631eee25c660617360ac84423603f4b175b3666a99495d9fa8b3592f52",
+   "src/mini_dann.py": "897581f518e61506d9d6f52593946e430e7511a403baac25438e23631318ea09",
+   "src/online_filters.py": "89e523690d0d9f8f4e23157a8094ae68eedc5aedd7a9f1da13cb518322d028d4",
+   "src/isotonic_eval.py": "3e56013efe14b808f4d55311318567a2565628d31a087d6e55dcb4ca9d63e40b",
+   "Experiments/r1_cmapss.py": "558087c703e20f7b2c4ce5acd05327b402d87d3d3dc0a983490ce86057e05463"
+  },
+  "data_list_sha256": {
+   "data_sha256_v2.txt": "8d520c299c9c1fec05d1d397beef3232a39e8bd157c6eb368e37e05b3df9d27b",
+   "data_sha256_v2hv.txt": "7b601df5d718d9be4900aa88568fec565c31b508ffcdc6ddb2b7f4b96112ee8d"
+  },
+  "git_head": "a84671f8bc44397f037d72f0e0a96c5560d98e54",
+  "git_tree_differs": true,
+  "command": "Experiments/r1_cmapss.py --dataset FD003 --repeats 0-9",
+  "python": "3.14.3",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "gpu": "NVIDIA GeForce RTX 5070"
+ }
+}

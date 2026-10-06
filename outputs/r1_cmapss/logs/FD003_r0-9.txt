@@ -1,0 +1,43 @@
+E:\Yolo-Thermal\Dual-Stream Vibration-Vision\.venv\Lib\site-packages\torch\nn\modules\conv.py:548: UserWarning: Using padding='same' with even kernel lengths and odd dilation may require a zero-padded copy of the input be created (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\Convolution.cpp:1025.)
+  return F.conv2d(
+FD003 n=4 r=0: SP best step 7850 (val MAE 1.72, 8000 steps); PR S* 4000 (fold MAE 19.92, 21.36, 20.01, 18.25, 18.73); 363.4 s
+FD003 n=10 r=0: SP best step 8000 (val MAE 2.19, 8000 steps); PR S* 500 (fold MAE 18.89, 19.23, 20.25, 22.79, 20.74); 402.3 s
+FD003 n=25 r=0: SP best step 7300 (val MAE 6.32, 8000 steps); PR S* 4000 (fold MAE 13.14, 10.65, 9.52, 9.14, 9.57); 478.1 s
+FD003 n=80 r=0: SP best step 5500 (val MAE 7.01, 7000 steps); PR S* 8000 (fold MAE 12.96, 10.14, 8.62, 8.23, 8.22); 519.6 s
+FD003 n=4 r=1: SP best step 7950 (val MAE 4.65, 8000 steps); PR S* 4000 (fold MAE 11.35, 11.91, 11.88, 8.41, 9.84); 390.7 s
+FD003 n=10 r=1: SP best step 7950 (val MAE 2.75, 8000 steps); PR S* 4000 (fold MAE 14.94, 15.34, 11.58, 10.33, 11.70); 404.6 s
+FD003 n=25 r=1: SP best step 7900 (val MAE 4.65, 8000 steps); PR S* 8000 (fold MAE 12.63, 12.29, 9.13, 8.09, 7.87); 512.8 s
+FD003 n=80 r=1: SP best step 8000 (val MAE 10.43, 8000 steps); PR S* 8000 (fold MAE 13.86, 12.00, 9.54, 8.83, 7.89); 528.7 s
+FD003 n=4 r=2: SP best step 8000 (val MAE 1.20, 8000 steps); PR S* 2000 (fold MAE 18.82, 19.47, 16.46, 19.78, 21.45); 431.0 s
+FD003 n=10 r=2: SP best step 8000 (val MAE 1.88, 8000 steps); PR S* 8000 (fold MAE 18.31, 17.33, 16.26, 14.15, 13.70); 456.5 s
+FD003 n=25 r=2: SP best step 7950 (val MAE 4.64, 8000 steps); PR S* 4000 (fold MAE 17.04, 15.52, 12.03, 11.43, 11.80); 463.6 s
+FD003 n=80 r=2: SP best step 7850 (val MAE 6.73, 8000 steps); PR S* 8000 (fold MAE 13.31, 12.47, 9.53, 8.07, 7.55); 529.9 s
+FD003 n=4 r=3: SP best step 7450 (val MAE 1.31, 8000 steps); PR S* 500 (fold MAE 23.37, 24.39, 26.61, 26.50, 26.77); 388.3 s
+FD003 n=10 r=3: SP best step 7850 (val MAE 2.99, 8000 steps); PR S* 4000 (fold MAE 11.13, 9.38, 8.07, 7.55, 7.77); 419.2 s
+FD003 n=25 r=3: SP best step 7850 (val MAE 5.91, 8000 steps); PR S* 8000 (fold MAE 13.45, 11.54, 9.64, 9.07, 8.82); 514.8 s
+FD003 n=80 r=3: SP best step 8000 (val MAE 7.30, 8000 steps); PR S* 8000 (fold MAE 13.44, 11.83, 9.77, 8.58, 7.88); 521.7 s
+FD003 n=4 r=4: SP best step 6750 (val MAE 1.25, 8000 steps); PR S* 500 (fold MAE 27.52, 30.64, 35.28, 37.91, 36.51); 366.8 s
+FD003 n=10 r=4: SP best step 7850 (val MAE 3.09, 8000 steps); PR S* 2000 (fold MAE 18.20, 17.40, 15.58, 16.88, 17.76); 421.7 s
+FD003 n=25 r=4: SP best step 7900 (val MAE 6.02, 8000 steps); PR S* 8000 (fold MAE 17.89, 17.09, 13.27, 12.05, 11.86); 503.6 s
+FD003 n=80 r=4: SP best step 7400 (val MAE 7.13, 8000 steps); PR S* 8000 (fold MAE 13.23, 13.19, 11.09, 8.90, 8.32); 528.9 s
+FD003 n=4 r=5: SP best step 7900 (val MAE 2.21, 8000 steps); PR S* 500 (fold MAE 21.10, 26.77, 27.16, 22.33, 22.09); 394.9 s
+FD003 n=10 r=5: SP best step 7650 (val MAE 4.25, 8000 steps); PR S* 4000 (fold MAE 12.91, 12.44, 11.90, 11.42, 12.71); 439.4 s
+FD003 n=25 r=5: SP best step 7900 (val MAE 4.92, 8000 steps); PR S* 8000 (fold MAE 13.14, 11.94, 11.69, 8.88, 8.67); 513.0 s
+FD003 n=80 r=5: SP best step 7950 (val MAE 7.07, 8000 steps); PR S* 8000 (fold MAE 13.02, 12.91, 10.80, 8.37, 7.53); 529.8 s
+FD003 n=4 r=6: SP best step 7450 (val MAE 0.79, 8000 steps); PR S* 8000 (fold MAE 11.99, 11.34, 11.29, 9.30, 7.61); 474.6 s
+FD003 n=10 r=6: SP best step 7900 (val MAE 2.36, 8000 steps); PR S* 4000 (fold MAE 11.73, 11.46, 12.18, 11.32, 12.18); 434.9 s
+FD003 n=25 r=6: SP best step 8000 (val MAE 6.88, 8000 steps); PR S* 4000 (fold MAE 13.12, 13.13, 11.34, 10.62, 11.86); 468.6 s
+FD003 n=80 r=6: SP best step 7850 (val MAE 7.18, 8000 steps); PR S* 8000 (fold MAE 13.15, 11.95, 9.47, 8.31, 7.94); 518.4 s
+FD003 n=4 r=7: SP best step 7750 (val MAE 2.12, 8000 steps); PR S* 500 (fold MAE 18.72, 20.01, 24.28, 24.96, 23.16); 383.1 s
+FD003 n=10 r=7: SP best step 7500 (val MAE 3.06, 8000 steps); PR S* 8000 (fold MAE 12.65, 11.31, 8.87, 7.61, 7.40); 479.7 s
+FD003 n=25 r=7: SP best step 8000 (val MAE 4.52, 8000 steps); PR S* 8000 (fold MAE 12.05, 9.37, 7.55, 7.04, 6.54); 523.0 s
+FD003 n=80 r=7: SP best step 7950 (val MAE 7.01, 8000 steps); PR S* 8000 (fold MAE 13.65, 10.27, 9.29, 8.56, 7.83); 522.7 s
+FD003 n=4 r=8: SP best step 7700 (val MAE 1.28, 8000 steps); PR S* 8000 (fold MAE 10.62, 9.73, 9.48, 7.82, 7.80); 403.3 s
+FD003 n=10 r=8: SP best step 8000 (val MAE 2.15, 8000 steps); PR S* 8000 (fold MAE 14.16, 13.04, 8.22, 8.35, 7.26); 479.1 s
+FD003 n=25 r=8: SP best step 8000 (val MAE 4.64, 8000 steps); PR S* 8000 (fold MAE 12.09, 11.47, 8.93, 7.82, 7.58); 507.5 s
+FD003 n=80 r=8: SP best step 7800 (val MAE 6.75, 8000 steps); PR S* 4000 (fold MAE 12.49, 12.37, 9.09, 8.09, 8.16); 474.0 s
+FD003 n=4 r=9: SP best step 8000 (val MAE 1.40, 8000 steps); PR S* 500 (fold MAE 24.35, 25.86, 30.05, 32.33, 29.64); 378.0 s
+FD003 n=10 r=9: SP best step 7850 (val MAE 2.90, 8000 steps); PR S* 4000 (fold MAE 14.35, 13.09, 13.30, 12.47, 13.29); 430.7 s
+FD003 n=25 r=9: SP best step 7900 (val MAE 5.12, 8000 steps); PR S* 8000 (fold MAE 13.62, 13.18, 11.62, 9.28, 8.41); 513.0 s
+FD003 n=80 r=9: SP best step 7850 (val MAE 7.09, 8000 steps); PR S* 8000 (fold MAE 14.19, 13.20, 11.52, 9.01, 8.16); 498.4 s
+done

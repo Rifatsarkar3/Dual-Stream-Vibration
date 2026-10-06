@@ -47,6 +47,7 @@ OUTPUTS: outputs/exp16_ress/<variant>/
 
 import argparse
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -63,6 +64,7 @@ from src.monotone_rul_head import upgrade_dsaflite_regressor
 from src.mini_dann import DANNModule
 from src.online_filters import RealTimeRunningMinimum, ConstrainedExponentialSmoothing
 from src.isotonic_eval import IsotonicRegressor, compute_monotonicity
+from Experiments.r1_provenance import provenance
 
 
 # -----------------------------------------------------------------------------
@@ -138,7 +140,9 @@ class BearingArrays:
         self.n = len(rul)
 
 
-def load_bearings(data_dir: str, patterns: Dict[str, int] | List[str]) -> List[BearingArrays]:
+def load_bearings(data_dir: str, patterns: Dict[str, int] | List[str],
+                  channels: str = 'h') -> List[BearingArrays]:
+    """channels='h': horizontal only, (N, 2560); 'hv': horizontal + vertical, (N, 2, 2560)."""
     data_dir = Path(data_dir)
     if isinstance(patterns, dict):
         items = patterns.items()
@@ -151,7 +155,10 @@ def load_bearings(data_dir: str, patterns: Dict[str, int] | List[str]) -> List[B
             raise FileNotFoundError(f'No npz for pattern {pattern} in {data_dir}')
         for f in files:
             data = np.load(f, allow_pickle=True)
-            bearings.append(BearingArrays(pattern, data['vibration'], data['rul'], cond))
+            vib = data['vibration']
+            if channels == 'hv':
+                vib = np.stack([vib, data['vibration_v']], axis=1)
+            bearings.append(BearingArrays(pattern, vib, data['rul'], cond))
     return bearings
 
 
@@ -212,8 +219,9 @@ def build_loaders(config: Dict, seed: int) -> Tuple[torch.utils.data.DataLoader,
                                                     torch.utils.data.DataLoader,
                                                     List[BearingArrays]]:
     """Train / val loaders from TRAINING bearings only; test bearings returned raw."""
-    train_bearings = load_bearings(config['data_dir'], config['train_bearings'])
-    test_bearings = load_bearings(config['data_dir'], config['test_bearings'])
+    channels = config.get('channels', 'h')
+    train_bearings = load_bearings(config['data_dir'], config['train_bearings'], channels)
+    test_bearings = load_bearings(config['data_dir'], config['test_bearings'], channels)
 
     mode = config.get('val_mode', 'window')
     if mode == 'bearing':
@@ -508,9 +516,27 @@ def train_one_seed(seed: int, config: Dict, use_dann: bool, use_pgmc: bool,
                 break
 
     train_minutes = (time.time() - t0) / 60.0
+
+    # Final-epoch validation predictions (R1 analysis plan, Section 4): the deployed
+    # model is a fixed-budget final-epoch model, so calibration and Track B use these
+    # rather than the best-validation state. RNG state is restored so that enabling
+    # this leaves every other number of the run unchanged.
+    val_arrays, final_state = None, None
+    if config.get('save_val_preds') and val_loader is not None:
+        cpu_rng = torch.get_rng_state()
+        cuda_rng = torch.cuda.get_rng_state_all() if torch.cuda.is_available() else None
+        val_arrays = final_val_predictions(model, val_loader,
+                                           config.get('val_mc_passes', 30), device)
+        final_state = {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}
+        torch.set_rng_state(cpu_rng)
+        if cuda_rng is not None:
+            torch.cuda.set_rng_state_all(cuda_rng)
+
     model.load_state_dict({k: v.to(device) for k, v in best_state.items()})
 
-    result = evaluate_on_test(model, test_bearings, config, device)
+    # Selection runs (--skip-test) never load or evaluate test bearings.
+    result = ({} if config.get('skip_test')
+              else evaluate_on_test(model, test_bearings, config, device))
     result.update({
         'seed': seed,
         'best_val_mae': (float(best_val_mae)
@@ -520,6 +546,9 @@ def train_one_seed(seed: int, config: Dict, use_dann: bool, use_pgmc: bool,
         'train_minutes': round(train_minutes, 1),
         'val_history': [round(float(v), 5) for v in history['val_mae']],
     })
+    if val_arrays is not None:
+        result['_val_arrays'] = val_arrays
+        result['_final_state'] = final_state
     return result, model, history
 
 
@@ -531,6 +560,38 @@ def _enable_mc_dropout(model: nn.Module):
     for m in model.modules():
         if isinstance(m, nn.Dropout):
             m.train()
+
+
+def final_val_predictions(model: nn.Module, val_loader, n_passes: int,
+                          device) -> Dict[str, np.ndarray]:
+    """Deterministic and MC-dropout predictions on each validation bearing, in
+    chronological order (the validation loader is not shuffled)."""
+    names = [b.name for b in val_loader.dataset.bearings]
+
+    def run(mc: bool):
+        model.eval()
+        if mc:
+            _enable_mc_dropout(model)
+        ps, bs, ys = [], [], []
+        with torch.no_grad():
+            for x, y, b_idx, _w, _c in val_loader:
+                p, *_rest = model(x.to(device))
+                ps.append(p.cpu().numpy())
+                bs.append(b_idx.numpy())
+                ys.append(y.numpy())
+        model.eval()
+        return np.concatenate(ps), np.concatenate(bs), np.concatenate(ys)
+
+    raw, b_idx, y = run(False)
+    mc = np.stack([run(True)[0] for _ in range(n_passes)])
+    out = {}
+    for i, name in enumerate(names):
+        sel = b_idx == i
+        out[f'raw_{name}'] = raw[sel]
+        out[f'tgt_{name}'] = y[sel]
+        out[f'mcmean_{name}'] = mc[:, sel].mean(axis=0)
+        out[f'mcstd_{name}'] = mc[:, sel].std(axis=0)
+    return out
 
 
 def evaluate_on_test(model: nn.Module, test_bearings: List[BearingArrays],
@@ -657,9 +718,34 @@ def main():
     ap.add_argument('--lambda-pgmc', type=float, default=None,
                     help='override lambda_pgmc_max (for val-based strength sweep)')
     ap.add_argument('--variant-name', type=str, default=None)
+    ap.add_argument('--data-dir', type=str, default=None,
+                    help='processed PRONOSTIA directory (default: Processed_PRONOSTIA)')
+    ap.add_argument('--output-root', type=str, default=None)
+    ap.add_argument('--test-bearings', type=str, default=None,
+                    help='comma-separated test bearing patterns')
+    ap.add_argument('--skip-test', action='store_true',
+                    help='selection run: test bearings are neither loaded nor evaluated')
+    ap.add_argument('--save-val-preds', action='store_true',
+                    help='save final-epoch validation predictions (MC dropout) and '
+                         'the final-epoch checkpoint')
+    ap.add_argument('--deterministic', action='store_true',
+                    help='deterministic CUDA kernels, so a seed reproduces a run exactly')
     args = ap.parse_args()
 
+    if args.deterministic:
+        # Must precede the first cuBLAS call; the CUDA context is created lazily.
+        os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG', ':4096:8')
+        torch.use_deterministic_algorithms(True)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+
     config = dict(CONFIG)
+    if args.data_dir:
+        config['data_dir'] = args.data_dir
+    if args.output_root:
+        config['output_root'] = args.output_root
+    if args.test_bearings:
+        config['test_bearings'] = [s.strip() for s in args.test_bearings.split(',')]
     if args.pgmc_mode:
         config['pgmc_mode'] = args.pgmc_mode
     if args.val_mode:
@@ -680,6 +766,11 @@ def main():
         config['seeds'] = [int(s) for s in args.seeds.split(',')]
     if args.lambda_pgmc is not None:
         config['lambda_pgmc_max'] = args.lambda_pgmc
+    if args.skip_test:
+        config['skip_test'] = True
+        config['test_bearings'] = []
+    if args.save_val_preds:
+        config['save_val_preds'] = True
 
     use_dann = not args.no_dann
     use_pgmc = not args.no_pgmc
@@ -712,22 +803,32 @@ def main():
             seed, config, use_dann, use_pgmc, static_gate,
             epochs_override=epochs_override, stream=args.stream)
 
-        arrays = result.pop('_arrays')
-        np.savez_compressed(
-            out_dir / f'preds_seed{seed}.npz',
-            **{f'raw_{n}': v for n, v in arrays['raw_p'].items()},
-            **{f'tgt_{n}': v for n, v in arrays['tgt'].items()},
-            **{f'alpha_{n}': v for n, v in arrays['alphas'].items()},
-            **{f'mcmean_{n}': v for n, v in arrays['mc_mean'].items()},
-            **{f'mcstd_{n}': v for n, v in arrays['mc_std'].items()})
+        arrays = result.pop('_arrays', None)
+        val_arrays = result.pop('_val_arrays', None)
+        final_state = result.pop('_final_state', None)
+        if arrays is not None:
+            np.savez_compressed(
+                out_dir / f'preds_seed{seed}.npz',
+                **{f'raw_{n}': v for n, v in arrays['raw_p'].items()},
+                **{f'tgt_{n}': v for n, v in arrays['tgt'].items()},
+                **{f'alpha_{n}': v for n, v in arrays['alphas'].items()},
+                **{f'mcmean_{n}': v for n, v in arrays['mc_mean'].items()},
+                **{f'mcstd_{n}': v for n, v in arrays['mc_std'].items()})
+        if val_arrays is not None:
+            np.savez_compressed(out_dir / f'valpreds_seed{seed}.npz', **val_arrays)
+            torch.save(final_state, out_dir / f'model_final_seed{seed}.pth')
         torch.save(model.state_dict(), out_dir / f'model_seed{seed}.pth')
 
-        print(f"  TEST raw : MAE={result['raw']['mae']:.4f} R2={result['raw']['r2']:.4f} "
-              f"Mono={result['raw']['mono']:.1f}%")
-        print(f"  TEST pava: MAE={result['pava']['mae']:.4f} R2={result['pava']['r2']:.4f}")
-        print(f"  TEST ces : MAE={result['ces']['mae']:.4f}  rtrm: MAE={result['rtrm']['mae']:.4f}")
-        print(f"  UQ: PICP90={result['uq']['picp90']:.1f}% MPIW={result['uq']['mpiw90']:.3f} "
-              f"NLL={result['uq']['nll']:.3f}", flush=True)
+        if 'raw' in result:
+            print(f"  TEST raw : MAE={result['raw']['mae']:.4f} R2={result['raw']['r2']:.4f} "
+                  f"Mono={result['raw']['mono']:.1f}%")
+            print(f"  TEST pava: MAE={result['pava']['mae']:.4f} R2={result['pava']['r2']:.4f}")
+            print(f"  TEST ces : MAE={result['ces']['mae']:.4f}  rtrm: MAE={result['rtrm']['mae']:.4f}")
+            print(f"  UQ: PICP90={result['uq']['picp90']:.1f}% MPIW={result['uq']['mpiw90']:.3f} "
+                  f"NLL={result['uq']['nll']:.3f}", flush=True)
+        elif result['val_history']:
+            print(f"  final-epoch val MAE={result['val_history'][-1]:.4f} "
+                  f"(test bearings not loaded)", flush=True)
         per_seed.append(result)
 
     final = {
@@ -743,12 +844,16 @@ def main():
         ],
         'use_dann': use_dann, 'use_pgmc': use_pgmc, 'adaptive_gate': not static_gate,
         'per_seed': per_seed,
-        'aggregated': aggregate(per_seed) if per_seed else {},
+        'aggregated': aggregate(per_seed) if per_seed and not config.get('skip_test') else {},
+        'provenance': provenance(),
     }
+    if config.get('skip_test'):
+        final['protocol_notes'].append('Selection run (--skip-test): test bearings were '
+                                       'neither loaded nor evaluated.')
     with open(out_dir / 'results.json', 'w', encoding='utf-8') as f:
         json.dump(final, f, indent=2)
 
-    if len(per_seed) > 1:
+    if len(per_seed) > 1 and final['aggregated']:
         a = final['aggregated']
         print(f"\n=== AGGREGATE ({len(per_seed)} seeds) ===")
         print(f"  raw : MAE={a['raw_mae_mean']:.4f}±{a['raw_mae_std']:.4f} "

@@ -1,0 +1,178 @@
+{
+ "model": "bilstm",
+ "K": 20,
+ "selection": "E:\\Yolo-Thermal\\Dual-Stream Vibration-Vision\\outputs\\r1_xjtu_baselines\\select\\bilstm.json",
+ "per_seed": [
+  {
+   "seed": 42,
+   "test_raw_mae": 0.2227376252412796,
+   "test_ces_mae": 0.2198900431394577,
+   "zs_raw_mae": 0.33098793029785156,
+   "minutes": 1.6
+  },
+  {
+   "seed": 123,
+   "test_raw_mae": 0.25211912393569946,
+   "test_ces_mae": 0.24569323658943176,
+   "zs_raw_mae": 0.3386743664741516,
+   "minutes": 1.6
+  },
+  {
+   "seed": 777,
+   "test_raw_mae": 0.23473785817623138,
+   "test_ces_mae": 0.22824209928512573,
+   "zs_raw_mae": 0.29154151678085327,
+   "minutes": 1.6
+  },
+  {
+   "seed": 999,
+   "test_raw_mae": 0.23739321529865265,
+   "test_ces_mae": 0.23275791108608246,
+   "zs_raw_mae": 0.30275097489356995,
+   "minutes": 1.6
+  },
+  {
+   "seed": 7,
+   "test_raw_mae": 0.2190706580877304,
+   "test_ces_mae": 0.21198633313179016,
+   "zs_raw_mae": 0.2611156404018402,
+   "minutes": 1.6
+  },
+  {
+   "seed": 8,
+   "test_raw_mae": 0.20444481074810028,
+   "test_ces_mae": 0.19655466079711914,
+   "zs_raw_mae": 0.3162664771080017,
+   "minutes": 1.6
+  },
+  {
+   "seed": 21,
+   "test_raw_mae": 0.24395115673542023,
+   "test_ces_mae": 0.23891866207122803,
+   "zs_raw_mae": 0.3230975866317749,
+   "minutes": 1.6
+  },
+  {
+   "seed": 34,
+   "test_raw_mae": 0.23610961437225342,
+   "test_ces_mae": 0.229326531291008,
+   "zs_raw_mae": 0.29423949122428894,
+   "minutes": 1.6
+  },
+  {
+   "seed": 55,
+   "test_raw_mae": 0.23145321011543274,
+   "test_ces_mae": 0.22891393303871155,
+   "zs_raw_mae": 0.2919735312461853,
+   "minutes": 1.6
+  },
+  {
+   "seed": 89,
+   "test_raw_mae": 0.2382124811410904,
+   "test_ces_mae": 0.23255778849124908,
+   "zs_raw_mae": 0.29573947191238403,
+   "minutes": 1.6
+  },
+  {
+   "seed": 144,
+   "test_raw_mae": 0.24035553634166718,
+   "test_ces_mae": 0.2375120371580124,
+   "zs_raw_mae": 0.3225042223930359,
+   "minutes": 1.6
+  },
+  {
+   "seed": 233,
+   "test_raw_mae": 0.2310613989830017,
+   "test_ces_mae": 0.2257045954465866,
+   "zs_raw_mae": 0.27758660912513733,
+   "minutes": 1.6
+  },
+  {
+   "seed": 377,
+   "test_raw_mae": 0.2401212453842163,
+   "test_ces_mae": 0.23793436586856842,
+   "zs_raw_mae": 0.34294363856315613,
+   "minutes": 1.6
+  },
+  {
+   "seed": 610,
+   "test_raw_mae": 0.23539860546588898,
+   "test_ces_mae": 0.23287394642829895,
+   "zs_raw_mae": 0.3084512948989868,
+   "minutes": 1.6
+  },
+  {
+   "seed": 987,
+   "test_raw_mae": 0.23149220645427704,
+   "test_ces_mae": 0.22379730641841888,
+   "zs_raw_mae": 0.3240562081336975,
+   "minutes": 1.6
+  },
+  {
+   "seed": 1597,
+   "test_raw_mae": 0.22114421427249908,
+   "test_ces_mae": 0.21428339183330536,
+   "zs_raw_mae": 0.2564038634300232,
+   "minutes": 1.6
+  },
+  {
+   "seed": 2584,
+   "test_raw_mae": 0.2568207085132599,
+   "test_ces_mae": 0.25107285380363464,
+   "zs_raw_mae": 0.2886749505996704,
+   "minutes": 1.6
+  },
+  {
+   "seed": 4181,
+   "test_raw_mae": 0.23688873648643494,
+   "test_ces_mae": 0.23392479121685028,
+   "zs_raw_mae": 0.3126373589038849,
+   "minutes": 1.6
+  },
+  {
+   "seed": 6765,
+   "test_raw_mae": 0.23864950239658356,
+   "test_ces_mae": 0.23634132742881775,
+   "zs_raw_mae": 0.2881777584552765,
+   "minutes": 1.6
+  },
+  {
+   "seed": 10946,
+   "test_raw_mae": 0.22494877874851227,
+   "test_ces_mae": 0.2181815803050995,
+   "zs_raw_mae": 0.2869541049003601,
+   "minutes": 1.6
+  }
+ ],
+ "provenance": {
+  "plan_sha256": "646e4d8b38e60167c80d59dc7709e65247c0c7057244f73ad8dfb47e70e45be7",
+  "code_sha256": {
+   "Experiments/exp16_ress.py": "7fb30773b3b5f3c7418c9a3ad78abda4fe436e30c3e450d9b9f056114b58f43a",
+   "Experiments/exp19_baselines.py": "ed481def3afd500661ce90106e1e140131508590594e67d1bcaf38b8d18e5cfd",
+   "Experiments/r1_provenance.py": "ff2e32fe946c0707c788a39b3414262c36388ec89b736fa12f4db90be49cf47e",
+   "src/dsaf_v2_lite.py": "985a33ca0993c5b52f736c97b2ac44399c8ea22b36c1b9169e4d305973766752",
+   "src/ablation_models.py": "d603563d9c4003c60b60eeee0b72123b0ed56e6cda7f1ddbff510092fe61b2c8",
+   "src/published_baselines.py": "c9f581bc27020b46e7d5a9f79129a826b34f012bda84665c2381e8338b6d5783",
+   "src/sota_baselines.py": "8ed27e977934fa2a58555be06288d71266f684a083557c53eb3bf2cacc9c9034",
+   "src/vanilla_baselines.py": "bcd744631eee25c660617360ac84423603f4b175b3666a99495d9fa8b3592f52",
+   "src/mini_dann.py": "897581f518e61506d9d6f52593946e430e7511a403baac25438e23631318ea09",
+   "src/online_filters.py": "89e523690d0d9f8f4e23157a8094ae68eedc5aedd7a9f1da13cb518322d028d4",
+   "src/isotonic_eval.py": "3e56013efe14b808f4d55311318567a2565628d31a087d6e55dcb4ca9d63e40b",
+   "Experiments/r1_xjtu_baselines.py": "369004efd8598a1bdb5efaff42abd288a5859cde19d8a290619929247b39a3df",
+   "Experiments/exp17_xjtu.py": "c1d6f107b77235abe1d8ebbda387ad6f562c6fadb512d6ac6d4b6f658f059255"
+  },
+  "data_list_sha256": {
+   "data_sha256_v2.txt": "8d520c299c9c1fec05d1d397beef3232a39e8bd157c6eb368e37e05b3df9d27b",
+   "data_sha256_v2hv.txt": "7b601df5d718d9be4900aa88568fec565c31b508ffcdc6ddb2b7f4b96112ee8d"
+  },
+  "git_head": "bf06c79d3f44137e1ab02597308424d22b4210f1",
+  "git_tree_differs": true,
+  "command": "Experiments/r1_xjtu_baselines.py --stage final --model bilstm",
+  "python": "3.14.3",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "gpu": "NVIDIA GeForce RTX 5070"
+ }
+}

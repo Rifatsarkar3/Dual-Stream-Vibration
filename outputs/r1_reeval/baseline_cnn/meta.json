@@ -1,0 +1,22 @@
+{
+  "source_checkpoints": "outputs/exp19_baselines20/cnn",
+  "n_checkpoints": 20,
+  "mc_dropout_passes": 10,
+  "data_dir": "E:\\Yolo-Thermal\\Dual-Stream Vibration-Vision\\Processed_PRONOSTIA_v2",
+  "bearings": [
+    "test_01_Bearing1_3",
+    "test_02_Bearing1_4",
+    "test_03_Bearing1_5",
+    "test_04_Bearing2_3",
+    "test_05_Bearing1_6",
+    "test_06_Bearing1_7",
+    "test_07_Bearing2_4",
+    "test_08_Bearing2_5",
+    "test_09_Bearing2_6",
+    "test_10_Bearing2_7",
+    "zs_01_Bearing3_1",
+    "zs_02_Bearing3_2",
+    "zs_03_Bearing3_3"
+  ],
+  "date": "2026-10-03 00:48"
+}

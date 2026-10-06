@@ -1,0 +1,178 @@
+{
+ "model": "cnnlstm",
+ "K": 5,
+ "selection": "E:\\Yolo-Thermal\\Dual-Stream Vibration-Vision\\outputs\\r1_xjtu_baselines\\select\\cnnlstm.json",
+ "per_seed": [
+  {
+   "seed": 42,
+   "test_raw_mae": 0.1925668716430664,
+   "test_ces_mae": 0.18369826674461365,
+   "zs_raw_mae": 0.2730019986629486,
+   "minutes": 0.7
+  },
+  {
+   "seed": 123,
+   "test_raw_mae": 0.24111059308052063,
+   "test_ces_mae": 0.235789492726326,
+   "zs_raw_mae": 0.29135364294052124,
+   "minutes": 0.7
+  },
+  {
+   "seed": 777,
+   "test_raw_mae": 0.22876060009002686,
+   "test_ces_mae": 0.22112052142620087,
+   "zs_raw_mae": 0.27926790714263916,
+   "minutes": 0.7
+  },
+  {
+   "seed": 999,
+   "test_raw_mae": 0.21312841773033142,
+   "test_ces_mae": 0.1978934407234192,
+   "zs_raw_mae": 0.30828386545181274,
+   "minutes": 0.7
+  },
+  {
+   "seed": 7,
+   "test_raw_mae": 0.1863299161195755,
+   "test_ces_mae": 0.1739017367362976,
+   "zs_raw_mae": 0.2812282145023346,
+   "minutes": 0.7
+  },
+  {
+   "seed": 8,
+   "test_raw_mae": 0.1954977661371231,
+   "test_ces_mae": 0.18402589857578278,
+   "zs_raw_mae": 0.2983238399028778,
+   "minutes": 0.7
+  },
+  {
+   "seed": 21,
+   "test_raw_mae": 0.20869728922843933,
+   "test_ces_mae": 0.20005495846271515,
+   "zs_raw_mae": 0.2968890964984894,
+   "minutes": 0.7
+  },
+  {
+   "seed": 34,
+   "test_raw_mae": 0.20353928208351135,
+   "test_ces_mae": 0.18752245604991913,
+   "zs_raw_mae": 0.2625884413719177,
+   "minutes": 0.7
+  },
+  {
+   "seed": 55,
+   "test_raw_mae": 0.23056544363498688,
+   "test_ces_mae": 0.21982114017009735,
+   "zs_raw_mae": 0.29213467240333557,
+   "minutes": 0.7
+  },
+  {
+   "seed": 89,
+   "test_raw_mae": 0.21022982895374298,
+   "test_ces_mae": 0.19658195972442627,
+   "zs_raw_mae": 0.32808718085289,
+   "minutes": 0.7
+  },
+  {
+   "seed": 144,
+   "test_raw_mae": 0.21561793982982635,
+   "test_ces_mae": 0.20645074546337128,
+   "zs_raw_mae": 0.2962344288825989,
+   "minutes": 0.7
+  },
+  {
+   "seed": 233,
+   "test_raw_mae": 0.2324795424938202,
+   "test_ces_mae": 0.22159993648529053,
+   "zs_raw_mae": 0.3014250695705414,
+   "minutes": 0.7
+  },
+  {
+   "seed": 377,
+   "test_raw_mae": 0.2250240296125412,
+   "test_ces_mae": 0.2119862288236618,
+   "zs_raw_mae": 0.297333300113678,
+   "minutes": 0.7
+  },
+  {
+   "seed": 610,
+   "test_raw_mae": 0.21210460364818573,
+   "test_ces_mae": 0.1995415985584259,
+   "zs_raw_mae": 0.316965252161026,
+   "minutes": 0.7
+  },
+  {
+   "seed": 987,
+   "test_raw_mae": 0.19838783144950867,
+   "test_ces_mae": 0.18368691205978394,
+   "zs_raw_mae": 0.2724357843399048,
+   "minutes": 0.7
+  },
+  {
+   "seed": 1597,
+   "test_raw_mae": 0.21692296862602234,
+   "test_ces_mae": 0.20924244821071625,
+   "zs_raw_mae": 0.3201533555984497,
+   "minutes": 0.7
+  },
+  {
+   "seed": 2584,
+   "test_raw_mae": 0.24297700822353363,
+   "test_ces_mae": 0.23212407529354095,
+   "zs_raw_mae": 0.2994164526462555,
+   "minutes": 0.7
+  },
+  {
+   "seed": 4181,
+   "test_raw_mae": 0.21421195566654205,
+   "test_ces_mae": 0.20268632471561432,
+   "zs_raw_mae": 0.30633386969566345,
+   "minutes": 0.7
+  },
+  {
+   "seed": 6765,
+   "test_raw_mae": 0.20969219505786896,
+   "test_ces_mae": 0.20220933854579926,
+   "zs_raw_mae": 0.27988845109939575,
+   "minutes": 0.7
+  },
+  {
+   "seed": 10946,
+   "test_raw_mae": 0.23559856414794922,
+   "test_ces_mae": 0.2305268794298172,
+   "zs_raw_mae": 0.2980625331401825,
+   "minutes": 0.7
+  }
+ ],
+ "provenance": {
+  "plan_sha256": "646e4d8b38e60167c80d59dc7709e65247c0c7057244f73ad8dfb47e70e45be7",
+  "code_sha256": {
+   "Experiments/exp16_ress.py": "7fb30773b3b5f3c7418c9a3ad78abda4fe436e30c3e450d9b9f056114b58f43a",
+   "Experiments/exp19_baselines.py": "ed481def3afd500661ce90106e1e140131508590594e67d1bcaf38b8d18e5cfd",
+   "Experiments/r1_provenance.py": "ff2e32fe946c0707c788a39b3414262c36388ec89b736fa12f4db90be49cf47e",
+   "src/dsaf_v2_lite.py": "985a33ca0993c5b52f736c97b2ac44399c8ea22b36c1b9169e4d305973766752",
+   "src/ablation_models.py": "d603563d9c4003c60b60eeee0b72123b0ed56e6cda7f1ddbff510092fe61b2c8",
+   "src/published_baselines.py": "c9f581bc27020b46e7d5a9f79129a826b34f012bda84665c2381e8338b6d5783",
+   "src/sota_baselines.py": "8ed27e977934fa2a58555be06288d71266f684a083557c53eb3bf2cacc9c9034",
+   "src/vanilla_baselines.py": "bcd744631eee25c660617360ac84423603f4b175b3666a99495d9fa8b3592f52",
+   "src/mini_dann.py": "897581f518e61506d9d6f52593946e430e7511a403baac25438e23631318ea09",
+   "src/online_filters.py": "89e523690d0d9f8f4e23157a8094ae68eedc5aedd7a9f1da13cb518322d028d4",
+   "src/isotonic_eval.py": "3e56013efe14b808f4d55311318567a2565628d31a087d6e55dcb4ca9d63e40b",
+   "Experiments/r1_xjtu_baselines.py": "369004efd8598a1bdb5efaff42abd288a5859cde19d8a290619929247b39a3df",
+   "Experiments/exp17_xjtu.py": "c1d6f107b77235abe1d8ebbda387ad6f562c6fadb512d6ac6d4b6f658f059255"
+  },
+  "data_list_sha256": {
+   "data_sha256_v2.txt": "8d520c299c9c1fec05d1d397beef3232a39e8bd157c6eb368e37e05b3df9d27b",
+   "data_sha256_v2hv.txt": "7b601df5d718d9be4900aa88568fec565c31b508ffcdc6ddb2b7f4b96112ee8d"
+  },
+  "git_head": "bf06c79d3f44137e1ab02597308424d22b4210f1",
+  "git_tree_differs": true,
+  "command": "Experiments/r1_xjtu_baselines.py --stage final --model cnnlstm",
+  "python": "3.14.3",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "gpu": "NVIDIA GeForce RTX 5070"
+ }
+}

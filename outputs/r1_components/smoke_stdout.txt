@@ -1,0 +1,11 @@
+=== outputs/r1_components_smoke/full_foldA ===
+[r1_components] {'envelope': 'band', 'augment': 'awgn', 'pgmc_pairs': 'gap', 'dataset': 'pronostia', 'band_json': 'outputs/r1_components/band_pronostia.json', 'band_json_sha256': '9feee21e381d4852cc66adb6b154a89fb9e04bc060ede2c47b1c3b5340056a84', 'band_hz': [6400.0, 9600.0], 'snr_db': [0.0, 30.0], 'p_noise': 0.5, 'gap_frac': [0.05, 0.1], 'n_pairs': 16, 'pair_seed_offset': 7919}
+[exp16] variant=full_foldA seeds=[42] pgmc_mode=aux-seq dann=True pgmc=True adaptive_gate=True
+
+=== seed 42 ===
+  epoch   1/10  val MAE=0.1753  R2=0.4503  (best 0.1753)
+  epoch  10/10  val MAE=0.2046  R2=0.2374  (best 0.1744)
+  final-epoch val MAE=0.2046 (test bearings not loaded)
+
+[exp16] results saved to outputs\r1_components_smoke\full_foldA\results.json
+=== r1_components_runs smoke done ===
