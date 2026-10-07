@@ -29,12 +29,16 @@ OUT = Path(__file__).resolve().parent / 'supp_tables'
 # 'MSCNN [7]'); these labels stay data keys and are renumbered only in the written tables.
 _AUX_PATH = Path(__file__).resolve().parent / 'manuscript_R1.aux'
 # numbers of the reference list of revision 1, used where the manuscript source is not available (public release)
-_FALLBACK = {'Jiang2020': '15', 'Li2019': '14', 'SaxenaCMAPSS2008': '73', 'Li2018RESS': '74', 'Javanmardi2023': '17'}
+_FALLBACK = {'Jiang2020': '15', 'Li2019': '14', 'SaxenaCMAPSS2008': '76', 'Li2018RESS': '77', 'Javanmardi2023': '17',
+             'Roberts2017': '26', 'LiGahrooeiKim2026': '32', 'Barua2026': '48', 'BenAbdennour2026': '49',
+             'XuZio2026': '63'}
 REFNUM = (dict(re.findall(r'\\bibcite\{([^}]*)\}\{\{(\d+)\}', _AUX_PATH.read_text(encoding='utf-8')))
           if _AUX_PATH.exists() else dict(_FALLBACK))
 RENUMBER = {'[21]': f"[{REFNUM['Jiang2020']}]", '[7]': f"[{REFNUM['Li2019']}]"}
 REF_MACROS = {'refTSMC': 'Jiang2020', 'refMSCNN': 'Li2019', 'refCMAPSS': 'SaxenaCMAPSS2008',
-              'refLiDCNN': 'Li2018RESS', 'refJavanmardi': 'Javanmardi2023'}
+              'refLiDCNN': 'Li2018RESS', 'refJavanmardi': 'Javanmardi2023', 'refRoberts': 'Roberts2017',
+              'refLiFleet': 'LiGahrooeiKim2026', 'refBarua': 'Barua2026', 'refBenAbdennour': 'BenAbdennour2026',
+              'refXuZio': 'XuZio2026'}
 
 PRON_MODELS = [  # (label, path, key in tables_R1.json)
     ('Ours', 'outputs/r1_final_B10/final20', 'DSAFLite+PGMC, submitted architecture'),
@@ -648,6 +652,69 @@ def s12_cmapss():
         rows, resize=False))
 
 
+def s12_blocked():
+    d = load('cmapss_blocked.json')
+    fleets = ['4', '10', '25']
+    tests = ['P1_n4', 'P1_n10', 'P1_n25', 'P2_n4', 'P2_n10', 'P2_n25']
+
+    def pfmt(p):
+        if p >= 0.001:
+            return f'{p:.3f}'
+        m, e = f'{p:.1e}'.split('e')
+        return f'${m} \\times 10^{{{int(e)}}}$'
+
+    def cell(t, k):
+        val = f"${t['mean']:+.1f}$" if k.startswith('P1') else f"{t['geometric_mean_ratio']:.2f}"
+        p = pfmt(t['p_holm'])
+        if t['significant']:
+            p = '\\textbf{\\boldmath ' + p + '}'
+        elif t['significant_opposite']:
+            val = val + '$^{\\dagger}$'
+        return f"{val} ({t['n_predicted']}/{t['n']}; {p})"
+
+    names = {k: (f"A12-P1, $n = {k[4:]}$" if k.startswith('P1') else f"A12-P2, $n = {k[4:]}$") for k in tests}
+    rows = [[names[k], cell(d['FD001']['tests'][k], k), cell(d['FD003']['tests'][k], k)] for k in tests]
+    write('s12_blocked_tests', table(
+        'tab:s12-blocked-tests',
+        'Blocked in-unit calibration (Amendment 12): primary tests, 20 repeats per fleet size, Holm over the six tests '
+        'of each subset (FD001 primary, FD003 replication); bold: significant after Holm in the stated direction; '
+        '$^{\\dagger}$significant after Holm against it. A12-P1: coverage with held-out engines minus coverage with '
+        'time blocks of the training engines, in points (repeats with a positive difference; Holm $p$). A12-P2: '
+        'geometric mean over repeats of the tail ratio with blocks divided by that with held-out engines (repeats '
+        'below 1). Both schemes have one calibration error per fleet window.',
+        'lcc', 'Test & FD001 & FD003', rows, resize=False))
+
+    rows = []
+    for ds in ('FD001', 'FD003'):
+        rows.append(f'\\multicolumn{{8}}{{l}}{{\\textit{{{ds}}}}} \\\\')
+        for n in fleets:
+            s = d[ds]['secondary'][n]
+            g = s['g']
+            rows.append([
+                n,
+                f"{s['SP_coverage']['mean']:.1f} / {s['SB_coverage']['mean']:.1f} "
+                f"({s['SB_coverage']['min']:.1f}--{s['SB_coverage']['max']:.1f}) / {s['PR_coverage']['mean']:.1f}",
+                f"{s['SP_rho_matched']['mean']:.2f} / {s['SB_rho']['mean']:.2f} / {s['PR_rho']['mean']:.2f}",
+                'n/a' if g['median'] is None else f"{g['median']:.2f}",
+                f"{s['SB_width']['mean']:.1f} / {s['PR_width']['mean']:.1f}",
+                f"{s['SB_decision_cov_r5']['mean']:.1f} / {s['PR_decision_cov_r5']['mean']:.1f}",
+                f"{s['SB_rmse_last']['mean']:.1f} / {s['PR_rmse_last']['mean']:.1f}",
+                ', '.join(str(v) for v in s['SB_s_star_counts'].values()) + f" ({s['same_s_star']})"])
+    write('s12_blocked_results', table(
+        'tab:s12-blocked-results',
+        'Blocked in-unit calibration: means over the 20 repeats. $n$: training engines. Coverage of the 90\\% residual '
+        'interval on all test windows with calibration on every 10th window of the training engines (in-unit, '
+        'Amendment 11) / on time blocks of the training engines (blocked; range) / on held-out engines. Ratio: '
+        '0.9-quantile of the absolute error on the calibration data over that on the test windows (in-unit: '
+        'size-matched). Share removed: median over repeats of the share of the in-unit understatement of the tail that '
+        'blocking removes, $g$ (0: none, 1: all). Width (cycles), decision quantile for $r = 5$ (target 83.3\\%) and '
+        'last-window RMSE (cycles), blocked / held-out. Budget: repeats in which the blocks selected 500, 1,000, 2,000, '
+        '4,000 and 8,000 steps (repeats with the same budget as the engine folds, in which the two deployed models '
+        'coincide).',
+        'rccccccc', '$n$ & Coverage, in-unit / blocked / held-out & Ratio & Share removed & Width & Decision quantile & '
+        'RMSE & Budget', rows))
+
+
 def main():
     sys.stdout.reconfigure(encoding='utf-8')
     refnums()
@@ -656,6 +723,8 @@ def main():
     s11_components()
     if (ROOT / 'outputs' / 'r1_analysis' / 'cmapss.json').exists():
         s12_cmapss()
+    if (ROOT / 'outputs' / 'r1_analysis' / 'cmapss_blocked.json').exists():
+        s12_blocked()
     res = s2_pronostia()
     s2_xjtu()
     s2_ours(res)

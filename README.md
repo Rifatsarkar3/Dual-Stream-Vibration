@@ -47,6 +47,10 @@ identical rules for nine models on PRONOSTIA and four on XJTU-SY:
   covered 20.8 and 31.0 % of test outcomes with four engines, against 87.6 and 82.5 % with held-out engines.
   The gap shrank as the fleet grew and was gone with 80 engines: the understatement is a property of evaluating
   with few training units, the situation of both bearing benchmarks.
+- Calibration on contiguous time blocks of the training engines, separated from the training windows by buffers
+  (Amendment 12), did not understate the tail: against the expectation stated in the plan, it overstated it, with
+  intervals 1.2 to 1.9 times as wide as with held-out engines. The understatement disappears when the validation
+  windows are separated in time from the training windows; a random split of windows interleaves them.
 
 ## Repository structure
 
@@ -69,10 +73,12 @@ Experiments/
   r1_provenance.py          records code hashes, plan hash, git state and command in every result file
   r1_components*.py, r1_band_select.py   rebuilt components: selection, final runs, noise, statistics (Amendment 10)
   r1_cmapss.py, r1_cmapss_stats.py       C-MAPSS turbofan check of the calibration source (Amendment 11)
-tests/                     preprocessing, MSCNN, temporal-context, rebuilt-component and C-MAPSS tests
+  r1_cmapss_blocked.py, r1_cmapss_blocked_stats.py   C-MAPSS: calibration on time blocks of the training
+                            engines against held-out engines (Amendment 12)
+tests/                     preprocessing, MSCNN, temporal-context, rebuilt-component and C-MAPSS tests (both schemes)
 paper/revision_R1/
-  R1_analysis_plan.md       dated analysis plan with eleven amendments (the last with two corrections made
-                            before its analysis) and one declared deviation
+  R1_analysis_plan.md       dated analysis plan with twelve amendments (Amendment 11 with two corrections and
+                            Amendment 12 with one, each made before its analysis) and one declared deviation
   R1_experiment_registry.md every run, including smoke tests and failed attempts
   manuscript_R1/make_figures_R1.py, make_supplement_tables.py   figures and supplementary tables
 outputs/r1_analysis/       result tables (Markdown) and JSON, each with provenance
@@ -84,6 +90,8 @@ outputs/r1_components*/    rebuilt network and its ablations: selection files, t
                            (Amendment 10)
 outputs/r1_cmapss/         C-MAPSS runs: per fleet and repeat, calibration errors and test predictions of both
                            schemes, with run records (Amendment 11)
+outputs/r1_cmapss_blocked/ C-MAPSS runs of the blocked scheme: block errors, budgets and test predictions, with
+                           run records (Amendment 12)
 outputs/exp16_ress/final20/ artifacts of the first version (see the correction notice)
 ```
 
@@ -144,6 +152,10 @@ python Experiments/r1_components_noise.py --dataset pronostia && python Experime
 python tests/test_cmapss.py && python Experiments/r1_cmapss.py --smoke
 python Experiments/r1_cmapss.py --dataset FD001 && python Experiments/r1_cmapss.py --dataset FD003
 python Experiments/r1_cmapss_stats.py --dry-run && python Experiments/r1_cmapss_stats.py
+# Amendment 12: blocked in-unit calibration on C-MAPSS (needs the Amendment 11 outputs)
+python tests/test_cmapss_blocked.py && python Experiments/r1_cmapss_blocked.py --smoke
+python Experiments/r1_cmapss_blocked.py --dataset FD001 && python Experiments/r1_cmapss_blocked.py --dataset FD003
+python Experiments/r1_cmapss_blocked_stats.py --dry-run && python Experiments/r1_cmapss_blocked_stats.py
 # figures and supplementary tables
 python paper/revision_R1/manuscript_R1/make_figures_R1.py
 python paper/revision_R1/manuscript_R1/make_supplement_tables.py

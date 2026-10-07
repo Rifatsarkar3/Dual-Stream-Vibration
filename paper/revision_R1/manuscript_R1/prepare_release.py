@@ -31,7 +31,8 @@ PRED_DIRS = ['outputs/r1_final_B10/final20', 'outputs/r1_final_temporal_B5/final
 PRED_DIRS += [f'outputs/r1_components_final/{v}' for v in A10_VARIANTS]
 PRED_DIRS += [f'outputs/r1_components_xjtu_final/{v}' for v in A10_XJTU_VARIANTS]
 CKPT_DIRS = ['outputs/r1_final_B10/final20', 'outputs/exp17_xjtu/final20']
-WHOLE_DIRS = ['outputs/r1_analysis', 'outputs/r1_tsmc_randsplit', 'outputs/r1_cmapss', 'outputs/r1_cmapss_smoke']
+WHOLE_DIRS = ['outputs/r1_analysis', 'outputs/r1_tsmc_randsplit', 'outputs/r1_cmapss', 'outputs/r1_cmapss_smoke',
+              'outputs/r1_cmapss_blocked', 'outputs/r1_cmapss_blocked_smoke']
 SUMMARY = {'outputs/r1_components': ['*.json', '*.txt', 'launchers/*.sh'],
            'outputs/r1_components_final': ['noise.json'], 'outputs/r1_components_xjtu_final': ['noise.json']}
 EXTRA = ['paper/revision_R1/R1_analysis_plan.md', 'paper/revision_R1/R1_experiment_registry.md',
@@ -93,7 +94,7 @@ def main():
     present = set(text.splitlines())
     new = [r for r in gitignore_rules() if r not in present]
     if new:
-        header = '\n# Revision 1 (2026), Amendments 10 and 11: rebuilt components, C-MAPSS check\n'
+        header = '\n# Revision 1 (2026), later amendments\n'
         gi.write_text(text.rstrip('\n') + '\n' + header + '\n'.join(new) + '\n', encoding='utf-8')
     print(f'copied {len(files)} files, {total / 2**20:.1f} MB, into {REL}; {len(new)} new .gitignore rules')
 

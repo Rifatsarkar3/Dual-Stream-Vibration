@@ -173,3 +173,7 @@ outputs/r1_components/launchers/*
 !outputs/r1_components/launchers/*.sh
 !outputs/r1_components_final/noise.json
 !outputs/r1_components_xjtu_final/noise.json
+
+# Revision 1 (2026), Amendment 12: blocked in-unit calibration on C-MAPSS
+!outputs/r1_cmapss_blocked
+!outputs/r1_cmapss_blocked_smoke

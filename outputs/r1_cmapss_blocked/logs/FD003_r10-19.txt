@@ -1,0 +1,33 @@
+E:\Yolo-Thermal\Dual-Stream Vibration-Vision\.venv\Lib\site-packages\torch\nn\modules\conv.py:548: UserWarning: Using padding='same' with even kernel lengths and odd dilation may require a zero-padded copy of the input be created (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\Convolution.cpp:1025.)
+  return F.conv2d(
+FD003 n=4 r=10: SB S* 1000 (block MAE 61.15, 26.90, 32.07, 35.33, 36.83); 300.3 s
+FD003 n=10 r=10: SB S* 500 (block MAE 27.15, 29.10, 35.85, 33.58, 27.50); 320.8 s
+FD003 n=25 r=10: SB S* 2000 (block MAE 27.54, 25.79, 24.43, 24.96, 28.97); 359.3 s
+FD003 n=4 r=11: SB S* 2000 (block MAE 34.61, 35.04, 24.17, 26.91, 30.45); 323.9 s
+FD003 n=10 r=11: SB S* 8000 (block MAE 18.64, 16.75, 18.40, 17.66, 16.73); 386.2 s
+FD003 n=25 r=11: SB S* 8000 (block MAE 22.53, 21.72, 21.42, 19.44, 19.31); 429.9 s
+FD003 n=4 r=12: SB S* 4000 (block MAE 46.33, 39.63, 28.78, 25.43, 33.92); 287.5 s
+FD003 n=10 r=12: SB S* 2000 (block MAE 25.80, 20.35, 16.83, 21.99, 22.04); 323.0 s
+FD003 n=25 r=12: SB S* 8000 (block MAE 27.63, 26.81, 26.25, 27.46, 24.39); 404.9 s
+FD003 n=4 r=13: SB S* 8000 (block MAE 20.44, 19.07, 25.52, 22.85, 18.90); 382.5 s
+FD003 n=10 r=13: SB S* 8000 (block MAE 20.07, 20.70, 21.40, 23.09, 18.70); 396.9 s
+FD003 n=25 r=13: SB S* 500 (block MAE 21.56, 24.09, 26.85, 28.39, 27.79); 316.5 s
+FD003 n=4 r=14: SB S* 500 (block MAE 21.57, 28.22, 25.87, 26.99, 35.83); 309.2 s
+FD003 n=10 r=14: SB S* 1000 (block MAE 27.79, 22.77, 25.37, 24.15, 30.47); 320.3 s
+FD003 n=25 r=14: SB S* 8000 (block MAE 22.35, 20.37, 20.84, 18.21, 15.69); 381.2 s
+FD003 n=4 r=15: SB S* 8000 (block MAE 31.32, 32.29, 32.41, 21.20, 20.37); 421.8 s
+FD003 n=10 r=15: SB S* 2000 (block MAE 18.86, 17.57, 13.93, 20.56, 18.63); 375.0 s
+FD003 n=25 r=15: SB S* 4000 (block MAE 22.19, 19.41, 22.60, 15.63, 17.94); 309.4 s
+FD003 n=4 r=16: SB S* 8000 (block MAE 22.35, 19.77, 19.73, 20.38, 15.64); 385.9 s
+FD003 n=10 r=16: SB S* 8000 (block MAE 28.34, 28.08, 27.23, 24.30, 24.23); 399.9 s
+FD003 n=25 r=16: SB S* 1000 (block MAE 30.21, 27.65, 30.48, 30.19, 28.60); 275.5 s
+FD003 n=4 r=17: SB S* 8000 (block MAE 17.64, 18.53, 28.83, 19.09, 12.42); 446.8 s
+FD003 n=10 r=17: SB S* 4000 (block MAE 24.20, 25.23, 23.82, 22.77, 24.48); 371.4 s
+FD003 n=25 r=17: SB S* 4000 (block MAE 23.25, 23.24, 23.45, 21.44, 23.89); 339.8 s
+FD003 n=4 r=18: SB S* 2000 (block MAE 41.07, 40.38, 24.65, 31.01, 36.61); 374.9 s
+FD003 n=10 r=18: SB S* 2000 (block MAE 33.35, 27.55, 25.58, 28.36, 27.92); 364.2 s
+FD003 n=25 r=18: SB S* 8000 (block MAE 25.38, 25.49, 30.80, 26.89, 24.79); 350.3 s
+FD003 n=4 r=19: SB S* 1000 (block MAE 16.35, 14.95, 18.75, 16.23, 21.15); 343.9 s
+FD003 n=10 r=19: SB S* 1000 (block MAE 28.73, 22.12, 23.21, 25.00, 27.31); 247.5 s
+FD003 n=25 r=19: SB S* 4000 (block MAE 27.69, 25.03, 22.36, 21.38, 22.54); 97.3 s
+done
