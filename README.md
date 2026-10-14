@@ -1,4 +1,4 @@
-# How Evaluation Practice Misstates the Uncertainty of Bearing Remaining Useful Life Predictions for Maintenance Decisions
+# Leakage-Free and Uncertainty-Calibrated Remaining Useful Life Prediction of Bearings for Reliability-Centered Maintenance
 
 Code, analysis plan, experiment registry, result files, test predictions and trained models accompanying the
 manuscript JRESS-D-26-05118, *Reliability Engineering & System Safety* (revision 1, 2026), by Sarkar Mohammad
@@ -22,31 +22,38 @@ inventory (`src/preprocess_pronostia.py`, `tests/test_preprocess_pronostia.py`).
 A maintenance alarm built on a remaining useful life (RUL) prediction depends on the tail of the prediction error
 on bearings the model has never seen: the alarm rule that minimizes the expected cost of late and early
 maintenance compares the r/(1 + r) quantile of that error distribution with the maintenance threshold, so an
-understated tail can only delay maintenance. The paper measures how evaluation practice misstates that tail, with
-identical rules for nine models on PRONOSTIA and four on XJTU-SY:
+understated tail can only delay maintenance. The paper builds a reliability-oriented framework around this
+decision quantile (model selection that never uses test bearings, trajectory corrections declared offline or
+causal, intervals calibrated before decision use, claims kept within validated conditions) and evaluates eight
+networks under identical rules on PRONOSTIA and four on XJTU-SY:
 
-- Validation windows taken from the training bearings understated the 0.9-quantile of the test error by 1.8 to
-  9 times in all twelve architecture-dataset combinations. Calibrated on them, 90 % intervals covered 21 to 50 %
-  of PRONOSTIA test outcomes, against 64 to 84 % when calibrated on held-out bearings; a replication on XJTU-SY
-  specified in advance confirmed the pooled difference (11 of 11 bearings, p = 0.001).
+- With few training units, the source of the calibration errors mattered more than the network. Validation
+  windows taken from the training bearings understated the 0.9-quantile of the test error 1.8 to 9 times in all
+  twelve network-dataset combinations. Calibrated on them, 90 % intervals covered 21 to 50 % of PRONOSTIA test
+  outcomes, against 64 to 84 % when calibrated on held-out bearings; a replication on XJTU-SY specified in advance
+  confirmed the difference for the four networks pooled (11 of 11 bearings, p = 0.001), though not for our
+  network alone (p = 0.19).
 - The understatement grew with the epoch that in-bearing early stopping selected (9 of 12 combinations, exact
   p = 0.0025): the error on new bearings widened with further training, and the validation windows did not
   register it (Amendment 9).
 - Tests over random seeds declared 29 of 44 comparisons significant, tests over bearings 7.
-- With ten or eleven bearings, only maintenance-cost differences of about 30 % or more are detectable, so the
-  paper makes no cost claim.
-- The dual-stream network DSAFLite+PGMC has the lowest mean error on PRONOSTIA (bearing-averaged CES MAE 0.1516
-  over ten test bearings) but is statistically level with a plain 1D CNN; none of its components beyond the
-  raw-vibration stream has a measurable effect. Its calibrated intervals cover 88.0 % (PRONOSTIA) and 86.6 %
-  (XJTU-SY) of test outcomes at a 90 % target.
+- The most accurate offline trajectory correction (PAVA) alarmed late on 81.5 to 95.5 % of trajectories, and the
+  decision-optimal rule changes with the cost ratio at break-even values given in closed form. With ten or eleven
+  bearings, only maintenance-cost differences of about 30 % or more are detectable, so the paper makes no cost
+  claim.
+- The compact dual-stream network DSAFLite+PGMC has the lowest mean error of the eight networks on PRONOSTIA
+  (bearing-averaged CES MAE 0.1516 over ten test bearings), significantly lower than four of the seven baselines
+  after Holm adjustment and not distinguishable from the other three; of its components only the raw-vibration
+  stream has a measurable effect. Its calibrated intervals cover 88.0 % (PRONOSTIA) and 86.6 % (XJTU-SY) of test
+  outcomes at a 90 % target.
 - Rebuilt versions of three components (band envelope stream, gate trained with input noise, pair penalty),
   specified in Amendment 10 before any of their runs, had no measurable effect either; the rebuilt network did
   not meet the plan's threshold for replacing the submitted one.
 - On the simulated C-MAPSS turbofan engines (Amendment 11: FD001, with FD003 as replication; training fleets of
   4, 10, 25 and 80 engines, 20 random fleets each), intervals calibrated on windows of the training engines
   covered 20.8 and 31.0 % of test outcomes with four engines, against 87.6 and 82.5 % with held-out engines.
-  The gap shrank as the fleet grew and was gone with 80 engines: the understatement is a property of evaluating
-  with few training units, the situation of both bearing benchmarks.
+  The gap shrank as the fleet grew and was not detected with 80 engines: the understatement is a property of
+  evaluating with few training units, the situation of both bearing benchmarks.
 - Calibration on contiguous time blocks of the training engines, separated from the training windows by buffers
   (Amendment 12), did not understate the tail: against the expectation stated in the plan, it overstated it, with
   intervals 1.2 to 1.9 times as wide as with held-out engines. The understatement disappears when the validation
@@ -80,7 +87,9 @@ paper/revision_R1/
   R1_analysis_plan.md       dated analysis plan with twelve amendments (Amendment 11 with two corrections and
                             Amendment 12 with one, each made before its analysis) and one declared deviation
   R1_experiment_registry.md every run, including smoke tests and failed attempts
-  manuscript_R1/make_figures_R1.py, make_supplement_tables.py   figures and supplementary tables
+  manuscript_R1/make_supplement_tables.py   supplementary tables (numbered as in an earlier draft; same values)
+paper/revision_R2/manuscript_R2/make_figures_R2.py   figures and graphical abstract of the revised manuscript,
+                            from the saved result files only
 outputs/r1_analysis/       result tables (Markdown) and JSON, each with provenance
 outputs/<run>/             test predictions (raw, target, MC-dropout mean and SD) of every reported model,
                            20 seeds; trained models of our final runs in outputs/r1_final_B10/final20
@@ -156,8 +165,8 @@ python Experiments/r1_cmapss_stats.py --dry-run && python Experiments/r1_cmapss_
 python tests/test_cmapss_blocked.py && python Experiments/r1_cmapss_blocked.py --smoke
 python Experiments/r1_cmapss_blocked.py --dataset FD001 && python Experiments/r1_cmapss_blocked.py --dataset FD003
 python Experiments/r1_cmapss_blocked_stats.py --dry-run && python Experiments/r1_cmapss_blocked_stats.py
-# figures and supplementary tables
-python paper/revision_R1/manuscript_R1/make_figures_R1.py
+# figures of the revised manuscript and supplementary tables
+python paper/revision_R2/manuscript_R2/make_figures_R2.py
 python paper/revision_R1/manuscript_R1/make_supplement_tables.py
 ```
 
