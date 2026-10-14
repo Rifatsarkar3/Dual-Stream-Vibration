@@ -8,6 +8,12 @@ Writes vector PDFs (and PNG previews) to paper/revision_R2/manuscript_R2/figures
 Shared style (reviewer comment on figure readability): Times-like serif at 8 pt for a 6.3 in
 text width, one colour per scheme in every figure, no titles inside figures.
 
+Readability pass (14 Oct 2026), against a 2026 article of the journal (RESS 275, 112763) whose figure lettering
+prints at about 3.5 pt: ours stays at 6.5 to 8 pt at print size (no annotation below 6.5 pt); light vertical grids
+on the dot and bar plots, as in that article; axis labels in sentence case; "90%" written as in the text; no label
+crossed by a line and no alarm marker hidden under another (Figs. 5 and 8). Fig. 2 and the graphical abstract give
+the error-tail understatement as the text does (3 to 9 times, PRONOSTIA; Section 5.7).
+
 USAGE:
   python paper/revision_R2/manuscript_R2/make_figures_R2.py
 """
@@ -66,6 +72,12 @@ def save(fig, stem):
     print(f'written {stem}')
 
 
+def grid_x(ax):
+    """Light vertical grid behind the data, for reading values across the rows of a dot or bar plot."""
+    ax.grid(axis='x', color='#E3E3E3', lw=0.5)
+    ax.set_axisbelow(True)
+
+
 # ---------------------------------------------------------------------------------------------
 # Concept figure (Section 1): where the calibration errors come from, what they say about the error tail, and
 # what an understated decision quantile does to the alarm (Corollary 1). Saved values only.
@@ -95,14 +107,14 @@ def fig_concept():
         yy = 7.85 - row * 0.8
         for k in range(40):
             a.add_patch(plt.Rectangle((k, yy), 0.82, 0.52, color=C_INB if k % 10 == 4 else '#C9C9C9', lw=0))
-    a.text(0, 4.6, 'validation windows interleaved with\nthe training windows of each bearing', fontsize=6.3,
+    a.text(0, 4.6, 'validation windows interleaved with\nthe training windows of each bearing', fontsize=6.5,
            va='center', color='#333333', linespacing=1.2)
     a.text(0, 3.05, 'Held-out calibration', fontsize=7.2, weight='bold', color=C_HO, va='center')
     for row in range(4):
         yy = 1.75 - row * 0.62
         for k in range(40):
             a.add_patch(plt.Rectangle((k, yy), 0.82, 0.42, color=C_HO if row == 3 else '#C9C9C9', lw=0))
-    a.text(0, -1.15, 'a whole bearing left out of training', fontsize=6.3, va='center', color='#333333')
+    a.text(0, -1.15, 'a whole bearing left out of training', fontsize=6.5, va='center', color='#333333')
     a.text(0.0, 1.04, '(a)', transform=a.transAxes, fontsize=8, weight='bold', ha='right')
 
     # (b) 0.9-quantile of the absolute error: calibration data against test bearings
@@ -113,11 +125,11 @@ def fig_concept():
         b.text(0.0, y0 - 0.36, lab, fontsize=7, color=col, weight='bold', va='bottom', ha='left')
         b.barh(y0, qc, height=0.34, color=col, lw=0)
         b.barh(y0 + 0.4, qt, height=0.34, color='#E3E3E3', edgecolor='#444444', lw=0.6)
-        b.text(qc + 0.008, y0, f'{qc:.2f}' + ('  calibration data' if i == 0 else ''), va='center', fontsize=6.2,
+        b.text(qc + 0.008, y0, f'{qc:.2f}' + ('  calibration data' if i == 0 else ''), va='center', fontsize=6.5,
                color=col)
-        b.text(qt + 0.008, y0 + 0.4, f'{qt:.2f}', va='center', fontsize=6.2, color='#333333')
+        b.text(qt + 0.008, y0 + 0.4, f'{qt:.2f}', va='center', fontsize=6.5, color='#333333')
         if i == 0:
-            b.text(0.01, y0 + 0.4, 'test bearings', va='center', fontsize=6.0, color='#333333')
+            b.text(0.01, y0 + 0.4, 'test bearings', va='center', fontsize=6.5, color='#333333')
     b.set_yticks([])
     b.set_ylim(2.25, -0.55)
     b.set_xlim(0, 0.42)
@@ -138,16 +150,16 @@ def fig_concept():
     marks = [(k_true, C_TRUE, 'due'), (k_ho, C_HO, 'held-out'), (k_wb, C_INB, 'within-bearing')]
     for k, col, _ in marks:
         c.plot([t[k]], [-0.1], marker='v', color=col, ms=6, ls='', clip_on=False, zorder=4)
-    c.set_ylim(-0.13, 1.15)
+    c.set_ylim(-0.13, 1.22)
     c.set_xlim(0, t[-1] + 0.15)
-    c.set_xlabel('operating time (h)')
-    c.set_ylabel('normalized RUL')
+    c.set_xlabel('Operating time (h)')
+    c.set_ylabel('Normalized RUL')
     for s in ('top', 'right'):
         c.spines[s].set_visible(False)
     h = [Line2D([], [], color=C_TRUE, lw=1.0), Line2D([], [], color=C_RAW, lw=0.8)] + \
         [Line2D([], [], marker='v', color=col, ls='', ms=5) for _, col, _ in marks]
     lab = ['true RUL', 'prediction', 'maintenance due', 'alarm, held-out', 'alarm, within-bearing']
-    c.legend(h, lab, loc='upper right', frameon=False, fontsize=6.0, handlelength=1.4, labelspacing=0.25,
+    c.legend(h, lab, loc='upper right', frameon=False, fontsize=6.5, handlelength=1.4, labelspacing=0.25,
              borderaxespad=0.1)
     c.text(0.0, 1.04, '(c)', transform=c.transAxes, fontsize=8, weight='bold', ha='right')
     save(fig, 'fig0_concept')
@@ -215,7 +227,7 @@ def fig_framework():
     # alternatives evaluated
     ax.text(1.8, 10.4, 'Alternatives evaluated against the protocol (Sections 4.2 and 6.1)', fontsize=7, weight='bold',
             color=C_INB, va='center')
-    box(ax, 2.5, 0.8, 30.2, 7.6, 'Within-bearing validation windows for\nearly stopping and calibration:\nerror tail understated 1.8 to 9 times',
+    box(ax, 2.5, 0.8, 30.2, 7.6, 'Within-bearing validation windows for\nearly stopping and calibration:\nerror tail understated 3 to 9 times',
         edge=C_INB, ls='--', size=6.5)
     box(ax, 35.3, 0.8, 30.2, 7.6, 'Checkpoint selected on the\ncalibration bearing: coverage 1.4\npoints farther from the target',
         edge=C_INB, ls='--', size=6.5)
@@ -268,7 +280,7 @@ def fig_calibration_source():
     a1.set_xlabel('0.9-quantile of absolute error:\ncalibration data / test bearings')
     a2.set_xlim(15, 100)
     a2.axvline(90, color='#333333', lw=0.7, ls=':')
-    a2.set_xlabel('Coverage of the 90 % interval on\ntest bearings (%)')
+    a2.set_xlabel('Coverage of the 90% interval on\ntest bearings (%)')
     a1.set_yticks(ys)
     a1.set_yticklabels([r[1] for r in rows])
     a1.invert_yaxis()
@@ -281,6 +293,7 @@ def fig_calibration_source():
     for a in (a1, a2):
         a.axhline(sep, color='#DDDDDD', lw=0.6)
         a.tick_params(axis='y', length=0)
+        grid_x(a)
         for s in ('top', 'right'):
             a.spines[s].set_visible(False)
     a1.text(0.97, -0.9, 'no understatement', fontsize=6.8, ha='right', va='bottom', color='#333333')
@@ -307,12 +320,14 @@ def fig_calibration_source():
             ax.plot([lo, hi], [yy, yy], color='#BBBBBB', lw=0.9, zorder=1)
             ax.scatter(lo, yy, s=16, color=C_RAW, marker='D', zorder=2)
             ax.scatter(hi, yy, s=18, color=C_HO, marker='s', zorder=2)
-    for ax, lab in ((b1, 'Coverage of the 90 % MC-dropout interval (%)'),
+    for ax, lab in ((b1, 'Coverage of the 90% MC-dropout interval (%)'),
                     (b2, 'Coverage in late life, true RUL < 0.2 (%)')):
         ax.set_xlim(0, 102)
         ax.axvline(90, color='#333333', lw=0.7, ls=':')
+        ax.text(90, -0.7, 'target', fontsize=6.8, ha='center', va='bottom', color='#333333')
         ax.set_xlabel(lab)
         ax.tick_params(axis='y', length=0)
+        grid_x(ax)
         for s in ('top', 'right'):
             ax.spines[s].set_visible(False)
     b1.set_yticks(my)
@@ -357,14 +372,15 @@ def fig_components():
     for i, row in enumerate(vals):
         ax.axhspan(i - 0.42, i + 0.42, color='#F4F4F4' if i % 2 == 0 else 'white', lw=0, zorder=0)
         for j, (lab, m, col) in enumerate(marks):
-            ax.scatter(row[1 + j], i + off[j], marker=m, s=22, color=col, zorder=3, linewidths=0)
+            ax.scatter(row[1 + j], i + off[j], marker=m, s=26, color=col, zorder=3, linewidths=0)
     ax.axvline(0, color='#333333', lw=0.7)
     ax.set_yticks(range(len(vals)))
     ax.set_yticklabels([v[0] for v in vals])
     ax.set_ylim(len(vals) - 0.5, -0.5)
     ax.set_xlim(-20, 50)
-    ax.set_xlabel('Difference to the full model, (variant $-$ full) / variant (%); positive: full model better')
+    ax.set_xlabel('Relative difference (variant $-$ full)/variant (%); positive: full model better')
     ax.tick_params(axis='y', length=0)
+    grid_x(ax)
     for s in ('top', 'right', 'left'):
         ax.spines[s].set_visible(False)
     handles = [Line2D([], [], marker=m, color=col, ls='', ms=5, label=lab) for lab, m, col in marks]
@@ -410,6 +426,7 @@ def fig_alarm_timing():
     b.set_xlabel('Late alarms per bearing (% of seeds); bar: all bearings')
     for ax in (a, b):
         ax.tick_params(axis='y', length=0)
+        grid_x(ax)
         for s in ('top', 'right'):
             ax.spines[s].set_visible(False)
     a.text(-0.02, 1.03, '(a)', transform=a.transAxes, fontsize=8, weight='bold', ha='right')
@@ -447,9 +464,10 @@ def fig_decision_map():
             if np.log10(b) - np.log10(a) > 0.17:
                 ax.text(mid, i, short, ha='center', va='center', fontsize=7,
                         color='white' if s['variant'] in ('lb_ces', 'ces') else 'black',
-                        bbox=dict(facecolor=C_PAVA_LIGHT if s['variant'] == 'pava' else col, edgecolor='none', pad=0.6), zorder=6)
-    for r in (2, 5, 10):
-        ax.axvline(np.log10(r), color='#222222', lw=0.8, ls='--', zorder=5)
+                        bbox=dict(facecolor=C_PAVA_LIGHT if s['variant'] == 'pava' else col, edgecolor='none',
+                                  pad=1.6 if s['variant'] == 'pava' else 0.6), zorder=6)
+    for r in (2, 5, 10):                     # behind the bars: visible between rows, never across a label
+        ax.axvline(np.log10(r), color='#222222', lw=0.8, ls='--', zorder=0.8)
         ax.text(np.log10(r) + 0.025, -0.52, f'$r$ = {r}', ha='left', va='bottom', fontsize=6.8, zorder=6,
                 bbox=dict(facecolor='white', edgecolor='none', pad=0.5))
     ax.set_ylim(2.45, -0.75)
@@ -459,7 +477,7 @@ def fig_decision_map():
     ax.set_xticks(np.log10(ticks))
     ax.set_xticklabels([str(t) for t in ticks])
     ax.set_xlim(np.log10(0.5), np.log10(100))
-    ax.set_xlabel('cost ratio $r$ = cost per window of late maintenance / cost per window of early maintenance')
+    ax.set_xlabel('Cost ratio $r$ = cost per window of late maintenance / cost per window of early maintenance')
     for s in ('top', 'right', 'left'):
         ax.spines[s].set_visible(False)
     ax.tick_params(axis='y', length=0)
@@ -498,24 +516,25 @@ def fig_trajectory():
     tau = 0.20
     zq = 1.6449
     fig, ax = plt.subplots(figsize=(WIDTH, 2.6))
-    ax.fill_between(t, np.clip(mu - zq * c_star * sd, -0.2, 1.3), np.clip(mu + zq * c_star * sd, -0.2, 1.3),
-                    color=C_HO, alpha=0.11, lw=0, label='calibrated 90 % interval (MC dropout)')
+    ax.fill_between(t, np.clip(mu - zq * c_star * sd, 0.0, 1.3), np.clip(mu + zq * c_star * sd, 0.0, 1.3),
+                    color=C_HO, alpha=0.11, lw=0, label='calibrated 90% interval (MC dropout)')
     ax.plot(t, raw, color=C_RAW, lw=0.5, alpha=0.8, label='raw prediction')
     ax.plot(t, ces[pick], color=C_CES, lw=1.1, label='CES (causal)')
     ax.plot(t, pv, color=C_PAVA, lw=1.1, ls='--', label='PAVA (offline reference)')
     ax.plot(t, y, color=C_TRUE, lw=1.1, label='true normalized RUL')
     ax.axhline(tau, color='#333333', lw=0.7, ls=':')
-    ax.text(t[-1], tau + 0.02, '$\\tau$ = 0.20', ha='right', va='bottom', fontsize=7)
+    ax.text(0.05, tau + 0.02, '$\\tau$ = 0.20', ha='left', va='bottom', fontsize=7)   # clear of every curve
     alarms = [('true crossing', first_cross(y, tau), C_TRUE, 'v'),
               ('cost-matched trigger, $r$ = 5', first_cross(raw - q56, tau), C_LBCES, 'v'),
               ('CES point prediction', first_cross(ces[pick], tau), C_CES, 'v'),
               ('PAVA (offline)', first_cross(pv, tau), C_PAVA, 'v')]
-    for lab, k, col, m in alarms:
-        ax.plot([t[k]], [-0.12], marker=m, color=col, ms=6, ls='', clip_on=False)
-    ax.set_ylim(-0.15, 1.25)
+    for row, (lab, k, col, m) in enumerate(alarms):  # one row per rule: CES and PAVA alarm 0.02 h apart
+        ax.plot([t[k]], [-0.055 - 0.05 * row], marker=m, color=col, ms=5.5, ls='', clip_on=False)
+    ax.set_ylim(-0.27, 1.25)
+    ax.set_yticks([0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2])
     ax.set_xlim(0, t[-1])
-    ax.set_xlabel('operating time (h)')
-    ax.set_ylabel('normalized RUL')
+    ax.set_xlabel('Operating time (h)')
+    ax.set_ylabel('Normalized RUL')
     for s in ('top', 'right'):
         ax.spines[s].set_visible(False)
     h1, l1 = ax.get_legend_handles_labels()
@@ -603,7 +622,7 @@ def graphical_abstract():
              color='#222222')
     box(ax0, 3, 30, 44, 20, 'calibrate on windows of\ntraining bearings', edge=C_INB, ls='--', size=6.4)
     box(ax0, 53, 30, 44, 20, 'calibrate on whole\nheld-out bearings', edge=C_HO, size=6.4, face='#EAF2FA')
-    ax0.text(25, 21, 'tail understated\n1.8 to 9 times', ha='center', va='top', fontsize=6.4, color=C_INB)
+    ax0.text(25, 21, 'tail understated 3 to 9\ntimes on PRONOSTIA', ha='center', va='top', fontsize=6.4, color=C_INB)
     ax0.text(75, 21, 'coverage 27 to 62 points\nhigher on PRONOSTIA', ha='center', va='top', fontsize=6.4, color=C_HO)
     ax = fig.add_axes([0.62, 0.22, 0.35, 0.68])
     ys = np.arange(len(rows))
@@ -615,7 +634,7 @@ def graphical_abstract():
     ax.text(90, -0.9, 'target', fontsize=6, ha='center', va='bottom')
     ax.set_xlim(15, 100)
     ax.set_yticks([])
-    ax.set_xlabel('coverage of 90% intervals (%)', fontsize=6.4)
+    ax.set_xlabel('Coverage of 90% intervals (%)', fontsize=6.4)
     ax.tick_params(axis='x', labelsize=6)
     ax.invert_yaxis()
     for s in ('top', 'right', 'left'):
@@ -641,7 +660,7 @@ def fig_s10_mechanism():
     models = list(NAMES)
     colors = dict(zip(models, plt.get_cmap('tab10').colors))
     markers = dict(zip(models, 'osD^vPXh'))
-    fig, axes = plt.subplots(1, 2, figsize=(WIDTH, 2.7), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(WIDTH, 2.7), sharey=True, layout='constrained')
     for ax, ds in zip(axes, ('PRONOSTIA', 'XJTU-SY')):
         for c in (c for c in d['combinations'] if c['dataset'] == ds):
             e = np.array([120.0 if cen else x for x, cen in zip(c['e'], c['censored'])])
@@ -666,12 +685,10 @@ def fig_s10_mechanism():
     axes[0].set_ylabel('Within-bearing / test 0.9-quantile\nof the absolute error')
     axes[0].set_ylim(0, 1.15)
     axes[0].set_yticks([0, 0.2, 0.4, 0.6, 0.8, 1.0])
-    fig.supxlabel('Epoch of the checkpoint selected by within-bearing early stopping (logarithmic axis)', fontsize=8,
-                  y=0.075)
+    fig.supxlabel('Epoch of the checkpoint selected by within-bearing early stopping (logarithmic axis)', fontsize=8)
     handles = [Line2D([], [], color=colors[m], marker=markers[m], lw=0.7, ms=4, label=NAMES[m]) for m in models]
-    fig.legend(handles=handles, loc='lower center', ncol=8, frameon=False, bbox_to_anchor=(0.5, -0.04),
-               handletextpad=0.3, columnspacing=0.9, fontsize=7)
-    fig.tight_layout(rect=(0, 0.1, 1, 1))
+    fig.legend(handles=handles, loc='outside upper center', ncol=8, frameon=False, handletextpad=0.3,
+               columnspacing=0.9, fontsize=7)        # constrained layout: legend above, label right under the ticks
     save(fig, 'figS10_mechanism')
 
 

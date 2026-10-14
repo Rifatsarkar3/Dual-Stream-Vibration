@@ -17,6 +17,11 @@ smoothed MAE of 0.0789 and a coverage of 89.1 %) are superseded. The artifacts o
 preprocessing now reads vibration records only and checks every bearing's window count against its file
 inventory (`src/preprocess_pronostia.py`, `tests/test_preprocess_pronostia.py`).
 
+[DATA_CORRECTION.md](DATA_CORRECTION.md) explains how the numbers changed: the effect of the correction alone
+(same models, same four test bearings), then each further step from the submitted to the revised numbers, with
+the source of every value. The repository as it was at submission is kept under the tag
+`submission-2026-07-12`; this version is tagged `revision-1-2026-10-14`.
+
 ## What the revised paper shows
 
 A maintenance alarm built on a remaining useful life (RUL) prediction depends on the tail of the prediction error
@@ -62,6 +67,7 @@ networks under identical rules on PRONOSTIA and four on XJTU-SY:
 ## Repository structure
 
 ```
+DATA_CORRECTION.md       what the data correction changed, step by step, with the source of every number
 src/                     models, post-processing, preprocessing
   dsaf_v2_lite.py           DSAFLite network; mini_dann.py, monotone_rul_head.py: training-only terms
   online_filters.py         causal filters (CES, running minimum); isotonic_eval.py: PAVA (offline)
