@@ -24,12 +24,12 @@ Experiments/
   r1_components*.py, r1_band_select.py   rebuilt components: selection, final runs, noise, statistics
   r1_cmapss*.py             C-MAPSS check of the calibration source, incl. calibration on time blocks
 tests/                     preprocessing, MSCNN, temporal-context, rebuilt-component and C-MAPSS tests
-files/                     figure scripts of the first version
 paper/revision_R1/
   R1_analysis_plan.md       analysis plan with its dated amendments
   R1_experiment_registry.md every run, including smoke tests and failed attempts
-  manuscript_R1/            table and figure scripts (read the saved result files only), release script
-paper/revision_R2/manuscript_R2/make_figures_R2.py   figure script (reads the saved result files only)
+  manuscript_R1/            table script (reads the saved result files only), release script
+paper/revision_R2/manuscript_R2/make_figures_R2.py   figure script (reads the saved result files only; PNG at
+                           1000 dpi and a vector PDF of every figure)
 outputs/r1_analysis/       result tables (Markdown) and JSON, each with provenance
 outputs/<run>/             test predictions (raw, target, MC-dropout mean and SD) of every reported model,
                            20 seeds; trained models of the final runs in outputs/r1_final_B10/final20
