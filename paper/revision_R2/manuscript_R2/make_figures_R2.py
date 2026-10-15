@@ -136,6 +136,10 @@ def dotted_grid(ax, axis='x'):
     ax.set_axisbelow(True)
 
 
+# white box behind a label inside a gridded axes, so that no grid line runs through the label
+MASK = dict(boxstyle='square,pad=0.12', fc='white', ec='none')
+
+
 def connect(ax, pts, color='black', ls='-', lw=0.8):
     """Orthogonal connector through points (inches) with an arrow head at the last point. The shaft takes the line
     style; the head is always solid (a dashed head shows notches at high resolution)."""
@@ -652,19 +656,19 @@ def fig_alarm_timing():
         dt_h = st['dt'] * 10 / 3600.0
         a.barh(i, dt_h, height=0.56, color=col, edgecolor='black', lw=0.5, zorder=2)
         a.text(dt_h + (0.08 if dt_h >= 0 else -0.08), i, f'{dt_h:+.2f} h'.replace('-', '−'), va='center',
-               ha='left' if dt_h >= 0 else 'right', fontsize=FS_SMALL)
+               ha='left' if dt_h >= 0 else 'right', fontsize=FS_SMALL, bbox=MASK)
         fr = np.array(list(t['late_fraction_per_bearing'][key].values())) * 100
         sx, sy = swarm(fr)
         b.scatter(sx, i + sy, s=15, color=col, zorder=3, edgecolors='black', linewidths=0.35, clip_on=False)
         b.plot([st['late'] * 100] * 2, [i - 0.36, i + 0.36], color='black', lw=1.8, zorder=4, solid_capstyle='butt')
         out[key] = (round(dt_h, 3), round(st['late'] * 100, 1))
     a.axvline(0, color='black', lw=0.7, zorder=3)
-    a.set_xlim(-3.2, 1.62)
+    a.set_xlim(-3.2, 1.8)                           # room for "+0.74 h" before the ticks of the right frame
     a.set_xticks([-2, -1, 0, 1])
     a.set_xticklabels(['−2', '−1', '0', '1'])
     a.set_xlabel('Mean alarm timing error (h)')
-    a.text(-3.12, -0.62, '← early', fontsize=FS_SMALL, ha='left', va='center')
-    a.text(1.55, -0.62, 'late →', fontsize=FS_SMALL, ha='right', va='center')
+    a.text(-3.12, -0.62, '← early', fontsize=FS_SMALL, ha='left', va='center', bbox=MASK)
+    a.text(1.72, -0.62, 'late →', fontsize=FS_SMALL, ha='right', va='center', bbox=MASK)
     b.set_xlim(-6, 106)
     b.set_xticks([0, 20, 40, 60, 80, 100])
     b.set_xlabel('Late alarms per bearing (% of seeds)')
@@ -841,8 +845,10 @@ def graphical_abstract():
     ax.set_xlabel('Coverage of 90% intervals (%)', fontsize=6.6, labelpad=2)
     ax.tick_params(axis='x', labelsize=6.3)
     dotted_grid(ax, 'x')
-    ax.text(rows[0][0], -0.7, 'training windows', fontsize=6.0, color=WB, ha='center', va='bottom', weight='bold')
-    ax.text(rows[0][1] + 1.5, -0.7, 'held-out', fontsize=6.0, color=HO, ha='right', va='bottom', weight='bold')
+    ax.text(rows[0][0], -0.7, 'training windows', fontsize=6.0, color=WB, ha='center', va='bottom', weight='bold',
+            bbox=MASK)
+    ax.text(rows[0][1] + 1.5, -0.7, 'held-out', fontsize=6.0, color=HO, ha='right', va='bottom', weight='bold',
+            bbox=MASK)
     cv.text(3.12, h - 0.10, '12 network–dataset pairs', fontsize=6.6, va='top', weight='bold')
     OUT.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUT / 'graphical_abstract.pdf', facecolor='white')
