@@ -51,8 +51,11 @@ checks against each bearing's file inventory. The re-evaluated first-version mod
 
 ## Data
 
-PRONOSTIA (IEEE PHM 2012), XJTU-SY and C-MAPSS are public third-party datasets and are not redistributed here.
-For C-MAPSS, extract `CMAPSSData.zip` from the data repository of NASA's Prognostics Center of Excellence into
+PRONOSTIA (FEMTO-ST Institute, IEEE PHM 2012 Prognostic Challenge), XJTU-SY (Xi'an Jiaotong University and
+Changxing Sumyoung Technology), CWRU (Case Western Reserve University Bearing Data Center) and C-MAPSS (NASA
+Prognostics Center of Excellence) are public third-party datasets, available from these providers; they are not
+redistributed here. For CWRU, `Experiments/exp20_cwru_zeroshot.py` reads windows with pseudo-RUL labels saved as
+`.npz` files (arrays `vibration` and `rul`) from `data/CWRU/<condition>/`. For C-MAPSS, extract `CMAPSSData.zip` from the data repository of NASA's Prognostics Center of Excellence into
 `data_cmapss/CMAPSSData/`; `Experiments/r1_cmapss.py` checks the SHA-256 of the FD001 and FD003 files. For the
 bearing datasets, after downloading them:
 
