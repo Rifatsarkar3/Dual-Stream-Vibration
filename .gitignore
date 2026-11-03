@@ -180,7 +180,7 @@ outputs/r1_components/launchers/*
 !outputs/r1_cmapss_blocked
 !outputs/r1_cmapss_blocked_smoke
 
-# Revision 2 (2026): inputs of the table and figure scripts that the rules above left out
+# Revision 2 (2026): further result files (baseline results, selection records)
 !outputs/exp19_baselines20
 outputs/exp19_baselines20/*
 !outputs/exp19_baselines20/bilstm
@@ -205,7 +205,3 @@ outputs/r1_published/*
 !outputs/r1_published/tsmccnn
 outputs/r1_published/tsmccnn/*
 !outputs/r1_published/tsmccnn/results.json
-
-# files the table and figure scripts write when they are run here
-paper/revision_R3/manuscript_R3/supp_tables/
-paper/revision_R3/manuscript_R3/figures/
