@@ -1,0 +1,77 @@
+{
+  "Bearing1_1": {
+    "role": "train",
+    "files": 123,
+    "windows": 1476
+  },
+  "Bearing1_2": {
+    "role": "train",
+    "files": 161,
+    "windows": 1932
+  },
+  "Bearing2_1": {
+    "role": "train",
+    "files": 491,
+    "windows": 5892
+  },
+  "Bearing2_2": {
+    "role": "train",
+    "files": 161,
+    "windows": 1932
+  },
+  "Bearing1_3": {
+    "role": "test",
+    "files": 158,
+    "windows": 1896
+  },
+  "Bearing1_4": {
+    "role": "test",
+    "files": 122,
+    "windows": 1464
+  },
+  "Bearing1_5": {
+    "role": "test",
+    "files": 52,
+    "windows": 624
+  },
+  "Bearing2_3": {
+    "role": "test",
+    "files": 533,
+    "windows": 6396
+  },
+  "Bearing2_4": {
+    "role": "test",
+    "files": 42,
+    "windows": 504
+  },
+  "Bearing2_5": {
+    "role": "test",
+    "files": 339,
+    "windows": 4068
+  },
+  "Bearing3_1": {
+    "role": "zeroshot",
+    "files": 2538,
+    "windows": 30456
+  },
+  "Bearing3_2": {
+    "role": "zeroshot",
+    "files": 2496,
+    "windows": 29952
+  },
+  "Bearing3_3": {
+    "role": "zeroshot",
+    "files": 371,
+    "windows": 4452
+  },
+  "Bearing3_4": {
+    "role": "zeroshot",
+    "files": 1515,
+    "windows": 18180
+  },
+  "Bearing3_5": {
+    "role": "zeroshot",
+    "files": 114,
+    "windows": 1368
+  }
+}

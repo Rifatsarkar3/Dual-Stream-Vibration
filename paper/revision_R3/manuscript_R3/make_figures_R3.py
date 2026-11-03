@@ -1,9 +1,9 @@
 """
-make_figures_R2.py: figures of the revised manuscript (JRESS-D-26-05118, revision 1).
+make_figures_R3.py: figures of the revised manuscript (JRESS-D-26-05118, revision 1).
 
 Reads only saved analysis outputs (outputs/r1_analysis/*.json) and the saved test predictions of
 the paper's model (outputs/r1_final_B10/final20/preds_seed42.npz); no model is trained or run.
-Writes to paper/revision_R2/manuscript_R2/figures/ each figure as a PNG at 1000 dpi (opaque RGB, resolution
+Writes to paper/revision_R3/manuscript_R3/figures/ each figure as a PNG at 1000 dpi (opaque RGB, resolution
 recorded in the file; the manuscript, the supplement and the upload package use these) and as a vector PDF master.
 
 Style (reviewer comment on figure readability; authors' requests of 14 and 15 Oct 2026, values unchanged):
@@ -16,10 +16,11 @@ Style (reviewer comment on figure readability; authors' requests of 14 and 15 Oc
   bounds (dark: on the CES mean, light: on the raw mean).
 
 USAGE:
-  python paper/revision_R2/manuscript_R2/make_figures_R2.py
+  python paper/revision_R3/manuscript_R3/make_figures_R3.py
 """
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -763,23 +764,25 @@ def fig_trajectory():
     mu = z['mcmean_' + pick]
     sd = z['mcstd_' + pick]
     pv = IsotonicRegressor(increasing=False).fit_transform(raw)
+    rtrm = np.minimum.accumulate(raw)
     t = np.arange(len(y)) * 10 / 3600.0
     tau = 0.20
     zq = 1.6449
-    H = 3.05
+    H = 3.33
     fig = plt.figure(figsize=(W, H))
-    ax = axes_at(fig, 1.02, 1.12, 6.08, 1.86)
-    st = axes_at(fig, 1.02, 0.46, 6.08, 0.56, sharex=ax)
+    ax = axes_at(fig, 1.02, 1.40, 6.08, 1.86)
+    st = axes_at(fig, 1.02, 0.46, 6.08, 0.84, sharex=ax)
     ax.fill_between(t, np.clip(mu - zq * c_star * sd, 0.0, 1.3), np.clip(mu + zq * c_star * sd, 0.0, 1.3),
                     color=HO_L, alpha=0.75, lw=0, zorder=1, label='calibrated 90% interval (MC dropout)')
     ax.plot(t, raw, color=RAW, lw=0.5, zorder=2, label='raw prediction')
     ax.plot(t, pv, color=PAVA_C, lw=1.2, ls=(0, (4, 1.6)), zorder=4, label='PAVA (offline reference)')
     ax.plot(t, ces[pick], color=CES_C, lw=1.1, zorder=3, label='CES (causal)')
+    ax.plot(t, rtrm, color=BROWN, lw=1.0, zorder=3, label='RTRM (causal)')
     ax.plot(t, y, color='black', lw=1.4, zorder=5, label='true normalized RUL')
     ax.axhline(tau, color='black', lw=0.6, ls=(0, (4, 2)), zorder=2)
     ax.text(0.06, tau + 0.02, r'$\tau$ = 0.20', ha='left', va='bottom', fontsize=FS_SMALL, zorder=6)
     h, lab = ax.get_legend_handles_labels()
-    order = [4, 3, 2, 1, 0]
+    order = [5, 3, 4, 2, 1, 0]
     framed(ax.legend([h[i] for i in order], [lab[i] for i in order], loc='upper right', ncol=2, fontsize=6.6,
                      columnspacing=1.2, handlelength=1.8))
     ax.set_ylim(-0.02, 1.25)
@@ -788,14 +791,17 @@ def fig_trajectory():
     ax.set_ylabel('Normalized RUL')
     plt.setp(ax.get_xticklabels(), visible=False)
     alarms = [('true crossing', first_cross(y, tau), 'black'),
+              ('calibrated lower bound', first_cross(mu - zq * c_star * sd, tau), HO_L),
               ('cost-matched trigger, $r$ = 5', first_cross(raw - q56, tau), HO),
+              ('raw prediction and RTRM', first_cross(raw, tau), RAW),
               ('CES point prediction', first_cross(ces[pick], tau), CES_C),
               ('PAVA (offline)', first_cross(pv, tau), PAVA_C)]
-    short = ['true crossing', 'trigger, $r$ = 5', 'CES', 'PAVA']
+    assert first_cross(raw, tau) == first_cross(rtrm, tau)        # the running minimum cannot change the first crossing
+    short = ['true crossing', 'lower bound', 'trigger, $r$ = 5', 'raw, RTRM', 'CES', 'PAVA']
     for row, (lab, k, col) in enumerate(alarms):
         st.plot([t[k]], [row], marker='v', ms=6, color=col, mec='black', mew=0.4, ls='', zorder=3, clip_on=False)
-    st.set_ylim(3.6, -0.6)
-    st.set_yticks(range(4))
+    st.set_ylim(5.6, -0.6)
+    st.set_yticks(range(6))
     st.set_yticklabels(short, fontsize=FS_SMALL)
     categorical(st, 'y')
     dotted_grid(st, 'y')
@@ -906,6 +912,222 @@ def fig_s10_mechanism():
     save(fig, 'figS10_mechanism')
 
 
+# ---------------------------------------------------------------------------------------------------------------
+# Figures of the submission restored in revision 2 (internal R3), redrawn from the corrected results
+# ---------------------------------------------------------------------------------------------------------------
+def fig_budget_sweep():
+    """Validation error against the budget and lambda, two folds against four (the values of the selection table)."""
+    rows = {}
+    for line in (ROOT / 'outputs' / 'r1_lobo' / 'selection_4fold.txt').read_text(encoding='utf-8').splitlines():
+        m = re.match(r'B=\s*(\d+) A=([\d.]+)\s+B=([\d.]+)\s+C=([\d.]+)\s+D=([\d.]+)\s+4-fold=([\d.]+)\s+SE=([\d.]+)', line)
+        if m:
+            rows[int(m.group(1))] = [float(x) for x in m.groups()[1:]]
+    budgets = sorted(rows)
+    lam = json.loads((ROOT / 'outputs' / 'r1_lambda' / 'selection.json').read_text(encoding='utf-8'))
+    lams = list(lam['scores'])
+    panels = [
+        (budgets, [(rows[b][0] + rows[b][1]) / 2 for b in budgets], [rows[b][4] for b in budgets],
+         [rows[b][5] for b in budgets], 'Training budget $B$ (epochs)', [str(b) for b in budgets], 10),
+        ([float(x) for x in lams], [(lam['per_fold'][x]['A'] + lam['per_fold'][x]['B']) / 2 for x in lams],
+         [lam['scores'][x]['mean'] for x in lams], [lam['scores'][x]['se'] for x in lams],
+         r'Regularizer strength $\lambda$ (at $B$ = 10)', lams, 0.08)]
+    assert round(panels[0][2][1], 4) == 0.1510 and round(panels[1][2][0], 4) == 0.1508 and round(panels[1][1][0], 4) == 0.1476
+    H = 2.30
+    fig = plt.figure(figsize=(W, H))
+    axes = [axes_at(fig, 0.72, 0.50, 2.95, 1.66), axes_at(fig, 4.10, 0.50, 2.95, 1.66)]
+    for ax, (x, two, four, se, xlab, labels, chosen) in zip(axes, panels):
+        ax.set_xscale('log')
+        ax.errorbar(x, four, yerr=se, color=HO, marker='o', ms=4.5, lw=1.1, capsize=2.5, elinewidth=0.8, mec='black',
+                    mew=0.35, label='Folds A to D (standard error)', zorder=3)
+        ax.plot(x, two, color=HO, ls=(0, (4, 2)), lw=1.0, marker='s', ms=4, mfc=HO_L, mec='black', mew=0.35,
+                label='Folds A, B', zorder=2)
+        i = list(x).index(chosen)
+        ax.plot([x[i]], [four[i]], marker='o', ms=9, mfc='none', mec='black', mew=0.9, ls='', zorder=4,
+                label='selected')
+        ax.set_xticks(x)
+        ax.set_xticklabels(labels)
+        ax.tick_params(axis='x', which='minor', bottom=False, top=False)
+        ax.set_xlim(min(x) * 0.8, max(x) * 1.25)
+        ax.set_ylim(0.115, 0.185)
+        ax.set_xlabel(xlab)
+    axes[0].set_ylabel('Validation MAE')
+    axes[1].set_yticklabels([])
+    framed(axes[0].legend(loc='upper left', fontsize=6.6, handlelength=2.2))
+    letter(fig, 0.02, H - 0.03, '(a)')
+    letter(fig, 3.78, H - 0.03, '(b)')
+    save(fig, 'fig_budget_sweep')
+
+
+def fig_test_trajectories():
+    """All ten test bearings of the paper's model (seed 42): true RUL, raw, CES, PAVA and the calibrated interval."""
+    z = np.load(ROOT / 'outputs' / 'r1_final_B10' / 'final20' / 'preds_seed42.npz')
+    names = sorted((k[len('raw_'):] for k in z.files if k.startswith('raw_test_')), key=lambda n: n.split('_', 2)[-1])
+    assert len(names) == 10
+    c_star = load('decision_inbearing.json')['calibration_PR']['submitted architecture']['c_star']
+    H = 5.60
+    fig = plt.figure(figsize=(W, H))
+    x0, pw, gapx, rh, gapy, bottom = 0.56, 3.14, 0.20, 0.73, 0.26, 0.42
+    for i, n in enumerate(names):
+        col, row = i % 2, 4 - i // 2
+        ax = axes_at(fig, x0 + col * (pw + gapx), bottom + row * (rh + gapy), pw, rh)
+        y, raw, mu, sd = z['tgt_' + n], z['raw_' + n], z['mcmean_' + n], z['mcstd_' + n]
+        t = np.arange(len(y)) * 10 / 3600.0
+        ax.fill_between(t, np.clip(mu - 1.6449 * c_star * sd, 0.0, 1.3), np.clip(mu + 1.6449 * c_star * sd, 0.0, 1.3),
+                        color=HO_L, alpha=0.75, lw=0, zorder=1)
+        ax.plot(t, raw, color=RAW, lw=0.3, zorder=2)
+        ax.plot(t, ConstrainedExponentialSmoothing(alpha=0.2, epsilon=0.05).process(raw), color=CES_C, lw=0.8, zorder=3)
+        ax.plot(t, IsotonicRegressor(increasing=False).fit_transform(raw), color=PAVA_C, lw=0.9, ls=(0, (4, 1.6)), zorder=4)
+        ax.plot(t, y, color='black', lw=1.1, zorder=5)
+        ax.set_xlim(0, t[-1])
+        ax.set_ylim(-0.02, 1.25)
+        ax.set_yticks([0, 0.5, 1.0])
+        if col:
+            ax.set_yticklabels([])
+        ax.text(0.985, 0.93, n.split('_', 2)[-1], transform=ax.transAxes, ha='right', va='top', fontsize=FS_SMALL,
+                weight='bold', zorder=6, bbox=dict(facecolor='white', edgecolor='none', pad=0.8))
+    fig.text(0.10 / W, (bottom + (5 * rh + 4 * gapy) / 2) / H, 'Normalized RUL', rotation=90, ha='left', va='center',
+             fontsize=FS_LAB)
+    fig.text((x0 + pw + gapx / 2) / W, 0.04 / H, 'Operating time (h)', ha='center', va='bottom', fontsize=FS_LAB)
+    handles = [Line2D([], [], color='black', lw=1.1, label='true normalized RUL'),
+               Line2D([], [], color=RAW, lw=0.6, label='raw prediction'),
+               Line2D([], [], color=CES_C, lw=0.9, label='CES (causal)'),
+               Line2D([], [], color=PAVA_C, lw=0.9, ls=(0, (4, 1.6)), label='PAVA (offline reference)'),
+               Patch(facecolor=HO_L, alpha=0.75, lw=0, label='calibrated 90% interval (MC dropout)')]
+    framed(fig.legend(handles=handles, loc='upper center', ncol=5, bbox_to_anchor=(0.52, 0.998), fontsize=6.6,
+                      handlelength=1.8, columnspacing=1.1))
+    save(fig, 'fig_test_trajectories')
+
+
+def fig_noise():
+    """Raw MAE against the noise level with the adaptive gate and static fusion, and the gate's response."""
+    nz = load('noise_B10_all10.json')
+    levels = nz['snr_levels_db']
+    keys = ['clean' if s == 'clean' else f'{s}dB' for s in levels]
+    labels = ['clean' if s == 'clean' else str(s).replace('-', '−') for s in levels]
+    x = np.arange(len(keys), dtype=float)
+    H = 2.30
+    fig = plt.figure(figsize=(W, H))
+    a = axes_at(fig, 0.72, 0.50, 2.95, 1.66)
+    b = axes_at(fig, 4.28, 0.50, 2.77, 1.66)
+    for gate, col, ls, mk, lab in (('adaptive_gate', BROWN, '-', 'o', 'adaptive gate'),
+                                   ('static_gate', 'black', (0, (4, 2)), 's', 'static fusion')):
+        a.errorbar(x, [nz[gate][k]['mae_mean'] for k in keys], yerr=[nz[gate][k]['mae_std'] for k in keys], color=col,
+                   ls=ls, marker=mk, ms=4, lw=1.0, capsize=2.5, elinewidth=0.7, mec='black', mew=0.35, label=lab)
+    a.set_ylabel('Raw MAE, pooled')
+    a.set_ylim(0.08, 0.45)
+    framed(a.legend(loc='upper left', fontsize=6.6, handlelength=2.2))
+    b.plot(x, [nz['adaptive_gate'][k]['alpha_mean'] for k in keys], color=BROWN, marker='o', ms=4, lw=1.0, mec='black',
+           mew=0.35, label='adaptive gate')
+    b.axhline(0.5, color='black', lw=0.8, ls=(0, (4, 2)), label='static fusion (0.5)')
+    b.set_ylim(0.40, 0.55)
+    b.set_ylabel(r'Mean gate weight $\alpha$')
+    framed(b.legend(loc='lower left', fontsize=6.6, handlelength=2.2))
+    for ax in (a, b):
+        ax.set_xticks(x)
+        ax.set_xticklabels(labels)
+        categorical(ax, 'x')
+        ax.set_xlim(-0.4, len(x) - 0.6)
+        ax.set_xlabel('Signal-to-noise ratio (dB)')
+    letter(fig, 0.02, H - 0.03, '(a)')
+    letter(fig, 3.78, H - 0.03, '(b)')
+    save(fig, 'fig_noise')
+
+
+def fig_xjtu_bearings():
+    """CES MAE per XJTU-SY bearing, test and zero-shot, with the lifetime of each bearing."""
+    from make_supplement_tables_R3 import XJTU_MODELS, per_bearing_mae
+    res = {lab: per_bearing_mae(p) for lab, p, _ in XJTU_MODELS if lab != 'Variant'}
+    test = sorted(k for k in res['1D CNN'] if k.startswith('test_'))
+    zs = sorted(k for k in res['1D CNN'] if k.startswith('zeroshot_'))
+    assert abs(np.mean([res['Ours'][k]['ces'] for k in test]) - 0.1986) < 5e-4
+    assert abs(np.mean([res['Ours'][k]['ces'] for k in zs]) - 0.2687) < 5e-4
+    life = json.loads((ROOT / 'Processed_XJTU' / 'manifest.json').read_text(encoding='utf-8'))
+    keys = test + zs
+    colors = {'Ours': BLUE, '1D CNN': RED, 'BiLSTM': GREEN, 'CNN-LSTM': ORANGE}             # as in Fig. S1
+    H = 2.55
+    fig = plt.figure(figsize=(W, H))
+    ax = axes_at(fig, 0.62, 0.62, 6.46, 1.78)
+    bw = 0.2
+    pos = np.array([i + (0.5 if i >= len(test) else 0.0) for i in range(len(keys))])
+    for j, lab in enumerate(colors):
+        ax.bar(pos + (j - 1.5) * bw, [res[lab][k]['ces'] for k in keys], width=bw, color=colors[lab], edgecolor='black',
+               lw=0.35, label=lab, zorder=2)
+    ax.axvline(len(test) - 0.25, color='black', lw=0.7, ls=(0, (4, 2)))
+    ax.text(len(test) - 0.40, 0.492, 'test bearings', ha='right', va='top', fontsize=FS_SMALL, weight='bold')
+    ax.text(len(test) - 0.10, 0.492, 'Condition 3, zero-shot', ha='left', va='top', fontsize=FS_SMALL, weight='bold')
+    ax.set_xticks(pos)
+    names = [k.split('_', 2)[-1] for k in keys]
+    ax.set_xticklabels([f"{n.replace('Bearing', '')}\n{life[n]['files']:,} min" for n in names], fontsize=6.6)
+    categorical(ax, 'x')
+    dotted_grid(ax, 'y')
+    ax.set_xlim(-0.6, pos[-1] + 0.6)
+    ax.set_ylim(0, 0.50)
+    ax.set_ylabel('CES MAE')
+    ax.set_xlabel('Bearing and lifetime')
+    framed(ax.legend(loc='upper center', bbox_to_anchor=(0.30, 0.90), ncol=4, fontsize=6.6, handlelength=1.3,
+                     columnspacing=1.0))
+    save(fig, 'fig_xjtu_bearings')
+
+
+def fig_operating_characteristic():
+    """Missed detections against false alarms as the threshold is swept (a), and per bearing at tau = 0.20 (b)."""
+    sys.path.insert(0, str(ROOT / 'Experiments'))
+    import r1_decision as rd
+    d = load('decision_final20_all10.json')
+    bearings = rd.SETS['all10']
+    seeds = rd.load(str(ROOT / 'outputs' / 'r1_final_B10' / 'final20'), bearings)
+    assert len(seeds) == 20
+    taus = [round(0.02 * i, 2) for i in range(5, 31)]                # tau from 0.10 to 0.60
+    pols = ('point', 'uncalibrated', 'calibrated')
+    curve = {p: {'fa': [], 'md': []} for p in pols}
+    for tau in taus:
+        macro = {p: {'false_alarm': [], 'missed_detection': []} for p in pols}
+        for sd in seeds:
+            rates = {b: rd.window_rates(sd[b], d['c_star'], tau) for b in bearings}
+            for p in pols:
+                for m in macro[p]:
+                    macro[p][m].append(np.mean([rates[b][p][m] for b in bearings]))
+        for p in pols:
+            curve[p]['fa'].append(float(np.mean(macro[p]['false_alarm'])))
+            curve[p]['md'].append(float(np.mean(macro[p]['missed_detection'])))
+    k = taus.index(0.2)
+    for p in pols:                                  # the sweep passes through the values of the rates table
+        assert abs(curve[p]['fa'][k] - d['rates_tau020'][p]['false_alarm'][0]) < 1e-6
+        assert abs(curve[p]['md'][k] - d['rates_tau020'][p]['missed_detection'][0]) < 1e-6
+    style = {'point': ('black', 'Point estimate', 's'), 'uncalibrated': (GRAY, 'Uncalibrated lower bound', '^'),
+             'calibrated': (LBC, 'Calibrated lower bound', 'o')}
+    H = 2.75
+    fig = plt.figure(figsize=(W, H))
+    a = axes_at(fig, 0.66, 0.48, 3.02, 2.12)
+    b = axes_at(fig, 4.28, 0.48, 2.78, 2.12)
+    for p in pols:
+        col, lab, mk = style[p]
+        a.plot(curve[p]['fa'], curve[p]['md'], color=col, lw=1.1, label=lab, zorder=2)
+        a.plot([curve[p]['fa'][k]], [curve[p]['md'][k]], marker=mk, ms=6, color=col, mec='black', mew=0.4, ls='', zorder=3)
+    a.plot([], [], color='none', marker='o', ms=5, mfc='white', mec='black', mew=0.5, label=r'marker: $\tau$ = 0.20')
+    framed(a.legend(loc='upper right', fontsize=6.6, handlelength=1.8))
+    pb = d['rates_tau020_per_bearing']
+    for bn, v in sorted(pb.items()):
+        pts = [(v[p]['false_alarm'][0], v[p]['missed_detection'][0]) for p in ('point', 'calibrated')]
+        b.plot([pts[0][0], pts[1][0]], [pts[0][1], pts[1][1]], color='#A0A0A0', lw=0.6, zorder=1)
+        b.plot([pts[0][0]], [pts[0][1]], marker='s', ms=4.2, color='black', mec='black', mew=0.3, ls='', zorder=3)
+        b.plot([pts[1][0]], [pts[1][1]], marker='o', ms=4.6, color=LBC, mec='black', mew=0.3, ls='', zorder=3)
+    b.annotate('Bearing2_4, 2_7', xy=(0.6, 85.2), xytext=(7, 68), fontsize=FS_SMALL, bbox=MASK, zorder=5,
+               arrowprops=dict(arrowstyle='-', lw=0.6, color='black', shrinkA=0, shrinkB=2))
+    for ax in (a, b):
+        ax.set_xlim(-2, 62)
+        ax.set_ylim(-3, 103)
+        ax.set_xlabel('False-alarm rate (%)')
+    a.set_ylabel('Missed-detection rate (%)')
+    framed(b.legend(handles=[Line2D([], [], marker='s', ms=4.2, color='black', ls='', label='Point estimate'),
+                             Line2D([], [], marker='o', ms=4.6, color=LBC, mec='black', mew=0.3, ls='',
+                                    label='Calibrated lower bound')], loc='upper right', fontsize=6.6, handlelength=1.0))
+    letter(fig, 0.02, H - 0.03, '(a)')
+    letter(fig, 3.84, H - 0.03, '(b)')
+    save(fig, 'fig_operating_characteristic')
+    return {p: (round(curve[p]['fa'][k], 1), round(curve[p]['md'][k], 1)) for p in pols}
+
+
 def main():
     graphical_abstract()
     print('  concept:', fig_concept())
@@ -920,7 +1142,16 @@ def main():
     pick, m, med, times = fig_trajectory()
     print(f'  trajectory bearing {pick}: CES MAE {m:.4f} (median over bearings {med:.4f}); alarms (h) {times}')
     fig_architecture()
+    fig_budget_sweep()
+    fig_test_trajectories()
+    fig_noise()
+    fig_xjtu_bearings()
+    print('  operating characteristic at tau = 0.20 (FA, MD):', fig_operating_characteristic())
 
 
 if __name__ == '__main__':
-    main()
+    if len(sys.argv) > 1:                       # names of figure functions, to redraw only those
+        for name in sys.argv[1:]:
+            print(name, globals()[name]())
+    else:
+        main()

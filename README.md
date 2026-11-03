@@ -27,9 +27,12 @@ tests/                     preprocessing, MSCNN, temporal-context, rebuilt-compo
 paper/revision_R1/
   R1_analysis_plan.md       analysis plan with its dated amendments
   R1_experiment_registry.md every run, including smoke tests and failed attempts
-  manuscript_R1/            table script (reads the saved result files only), release script
-paper/revision_R2/manuscript_R2/make_figures_R2.py   figure script (reads the saved result files only; PNG at
-                           1000 dpi and a vector PDF of every figure)
+paper/revision_R3/manuscript_R3/   table and figure scripts; they read the saved result files only
+  make_supplement_tables_R3.py, make_manuscript_tables_R3.py   the tables, recomputed from the result files
+  make_figures_R3.py        the figures (PNG at 1000 dpi and a vector PDF of each)
+Processed_PRONOSTIA_v2/manifest.json, Processed_XJTU/manifest.json
+                           file inventory of each bearing (records read, temperature records skipped, windows);
+                           the processed data themselves are not included
 outputs/r1_analysis/       result tables (Markdown) and JSON, each with provenance
 outputs/<run>/             test predictions (raw, target, MC-dropout mean and SD) of every reported model,
                            20 seeds; trained models of the final runs in outputs/r1_final_B10/final20
@@ -106,9 +109,10 @@ python Experiments/r1_cmapss_stats.py --dry-run && python Experiments/r1_cmapss_
 python tests/test_cmapss_blocked.py && python Experiments/r1_cmapss_blocked.py --smoke
 python Experiments/r1_cmapss_blocked.py --dataset FD001 && python Experiments/r1_cmapss_blocked.py --dataset FD003
 python Experiments/r1_cmapss_blocked_stats.py --dry-run && python Experiments/r1_cmapss_blocked_stats.py
-# figures and tables from the saved result files
-python paper/revision_R2/manuscript_R2/make_figures_R2.py
-python paper/revision_R1/manuscript_R1/make_supplement_tables.py
+# tables and figures from the saved result files (no dataset needed)
+python paper/revision_R3/manuscript_R3/make_supplement_tables_R3.py
+python paper/revision_R3/manuscript_R3/make_manuscript_tables_R3.py
+python paper/revision_R3/manuscript_R3/make_figures_R3.py
 ```
 
 Everything above runs on one consumer GPU; most multi-seed runs take minutes.

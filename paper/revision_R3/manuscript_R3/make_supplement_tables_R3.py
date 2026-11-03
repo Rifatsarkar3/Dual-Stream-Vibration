@@ -1,12 +1,13 @@
 """
-make_supplement_tables.py: tables of the Supplementary Material (JRESS-D-26-05118, revision 1).
+make_supplement_tables_R3.py: tables of the Supplementary Material (JRESS-D-26-05118, revision 1, internal
+version R2). Copy of R1's make_supplement_tables.py with the R2 paths.
 
 Reads saved test predictions and analysis outputs only; no model is trained or run. Writes one LaTeX file per
-table to paper/revision_R1/manuscript_R1/supp_tables/ and prints consistency checks against the numbers in the
+table to paper/revision_R3/manuscript_R3/supp_tables/ and prints consistency checks against the numbers in the
 manuscript (bearing-averaged CES MAE, coverage).
 
 USAGE:
-  python paper/revision_R1/manuscript_R1/make_supplement_tables.py
+  python paper/revision_R3/manuscript_R3/make_supplement_tables_R3.py
 """
 
 import glob
@@ -27,18 +28,19 @@ OUT = Path(__file__).resolve().parent / 'supp_tables'
 # Reference numbers of the manuscript, read from its .aux after compilation, so that the supplement cites the
 # current numbering. The result files label two models with the submission's numbers ('TSMC-CNN [21]',
 # 'MSCNN [7]'); these labels stay data keys and are renumbered only in the written tables.
-_AUX_PATH = Path(__file__).resolve().parent / 'manuscript_R1.aux'
-# numbers of the reference list of revision 1, used where the manuscript source is not available (public release)
-_FALLBACK = {'Jiang2020': '15', 'Li2019': '14', 'SaxenaCMAPSS2008': '76', 'Li2018RESS': '77', 'Javanmardi2023': '17',
-             'Roberts2017': '26', 'LiGahrooeiKim2026': '32', 'Barua2026': '48', 'BenAbdennour2026': '49',
-             'XuZio2026': '63'}
+_AUX_PATH = Path(__file__).resolve().parent / 'manuscript_R3.aux'
+# numbers of the reference list of this revision (3 Nov 2026), used where its source is not available, as in the
+# public repository
+_FALLBACK = {'Jiang2020': '30', 'Li2019': '24', 'SaxenaCMAPSS2008': '58', 'Li2018RESS': '83', 'Javanmardi2023': '54',
+             'Roberts2017': '16', 'LiGahrooeiKim2026': '53', 'Barua2026': '36', 'BenAbdennour2026': '37',
+             'XuZio2026': '57', 'Yan2026Zenodo': '63'}
 REFNUM = (dict(re.findall(r'\\bibcite\{([^}]*)\}\{\{(\d+)\}', _AUX_PATH.read_text(encoding='utf-8')))
           if _AUX_PATH.exists() else dict(_FALLBACK))
 RENUMBER = {'[21]': f"[{REFNUM['Jiang2020']}]", '[7]': f"[{REFNUM['Li2019']}]"}
 REF_MACROS = {'refTSMC': 'Jiang2020', 'refMSCNN': 'Li2019', 'refCMAPSS': 'SaxenaCMAPSS2008',
               'refLiDCNN': 'Li2018RESS', 'refJavanmardi': 'Javanmardi2023', 'refRoberts': 'Roberts2017',
               'refLiFleet': 'LiGahrooeiKim2026', 'refBarua': 'Barua2026', 'refBenAbdennour': 'BenAbdennour2026',
-              'refXuZio': 'XuZio2026'}
+              'refXuZio': 'XuZio2026', 'refYan': 'Yan2026Zenodo'}
 
 PRON_MODELS = [  # (label, path, key in tables_R1.json)
     ('Ours', 'outputs/r1_final_B10/final20', 'DSAFLite+PGMC, submitted architecture'),
@@ -107,6 +109,7 @@ def write(name, text):
 def refnums():
     """macros with the manuscript's current reference numbers, for the text of the supplement"""
     lines = [f'\\newcommand{{\\{macro}}}{{{REFNUM[key]}}}' for macro, key in REF_MACROS.items()]
+    OUT.mkdir(parents=True, exist_ok=True)
     (OUT / 'refnums.tex').write_text('\n'.join(lines) + '\n', encoding='utf-8')
     print('written supp_tables/refnums.tex:', ', '.join(f'{k} [{REFNUM[v]}]' for k, v in REF_MACROS.items()))
 
@@ -177,7 +180,7 @@ def s2_xjtu():
     write('s2_xjtu', table(
         'tab:s2-xjtu',
         'XJTU-SY: CES MAE per bearing (mean over 20 seeds; baselines selected by the same four-fold procedure as '
-        'our model). The bearing averages reproduce Table 5 of the manuscript.',
+        'our model). The bearing averages reproduce Table 8 of the manuscript.',
         'l' + 'c' * len(XJTU_MODELS), 'Bearing & ' + ' & '.join(lab for lab, _, _ in XJTU_MODELS), rows,
         resize=False))
 
@@ -225,8 +228,8 @@ def s2_source():
     rows.append(['', 'mean', pct(dx['A7_P1_P2']['pooled']['mean'])])
     write('s2_source', table(
         'tab:s2-source',
-        'Per-bearing gain of held-out over in-bearing calibration (manuscript Section 5.6, Table 9): '
-        '$|$coverage $-$ 90$|$ under in-bearing calibration minus the same under held-out calibration, in points, '
+        'Per-bearing gain of held-out over within-bearing calibration (manuscript Section 5.7, Fig. 10): '
+        '$|$coverage $-$ 90$|$ under within-bearing calibration minus the same under held-out calibration, in points, '
         'averaged over the eight (PRONOSTIA) and four (XJTU-SY) architectures; residual interval, five seeds.',
         'llc', 'Dataset & Bearing & Gain (points)', rows, resize=False))
 
@@ -312,7 +315,7 @@ def s3_source_costs():
     write('s3_source_costs', table(
         'tab:s3-source-costs',
         'Cost-matched trigger with each pipeline\'s own quantiles ($\\tau = 0.20$): expected loss $L$ in windows and '
-        'share of late alarms (\\%), in-bearing calibration (SP) / held-out calibration (PR), five seeds. '
+        'share of late alarms (\\%), within-bearing calibration (SP) / held-out calibration (PR), five seeds. '
         'PRONOSTIA: ten test bearings, one window per 10 s; XJTU-SY: six test and five Condition-3 bearings, twelve '
         'windows per minute of operation. Descriptive; '
         'the bearing-level tests are in Section 5.7 of the manuscript.',
@@ -349,9 +352,9 @@ def s5_candidates():
             b4['scores'].items()]
     write('s5_ces', table(
         'tab:s5-ces',
-        'Smoothing constant $\\alpha$ of CES: four-fold validation MAE (mean and standard error over the 20 runs). '
+        'Smoothing constant $\\beta$ of CES: four-fold validation MAE (mean and standard error over the 20 runs). '
         'The one-standard-error rule keeps the default 0.2, within one standard error of the minimum.',
-        'lccc', '$\\alpha$ & Validation CES MAE & SE & ', rows, resize=False))
+        'lccc', '$\\beta$ & Validation CES MAE & SE & ', rows, resize=False))
 
 
 def s6_noise():
@@ -439,11 +442,11 @@ def s10_mechanism():
     write('s10_runs', table(
         'tab:s10-runs',
         'Runs of Amendment 9 (seeds 42, 123, 777, 999 and 7, in this order): epoch $e$ of the checkpoint selected by '
-        'in-bearing early stopping and ratio $\\rho$ of the 0.9-quantile of the absolute error on the in-bearing '
+        'within-bearing early stopping and ratio $\\rho$ of the 0.9-quantile of the absolute error on the within-bearing '
         'validation windows to that on the test bearings. Per combination: Kendall\'s $S$ and $\\tau_b$ of $e$ against '
-        '$\\rho$, against the in-bearing quantile and against the test quantile. $>$90: trained 120 epochs without '
+        '$\\rho$, against the within-bearing quantile and against the test quantile. $>$90: trained 120 epochs without '
         'stopping.',
-        'llllcccc', 'Dataset & Model & $e$ & $\\rho$ & $S$ & $\\tau_b$, $\\rho$ & $\\tau_b$, in-bearing & $\\tau_b$, test',
+        'llllcccc', 'Dataset & Model & $e$ & $\\rho$ & $S$ & $\\tau_b$, $\\rho$ & $\\tau_b$, within-bearing & $\\tau_b$, test',
         rows))
 
     def row(label, r, expectation):
@@ -451,7 +454,7 @@ def s10_mechanism():
                 f"${r['mean_tau_b']:+.2f}$", f"{r['n_tau_negative']} of {r['n_tau_defined']}"]
     rows = [row('$\\rho$, twelve combinations (A9-P1, primary)', res['A9_P1'], '$T < 0$'),
             row('$\\rho$, without our XJTU-SY network (A9-S1)', res['A9_S1'], '$T < 0$'),
-            row('In-bearing 0.9-quantile (A9-S2)', res['A9_S2_q_cal'], '$T < 0$'),
+            row('Withwithin-bearing 0.9-quantile (A9-S2)', res['A9_S2_q_cal'], '$T < 0$'),
             row('Test 0.9-quantile (A9-S2)', res['A9_S2_q_test'], 'none')]
     write('s10_tests', table(
         'tab:s10-tests',
@@ -495,8 +498,8 @@ def s11_components():
         'Selection of the rebuilt network R (Amendment 10): four-fold validation MAE, mean over the 20 fold-seed runs '
         '(standard error); test bearings not loaded. The budget is selected at $\\lambda = 0.08$, then $\\lambda$ at the '
         'selected budget by the one-standard-error rule, which keeps 0.08 when its mean is below the minimum plus the '
-        'standard error of the minimizing weight. On PRONOSTIA, R would have replaced the submitted network only below '
-        f"{cur['mean'] - cur['se']:.4f} (the submitted network's {cur['mean']:.4f} minus its standard error "
+        'standard error of the minimizing weight. On PRONOSTIA, R would have replaced our network only below '
+        f"{cur['mean'] - cur['se']:.4f} (our network's {cur['mean']:.4f} minus its standard error "
         f"{cur['se']:.4f}); XJTU-SY has no adoption rule.",
         'lcc', 'Setting & PRONOSTIA & XJTU-SY', rows, resize=False))
 
@@ -505,7 +508,7 @@ def s11_components():
               'A10-M': 'M, PGMC on window pairs (against without PGMC)',
               'old_env': 'submitted envelope extractor', 'no_aug': 'no input noise in training',
               'adjacent': 'PGMC on adjacent windows', 'no_dann': 'without DANN', 'spectral': 'envelope stream only',
-              'submitted network': 'submitted network', '1D CNN': '1D CNN'}
+              'submitted network': 'our network', '1D CNN': '1D CNN'}
 
     def trow(key, r):
         rel = r['rel_pct']
@@ -548,7 +551,7 @@ def s11_components():
         'calibrated on its own four-fold validation runs by the rule of the manuscript (descriptive; in parentheses, '
         'the unadjusted sign-flip $p$ against R). Coverage of the two-sided 90\\% MC-dropout interval, overall and in '
         'late life; tail ratio: 0.9-quantile of the absolute error on the held-out validation bearings over that on '
-        'the test bearings; $L$: expected cost of the cost-matched trigger at $\\tau = 0.20$. Submitted network, with '
+        'the test bearings; $L$: expected cost of the cost-matched trigger at $\\tau = 0.20$. Our network, with '
         f"the same functions: $c^* = {sub['c_star']:.2f}$, CES MAE {sub['ces_mae']:.4f}, $L$ = {sub['cost_r5']:.1f} "
         f"and {sub['cost_r10']:.1f}.",
         'lcccccccc', 'Model & $c^*$ & Coverage & Late life & Interval score & Tail ratio & $L$, $r = 5$ & $L$, '
@@ -595,11 +598,11 @@ def s12_cmapss():
         'C-MAPSS check (Amendment 11): primary tests, 20 repeats per fleet size, Holm over the six tests of each subset '
         '(FD001 primary, FD003 replication); bold: significant after Holm in the stated direction; '
         '$^{\\dagger}$significant after Holm against it. A11-P1: coverage error '
-        'of in-unit calibration minus that of calibration on held-out engines, in points (repeats with a positive '
+        'of within-unit calibration minus that of calibration on held-out engines, in points (repeats with a positive '
         'difference; Holm $p$). A11-P2: geometric mean of the ratio of the 0.9-quantile of the absolute error on the '
-        'in-unit validation windows to that on the test windows at $n = 80$ (repeats below 1). A11-P3: sum over repeats '
+        'within-unit validation windows to that on the test windows at $n = 80$ (repeats below 1). A11-P3: sum over repeats '
         'of Kendall\'s $S$ between fleet size and that ratio (mean $\\tau_b$). Size-matched: the held-out coverage error '
-        'and the test quantile are computed at the size of the in-unit calibration set (Section S12).',
+        'and the test quantile are computed at the size of the within-unit calibration set (Section S12).',
         'lcc', 'Test & FD001 & FD003', rows, resize=False))
 
     rows = []
@@ -621,13 +624,13 @@ def s12_cmapss():
     write('s12_results', table(
         'tab:s12-results',
         'C-MAPSS check: means over the 20 repeats (range). $n$: training engines. Calibration errors: number of '
-        'calibration errors, in-unit / held-out engines. Coverage of the 90\\% residual interval on all test windows. '
-        'Gain: in-unit coverage error minus held-out coverage error, size-matched (as first written). Ratio: 0.9-quantile '
-        'of the absolute error on the calibration data over that on the test windows, in-unit size-matched (plain), and '
+        'calibration errors, within-unit / held-out engines. Coverage of the 90\\% residual interval on all test windows. '
+        'Gain: within-unit coverage error minus held-out coverage error, size-matched (as first written). Ratio: 0.9-quantile '
+        'of the absolute error on the calibration data over that on the test windows, within-unit size-matched (plain), and '
         'held-out (plain). Decision quantile: share of test windows whose error lies below the calibrated '
-        '$r/(1+r)$-quantile for $r = 5$ (target 83.3\\%). RMSE: last window of each test engine, cycles, in-unit / '
+        '$r/(1+r)$-quantile for $r = 5$ (target 83.3\\%). RMSE: last window of each test engine, cycles, within-unit / '
         'held-out deployed model.',
-        'rcccccccc', '$n$ & Calibration errors & Coverage, in-unit & Coverage, held-out & Gain & Ratio, in-unit & '
+        'rcccccccc', '$n$ & Calibration errors & Coverage, within-unit & Coverage, held-out & Gain & Ratio, within-unit & '
         'Ratio, held-out & Decision quantile & RMSE', rows))
 
     rows = []
@@ -643,11 +646,11 @@ def s12_cmapss():
                          'undefined' if tau is None else f'${tau:.2f}$'])
     write('s12_training', table(
         'tab:s12-training',
-        'C-MAPSS check: training and further secondary quantities. Kept step: step of the state kept by in-unit early '
+        'C-MAPSS check: training and further secondary quantities. Kept step: step of the state kept by within-unit early '
         'stopping, median (range) over 20 repeats (at most 8,000). Budget: number of repeats in which the engine folds '
         'selected 500, 1,000, 2,000, 4,000 and 8,000 steps. Decision quantile for $r = 10$ (target 90.9\\%) and interval '
-        'width (cycles), in-unit / held-out. $\\tau$: Kendall\'s $\\tau_b$ between the kept step and the size-matched '
-        'in-unit ratio within each fleet size (descriptive, as in S10).',
+        'width (cycles), within-unit / held-out. $\\tau$: Kendall\'s $\\tau_b$ between the kept step and the size-matched '
+        'within-unit ratio within each fleet size (descriptive, as in S10).',
         'llccccc', 'Subset & $n$ & Kept step & Budget counts & Decision quantile, $r = 10$ & Width & $\\tau$',
         rows, resize=False))
 
@@ -676,7 +679,7 @@ def s12_blocked():
     rows = [[names[k], cell(d['FD001']['tests'][k], k), cell(d['FD003']['tests'][k], k)] for k in tests]
     write('s12_blocked_tests', table(
         'tab:s12-blocked-tests',
-        'Blocked in-unit calibration (Amendment 12): primary tests, 20 repeats per fleet size, Holm over the six tests '
+        'Blocked within-unit calibration (Amendment 12): primary tests, 20 repeats per fleet size, Holm over the six tests '
         'of each subset (FD001 primary, FD003 replication); bold: significant after Holm in the stated direction; '
         '$^{\\dagger}$significant after Holm against it. A12-P1: coverage with held-out engines minus coverage with '
         'time blocks of the training engines, in points (repeats with a positive difference; Holm $p$). A12-P2: '
@@ -702,16 +705,16 @@ def s12_blocked():
                 ', '.join(str(v) for v in s['SB_s_star_counts'].values()) + f" ({s['same_s_star']})"])
     write('s12_blocked_results', table(
         'tab:s12-blocked-results',
-        'Blocked in-unit calibration: means over the 20 repeats. $n$: training engines. Coverage of the 90\\% residual '
-        'interval on all test windows with calibration on every 10th window of the training engines (in-unit, '
+        'Blocked within-unit calibration: means over the 20 repeats. $n$: training engines. Coverage of the 90\\% residual '
+        'interval on all test windows with calibration on every 10th window of the training engines (within-unit, '
         'Amendment 11) / on time blocks of the training engines (blocked; range) / on held-out engines. Ratio: '
-        '0.9-quantile of the absolute error on the calibration data over that on the test windows (in-unit: '
-        'size-matched). Share removed: median over repeats of the share of the in-unit understatement of the tail that '
+        '0.9-quantile of the absolute error on the calibration data over that on the test windows (within-unit: '
+        'size-matched). Share removed: median over repeats of the share of the within-unit understatement of the tail that '
         'blocking removes, $g$ (0: none, 1: all). Width (cycles), decision quantile for $r = 5$ (target 83.3\\%) and '
         'last-window RMSE (cycles), blocked / held-out. Budget: repeats in which the blocks selected 500, 1,000, 2,000, '
         '4,000 and 8,000 steps (repeats with the same budget as the engine folds, in which the two deployed models '
         'coincide).',
-        'rccccccc', '$n$ & Coverage, in-unit / blocked / held-out & Ratio & Share removed & Width & Decision quantile & '
+        'rccccccc', '$n$ & Coverage, within-unit / blocked / held-out & Ratio & Share removed & Width & Decision quantile & '
         'RMSE & Budget', rows))
 
 
@@ -733,7 +736,6 @@ def main():
     s3_cmq()
     s3_source_costs()
     s5_candidates()
-    s6_noise()
     s8_randsplit()
 
 

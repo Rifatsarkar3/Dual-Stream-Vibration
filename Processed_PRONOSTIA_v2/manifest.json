@@ -1,0 +1,138 @@
+{
+  "train_01_Bearing1_1": {
+    "raw": "Learning_set/Bearing1_1",
+    "acc_files": 2803,
+    "temp_files_ignored": 0,
+    "delimiter": ",",
+    "windows": 2803,
+    "duration_h": 7.786
+  },
+  "train_02_Bearing1_2": {
+    "raw": "Learning_set/Bearing1_2",
+    "acc_files": 871,
+    "temp_files_ignored": 0,
+    "delimiter": ",",
+    "windows": 871,
+    "duration_h": 2.419
+  },
+  "train_03_Bearing2_1": {
+    "raw": "Learning_set/Bearing2_1",
+    "acc_files": 911,
+    "temp_files_ignored": 0,
+    "delimiter": ",",
+    "windows": 911,
+    "duration_h": 2.531
+  },
+  "train_04_Bearing2_2": {
+    "raw": "Learning_set/Bearing2_2",
+    "acc_files": 797,
+    "temp_files_ignored": 0,
+    "delimiter": ",",
+    "windows": 797,
+    "duration_h": 2.214
+  },
+  "test_01_Bearing1_3": {
+    "raw": "Full_Test_Set/Bearing1_3",
+    "acc_files": 2375,
+    "temp_files_ignored": 0,
+    "delimiter": ",",
+    "windows": 2375,
+    "duration_h": 6.597
+  },
+  "test_02_Bearing1_4": {
+    "raw": "Full_Test_Set/Bearing1_4",
+    "acc_files": 1428,
+    "temp_files_ignored": 237,
+    "delimiter": ";",
+    "windows": 1428,
+    "duration_h": 3.967
+  },
+  "test_03_Bearing1_5": {
+    "raw": "Full_Test_Set/Bearing1_5",
+    "acc_files": 2463,
+    "temp_files_ignored": 410,
+    "delimiter": ",",
+    "windows": 2463,
+    "duration_h": 6.842
+  },
+  "test_04_Bearing2_3": {
+    "raw": "Full_Test_Set/Bearing2_3",
+    "acc_files": 1955,
+    "temp_files_ignored": 0,
+    "delimiter": ",",
+    "windows": 1955,
+    "duration_h": 5.431
+  },
+  "test_05_Bearing1_6": {
+    "raw": "Full_Test_Set/Bearing1_6",
+    "acc_files": 2448,
+    "temp_files_ignored": 408,
+    "delimiter": ",",
+    "windows": 2448,
+    "duration_h": 6.8
+  },
+  "test_06_Bearing1_7": {
+    "raw": "Full_Test_Set/Bearing1_7",
+    "acc_files": 2259,
+    "temp_files_ignored": 376,
+    "delimiter": ",",
+    "windows": 2259,
+    "duration_h": 6.275
+  },
+  "test_07_Bearing2_4": {
+    "raw": "Full_Test_Set/Bearing2_4",
+    "acc_files": 751,
+    "temp_files_ignored": 125,
+    "delimiter": ",",
+    "windows": 751,
+    "duration_h": 2.086
+  },
+  "test_08_Bearing2_5": {
+    "raw": "Full_Test_Set/Bearing2_5",
+    "acc_files": 2311,
+    "temp_files_ignored": 386,
+    "delimiter": ",",
+    "windows": 2311,
+    "duration_h": 6.419
+  },
+  "test_09_Bearing2_6": {
+    "raw": "Full_Test_Set/Bearing2_6",
+    "acc_files": 701,
+    "temp_files_ignored": 116,
+    "delimiter": ",",
+    "windows": 701,
+    "duration_h": 1.947
+  },
+  "test_10_Bearing2_7": {
+    "raw": "Full_Test_Set/Bearing2_7",
+    "acc_files": 230,
+    "temp_files_ignored": 38,
+    "delimiter": ",",
+    "windows": 230,
+    "duration_h": 0.639
+  },
+  "zs_01_Bearing3_1": {
+    "raw": "Learning_set/Bearing3_1",
+    "acc_files": 515,
+    "temp_files_ignored": 0,
+    "delimiter": ",",
+    "windows": 515,
+    "duration_h": 1.431
+  },
+  "zs_02_Bearing3_2": {
+    "raw": "Learning_set/Bearing3_2",
+    "acc_files": 1637,
+    "temp_files_ignored": 0,
+    "delimiter": ",",
+    "windows": 1637,
+    "duration_h": 4.547
+  },
+  "zs_03_Bearing3_3": {
+    "raw": "Full_Test_Set/Bearing3_3",
+    "acc_files": 434,
+    "temp_files_ignored": 72,
+    "delimiter": ",",
+    "windows": 434,
+    "duration_h": 1.206
+  }
+}

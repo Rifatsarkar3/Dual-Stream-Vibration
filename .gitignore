@@ -6,8 +6,10 @@ venv/
 .vscode/
 .idea/
 data/
-Processed_PRONOSTIA/
-Processed_XJTU/
+# processed datasets are not redistributed; only their file inventories (manifests) are released
+Processed_*/*
+!Processed_PRONOSTIA_v2/manifest.json
+!Processed_XJTU/manifest.json
 *.ckpt
 *.pt
 *.pth
@@ -177,3 +179,33 @@ outputs/r1_components/launchers/*
 # Revision 1 (2026), Amendment 12: blocked in-unit calibration on C-MAPSS
 !outputs/r1_cmapss_blocked
 !outputs/r1_cmapss_blocked_smoke
+
+# Revision 2 (2026): inputs of the table and figure scripts that the rules above left out
+!outputs/exp19_baselines20
+outputs/exp19_baselines20/*
+!outputs/exp19_baselines20/bilstm
+!outputs/exp19_baselines20/cnn
+!outputs/exp19_baselines20/cnnlstm
+!outputs/exp19_baselines20/resnet
+!outputs/exp19_baselines20/transformer
+outputs/exp19_baselines20/*/*
+!outputs/exp19_baselines20/*/results.json
+!outputs/r1_components_xjtu
+outputs/r1_components_xjtu/*
+!outputs/r1_components_xjtu/selection.json
+!outputs/r1_components_xjtu/budget_selection.json
+!outputs/r1_lambda
+outputs/r1_lambda/*
+!outputs/r1_lambda/selection.json
+!outputs/r1_lobo
+outputs/r1_lobo/*
+!outputs/r1_lobo/selection_4fold.txt
+!outputs/r1_published
+outputs/r1_published/*
+!outputs/r1_published/tsmccnn
+outputs/r1_published/tsmccnn/*
+!outputs/r1_published/tsmccnn/results.json
+
+# files the table and figure scripts write when they are run here
+paper/revision_R3/manuscript_R3/supp_tables/
+paper/revision_R3/manuscript_R3/figures/
